@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="he" dir="rtl" data-ver="1795095489516">
+<html lang="he" dir="rtl" data-ver="1795095603778">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
@@ -7,7 +7,7 @@
 <meta name="description" content="המדריך לטסות ולטסים לחנוכה אצל הרבי ב-770: כשרות, זמנים, מפה, התניידות ומספרי חירום.">
 <meta name="theme-color" content="#f6e8dd">
 <style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
-<script>(function(){var V="1795095489516";try{fetch(location.pathname+"?nc="+Date.now(),{cache:"no-store"}).then(function(r){return r.text()}).then(function(t){var m=t.match(/data-ver="([0-9]+)"/);if(m&&m[1]!==V){var k="nl-reload-"+m[1];try{if(sessionStorage.getItem(k))return;sessionStorage.setItem(k,"1")}catch(e){}location.replace(location.pathname+"?v="+m[1]+location.hash)}}).catch(function(){})}catch(e){}})();</script>
+<script>(function(){var V="1795095603778";try{fetch(location.pathname+"?nc="+Date.now(),{cache:"no-store"}).then(function(r){return r.text()}).then(function(t){var m=t.match(/data-ver="([0-9]+)"/);if(m&&m[1]!==V){var k="nl-reload-"+m[1];try{if(sessionStorage.getItem(k))return;sessionStorage.setItem(k,"1")}catch(e){}location.replace(location.pathname+"?v="+m[1]+location.hash)}}).catch(function(){})}catch(e){}})();</script>
 </head>
 <body>
 <title>נוסעים לרבי – המדריך</title>
@@ -828,13 +828,14 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline-color:var(--n
 .cal-line.heb:empty+*{grid-area:heb}
 .hero-date .db-candle,.db-candle{background:#fff4e8;color:#8a5a1c;border:1px solid rgba(215,154,58,.35);box-shadow:none!important;border-radius:999px;padding:7px 16px;font-size:.88rem;font-weight:800}
 .db-candle .fl i{background:#ff8c1a;box-shadow:0 0 5px rgba(255,140,26,.6)}
-.w-weather{grid-column:1/-1;background:linear-gradient(150deg,#eef2ff 0%,#f6eef6 55%,#fdf1e8 100%);gap:12px}
+.w-weather{grid-column:1/-1;gap:12px}
+.dash .widget.w-weather{background:linear-gradient(150deg,#eef2ff 0%,#f6eef6 55%,#fdf1e8 100%) padding-box,linear-gradient(140deg,rgba(231,185,100,.65),rgba(246,201,201,.5),rgba(217,198,236,.75)) border-box!important}
 .w-weather .w-label svg.lucide{color:#c0623a}
 .wx-main{display:flex;align-items:center;gap:14px}
 .wx-ic{flex:none;width:58px;height:58px;border-radius:18px;background:#fff;display:grid;place-items:center;box-shadow:0 6px 16px rgba(70,60,110,.12);color:#e0912a}
 .wx-ic svg.lucide{width:32px;height:32px;stroke-width:1.8}
 .wx-now-box{display:grid;gap:0}
-.w-weather .wx-now-box b{font-size:2.1rem;font-weight:900;line-height:1;letter-spacing:-.01em}
+.w-weather .wx-now-box b{font-size:2.1rem;font-weight:900;line-height:1;letter-spacing:-.01em;direction:ltr;unicode-bidi:isolate;text-align:right}
 .w-weather .wx-now-box small{font-size:.88rem;color:var(--muted);font-weight:600}
 .wx-days{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:0}
 .wx-days:empty{display:none}
@@ -2331,8 +2332,8 @@ var PH={jcm:"p-museum",esb:"p-esb",totr:"p-rock",summit:"p-manhattan",edge:"p-ro
     var c=C[d.current.weather_code]||["",""];
     document.getElementById("wx-now").textContent=Math.round(d.current.temperature_2m)+"°";
     document.getElementById("wx-cond").textContent=c[0]?c[0]+" עכשיו":"עכשיו";
-    if(c[1])document.getElementById("wx-ic").innerHTML="<i data-lucide=""+c[1]+""></i>";
-    var s="";for(var i=1;i<4;i++){var dt=new Date(d.daily.time[i]+"T12:00:00"),dc=C[d.daily.weather_code[i]]||["","cloud"];s+="<span class="wxd"><em>יום "+DAY[dt.getDay()]+"׳</em><i data-lucide=""+dc[1]+""></i><strong>"+Math.round(d.daily.temperature_2m_max[i])+"°</strong><small>"+Math.round(d.daily.temperature_2m_min[i])+"°</small></span>"}
+    if(c[1])document.getElementById("wx-ic").innerHTML='<i data-lucide="'+c[1]+'"></i>';
+    var s="";for(var i=1;i<4;i++){var dt=new Date(d.daily.time[i]+"T12:00:00"),dc=C[d.daily.weather_code[i]]||["","cloud"];s+='<span class="wxd"><em>יום '+DAY[dt.getDay()]+'׳</em><i data-lucide="'+dc[1]+'"></i><strong>'+Math.round(d.daily.temperature_2m_max[i])+'°</strong><small>'+Math.round(d.daily.temperature_2m_min[i])+'°</small></span>'}
     document.getElementById("wx-days").innerHTML=s;
     if(window.lucide)lucide.createIcons();
   }).catch(function(){});
