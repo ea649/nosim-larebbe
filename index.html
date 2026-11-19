@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="he" dir="rtl" data-ver="1795087272316">
+<html lang="he" dir="rtl" data-ver="1795089028424">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
@@ -7,7 +7,7 @@
 <meta name="description" content="המדריך לטסות ולטסים לחנוכה אצל הרבי ב-770: כשרות, זמנים, מפה, התניידות ומספרי חירום.">
 <meta name="theme-color" content="#f6e8dd">
 <style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
-<script>(function(){var V="1795087272316";try{fetch(location.pathname+"?nc="+Date.now(),{cache:"no-store"}).then(function(r){return r.text()}).then(function(t){var m=t.match(/data-ver="([0-9]+)"/);if(m&&m[1]!==V){var k="nl-reload-"+m[1];try{if(sessionStorage.getItem(k))return;sessionStorage.setItem(k,"1")}catch(e){}location.replace(location.pathname+"?v="+m[1]+location.hash)}}).catch(function(){})}catch(e){}})();</script>
+<script>(function(){var V="1795089028424";try{fetch(location.pathname+"?nc="+Date.now(),{cache:"no-store"}).then(function(r){return r.text()}).then(function(t){var m=t.match(/data-ver="([0-9]+)"/);if(m&&m[1]!==V){var k="nl-reload-"+m[1];try{if(sessionStorage.getItem(k))return;sessionStorage.setItem(k,"1")}catch(e){}location.replace(location.pathname+"?v="+m[1]+location.hash)}}).catch(function(){})}catch(e){}})();</script>
 </head>
 <body>
 <title>נוסעים לרבי – המדריך</title>
@@ -567,7 +567,7 @@ html,body{overflow-x:clip}
 .att-ph img,.pcard img{background:linear-gradient(135deg,#e9d7c8,#d9c3d6)}
 .bot-fab,.bot-fab:hover{padding:0!important;width:68px;height:68px;border-radius:50%;background:none;box-shadow:0 10px 26px rgba(23,22,28,.32);overflow:visible}
 .bot-fab img{width:68px!important;height:68px!important;border-radius:50%;object-fit:cover;filter:none!important}
-.bot-fab::after{content:"שאלי אותי";position:absolute;bottom:100%;left:50%;transform:translateX(-50%);margin-bottom:6px;white-space:nowrap;background:var(--ink);color:#fff;font-size:.75rem;font-weight:800;border-radius:999px;padding:3px 10px}
+.bot-fab::after{content:"שאלו אותי";position:absolute;bottom:100%;left:50%;transform:translateX(-50%);margin-bottom:6px;white-space:nowrap;background:var(--ink);color:#fff;font-size:.75rem;font-weight:800;border-radius:999px;padding:3px 10px}
 .bot-fab{position:fixed}
 .bot-av{border-radius:50%;object-fit:cover}
 @media (max-width:900px){.bot-fab,.bot-fab:hover{width:60px;height:60px}.bot-fab img{width:60px!important;height:60px!important}}
@@ -583,17 +583,54 @@ html,body{overflow-x:clip}
 #v-trouble .tdet .sum img{width:58px;height:58px;object-fit:contain;flex:none;filter:drop-shadow(0 4px 8px rgba(0,0,0,.15))}
 #v-trouble .tdet .sum{gap:14px}
 #urgent{scroll-margin-top:150px}
+
+/* ===== v14: בלי פס עליון, תאריך בדף הבית, ציר זמן, חירום בולט ===== */
+.menu-btn{position:fixed;top:calc(8px + env(safe-area-inset-top,0px));right:max(10px,env(safe-area-inset-right,0px));z-index:8;box-shadow:0 6px 18px rgba(23,22,28,.18)}
+.bh-corner{position:absolute;top:calc(6px + env(safe-area-inset-top,0px));left:max(14px,env(safe-area-inset-left,0px));z-index:5;font-size:.78rem;font-weight:700;color:var(--muted)}
+.content{padding-top:22px}
+@media (min-width:901px){.side{top:18px;max-height:calc(100vh - 36px)}.content{padding-top:12px}}
+@media (max-width:900px){.content{padding-top:26px}}
+.hero-date{order:1;display:flex;flex-direction:column;align-items:center;gap:8px;position:relative;z-index:3}
+.hero-date .cal{min-width:150px}
+.hero-date .cal-top{font-size:.9rem}
+.hero-date .cal-line{font-size:.95rem}
+.hero-date .db-candle{font-size:.85rem;font-weight:800;padding:5px 14px}
+#v-home .art-stage{order:2;display:grid;justify-items:center}
+#v-home .hero-sub{order:3;font-weight:700;margin-top:-4px}
+#v-home .art-stage .hero-title.on-art{order:0}#v-home .art-stage .hero-art{order:1}
+.hero-title.on-art{position:relative;z-index:3;margin:6px 0 -14%;line-height:.9;pointer-events:none}
+#v-home .hero-title.on-art{font-size:clamp(3rem,13vw,6rem)}
+@media (min-width:901px){#v-home .hero-title.on-art{font-size:clamp(3.4rem,6.4vw,6rem);margin-bottom:-10%}}
+@media (prefers-reduced-motion:no-preference){.hero-date{animation:rise .8s both}}
+/* ציר זמן */
+.w-tl{grid-column:1/-1;gap:10px}
+.tl{list-style:none;margin:4px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);position:relative}
+.tl::before{content:"";position:absolute;top:8px;right:12.5%;left:12.5%;height:2px;background:linear-gradient(90deg,rgba(255,255,255,.25),#ffcf5c 50%,rgba(255,255,255,.25))}
+.tl li{display:grid;justify-items:center;text-align:center;gap:2px;position:relative}
+.tl li i{width:18px;height:18px;border-radius:50%;background:var(--ink);border:3px solid rgba(255,255,255,.55);margin-bottom:4px;box-sizing:border-box}
+.tl li b{font-size:1rem;color:#fff}
+.tl li small{font-size:.78rem;color:rgba(255,255,255,.75)}
+.tl li.hot i{background:#ffcf5c;border-color:#ffcf5c;box-shadow:0 0 0 5px rgba(255,207,92,.25),0 0 14px #ffb02e}
+.tl li.hot b{color:#ffcf5c}
+.w-dark .tl-note{font-size:.76rem}
+/* חירום זורח */
+.w-sos{background:linear-gradient(135deg,#ff2d2d 0%,#ff5a1f 55%,#ff9500 100%)!important;color:#fff;box-shadow:0 0 0 3px rgba(255,90,31,.25),0 12px 32px rgba(255,45,45,.45)}
+.w-sos .w-label{color:#fff;font-size:.95rem}
+.w-sos .w-label svg.lucide{color:#fff}
+.w-sos .btn{background:#fff;color:#c4140c;font-weight:900;border:0;box-shadow:0 4px 12px rgba(120,0,0,.25)}
+.w-sos .btn.danger{background:#fff200;color:#b00000}
+@media (prefers-reduced-motion:no-preference){.w-sos{animation:sosglow 1.8s ease-in-out infinite alternate}}
+@keyframes sosglow{from{box-shadow:0 0 0 3px rgba(255,90,31,.25),0 12px 30px rgba(255,45,45,.35)}to{box-shadow:0 0 0 6px rgba(255,90,31,.35),0 12px 40px rgba(255,45,45,.7)}}
+.bot-fab,.bot-fab:hover{border-radius:0!important;box-shadow:none!important;width:76px;height:76px}
+.bot-fab img{width:76px!important;height:76px!important;border-radius:0!important;object-fit:contain!important;filter:drop-shadow(0 8px 14px rgba(23,22,28,.3))!important}
+@media (max-width:900px){.bot-fab,.bot-fab:hover{width:66px;height:66px}.bot-fab img{width:66px!important;height:66px!important}}
+.bot-av{border-radius:0!important;object-fit:contain!important;width:54px;height:54px}
 </style>
 
 <div class="glow" aria-hidden="true"></div>
 
-<header class="top">
-  <div class="wrap">
-    <button type="button" class="menu-btn" id="menu-btn" aria-label="תפריט" aria-controls="side" aria-expanded="false"><i data-lucide="menu"></i></button>
-    <span class="bh" dir="ltr">B"H</span>
-  </div>
-  <div class="daybar" id="daybar" aria-live="polite"><div class="cal" id="db-cal" aria-label="התאריך היום"><span class="cal-rings" aria-hidden="true"><i></i><i></i></span><b class="cal-top" id="db-wd">חנוכה</b><span class="cal-line" id="db-greg">תשפ"ז</span><span class="cal-line heb" id="db-heb"></span></div><span class="db-candle" id="db-candle" hidden></span></div>
-</header>
+<button type="button" class="menu-btn" id="menu-btn" aria-label="תפריט" aria-controls="side" aria-expanded="false"><i data-lucide="menu"></i></button>
+<span class="bh bh-corner" dir="ltr">B"H</span>
 
 <div class="shell">
   <aside class="side" id="side" aria-label="תפריט האתר">
@@ -618,13 +655,9 @@ html,body{overflow-x:clip}
     <div class="hero-bg" aria-hidden="true"></div>
     <div class="hero-mist" aria-hidden="true"></div>
     <div class="hero-clouds" aria-hidden="true"></div>
-    <div class="hero-text">
-      <span class="hero-kicker"><i data-lucide="flame"></i><span id="cd-text">חנוכה תשפ"ז · 4–12 בדצמבר</span></span>
-      <h1 class="hero-title"><span>נוסעים</span> <span>לרבי</span></h1>
-      <p class="hero-sub">המדריך לטסות ולטסים לחנוכה ב-770. כל מה שצריך, מהנחיתה ועד ההדלקה.</p>
-
-    </div>
-    <div class="art-stage"><span class="cloud c1"></span><span class="cloud c2"></span><img class="hero-art" src="hero.png" alt="770, האוהל, מזוודה ומטוס" width="1100" height="733"><span class="cloud front c3"></span><span class="cloud front c4"></span><span class="cloud front c5"></span></div>
+    <div class="hero-date" id="daybar" aria-live="polite"><div class="cal" id="db-cal" aria-label="התאריך היום"><span class="cal-rings" aria-hidden="true"><i></i><i></i></span><b class="cal-top" id="db-wd">חנוכה</b><span class="cal-line" id="db-greg">תשפ"ז</span><span class="cal-line heb" id="db-heb"></span></div><span class="db-candle" id="db-candle" hidden></span></div>
+    <div class="art-stage"><h1 class="hero-title on-art"><span>נוסעים</span> <span>לרבי</span></h1><span class="cloud c1"></span><span class="cloud c2"></span><img class="hero-art" src="hero.png" alt="770, האוהל, מזוודה ומטוס" width="1100" height="733"><span class="cloud front c3"></span><span class="cloud front c4"></span><span class="cloud front c5"></span></div>
+    <p class="hero-sub">המדריך המלא לנסיעה לרבי בחנוכה: מהאריזה, דרך הנחיתה ועד ההדלקה ב-770.</p>
   </div>
 
 
@@ -634,10 +667,10 @@ html,body{overflow-x:clip}
   </div>
 
   <div class="dash">
-    <a class="widget w-dark" href="#times"><span class="w-label"><i data-lucide="flame"></i>הדלקה ב-770</span><b>בסיום מנחה</b><small>בערך 15:25 בימי חול · ערב שבת מוקדם יותר</small></a>
-    <a class="widget w-gold" href="#times"><span class="w-label"><i data-lucide="calendar-heart"></i>כינוס נשים ב-770</span><b>מוצ"ש ב' טבת · 21:00</b><small>12.12.2026 · לכל אורחות המלך</small></a>
+    <a class="widget w-dark w-tl" href="#times"><span class="w-label"><i data-lucide="flame"></i>יום חול בחנוכה ב-770</span><ol class="tl"><li><i></i><b>שחרית</b><small>10:00</small></li><li><i></i><b>מנחה</b><small>15:15</small></li><li class="hot"><i></i><b>הדלקה</b><small>בסיום מנחה</small></li><li><i></i><b>ערבית</b><small>בערב</small></li></ol><small class="tl-note">בערב שבת ההדלקה לפני השבת · כל הזמנים בעמוד "זמנים"</small></a>
+    <a class="widget w-gold" href="#events"><span class="w-label"><i data-lucide="calendar-heart"></i>כינוס נשים ב-770</span><b>מוצ"ש ב' טבת · 21:00</b><small>12.12.2026 · לכל אורחות המלך</small></a>
     <a class="widget w-weather" id="weather" href="https://forecast.weather.gov/MapClick.php?lat=40.669&lon=-73.942" target="_blank" rel="noopener"><span class="w-label"><i data-lucide="cloud-sun"></i>מזג האוויר בקראון הייטס</span><b id="wx-now">לתחזית העדכנית</b><small id="wx-days">בדצמבר בדרך כלל בין 0 ל-8 מעלות</small></a>
-    <div class="widget w-sos"><span class="w-label"><i data-lucide="siren"></i>חירום</span><div class="acts"><a class="btn danger" href="tel:911">911</a><a class="btn" href="tel:+17182301000">הצלה</a><a class="btn" href="#sos">עוד</a></div></div>
+    <div class="widget w-sos"><span class="w-label"><i data-lucide="siren"></i>חירום · לוחצים ומתקשרים</span><div class="acts"><a class="btn danger" href="tel:911">911</a><a class="btn" href="tel:+17182301000">הצלה</a><a class="btn" href="#sos">עוד</a></div></div>
   </div>
   <div class="cats">
     <div class="cats-bar">
@@ -1406,6 +1439,13 @@ html,body{overflow-x:clip}
   </div>
   <div class="biz-list" id="biz-list"></div>
   <div class="card how"><h3><span class="hi"><i data-lucide="ticket-percent"></i></span>איך משתמשות בהטבה</h3><p class="small">מציגות בקופה את הקוד או את המסך של העסק במדריך. כל עסק שותף מצרף קופון לטסות "נוסעים לרבי".</p></div>
+
+  <div class="card" id="dir">
+    <h2><span class="hi"><i data-lucide="store"></i></span>מדריך השכונה: הסעות, אוכל ושירותים</h2>
+    <p class="small">עסקים בקראון הייטס, מתוך רשימות של אתרי השכונה (חב"ד אינפו, CrownHeights.info, ‏COLlive) ובדיקה בגוגל מפות. זה לא פרסום בתשלום. שעות ומחירים משתנים, אז מומלץ להתקשר לפני.</p>
+    <div class="chips-row" role="group" aria-label="סינון לפי קטגוריה" id="dir-chips"></div>
+    <ul class="svc-list" id="dir-list"></ul>
+    <p class="src" id="dir-src"></p>
   </div>
 </section>
 
@@ -1431,14 +1471,14 @@ html,body{overflow-x:clip}
 </div>
 
 
-<button type="button" class="bot-fab" id="bot-fab" aria-controls="bot" aria-expanded="false" aria-label="שאלי את המטוס על הטיסה"><img src="i-bot-plane.png" alt=""></button>
+<button type="button" class="bot-fab" id="bot-fab" aria-controls="bot" aria-expanded="false" aria-label="שאלו את מדריך הטיסה"><img src="i-bot-770q.png" alt=""></button>
 <section class="bot" id="bot" hidden aria-label="שאלות על המדריך">
-  <header class="bot-head"><img class="bot-av" src="i-bot-plane.png" alt=""><div class="bot-tt"><b>שאלי את המטוס</b><small>כל מה שקשור לטיסה ולנסיעה, לפי המדריך</small></div><button type="button" class="bot-x" id="bot-x" aria-label="סגירה"><i data-lucide="x"></i></button></header>
+  <header class="bot-head"><img class="bot-av" src="i-bot-770q.png" alt=""><div class="bot-tt"><b>אני מדריך הטיסה שלכם</b><small>שאלו כל דבר על הנסיעה, לפי המדריך</small></div><button type="button" class="bot-x" id="bot-x" aria-label="סגירה"><i data-lucide="x"></i></button></header>
   <div class="bot-log" id="bot-log" aria-live="polite">
-    <div class="msg ai">שלום! אני המטוס של המדריך ✈️ אפשר לשאול אותי כל דבר על הטיסה: מה להכין, מה לארוז, ESTA, נחיתה והגעה ל-770 — וגם על כשרות וזמנים.</div>
+    <div class="msg ai">שלום! אני מדריך הטיסה שלכם ✈️ אפשר לשאול אותי על כל מה שכתוב במדריך: מה להכין, מה לארוז, ESTA, נחיתה והגעה ל-770, כשרות, זמנים ואירועים. אם משהו לא כתוב במדריך, אגיד שאין לי מידע עליו.</div>
     <div class="bot-sugg"><button type="button">מה צריך להכין לפני הטיסה?</button><button type="button">מה זה ESTA?</button><button type="button">מה מותר במזוודה?</button><button type="button">מה ההכשרים המהודרים?</button><button type="button">איך מגיעים לחנוכייה בשדרה החמישית?</button><button type="button">איך מגיעים לנתב״ג מירושלים?</button><button type="button">מה עושים אם הדרכון אבד?</button></div>
   </div>
-  <form class="bot-form" id="bot-form"><input id="bot-in" type="text" autocomplete="off" placeholder="כתבי שאלה..." aria-label="שאלה"><button type="submit" class="sgo" id="bot-send" aria-label="שליחה"><i data-lucide="arrow-left"></i></button></form>
+  <form class="bot-form" id="bot-form"><input id="bot-in" type="text" autocomplete="off" placeholder="כתבו שאלה..." aria-label="שאלה"><button type="submit" class="sgo" id="bot-send" aria-label="שליחה"><i data-lucide="arrow-left"></i></button></form>
   <p class="bot-note" id="bot-note" hidden></p>
 </section>
 <div class="tabs">
@@ -1732,6 +1772,102 @@ var PH={jcm:"p-museum",esb:"p-esb",totr:"p-rock",summit:"p-manhattan",edge:"p-ro
   if(q)q.addEventListener("input",function(){var s=q.value.trim().toLowerCase(),any=false;
     document.querySelectorAll(".hub-group").forEach(function(g){var vis=0;g.querySelectorAll(".gcard").forEach(function(t){var m=!s||(t.textContent+" "+(t.dataset.k||"")).toLowerCase().indexOf(s)>=0;t.hidden=!m;if(m)vis++});g.hidden=!vis;if(vis)any=true});
     empty.hidden=any;});
+  // neighborhood directory {c:category,n,d,a:address,t:phone,w:website}
+  (function(){
+    var CATS=[["ride","הסעות ומוניות","car"],["food","סופרים ומכולות","shopping-cart"],["bake","מאפיות וקפה","croissant"],["eat","מסעדות וטייק אווי","utensils"],["fish","דגים וקצביות","fish"],["cater","קייטרינג לשבת","chef-hat"],["rx","בתי מרקחת ומרפאות","pill"],["svc","טלפונים, הדפסה ונסיעות","smartphone"],["stay","לינה","bed-double"]];
+    var OLD="מספר מספריית COLlive (רשומה ישנה). כדאי לוודא בטלפון.";
+    var DIR=[
+      {c:"ride",n:"Keter Car Service",d:"קאר סרוויס חסידי. מכוניות וואנים ל-10 ול-15. אפשר לבקש נהגת מראש. הלוך-חזור לאוהל.",t:"718-644-4444"},
+      {c:"ride",n:"Crown Heights Airport",d:"הסעות לשדות התעופה. "+OLD,t:"718-753-4054"},
+      {c:"ride",n:"Barouh Van Service",d:"רכב, מיני-ואן וואן לשדות התעופה ולאוהל. נהגות לפי בקשה. עברית, אנגלית וצרפתית. "+OLD,t:"646-209-0723"},
+      {c:"ride",n:"Anash Car & Van Service",d:"סדאנים, מיני-ואן וואן ל-15. שדות תעופה ואוהל הלוך-חזור, נהגים מאנ\"ש, עברית ואנגלית. "+OLD,t:"917-699-3937"},
+      {c:"ride",n:"Ateret Taxi",d:"מונית עם נהגת. "+OLD,t:"347-417-4386"},
+      {c:"ride",n:"770 Car Service",d:"קאר סרוויס בשכונה. "+OLD,t:"347-249-4539"},
+      {c:"ride",n:"Crown Heights Car Service",d:"קאר סרוויס בשכונה. "+OLD,t:"917-846-4701"},
+      {c:"ride",n:"Elite Car Service",d:"קאר סרוויס. "+OLD,a:"770 Lefferts Ave",t:"718-756-7770"},
+      {c:"ride",n:"Union Car Service",d:"קאר סרוויס בקינגסטון.",a:"311 Kingston Ave",t:"718-771-3000"},
+      {c:"ride",n:"White Top",d:"קאר סרוויס, 24 שעות.",a:"Hampton Pl",t:"718-774-6660",w:"whitetopcarsvc.com"},
+      {c:"ride",n:"Bedstar Car Services",d:"קאר סרוויס, 24 שעות.",a:"528 Empire Blvd",t:"718-771-2299"},
+      {c:"ride",n:"Dovid's Bus Service",d:"ואנים ל-15, מיניבוסים ואוטובוסים. לקבוצה שנוסעת יחד.",t:"718-772-8776"},
+      {c:"ride",n:"Ohel Bus (bustoohel)",d:"אוטובוס לאוהל שיוצא מה\"דריידל\". לוח זמנים באתר.",t:"347-770-7792",w:"bustoohel.com"},
+      {c:"ride",n:"Village Car Rentals",d:"השכרת רכב: סדאנים ומיני-ואנים.",a:"632 E New York Ave",t:"347-240-7772",w:"villagecarrentals.com"},
+
+      {c:"food",n:"Kahan's Superette",d:"מכולת גדולה בלב קינגסטון. פתוח גם במוצאי שבת. הזמנה אונליין עם משלוח.",a:"317 Kingston Ave",t:"718-756-2999",w:"kahanskosher.com"},
+      {c:"food",n:"Kol Tuv Grocery",d:"מכולת. ו׳ עד 16:00.",a:"409 Kingston Ave",t:"718-953-4440",w:"koltuvgrocery.com"},
+      {c:"food",n:"Koshertown",d:"סופר וקפה, CHK.",a:"459 Albany Ave",t:"718-778-6171",w:"koshertown.com"},
+      {c:"food",n:"Empire Kosher Supermarket",d:"סופר גדול. ה׳ עד חצות.",a:"529 Empire Blvd",t:"718-221-2144",w:"empirekoshersupermarket.com"},
+      {c:"food",n:"The Market Place",d:"סופר גדול עם משלוחים, CHK.",a:"589 E New York Ave",t:"718-363-1300",w:"kosherfamily.com"},
+
+      {c:"bake",n:"Kingston Bake Shop",d:"מאפייה, CHK. נפתח ב-06:00.",a:"380 Kingston Ave",t:"718-467-2047",w:"kingstonbakeshop.com"},
+      {c:"bake",n:"Albany Bakery",d:"מאפייה, CHK.",a:"339 Albany Ave",t:"718-778-1733"},
+      {c:"bake",n:"Brooklyn Artisan Bakehouse",d:"מאפייה, CHK.",a:"665 Empire Blvd",t:"718-872-5155",w:"brooklynab.com"},
+      {c:"bake",n:"Crisp & Crumb",d:"מאפייה וקפה, CHK.",a:"399 Troy Ave",t:"516-998-0425",w:"crispandcrumbnyc.com"},
+      {c:"bake",n:"Splendid Cafe & Pastry",d:"מאפייה וקייטרינג, CHK.",a:"257 Kingston Ave",t:"347-622-4557"},
+      {c:"bake",n:"Chocolatte",d:"בית קפה חלבי, CHK. פתוח 24 שעות.",a:"792 Eastern Pkwy",t:"718-773-3770",w:"choco-latte.com"},
+      {c:"bake",n:"Almah Cafe",d:"מסעדה חלבית, CHK.",a:"473 Albany Ave / 87 Utica Ave",t:"718-288-0074"},
+      {c:"bake",n:"Ricotta Coffee",d:"קפה ומאפה חלבי, CHK.",a:"513 Albany Ave",t:"347-365-5177",w:"ricotacoffee.com"},
+      {c:"bake",n:"Holesome Bagels",d:"בייגלים, CHK.",a:"333A Kingston Ave",t:"347-955-5300",w:"holesomebagels.com"},
+      {c:"bake",n:"Bunch O' Bagels",d:"בייגלים, OK.",a:"361 Troy Ave",t:"718-604-0634",w:"bunchobagels.com"},
+      {c:"bake",n:"Bread and Dairy",d:"מסעדה חלבית, CHK.",a:"368 Kingston Ave",t:"718-576-6664"},
+
+      {c:"eat",n:"Kingston Pizza",d:"פיצה, CHK. פתוח גם במוצאי שבת.",a:"395 Kingston Ave",t:"718-773-7154",w:"kingstonkosherpizza.com"},
+      {c:"eat",n:"Pizza Crust",d:"פיצה חלבית, CHK.",a:"313 Kingston Ave",t:"347-221-0953"},
+      {c:"eat",n:"Crown Heights Mozzarella",d:"פיצה, CHK.",a:"265 Troy Ave",t:"917-633-6770",w:"chmozzarella.com"},
+      {c:"eat",n:"Sushi Spot",d:"סושי פרווה, CHK.",a:"426 Kingston Ave",t:"718-756-4040",w:"sushispot2.com"},
+      {c:"eat",n:"Noribar",d:"סושי פרווה, CHK.",a:"326 Kingston Ave",t:"347-705-8777",w:"noribar1.com"},
+      {c:"eat",n:"Hummus Bar",d:"חומוס, פלאפל ושווארמה, CHK.",a:"325 Kingston Ave",t:"718-701-7044",w:"hummusbarny.com"},
+      {c:"eat",n:"Mermelsteins",d:"טייק אווי, CHK. ו׳ עד 14:00.",a:"351 Kingston Ave",t:"718-778-3100"},
+      {c:"eat",n:"House of Glatt",d:"בשרי וטייק אווי, CHK.",a:"385 Kingston Ave",t:"718-467-9411",w:"thehouseofglatt.com"},
+      {c:"eat",n:"Prime Avenue",d:"מסעדה בשרית, CHK.",a:"377 Kingston Ave",t:"718-576-6665"},
+      {c:"eat",n:"Holy Schnitzel",d:"בשרי, CHK.",a:"262 Kingston Ave",t:"929-339-1156",w:"holyschnitzel.com"},
+      {c:"eat",n:"Mendy's",d:"בשרי, CHK. במוזיאון הילדים היהודי.",a:"792 Eastern Pkwy",t:"718-907-8877",w:"mendysjcm.com"},
+      {c:"eat",n:"Sweet Expressions",d:"גלידה, שוקולד ומתנות, CHK.",a:"310 Kingston Ave",t:"718-613-0188",w:"sweetexpressionsch.com"},
+
+      {c:"fish",n:"Raskin's Fish Market",d:"דגים. א׳ סגור.",a:"320 Kingston Ave",t:"718-756-9521"},
+      {c:"fish",n:"Shabbos Fish Market",d:"דגים, CHK.",a:"417 Kingston Ave",t:"347-533-6004"},
+      {c:"fish",n:"Benz's Food Products",d:"דגים ומזון. א׳ סגור.",a:"332 Albany Ave",t:"718-778-3329",w:"benzsfish.com"},
+      {c:"fish",n:"Crown Heights Butcher",d:"קצביה.",a:"334 Albany Ave",t:"347-770-4048",w:"chbutcher.com"},
+
+      {c:"cater",n:"Ben Sion Kohen",d:"קייטרינג, מאפייה ומסעדה, CHK.",a:"564 E New York Ave",t:"718-382-5687"},
+      {c:"cater",n:"Dovid Malka",d:"קייטרינג, CHK.",a:"440 Brooklyn Ave",t:"718-773-2335",w:"dovidmalkach.com"},
+      {c:"cater",n:"Table One Catering",d:"קייטרינג, CHK.",t:"917-324-6276"},
+
+      {c:"rx",n:"Crown Drugs",d:"בית מרקחת עם משלוחים.",a:"319 Kingston Ave",t:"718-363-7000"},
+      {c:"rx",n:"Apple Drugs",d:"בית מרקחת עם משלוחים.",a:"376 Kingston Ave",t:"718-467-6700"},
+      {c:"rx",n:"Sunshine Pharmacy",d:"בית מרקחת עם משלוחים.",a:"411 Kingston Ave",t:"718-773-2020"},
+      {c:"rx",n:"Esti's Pharmacy",d:"בית מרקחת.",a:"300 Troy Ave",t:"718-484-4305"},
+      {c:"rx",n:"ModernMD Urgent Care",d:"מרפאה דחופה, פתוחה כל השבוע.",a:"436 Utica Ave",t:"646-604-8150",w:"modernmduc.com"},
+      {c:"rx",n:"CityMD Crown Heights",d:"מרפאה דחופה, פתוחה כל השבוע.",a:"256 Utica Ave",t:"718-571-9355",w:"citymd.com"},
+
+      {c:"svc",n:"Flash Photo / Amigo",d:"השכרת טלפונים וסימים לאורחים מישראל.",a:"399 Kingston Ave",t:"718-604-0500",w:"amigo-us.com"},
+      {c:"svc",n:"Y&B CopyCenter",d:"הדפסה ותיקון טלפונים ומחשבים.",a:"418 Kingston Ave",t:"718-221-1100"},
+      {c:"svc",n:"Crown Heights Shipping Center",d:"הדפסה ומשלוחים.",a:"478 Albany Ave",t:"718-771-5000",w:"chshippingcenter.com"},
+      {c:"svc",n:"Crown Travel",d:"סוכנות נסיעות. "+OLD,a:"331 Kingston Ave",t:"718-493-1111"},
+
+      {c:"stay",n:"Eshel Hospitality Center",d:"בית הארחה בקינגסטון.",a:"272 Kingston Ave",t:"718-928-3330"},
+      {c:"stay",n:"Anash Accommodations",d:"לינה. "+OLD,a:"446 Kingston Ave",t:"718-778-5656"},
+      {c:"stay",n:"Arazim",d:"לינה. "+OLD,t:"718-778-8877"},
+      {c:"stay",n:"Crown Heights BNB",d:"לינה. "+OLD,t:"718-773-8000"}
+    ];
+    var chips=document.getElementById("dir-chips"),ul=document.getElementById("dir-list"),src=document.getElementById("dir-src");
+    if(!chips||!ul)return;
+    function e(s){return String(s||"").replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+    var cur="ride";
+    chips.innerHTML=CATS.map(function(k){return '<button type="button" class="fchip'+(k[0]===cur?' on':'')+'" data-c="'+k[0]+'"><i data-lucide="'+k[2]+'"></i>'+k[1]+'</button>'}).join("");
+    function draw(){
+      ul.innerHTML=DIR.filter(function(b){return b.c===cur}).map(function(b){
+        var tel=b.t?'+1'+b.t.replace(/\D/g,""):"";
+        return '<li class="svc"><b dir="ltr">'+e(b.n)+'</b><span class="small">'+e(b.d)+'</span>'+(b.a?'<span class="small muted" dir="ltr" style="text-align:right">'+e(b.a)+'</span>':'')+
+          '<div class="acts">'+(b.t?'<a class="btn" href="tel:'+tel+'" dir="ltr"><i data-lucide="phone"></i>'+e(b.t)+'</a>':'')+
+          (b.a?'<a class="btn" href="https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(b.n+" "+b.a+" Brooklyn")+'" target="_blank" rel="noopener"><i data-lucide="map-pin"></i>מפה</a>':'')+
+          (b.w?'<a class="btn" href="https://'+e(b.w)+'" target="_blank" rel="noopener"><i data-lucide="globe"></i>אתר</a>':'')+'</div></li>';
+      }).join("");
+      if(window.lucide)lucide.createIcons();
+    }
+    chips.querySelectorAll(".fchip").forEach(function(c){c.addEventListener("click",function(){cur=c.dataset.c;chips.querySelectorAll(".fchip").forEach(function(x){x.classList.toggle("on",x===c)});draw()})});
+    if(src)src.innerHTML='מקורות: <a href="https://crownheights.info/" target="_blank" rel="noopener">CrownHeights.info</a> (רשימת CHK) · <a href="https://chkosher.org/" target="_blank" rel="noopener">ועד הכשרות CHK</a> · <a href="https://gegent.com/" target="_blank" rel="noopener">Gegent by COLlive</a> · <a href="https://chabad.info/" target="_blank" rel="noopener">חב"ד אינפו</a> · גוגל מפות (נבדק 19.11.2026)';
+    draw();
+  })();
   // businesses: add partners here {n,cat,addr,phone,perk,code,tags:["perk","ebt","shabbat","travel"]}
   var BIZ=[];
   var list=document.getElementById("biz-list"),cur="all";
@@ -1778,24 +1914,33 @@ var PH={jcm:"p-museum",esb:"p-esb",totr:"p-rock",summit:"p-manhattan",edge:"p-ro
   if(!LOCAL)window.claude.use("sample").then(function(s){sample=s;ready=true;if(!s)LOCAL=true}).catch(function(){LOCAL=true});
   /* מצב מקומי: חיפוש בתוכן המדריך עצמו, בלי שרת */
   var IDX=null,STOP={"מה":1,"איך":1,"איפה":1,"מתי":1,"כמה":1,"יש":1,"של":1,"את":1,"על":1,"אם":1,"אני":1,"זה":1,"עם":1,"לא":1,"או":1,"גם":1,"כל":1,"צריך":1,"צריכה":1,"אפשר":1,"מי":1,"למה":1,"הכי":1};
-  function norm(w){w=w.replace(/[^֐-׿a-z0-9]/gi,"").toLowerCase().replace(/[֑-ׇ]/g,"");if(w.length>3)w=w.replace(/^(וה|שה|וב|ול|ומ|וש|ה|ו|ב|ל|מ|ש|כ)/,"");return w.replace(/(ים|ות)$/,"")}
-  function terms(t){return t.split(/\s+/).filter(function(w){return w&&!STOP[w]}).map(norm).filter(function(w){return w.length>1})}
-  function build(){IDX=[];document.querySelectorAll("main .view").forEach(function(v){if(v.id==="v-home")return;var page=v.getAttribute("aria-label")||v.id;v.querySelectorAll("p,li,tr,.card h3,.card h2,dd").forEach(function(el){if(el.closest("li")&&el.tagName!=="LI")return;var t=(el.textContent||"").replace(/\s+/g," ").trim();if(t.length<12)return;var head=el.closest(".card");head=head&&head.querySelector("h2,h3");IDX.push({t:t,h:head?head.textContent.trim():"",page:page,id:v.id.replace(/^v-/,""),w:terms(t+" "+(head?head.textContent:""))})})})}
-  function localAnswer(q){if(!IDX)build();var qt=terms(q);if(!qt.length)return null;var sc=IDX.map(function(e){var s=0;qt.forEach(function(w){e.w.forEach(function(x){if(x===w)s+=3;else if(w.length>2&&(x.indexOf(w)===0||w.indexOf(x)===0&&x.length>2))s+=1})});return{e:e,s:s}}).filter(function(x){return x.s>0}).sort(function(a,b){return b.s-a.s}).slice(0,3);if(!sc.length)return null;return sc}
-  function showLocal(q,out){var r=localAnswer(q);out.classList.remove("wait");out.textContent="";if(!r){out.textContent="לא מצאתי על זה במדריך. נסי לשאול במילים אחרות, או פתחי את התפריט ובחרי עמוד.";return}var seen={};r.forEach(function(x){if(x.e.t===x.e.h)return;var p=document.createElement("p");p.textContent=(x.e.h&&x.e.t.indexOf(x.e.h)!==0?x.e.h+": ":"")+x.e.t;out.appendChild(p)});r.forEach(function(x){if(seen[x.e.id])return;seen[x.e.id]=1;var a=document.createElement("a");a.href="#"+x.e.id;a.className="bot-link";a.textContent="בעמוד: "+x.e.page;a.addEventListener("click",function(){toggle(false)});out.appendChild(a)});log.scrollTop=log.scrollHeight}
+  function clean(w){return w.replace(/[״"׳']/g,"").replace(/[^\u0590-\u05FFa-z0-9]/gi,"").toLowerCase().replace(/[\u0591-\u05C7]/g,"")}
+  function forms(w){w=clean(w);if(w.length<2)return[];var f={};f[w]=1;var a=w.length>3?w.replace(/^(וה|שה|וב|ול|ומ|וש|וכ|בה|לה|מה|כש|ה|ו|ב|ל|מ|ש|כ)/,""):w;if(a.length>1)f[a]=1;var b=a.length>3?a.replace(/^(ה|ו|ב|ל|מ|ש|כ)/,""):a;if(b.length>1)f[b]=1;Object.keys(f).forEach(function(x){var s=x.replace(/(יות|ים|ות)$/,"");if(s.length>2)f[s]=1});return Object.keys(f)}
+  function norm(w){return forms(w)[0]||""}
+  function terms(t){return t.split(/[\s\-–,.:?!()\/]+/).filter(function(w){return w&&!STOP[w]&&!STOP[clean(w)]}).map(forms).filter(function(f){return f.length})}
+  function bag(t){var o={};t.split(/[\s\-–,.:?!()\/]+/).forEach(function(w){forms(w).forEach(function(x){o[x]=1})});return Object.keys(o)}
+  function build(){IDX=[];document.querySelectorAll("main .view").forEach(function(v){if(v.id==="v-home")return;var page=v.getAttribute("aria-label")||v.id;v.querySelectorAll("p,li,tr,.card h3,.card h2,dd").forEach(function(el){if(el.closest("li")&&el.tagName!=="LI")return;var t=(el.textContent||"").replace(/\s+/g," ").trim();if(t.length<12)return;var head=el.closest(".card,details");head=head&&head.querySelector("h2,h3,summary");IDX.push({t:t,h:head?head.textContent.trim():"",page:page,id:v.id.replace(/^v-/,""),w:bag(t+" "+(head?head.textContent:"")+" "+page)})})})}
+  function mt(fs,ws){var best=0;fs.forEach(function(w){ws.forEach(function(x){if(x===w)best=1;else if(best<.7&&w.length>3&&x.length>3&&(x.indexOf(w)===0||w.indexOf(x)===0))best=.7})});return best}
+  function localAnswer(q){if(!IDX)build();var qt=terms(q);if(!qt.length)return null;var N=IDX.length;
+    var W=qt.map(function(fs){var df=0;IDX.forEach(function(e){if(mt(fs,e.w))df++});return df?Math.log(N/df)+1:4});
+    var tot=W.reduce(function(s,x){return s+x},0);
+    var sc=IDX.map(function(e){var s=0;qt.forEach(function(fs,i){s+=mt(fs,e.w)*W[i]});return{e:e,s:s-(e.t.length>400?.3:0)}})
+      .filter(function(x){return x.s>=tot*.6}).sort(function(a,b){return b.s-a.s});
+    if(!sc.length)return null;var top=sc[0].s;return sc.filter(function(x){return x.s>=top*.85}).slice(0,3)}
+  function showLocal(q,out){var r=localAnswer(q);out.classList.remove("wait");out.textContent="";if(!r){out.textContent="אין לי מידע על זה במדריך. אפשר לנסות לשאול במילים אחרות, או לפתוח את התפריט ולבחור עמוד.";return}var seen={};r.forEach(function(x){if(x.e.t===x.e.h)return;var p=document.createElement("p");p.textContent=(x.e.h&&x.e.t.indexOf(x.e.h)!==0?x.e.h+": ":"")+x.e.t;out.appendChild(p)});r.forEach(function(x){if(seen[x.e.id])return;seen[x.e.id]=1;var a=document.createElement("a");a.href="#"+x.e.id;a.className="bot-link";a.textContent="בעמוד: "+x.e.page;a.addEventListener("click",function(){toggle(false)});out.appendChild(a)});log.scrollTop=log.scrollHeight}
   function toggle(o){box.hidden=!o;fab.setAttribute("aria-expanded",o);if(o)setTimeout(function(){inp.focus()},50)}
   fab.addEventListener("click",function(){toggle(box.hidden)});
   document.getElementById("bot-x").addEventListener("click",function(){toggle(false)});
   log.querySelectorAll(".bot-sugg button").forEach(function(b){b.addEventListener("click",function(){inp.value=b.textContent;form.requestSubmit()})});
   function ctx(){if(CTX)return CTX;var parts=[];document.querySelectorAll("main .view").forEach(function(v){if(v.id==="v-home"||v.id==="v-map")return;var t=(v.innerText||v.textContent||"").replace(/\s+\n/g,"\n").replace(/[ \t]+/g," ").trim();var title=v.getAttribute("aria-label")||v.id;parts.push("### עמוד: "+title+"\n"+t)});CTX=parts.join("\n\n").slice(0,90000);return CTX}
   function add(cls,text){var d=document.createElement("div");d.className="msg "+cls;d.textContent=text;log.appendChild(d);log.scrollTop=log.scrollHeight;return d}
-  var COPY={not_granted:"אין הרשאה להשתמש בעוזר בדף הזה.",sampling_disabled:"העוזר לא זמין בחשבון הזה.",rate_limited:"יותר מדי שאלות ברגע. נסי שוב בעוד דקה.",session_expired:"צריך להתחבר מחדש לחשבון.",refused:"לא אוכל לענות על זה. נסי לשאול אחרת."};
+  var COPY={not_granted:"אין הרשאה להשתמש בעוזר בדף הזה.",sampling_disabled:"העוזר לא זמין בחשבון הזה.",rate_limited:"יותר מדי שאלות ברגע. אפשר לנסות שוב בעוד דקה.",session_expired:"צריך להתחבר מחדש לחשבון.",refused:"לא אוכל לענות על זה. אפשר לשאול אחרת."};
   form.addEventListener("submit",async function(e){
     e.preventDefault();var q=inp.value.trim();if(!q||busy)return;
     if(LOCAL||!sample){var s0=log.querySelector(".bot-sugg");if(s0)s0.remove();add("me",q);inp.value="";var o=add("ai","");showLocal(q,o);return}
     var s=log.querySelector(".bot-sugg");if(s)s.remove();
-    add("me",q);inp.value="";busy=true;send.disabled=true;var out=add("ai wait","חושבת...");
-    var RULES="את העוזרת של האתר 'נוסעים לרבי', מדריך לנשים ובנות שטסות לרבי ל-770 בחנוכה תשפ\"ז. עני אך ורק לפי המידע שבמדריך שלמטה. כתבי בעברית פשוטה, קצר וברור (עד 6 שורות), בלי Markdown. אל תמציאי מספרי טלפון, מחירים, שעות או כתובות. אם המידע לא נמצא במדריך, אמרי זאת והציעי את העמוד המתאים או מי לשאול. בסוף התשובה כתבי בשורה נפרדת: 'בעמוד: <שם העמוד>'.\n\nהמדריך:\n"+ctx();
+    add("me",q);inp.value="";busy=true;send.disabled=true;var out=add("ai wait","רגע, בודק...");
+    var RULES="אתה 'מדריך הטיסה' של האתר 'נוסעים לרבי', מדריך לנוסעים לרבי ל-770 בחנוכה תשפ\"ז. ענה אך ורק על השאלה שנשאלה, ורק לפי המידע שבמדריך שלמטה. כתוב בעברית פשוטה, קצר וברור (עד 6 שורות), בלי Markdown, ותמיד בלשון רבים (שאלו, בדקו, כדאי ל...) ולא בלשון זכר או נקבה ליחיד. אל תמציא מספרי טלפון, מחירים, שעות או כתובות. אם המידע לא נמצא במדריך, כתוב רק: 'אין לי מידע על זה במדריך.' ואל תענה על נושא אחר. בסוף תשובה שנמצאה במדריך כתוב בשורה נפרדת: 'בעמוד: <שם העמוד>'.\n\nהמדריך:\n"+ctx();
     turns.push({role:"user",content:q});
     try{
       var r=await sample([{role:"user",content:RULES}].concat(turns.slice(-8)),{modelTier:"quick",cache:false,onText:function(u){out.classList.remove("wait");out.textContent=u.text;log.scrollTop=log.scrollHeight}});
@@ -1803,7 +1948,7 @@ var PH={jcm:"p-museum",esb:"p-esb",totr:"p-rock",summit:"p-manhattan",edge:"p-ro
     }catch(err){
       turns.pop();out.classList.remove("wait");
       if(err&&err.code==="not_granted"||err&&err.code==="sampling_disabled"){LOCAL=true;showLocal(q,out);return}
-      out.textContent=(err&&err.text)||COPY[err&&err.code]||"משהו השתבש. נסי שוב.";
+      out.textContent=(err&&err.text)||COPY[err&&err.code]||"משהו השתבש. אפשר לנסות שוב.";
     }finally{busy=false;send.disabled=false;inp.focus()}
   });
 })();
