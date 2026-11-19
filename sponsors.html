@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="המדריך לטסות ולטסים לחנוכה אצל הרבי ב-770: כשרות, זמנים, מפה, התניידות ומספרי חירום.">
+<meta name="theme-color" content="#f6e8dd">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<title>נוסעים לרבי</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;900&display=swap">
+<style>
+/* Layout: single dark "slate night" look from the post — glass panels over soft glows, bento grid, app-like sticky bar */
+:root{
+  --bg:#f5f8fe; --bg-2:#e9f0fb; --glass:#ffffff; --glass-2:#edf2fb;
+  --stroke:rgba(19,40,74,.1); --ink:#13284a; --muted:#5b6b85;
+  --brick:#d4622f; --gold:#c08410; --sky:#2457b3;
+  --display:"Fb Tamlil","Tamlil","Rubik",system-ui,sans-serif;
+  --body:"Fb Tamlil","Tamlil","Rubik",system-ui,sans-serif;
+  color-scheme:light;
+}
+.tile,.stat,.pkg,.tl li,.cats span{box-shadow:0 4px 18px rgba(19,40,74,.06)}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
+.glow{position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:radial-gradient(600px 400px at 85% 10%,rgba(246,190,70,.28),transparent 70%),
+             radial-gradient(700px 500px at 10% 40%,rgba(80,140,230,.14),transparent 70%),
+             radial-gradient(600px 500px at 60% 100%,rgba(246,190,70,.16),transparent 70%)}
+.wrap{position:relative;z-index:1;max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);line-height:1.1;text-wrap:balance;margin:0}
+p{margin:0}
+[data-l]{display:none}
+html[lang="he"] [data-l="he"], html[lang="en"] [data-l="en"]{display:revert}
+
+/* bar */
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);background:rgba(255,255,255,.78);border-bottom:1px solid var(--stroke)}
+.bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:12px}
+.logo{font-family:var(--display);font-weight:900;font-size:1.2rem;display:flex;align-items:center;gap:8px}
+.logo i{width:10px;height:10px;border-radius:50%;background:var(--brick);box-shadow:0 0 12px var(--brick)}
+.bar-end{display:flex;align-items:center;gap:10px}
+.bh{font-size:.8rem;color:var(--muted)}
+.lang{display:flex;background:var(--glass);border:1px solid var(--stroke);border-radius:999px;padding:3px}
+.lang button{font:inherit;font-size:.82rem;background:none;border:0;color:var(--muted);padding:5px 12px;border-radius:999px;cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--ink);color:var(--bg);font-weight:700}
+button:focus-visible,a:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
+/* hero */
+.hero{padding-block:40px 20px;display:grid;grid-template-columns:1fr 1.1fr;gap:24px;align-items:center}
+.hero>*{min-width:0}
+.pill{display:inline-flex;align-items:center;gap:8px;background:var(--glass);border:1px solid var(--stroke);border-radius:999px;padding:6px 14px;font-size:.88rem;color:var(--gold)}
+.pill .dot{width:7px;height:7px;border-radius:50%;background:#4ade80;box-shadow:0 0 8px #4ade80}
+.title{font-size:clamp(3.2rem,9vw,6.2rem);font-weight:900;letter-spacing:-.01em;margin-block:14px 6px;
+  background:linear-gradient(180deg,#13284a 30%,#2457b3);-webkit-background-clip:text;background-clip:text;color:transparent}
+.title span{background:linear-gradient(90deg,var(--gold),var(--brick));-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{font-size:clamp(1.15rem,2.4vw,1.45rem);font-weight:500;max-width:28em}
+.sub em{font-style:normal;color:var(--gold)}
+.lead{color:var(--muted);margin-top:12px;max-width:34em}
+.ctas{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.btn{display:inline-flex;align-items:center;gap:8px;font:inherit;font-weight:700;border-radius:14px;padding:13px 22px;text-decoration:none;cursor:pointer;border:0}
+.btn.primary{background:linear-gradient(135deg,var(--brick),#c94f27);color:#fff;box-shadow:0 8px 28px rgba(224,104,58,.35)}
+.btn.ghost{background:var(--glass);color:var(--ink);border:1px solid var(--stroke)}
+.art{position:relative}
+.art img{width:100%;height:auto;display:block;filter:drop-shadow(0 24px 30px rgba(19,40,74,.18))}
+@media (prefers-reduced-motion:no-preference){.art img{animation:float 6s ease-in-out infinite}@keyframes float{50%{transform:translateY(-8px)}}}
+
+/* stats strip */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-block:16px 8px}
+.stat{background:var(--glass);border:1px solid var(--stroke);border-radius:18px;padding:16px 18px}
+.stat b{display:block;font-family:var(--display);font-size:1.9rem;font-weight:900;line-height:1.1;font-variant-numeric:tabular-nums}
+.stat span{color:var(--muted);font-size:.9rem}
+
+section{padding-block:48px}
+.kicker{color:var(--gold);font-size:.85rem;font-weight:700;letter-spacing:.06em}
+.sec-head{display:grid;gap:8px;margin-bottom:24px;max-width:42em}
+.sec-head h2{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:900}
+.sec-head p{color:var(--muted)}
+
+/* bento */
+.bento{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+.tile{background:var(--glass);border:1px solid var(--stroke);border-radius:22px;padding:20px;display:grid;gap:6px;align-content:start;min-width:0}
+.tile.w3{grid-column:span 3}.tile.w2{grid-column:span 2}
+.tile .ic{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:var(--glass-2);margin-bottom:6px}
+.tile .ic svg{width:22px;height:22px;fill:none;stroke:var(--gold);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.tile h3{font-size:1.2rem}
+.tile p{color:var(--muted);font-size:.95rem}
+.tile.feat{background:linear-gradient(135deg,rgba(224,104,58,.22),rgba(255,255,255,.04))}
+
+/* phone */
+.showcase{display:grid;grid-template-columns:1fr 330px;gap:36px;align-items:center}
+.showcase>*{min-width:0}
+.phone{background:#060c16;border:1px solid var(--stroke);border-radius:40px;padding:10px;max-width:320px;margin-inline:auto;box-shadow:0 30px 60px rgba(0,0,0,.5)}
+.screen{background:#fbfcff;border-radius:31px;overflow:hidden;position:relative;min-height:560px;font-size:.82rem}
+.notch{width:90px;height:22px;background:#060c16;border-radius:0 0 14px 14px;margin:0 auto}
+.s-head{padding:10px 16px 6px}
+.s-head b{font-family:var(--display);font-size:1.4rem;font-weight:900;display:block}
+.s-head small{color:var(--muted)}
+.s-search{margin:10px 14px;background:var(--glass-2);border-radius:12px;padding:8px 12px;color:var(--muted)}
+.chips{display:flex;gap:6px;padding:4px 14px 8px;overflow:hidden}
+.chip{flex:none;border:1px solid var(--stroke);border-radius:999px;padding:4px 11px;font-size:.76rem;color:var(--muted)}
+.chip.on{background:var(--ink);color:var(--bg);border-color:var(--ink);font-weight:700}
+.card{margin:8px 14px;background:var(--glass);border:1px solid var(--stroke);border-radius:14px;padding:10px 12px;display:grid;gap:2px}
+.card.spon{background:linear-gradient(135deg,rgba(224,104,58,.28),rgba(255,255,255,.05));border-color:rgba(224,104,58,.5)}
+.tag{font-size:.68rem;font-weight:700;color:var(--gold)}
+.card b{font-size:.92rem}
+.card span{color:var(--muted)}
+.popup{position:absolute;inset:auto 14px 16px;background:var(--ink);color:#fff;border-radius:18px;padding:14px;box-shadow:0 10px 30px rgba(0,0,0,.4);display:grid;gap:3px}
+.popup .tag{color:#f6c25a}
+.popup b{font-family:var(--display);font-size:1.05rem}
+.popup .x{position:absolute;top:8px;inset-inline-end:12px;opacity:.5}
+.checks{list-style:none;padding:0;margin:0;display:grid;gap:14px}
+.checks li{display:grid;grid-template-columns:28px 1fr;gap:12px}
+.checks li::before{content:"✓";width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:rgba(74,222,128,.15);color:#4ade80;font-weight:700}
+.checks b{display:block}
+.checks span{color:var(--muted);font-size:.95rem}
+
+/* packages */
+.pkgs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.pkg{background:var(--glass);border:1px solid var(--stroke);border-radius:24px;padding:24px;display:grid;gap:12px;align-content:start;position:relative}
+.pkg.main{background:linear-gradient(160deg,rgba(242,196,109,.16),rgba(224,104,58,.12) 60%,rgba(255,255,255,.04));border-color:rgba(242,196,109,.55)}
+.badge{position:absolute;top:-12px;inset-inline-start:20px;background:var(--gold);color:#2a1d05;font-size:.78rem;font-weight:700;padding:3px 12px;border-radius:999px}
+.pkg h3{font-size:1.3rem}
+.price{font-family:var(--display);font-size:2.6rem;font-weight:900;font-variant-numeric:tabular-nums;line-height:1}
+.price small{font-size:.9rem;font-weight:400;color:var(--muted)}
+.seats{font-size:.85rem;color:var(--gold)}
+.pkg ul{margin:0;padding:0;list-style:none;display:grid;gap:8px;border-top:1px solid var(--stroke);padding-top:14px}
+.pkg li{display:flex;gap:8px}
+.pkg li::before{content:"•";color:var(--brick);font-weight:900}
+.note{margin-top:16px;color:var(--muted);font-size:.92rem}
+
+/* categories marquee */
+.cats{display:flex;flex-wrap:wrap;gap:10px}
+.cats span{background:var(--glass);border:1px solid var(--stroke);border-radius:999px;padding:8px 16px}
+
+/* timeline */
+.tl{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;list-style:none;padding:0;margin:0}
+.tl li{background:var(--glass);border:1px solid var(--stroke);border-radius:18px;padding:16px;display:grid;gap:4px}
+.tl b{font-family:var(--display);font-size:1.3rem;font-weight:900;color:var(--gold);font-variant-numeric:tabular-nums}
+.tl span{color:var(--muted);font-size:.95rem}
+
+/* join */
+.join{background:linear-gradient(135deg,rgba(224,104,58,.25),rgba(111,179,255,.12));border:1px solid var(--stroke);border-radius:28px;padding:clamp(22px,4vw,40px);display:grid;gap:16px}
+.join h2{font-size:clamp(2rem,5vw,3rem);font-weight:900}
+.row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.phone-num{font-size:1.3rem;font-weight:700;background:#fff;padding:10px 16px;border-radius:12px;direction:ltr;user-select:all}
+.msg{background:#fff;border-radius:14px;padding:16px;white-space:pre-line;font-size:.95rem;user-select:all}
+.copied{color:var(--gold);font-size:.9rem;min-height:1.2em}
+footer{padding-block:32px;color:var(--muted);font-size:.85rem;text-align:center}
+
+@media (max-width:900px){
+  .hero,.showcase{grid-template-columns:1fr}
+  .art{order:-1;max-width:560px;margin-inline:auto}
+  .stats,.tl{grid-template-columns:1fr 1fr}
+  .pkgs{grid-template-columns:1fr;gap:22px}
+  .bento{grid-template-columns:1fr 1fr}
+  .tile.w3,.tile.w2{grid-column:span 1}
+  .tile.feat{grid-column:1/-1}
+}
+@media (max-width:440px){.bento{grid-template-columns:1fr}.tile.feat{grid-column:auto}}
+</style>
+
+<div class="glow" aria-hidden="true"></div>
+
+<header class="bar">
+  <div class="wrap">
+    <div class="logo"><i></i><span data-l="he">נוסעים לרבי</span><span data-l="en">Nosim LaRebbe</span></div>
+    <div class="bar-end">
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" id="btn-he" data-set="he" aria-pressed="true">עב</button>
+        <button type="button" id="btn-en" data-set="en" aria-pressed="false">EN</button>
+      </div>
+      <span class="bh" dir="ltr">B"H</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="hero">
+    <div>
+      <span class="pill"><span class="dot"></span><span data-l="he">ההרשמה לשותפים פתוחה · חנוכה תשפ"ז</span><span data-l="en">Partner sign-up open · Chanukah 5787</span></span>
+      <h1 class="title" data-l="he">נוסעים <span>לרבי</span></h1>
+      <h1 class="title" data-l="en" style="font-size:clamp(2.6rem,7vw,4.8rem)">Going to <span>the Rebbe</span></h1>
+      <p class="sub" data-l="he">המדריך הדיגיטלי ל-<em>1,000+</em> בנות, נשים ומשפחות שטסות ל-770 לחנוכה. והעסק שלך יכול להיות בפנים.</p>
+      <p class="sub" data-l="en">The digital guide for <em>1,000+</em> girls, women and families flying to 770 for Chanukah. And your business can be in it.</p>
+      <p class="lead" data-l="he">כשרויות, הסעות, חנויות, סובווי ואובר, לוח אירועים ומספרי חירום. הכל בקישור אחד בטלפון, לאורך כל השהייה.</p>
+      <p class="lead" data-l="en">Kashrus, car services, stores, subway and Uber, events and emergency numbers. All in one link on their phone, for the whole stay.</p>
+      <div class="ctas">
+        <a class="btn primary" href="#join"><span data-l="he">להצטרף כשותף</span><span data-l="en">Become a partner</span> ←</a>
+        <a class="btn ghost" href="#packages"><span data-l="he">למסלולים</span><span data-l="en">See packages</span></a>
+      </div>
+    </div>
+    <div class="art"><img src="hero.png" alt="770, האוהל, מזוודה ומטוס" width="1536" height="1024"></div>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><b>1,000+</b><span data-l="he">טסות וטסים</span><span data-l="en">travelers</span></div>
+    <div class="stat"><b dir="ltr">8</b><span data-l="he">ימי חנוכה בשכונה</span><span data-l="en">days of Chanukah</span></div>
+    <div class="stat"><b dir="ltr">4–12.12</b><span data-l="he">דצמבר 2026</span><span data-l="en">December 2026</span></div>
+    <div class="stat"><b>24/7</b><span data-l="he">בטלפון שלהן</span><span data-l="en">on their phone</span></div>
+  </div>
+
+  <section>
+    <div class="sec-head">
+      <span class="kicker" data-l="he">מה במדריך</span><span class="kicker" data-l="en">INSIDE THE GUIDE</span>
+      <h2 data-l="he">כל מה שצריך מהנחיתה ועד הטיסה חזרה</h2><h2 data-l="en">Everything from landing to the flight home</h2>
+    </div>
+    <div class="bento">
+      <div class="tile w3 feat"><span class="ic"><svg viewBox="0 0 24 24"><path d="M4 11h16M6 11v8h12v-8M8 11a4 4 0 0 1 8 0"/></svg></span><h3 data-l="he">כשרויות מהודרות</h3><h3 data-l="en">Mehudar kashrus</h3><p data-l="he">מסעדות, מאפיות, קפה ומכולות, מסודרים לפי הכשרות</p><p data-l="en">Restaurants, bakeries, cafés and groceries, sorted by hechsher</p></div>
+      <div class="tile w3"><span class="ic"><svg viewBox="0 0 24 24"><path d="M2 16l20-6-3-3-6 2-6-4-2 1 4 5-4 1-2-1-1 1z"/></svg></span><h3 data-l="he">הסעות ושדות תעופה</h3><h3 data-l="en">Car services & airports</h3><p data-l="he">מספרי הסעות ומחירים משוערים מ-JFK ו-Newark</p><p data-l="en">Car service numbers and typical fares from JFK and Newark</p></div>
+      <div class="tile w2"><span class="ic"><svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="15" rx="3"/><path d="M5 11h14M8 21l2-3M16 21l-2-3"/></svg></span><h3 data-l="he">סובווי ואובר</h3><h3 data-l="en">Subway & Uber</h3><p data-l="he">תשלום בהקשה, קו 3 ל-Kingston Av, הזמנת אובר</p><p data-l="en">Tap to pay, the 3 train to Kingston Av, ordering an Uber</p></div>
+      <div class="tile w2"><span class="ic"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4"/></svg></span><h3 data-l="he">לוח אירועים</h3><h3 data-l="en">Events calendar</h3><p data-l="he">הדלקות, כינוסים ואירועים לנשים ולבנות</p><p data-l="en">Lightings, gatherings and events for women and girls</p></div>
+      <div class="tile w2"><span class="ic"><svg viewBox="0 0 24 24"><path d="M5 9l1-4h12l1 4M5 9h14v10H5zM10 19v-5h4v5"/></svg></span><h3 data-l="he">חנויות מומלצות</h3><h3 data-l="en">Recommended stores</h3><p data-l="he">יודאיקה, ספרים, ביגוד, מתנות וסים</p><p data-l="en">Judaica, seforim, clothing, gifts and SIM cards</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="showcase">
+      <div>
+        <div class="sec-head">
+          <span class="kicker" data-l="he">למה להצטרף</span><span class="kicker" data-l="en">WHY JOIN</span>
+          <h2 data-l="he">העסק שלך, בכיס של כל טסה</h2><h2 data-l="en">Your business, in every traveler's pocket</h2>
+        </div>
+        <ul class="checks">
+          <li><div><b data-l="he">מגיעים אליהן לפני הנחיתה</b><b data-l="en">Reach them before they land</b><span data-l="he">הן מתכננות מהבית איפה לאכול, ממי להזמין הסעה ומה לקנות. המדריך הוא המקום שבו מתכננים.</span><span data-l="en">They plan at home where to eat, who to call for a ride and what to buy. The guide is where planning happens.</span></div></li>
+          <li><div><b data-l="he">קהל שמוכן לקנות</b><b data-l="en">An audience ready to spend</b><span data-l="he">מאות אורחות לשבוע ויותר: אוכל, מתנות, ספרים, ביגוד ותחבורה.</span><span data-l="en">Hundreds of guests staying a week or more: food, gifts, seforim, clothing and transport.</span></div></li>
+          <li><div><b data-l="he">חשיפה שהיא גם חסד</b><b data-l="en">Exposure that's also a kindness</b><span data-l="he">העסק שלך מופיע כמי שעוזר לאורחות של הרבי, לא כעוד פרסומת.</span><span data-l="en">You appear as a business helping the Rebbe's guests, not as one more ad.</span></div></li>
+          <li><div><b data-l="he">דוח חשיפה בסוף</b><b data-l="en">An exposure report at the end</b><span data-l="he">כמה ראו את העסק שלך וכמה לחצו לוואטסאפ ולמפה.</span><span data-l="en">How many saw your business and how many tapped to WhatsApp and the map.</span></div></li>
+        </ul>
+      </div>
+      <div class="phone" aria-label="הדמיה">
+        <div class="screen">
+          <div class="notch"></div>
+          <div class="s-head"><b>נוסעים לרבי</b><small>המדריך לחנוכה · תשפ"ז</small></div>
+          <div class="s-search">🔍 פיצה, הסעה, סים...</div>
+          <div class="chips"><span class="chip on">אוכל</span><span class="chip">הסעות</span><span class="chip">חנויות</span><span class="chip">אירועים</span><span class="chip">סובווי</span></div>
+          <div class="card spon"><span class="tag">★ שותף מוביל</span><b>העסק שלך כאן</b><span>Kingston Ave · כשרות מהודרת</span><span>🎁 10% הנחה לטסות</span></div>
+          <div class="card"><b>שם המאפייה</b><span>Kingston Ave · פתוח עד חצות</span></div>
+          <div class="card"><b>שם המסעדה</b><span>Albany Ave · חלבי</span></div>
+          <div class="popup"><span class="x">✕</span><span class="tag">מודעה</span><b>העסק שלך כאן</b><span>מודעה קופצת בפתיחת המדריך</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="packages">
+    <div class="sec-head">
+      <span class="kicker" data-l="he">מסלולים</span><span class="kicker" data-l="en">PACKAGES</span>
+      <h2 data-l="he">בוחרים איך להופיע</h2><h2 data-l="en">Choose how you appear</h2>
+      <p data-l="he">פרסומת קופצת, הכנסת העסק למדריך, או שניהם.</p><p data-l="en">A pop-up ad, a guide listing, or both.</p>
+    </div>
+    <div class="pkgs">
+      <article class="pkg main">
+        <span class="badge" data-l="he">3 מקומות בלבד</span><span class="badge" data-l="en">Only 3 spots</span>
+        <h3 data-l="he">שותף מוביל</h3><h3 data-l="en">Lead Partner</h3>
+        <div class="price" dir="ltr">$500 <small data-l="he">/ כל החנוכה</small><small data-l="en">/ all Chanukah</small></div>
+        <ul data-l="he"><li>הלוגו בעמוד הפתיחה</li><li>מודעה קופצת בפתיחה (ברוטציה בין 3)</li><li>מקום ראשון בקטגוריה</li><li>אזכור בהודעות לקבוצות הטסות</li></ul>
+        <ul data-l="en"><li>Logo on the opening screen</li><li>Opening pop-up ad (rotating among 3)</li><li>Top spot in your category</li><li>Mention in traveler group updates</li></ul>
+      </article>
+      <article class="pkg">
+        <h3 data-l="he">מודעה קופצת</h3><h3 data-l="en">Pop-up Ad</h3>
+        <div class="price" dir="ltr">$250 <small data-l="he">/ כל החנוכה</small><small data-l="en">/ all Chanukah</small></div>
+        <div class="seats" data-l="he">10 מקומות</div><div class="seats" data-l="en">10 spots</div>
+        <ul data-l="he"><li>מודעה קופצת בעמודי הקטגוריות</li><li>כרטיס מודגש בקטגוריה</li><li>קישור לוואטסאפ, לאתר ולמפה</li></ul>
+        <ul data-l="en"><li>Pop-up ad on category pages</li><li>Highlighted card in your category</li><li>Link to WhatsApp, website and map</li></ul>
+      </article>
+      <article class="pkg">
+        <h3 data-l="he">הכנסה למדריך</h3><h3 data-l="en">Guide Listing</h3>
+        <div class="price" dir="ltr">$100 <small data-l="he">/ כל החנוכה</small><small data-l="en">/ all Chanukah</small></div>
+        <div class="seats" data-l="he">ללא הגבלה</div><div class="seats" data-l="en">Unlimited</div>
+        <ul data-l="he"><li>כרטיס עסק: כתובת, שעות, כשרות, טלפון</li><li>מופיע בחיפוש</li><li>אפשרות להטבה לטסות</li></ul>
+        <ul data-l="en"><li>Business card: address, hours, hechsher, phone</li><li>Shows up in search</li><li>Option to offer a traveler perk</li></ul>
+      </article>
+    </div>
+    <p class="note" data-l="he">🎁 עסק שנותן הטבה לטסות המדריך (הנחה, משלוח חינם, מתנה) מקבל סימון ומופיע בעמוד "הטבות".</p>
+    <p class="note" data-l="en">🎁 Businesses offering a perk to guide travelers (discount, free delivery, a gift) get a badge and a spot on the Perks page.</p>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="kicker" data-l="he">מי אנחנו מחפשות</span><span class="kicker" data-l="en">WHO WE'RE LOOKING FOR</span>
+      <h2 data-l="he">עסקים שהטסות צריכות</h2><h2 data-l="en">Businesses travelers need</h2>
+    </div>
+    <div class="cats" data-l="he"><span>מסעדות ופיצריות</span><span>מאפיות</span><span>בתי קפה</span><span>מכולות</span><span>הסעות ומוניות</span><span>חדרי אירוח</span><span>יודאיקה וספרים</span><span>ביגוד</span><span>מתנות</span><span>סים וטלפונים</span><span>בתי מרקחת</span><span>קייטרינג</span><span>חברות eSIM</span><span>ביטוח נסיעות</span><span>סוכנויות נסיעות וטיסות</span><span>כרטיסי אשראי ומט"ח</span><span>מזוודות וציוד נסיעה</span><span>הסעות משדה התעופה</span></div>
+    <div class="cats" data-l="en"><span>Restaurants & pizza</span><span>Bakeries</span><span>Cafés</span><span>Groceries</span><span>Car services</span><span>Guest rooms</span><span>Judaica & seforim</span><span>Clothing</span><span>Gifts</span><span>SIM cards</span><span>Pharmacies</span><span>Catering</span><span>eSIM companies</span><span>Travel insurance</span><span>Travel agencies & flights</span><span>Credit cards & currency</span><span>Luggage & travel gear</span><span>Airport transfers</span></div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="kicker" data-l="he">לוח זמנים</span><span class="kicker" data-l="en">TIMELINE</span>
+    </div>
+    <ol class="tl">
+      <li><b dir="ltr">30.11</b><span data-l="he">סגירת ההרשמה לשותפים</span><span data-l="en">Partner sign-up closes</span></li>
+      <li><b dir="ltr">1.12</b><span data-l="he">המדריך נשלח לכל קבוצות הטסות</span><span data-l="en">Guide goes out to all traveler groups</span></li>
+      <li><b dir="ltr">4–12.12</b><span data-l="he">חנוכה בשכונה</span><span data-l="en">Chanukah in the neighborhood</span></li>
+      <li><b dir="ltr">15.12</b><span data-l="he">דוח חשיפה לכל שותף</span><span data-l="en">Exposure report for every partner</span></li>
+    </ol>
+  </section>
+
+  <section id="join">
+    <div class="join">
+      <h2 data-l="he">מצטרפים?</h2><h2 data-l="en">Joining?</h2>
+      <p data-l="he">שלחו וואטסאפ עם שם העסק והמסלול, ונחזור אליכם עם כל הפרטים.</p>
+      <p data-l="en">Send a WhatsApp with your business name and package, and we'll get back to you with the details.</p>
+      <div class="row">
+        <span class="phone-num" id="phone">+1 (000) 000-0000</span>
+        <button type="button" class="btn ghost" id="copy-phone"><span data-l="he">העתקת המספר</span><span data-l="en">Copy number</span></button>
+      </div>
+      <div class="msg" id="msg-he" data-l="he">שלום, אני רוצה להצטרף כשותף ל"נוסעים לרבי".
+שם העסק:
+מסלול: שותף מוביל / מודעה קופצת / הכנסה למדריך
+הטבה לטסות (אם יש):</div>
+      <div class="msg" id="msg-en" data-l="en">Hi, I'd like to join "Nosim LaRebbe" as a partner.
+Business name:
+Package: Lead Partner / Pop-up Ad / Guide Listing
+Perk for travelers (optional):</div>
+      <div class="row">
+        <button type="button" class="btn primary" id="copy-msg"><span data-l="he">העתקת ההודעה</span><span data-l="en">Copy message</span></button>
+        <span class="copied" id="copied" aria-live="polite"></span>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="wrap"><span data-l="he">נוסעים לרבי · חנוכה תשפ"ז</span><span data-l="en">Nosim LaRebbe · Chanukah 5787</span></footer>
+
+<script>
+(function(){
+  var root=document.documentElement;
+  function setLang(l){
+    root.lang=l; root.dir=l==="he"?"rtl":"ltr";
+    document.querySelectorAll(".lang button").forEach(function(b){b.setAttribute("aria-pressed",b.dataset.set===l)});
+    try{localStorage.setItem("g770-lang",l)}catch(e){}
+  }
+  var saved=null; try{saved=localStorage.getItem("g770-lang")}catch(e){}
+  setLang(location.hash==="#en"?"en":(saved||"he"));
+  document.querySelectorAll(".lang button").forEach(function(b){b.addEventListener("click",function(){setLang(b.dataset.set)})});
+  // bidi: English runs inside Hebrew text read left-to-right
+  var re=/[A-Za-z][A-Za-z0-9 .,'’&\/()\-–:]*[A-Za-z0-9)]|[A-Za-z]/g;
+  document.querySelectorAll('[data-l="he"], .screen').forEach(function(root){
+    var w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,{acceptNode:function(n){
+      for(var p=n.parentNode;p&&p!==root.parentNode;p=p.parentNode){if(p.tagName==="BDI"||p.getAttribute&&p.getAttribute("dir")==="ltr")return NodeFilter.FILTER_REJECT}
+      return /[A-Za-z]/.test(n.nodeValue)?NodeFilter.FILTER_ACCEPT:NodeFilter.FILTER_REJECT}});
+    var nodes=[];while(w.nextNode())nodes.push(w.currentNode);
+    nodes.forEach(function(n){
+      var s=n.nodeValue,f=document.createDocumentFragment(),i=0;s.replace(re,function(m,o){f.appendChild(document.createTextNode(s.slice(i,o)));var b=document.createElement("bdi");b.dir="ltr";b.textContent=m;f.appendChild(b);i=o+m.length});
+      f.appendChild(document.createTextNode(s.slice(i)));n.parentNode.replaceChild(f,n);
+    });
+  });
+  var out=document.getElementById("copied");
+  function copy(text){
+    var he=root.lang==="he", fail=he?"סמנו את הטקסט והעתיקו ידנית":"Select the text and copy it manually";
+    if(navigator.clipboard&&navigator.clipboard.writeText){
+      navigator.clipboard.writeText(text).then(function(){out.textContent=he?"הועתק ✓":"Copied ✓"},function(){out.textContent=fail});
+    }else{out.textContent=fail}
+  }
+  document.getElementById("copy-phone").addEventListener("click",function(){copy(document.getElementById("phone").textContent)});
+  document.getElementById("copy-msg").addEventListener("click",function(){copy(document.getElementById(root.lang==="he"?"msg-he":"msg-en").textContent)});
+})();
+</script>
+
+</body>
+</html>

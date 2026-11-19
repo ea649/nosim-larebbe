@@ -1,0 +1,1781 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="המדריך לטסות ולטסים לחנוכה אצל הרבי ב-770: כשרות, זמנים, מפה, התניידות ומספרי חירום.">
+<meta name="theme-color" content="#f6e8dd">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<title>נוסעים לרבי – המדריך</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;900&display=swap">
+<style>
+/* Layout: cinematic travel landing — full-bleed photo hero with giant title and a glass search bar, photo cards with price pills, soft sand→mauve canvas, black pill actions */
+@font-face{font-family:"Almoni";src:url(almoni-regular.otf) format("opentype");font-weight:400;font-display:swap}
+@font-face{font-family:"Almoni";src:url(almoni-demibold.otf) format("opentype");font-weight:600;font-display:swap}
+@font-face{font-family:"Almoni";src:url(almoni-bold.otf) format("opentype");font-weight:700;font-display:swap}
+@font-face{font-family:"Almoni";src:url(almoni-black.otf) format("opentype");font-weight:800 900;font-display:swap}
+:root{direction:rtl;color-scheme:light;
+  --ink:#17161c; --muted:#6d6874; --line:rgba(23,22,28,.09);
+  --card:#ffffff; --glass:rgba(255,255,255,.72); --soft:#f6efea;
+  --sand:#f4e3d6; --peach:#eec3a6; --mauve:#a597b3; --gold:#c8913a; --blue:#17161c;
+  --font:"Almoni","Rubik",system-ui,sans-serif;
+  --r-lg:30px; --r-md:22px; --shadow:0 18px 40px rgba(60,40,50,.10)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:linear-gradient(180deg,#f6e8dd 0%,#efe3e3 40%,#e7e1ec 100%) fixed;color:var(--ink);font-family:var(--font);font-size:18px;line-height:1.55;-webkit-font-smoothing:antialiased;padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:rgba(246,232,221,.9);z-index:10}
+.wrap{position:relative;max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--font);line-height:1.05;margin:0;text-wrap:balance}
+p{margin:0}
+a{color:inherit}
+button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+svg.lucide{width:1.1em;height:1.1em;stroke-width:1.9;vertical-align:-.15em}
+[hidden]{display:none!important}
+
+/* top bar */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:6;background:rgba(246,232,221,.72);backdrop-filter:saturate(160%) blur(18px);-webkit-backdrop-filter:saturate(160%) blur(18px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:56px}
+.brand{font-weight:900;font-size:1.25rem;display:flex;gap:10px;align-items:center;text-decoration:none;letter-spacing:-.01em}
+.brand i{width:10px;height:10px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 5px rgba(200,145,58,.18)}
+.bh{font-size:.8rem;color:var(--muted)}
+
+/* views */
+.view{display:none;padding-block:18px 48px;gap:16px}
+.view.on{display:grid}
+.muted{color:var(--muted)} .small{font-size:.92rem} .src{font-size:.8rem;color:var(--muted)}
+.src a,.card a:not(.btn),.notice a,details a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--peach);text-underline-offset:3px}
+
+/* ===== HOME HERO ===== */
+.hero{position:relative;border-radius:var(--r-lg);overflow:hidden;min-height:min(84vh,760px);display:grid;align-content:space-between;padding:clamp(18px,4vw,40px);color:#fff;isolation:isolate;box-shadow:0 30px 70px rgba(60,40,50,.22)}
+.hero-bg{position:absolute;inset:0;background:url(p-hero.jpg) center 35%/cover;z-index:-3}
+.hero-mist{position:absolute;inset:-10%;z-index:-2;background:radial-gradient(40% 25% at 20% 70%,rgba(255,240,230,.55),transparent 70%),radial-gradient(35% 22% at 75% 80%,rgba(255,235,225,.5),transparent 70%),radial-gradient(50% 30% at 50% 100%,rgba(255,245,240,.7),transparent 70%)}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(23,22,28,.25) 0%,rgba(23,22,28,0) 35%,rgba(23,22,28,.05) 60%,rgba(23,22,28,.45) 100%)}
+.hero-top{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
+.hero-title{font-weight:900;font-size:clamp(3.6rem,13vw,9.5rem);line-height:.88;letter-spacing:-.02em;text-shadow:0 6px 40px rgba(0,0,0,.18)}
+.hero-title span{display:block;color:#fff8ef}
+.hero-sub{margin-top:14px;font-size:clamp(1.05rem,2.4vw,1.35rem);max-width:26em;opacity:.95}
+.hero-kicker{display:inline-flex;gap:8px;align-items:center;background:rgba(255,255,255,.18);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:6px 14px;font-size:.9rem;margin-bottom:14px}
+.orbs{display:grid;gap:10px;justify-items:center}
+.orb{display:grid;justify-items:center;gap:4px;text-decoration:none;font-size:.78rem;font-weight:700}
+.orb img{width:clamp(54px,8vw,76px);height:clamp(54px,8vw,76px);border-radius:50%;object-fit:cover;border:3px solid rgba(255,255,255,.85);box-shadow:0 8px 20px rgba(0,0,0,.25);transition:transform .3s}
+.orb:hover img{transform:scale(1.08)}
+.searchbar{display:grid;grid-template-columns:1.3fr 1fr 1fr auto;gap:0;background:var(--glass);backdrop-filter:blur(18px) saturate(160%);-webkit-backdrop-filter:blur(18px) saturate(160%);border:1px solid rgba(255,255,255,.7);border-radius:22px;padding:8px;color:var(--ink);box-shadow:0 20px 50px rgba(0,0,0,.18);max-width:880px;width:100%;justify-self:center}
+.sfield{display:grid;gap:2px;padding:8px 14px;min-width:0;border-inline-start:1px solid var(--line)}
+.sfield:first-child{border-inline-start:0}
+.sfield span{font-size:.75rem;color:var(--muted);display:flex;gap:6px;align-items:center}
+.sfield select,.sfield b{font:inherit;font-weight:700;font-size:.98rem;border:0;background:none;padding:0;color:var(--ink);min-width:0;width:100%;appearance:none;-webkit-appearance:none;cursor:pointer}
+.sgo{width:56px;height:56px;border-radius:16px;border:0;background:var(--ink);color:#fff;display:grid;place-items:center;cursor:pointer;align-self:center;transition:transform .2s}
+.sgo:hover{transform:scale(1.05)}
+.sgo svg.lucide{width:22px;height:22px}
+@media (max-width:760px){.searchbar{grid-template-columns:1fr 1fr}.sfield:nth-child(3){border-inline-start:0}.sfield{border-top:1px solid var(--line)}.sfield:nth-child(-n+2){border-top:0}.sgo{grid-column:1/-1;width:100%;height:48px;margin-top:6px}.orbs{display:none}}
+
+/* section heads */
+.sec{display:grid;gap:14px;margin-top:22px}
+.sec-head{display:flex;align-items:end;justify-content:space-between;gap:12px}
+.sec-head h2{font-size:clamp(1.6rem,4vw,2.4rem);font-weight:800;letter-spacing:-.01em}
+.sec-head .see{font-size:.85rem;font-weight:700;border:1px solid var(--ink);border-radius:999px;padding:5px 14px;text-decoration:none;white-space:nowrap}
+.sec-sub{color:var(--muted);margin-top:-6px}
+
+/* photo cards */
+.rail{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(230px,1fr);gap:14px;overflow-x:auto;padding-bottom:6px;scroll-snap-type:x mandatory}
+.rail::-webkit-scrollbar{height:6px}.rail::-webkit-scrollbar-thumb{background:rgba(23,22,28,.15);border-radius:9px}
+.pcard{position:relative;display:block;border-radius:var(--r-md);overflow:hidden;aspect-ratio:3/4;max-width:100%;color:#fff;text-decoration:none;scroll-snap-align:start;box-shadow:var(--shadow);isolation:isolate}
+.pcard img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.pcard:hover img{transform:scale(1.07)}
+.pcard::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(0,0,0,0) 40%,rgba(0,0,0,.65) 100%)}
+.pill{position:absolute;top:12px;inset-inline-start:12px;background:rgba(255,255,255,.9);color:var(--ink);font-size:.78rem;font-weight:700;border-radius:999px;padding:4px 11px}
+.fav{position:absolute;top:10px;inset-inline-end:10px;width:34px;height:34px;border-radius:50%;border:0;background:rgba(255,255,255,.88);display:grid;place-items:center;cursor:pointer;color:var(--ink)}
+.fav.on{color:#d2453b}.fav.on svg{fill:currentColor}
+.pcard .meta{position:absolute;inset:auto 14px 14px;display:grid;gap:3px}
+.pcard .meta b{font-size:1.15rem}
+.pcard .meta small{font-size:.82rem;opacity:.9;display:flex;gap:6px;align-items:center}
+.guide-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.gcard{position:relative;border-radius:var(--r-md);overflow:hidden;background:var(--card);text-decoration:none;color:var(--ink);box-shadow:var(--shadow);display:grid;grid-template-rows:150px auto;transition:transform .3s cubic-bezier(.2,.7,.2,1)}
+.gcard:hover{transform:translateY(-5px)}
+.gcard .ph{position:relative;overflow:hidden}
+.gcard .ph img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.gcard:hover .ph img{transform:scale(1.08)}
+.gcard .num{position:absolute;top:10px;inset-inline-start:10px;background:rgba(255,255,255,.9);border-radius:999px;font-size:.72rem;font-weight:800;padding:3px 10px}
+.gcard .tx{padding:14px 16px 16px;display:grid;gap:3px}
+.gcard b{font-size:1.12rem}
+.gcard small{color:var(--muted)}
+.gcard .arr{position:absolute;bottom:14px;inset-inline-end:14px;width:32px;height:32px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;transition:transform .25s}
+.gcard:hover .arr{transform:translateX(-4px)}
+.hub-search{display:flex;align-items:center;gap:10px;background:var(--card);border-radius:18px;padding:4px 16px;box-shadow:var(--shadow)}
+.hub-search input{flex:1;border:0;background:none;font:inherit;padding:13px 0;color:var(--ink);outline:none;min-width:0}
+.group-label{font-size:.8rem;font-weight:800;letter-spacing:.08em;color:var(--muted);display:flex;align-items:center;gap:10px}
+.group-label::after{content:"";flex:1;height:1px;background:var(--line)}
+.feature{position:relative;border-radius:var(--r-lg);overflow:hidden;color:#fff;padding:clamp(22px,4vw,40px);display:grid;gap:10px;min-height:280px;align-content:end;isolation:isolate;box-shadow:var(--shadow)}
+.feature img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.feature::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(23,22,28,.15),rgba(23,22,28,.75))}
+.feature h2{font-size:clamp(1.8rem,4.5vw,3rem);font-weight:900}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:5px 13px;font-size:.88rem;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.chip.gold{background:var(--gold);border-color:var(--gold);color:#fff;font-weight:700}
+.group-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.grp{display:grid;justify-items:center;gap:4px;text-align:center;background:var(--card);border-radius:20px;padding:18px 8px;box-shadow:var(--shadow);text-decoration:none;transition:transform .25s}
+.grp:hover{transform:translateY(-3px)}
+.grp svg.lucide{width:26px;height:26px;color:var(--gold)}
+.grp small{color:var(--muted);font-size:.78rem}
+.grp.soon{opacity:.75}
+@media (max-width:640px){.group-row{grid-template-columns:repeat(2,1fr)}}
+
+/* ===== INNER PAGES ===== */
+.banner{position:relative;border-radius:var(--r-lg);overflow:hidden;color:#fff;padding:clamp(22px,5vw,48px);min-height:260px;display:grid;align-content:end;gap:8px;isolation:isolate;box-shadow:var(--shadow)}
+.banner img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.banner::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(23,22,28,.05),rgba(23,22,28,.7))}
+.banner h1{font-size:clamp(2.4rem,8vw,5rem);font-weight:900;letter-spacing:-.02em}
+.banner p{max-width:38em;opacity:.94;font-size:1.08rem}
+.back{display:inline-flex;align-items:center;gap:6px;justify-self:start;font-size:.85rem;font-weight:700;color:#fff;text-decoration:none;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:5px 13px;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.card{background:var(--card);border-radius:var(--r-md);padding:clamp(18px,3vw,26px);display:grid;gap:10px;min-width:0;box-shadow:var(--shadow)}
+.card h2{font-size:1.45rem;font-weight:800;display:flex;align-items:center}
+.card h3{font-size:1.15rem;font-weight:700;display:flex;align-items:center}
+.hi{display:inline-grid;place-items:center;flex:none;width:40px;height:40px;border-radius:13px;background:var(--soft);color:var(--ink);margin-inline-end:12px}
+.hi svg.lucide{width:20px;height:20px}
+.group-title{font-weight:800;font-size:1.5rem;margin-top:14px;display:flex;align-items:center;gap:12px}
+.group-title::after{content:"";flex:1;height:1px;background:var(--line)}
+ul.clean{margin:0;padding-inline-start:20px;display:grid;gap:8px}
+ul.clean li::marker{color:var(--gold)}
+.check{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.check li{display:grid;grid-template-columns:26px 1fr;gap:10px}
+.check li::before{content:"";width:20px;height:20px;border-radius:7px;border:2px solid #cfc6cc;margin-top:3px}
+.acts{display:flex;flex-wrap:wrap;gap:8px}
+.btn{display:inline-flex;align-items:center;gap:7px;font:inherit;font-size:.95rem;font-weight:700;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:9px 18px;cursor:pointer;text-decoration:none;transition:transform .2s,background .2s}
+.btn:hover{transform:translateY(-1px);background:var(--soft)}
+.btn.primary{background:var(--ink);color:#fff;border-color:var(--ink)}
+.btn.primary:hover{background:#2c2a33}
+.btn.danger{background:#fff;color:#b3261e}
+.btn svg.lucide{width:18px;height:18px}
+.notice{background:rgba(255,255,255,.6);border:1px solid rgba(255,255,255,.8);border-radius:16px;padding:12px 16px;font-size:.93rem;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.spon{border-radius:18px;padding:16px;display:grid;gap:4px;text-align:center;background:linear-gradient(135deg,#fbf3ec,#f3edf6);border:1.5px dashed rgba(200,145,58,.55)}
+.spon .tag{font-size:.74rem;font-weight:800;color:var(--gold);letter-spacing:.05em}
+.prev{display:inline-block;font-size:.72rem;font-weight:700;color:#7a560c;background:#fbeacb;border-radius:999px;padding:1px 9px}
+.tip{display:flex;gap:10px;align-items:flex-start;background:#fbf1e2;border-radius:14px;padding:12px 14px;color:#5c430c}
+details{background:var(--card);border-radius:18px;padding:0 20px;box-shadow:var(--shadow)}
+summary{cursor:pointer;list-style:none;padding:17px 0;font-weight:700;display:flex;justify-content:space-between;gap:12px;align-items:center}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-weight:400;font-size:1.5rem;line-height:1;transition:transform .3s}
+details[open] summary::after{transform:rotate(45deg)}
+details>div{padding-bottom:18px;display:grid;gap:10px;color:#2f2d35}
+.sum{display:inline-flex;align-items:center;gap:10px}
+.sum svg.lucide{width:22px;height:22px;color:var(--gold)}
+.search{width:100%;font:inherit;border:0;border-radius:14px;padding:12px 14px;background:var(--soft);color:var(--ink)}
+.hlist{list-style:none;padding:0;margin:0;display:grid}
+.hlist li{padding:11px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:28px 1fr;gap:10px;align-items:start}
+.hlist li:last-child{border-bottom:0}
+.hlist li::before{content:"✓";width:24px;height:24px;border-radius:50%;display:grid;place-items:center;background:#e4f2e8;color:#2c7a49;font-weight:700;font-size:.8rem}
+.hlist li.note::before{content:"!";background:#fbeacb;color:#8a5d0c}
+.hlist small{display:block;color:var(--muted)}
+.ban{background:#fff6f4}
+.ban h2{color:#b3261e}
+.ban-list{list-style:none;padding:0;margin:0;display:grid;gap:6px}
+.ban-list li{display:flex;gap:10px;align-items:baseline}
+.ban-list li::before{content:"✕";color:#b3261e;font-weight:700}
+.drinks{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.copyline{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.copyline code{font-family:inherit;direction:ltr;background:var(--soft);padding:7px 12px;border-radius:10px;user-select:all}
+.copied{color:#2c7a49;font-size:.88rem;min-height:1.2em}
+.times{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.times li{display:grid;grid-template-columns:84px 1fr;gap:12px;align-items:start;border-top:1px solid var(--line);padding-top:10px}
+.times li:first-child{border-top:0;padding-top:0}
+.times .t{font-weight:800;font-variant-numeric:tabular-nums}
+.tank{width:110px;height:auto;float:left;margin-inline-start:8px}
+.learn-list{list-style:none;padding:0;margin:0;display:grid}
+.learn-list li{padding:12px 0;border-bottom:1px solid var(--line);display:grid;gap:3px}
+.learn-list li:last-child{border-bottom:0}
+.learn-list a{font-weight:700}
+.learn-list small{color:var(--muted)}
+blockquote{margin:0;padding:16px 20px;border-radius:16px;background:#fbf1e2;font-size:1.25rem;font-weight:800;color:#5c430c}
+blockquote cite{display:block;font-size:.82rem;font-weight:400;font-style:normal;color:var(--muted);margin-top:4px}
+.apps{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px}
+.app{background:var(--soft);border-radius:16px;padding:14px;display:grid;gap:8px}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.stepcard{background:var(--card);border-radius:22px;padding:18px;display:grid;gap:6px;align-content:start;box-shadow:var(--shadow)}
+.stepcard .sn{justify-self:start;background:var(--soft);font-weight:800;border-radius:999px;padding:2px 12px;font-size:.85rem}
+.stepcard.urgent{background:linear-gradient(150deg,#d24b3f,#a8261d);color:#fff}
+.stepcard.urgent .sn{background:rgba(255,255,255,.2)}
+.table-wrap{overflow-x:auto}
+.tbl{width:100%;border-collapse:collapse;font-size:.95rem}
+.tbl th{text-align:start;font-size:.8rem;color:var(--muted);padding:6px 8px;border-bottom:2px solid var(--line)}
+.tbl td{padding:10px 8px;border-bottom:1px solid var(--line)}
+.flow{margin:0;padding:0;list-style:none;counter-reset:f;display:grid;gap:10px}
+.flow li{counter-increment:f;display:grid;grid-template-columns:32px 1fr;gap:10px;align-items:start}
+.flow li::before{content:counter(f);width:30px;height:30px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;font-weight:800;font-size:.9rem}
+.chips-row{display:flex;flex-wrap:wrap;gap:8px}
+.fchip{display:inline-flex;align-items:center;gap:6px;font:inherit;font-weight:700;border:1px solid var(--line);border-radius:999px;padding:8px 16px;background:var(--card);color:var(--ink);cursor:pointer}
+.fchip.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.biz-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+.biz-empty{grid-column:1/-1;text-align:center;background:var(--card);border-radius:22px;padding:28px;border:1.5px dashed rgba(200,145,58,.55);color:var(--muted)}
+.biz-empty b{display:block;color:var(--ink);font-size:1.1rem;margin-bottom:4px}
+.event{display:none}
+/* routes / legs */
+.trip{display:grid;gap:10px}
+.route{display:flex;flex-wrap:wrap;align-items:center;gap:6px;font-size:.95rem}
+.route .ln{width:24px;height:24px;border-radius:50%;display:inline-grid;place-items:center;color:#fff;font-weight:700;font-size:.8rem;font-family:Rubik,system-ui,sans-serif}
+.ln.r{background:#ee352e}.ln.g{background:#00933c}.ln.y{background:#fccc0a;color:#17161c}
+.route .ar{color:var(--muted)}
+.dur{font-size:.88rem;color:var(--muted)}
+.leg{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:12px;padding:4px 0}
+.leg>div{display:grid;text-align:center}
+.leg b{font-size:1.2rem;font-weight:900;direction:ltr}
+.leg small{font-size:.72rem;color:var(--muted)}
+.leg .path{position:relative;height:2px;background:repeating-linear-gradient(90deg,var(--ink) 0 6px,transparent 6px 12px);opacity:.5}
+.leg .path i{position:absolute;top:50%;left:50%;transform:translate(-50%,-55%) scaleX(-1);font-style:normal;background:var(--card);padding:0 6px;opacity:1}
+/* attractions (photo cards) */
+.fun{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+.att{background:var(--card);border-radius:var(--r-md);overflow:hidden;display:grid;box-shadow:var(--shadow)}
+.att-ph{position:relative;aspect-ratio:16/10;overflow:hidden}
+.att-ph img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.att:hover .att-ph img{transform:scale(1.06)}
+.att-ph h3{position:absolute;inset:auto 16px 14px;color:#fff;font-size:1.35rem;font-weight:800;text-shadow:0 2px 14px rgba(0,0,0,.4)}
+.att-ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(0,0,0,.55))}
+.att-ph h3,.att-ph .pill,.att-ph .fav{z-index:1}
+.att-body{padding:8px 18px 18px;display:grid;gap:10px}
+.facts{display:grid;gap:8px;margin:0}
+.facts div{display:grid;grid-template-columns:28px 1fr;gap:8px;align-items:start;font-size:.95rem}
+.facts dt{margin:0;color:var(--gold)} .facts dd{margin:0}
+.facts small{display:block;color:var(--muted);font-size:.76rem;font-weight:700}
+/* map */
+.planner{gap:14px}
+.pick{display:grid;grid-template-columns:1fr auto 1fr;gap:10px;align-items:end}
+.fld{display:grid;gap:4px;min-width:0}
+.fld label{font-size:.82rem;color:var(--muted);display:flex;align-items:center;gap:6px}
+.dot{width:10px;height:10px;border-radius:50%;display:inline-block}
+.dot.a{background:#2457b3}.dot.b{background:#d4622f}
+select{font:inherit;width:100%;border:0;border-radius:12px;padding:11px 12px;background:var(--soft);color:var(--ink);min-width:0}
+.swap{padding:10px 14px}
+.est{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:10px}
+.est>div{background:var(--soft);border-radius:16px;padding:12px;display:grid;justify-items:center;gap:2px}
+.est b{font-size:1.4rem;font-weight:900;font-variant-numeric:tabular-nums}
+.est small{color:var(--muted);font-size:.82rem}
+.mapwrap{position:relative;height:min(68vh,600px);border-radius:var(--r-md);overflow:hidden;background:#eef0f4;box-shadow:var(--shadow)}
+#map{width:100%;height:100%;display:block;touch-action:none;cursor:grab}
+.tapmode{position:absolute;top:12px;inset-inline-start:12px;display:flex;align-items:center;gap:4px;background:rgba(255,255,255,.9);backdrop-filter:blur(12px);border-radius:999px;padding:4px 4px 4px 12px;font-size:.82rem;box-shadow:0 2px 10px rgba(0,0,0,.08)}
+.tapmode span{padding-inline:6px 2px;color:var(--muted)}
+.tapmode button{font:inherit;border:0;background:none;border-radius:999px;padding:5px 12px;cursor:pointer;color:var(--ink)}
+.tapmode button[aria-pressed="true"]{background:var(--ink);color:#fff}
+.zoom{position:absolute;bottom:12px;inset-inline-end:12px;display:grid;gap:6px}
+.zoom button{font:inherit;font-weight:800;width:44px;height:44px;border:0;border-radius:12px;background:rgba(255,255,255,.94);box-shadow:0 2px 10px rgba(0,0,0,.1);cursor:pointer;color:var(--ink)}
+#zhome{font-size:.8rem}
+@media (max-width:640px){.pick{grid-template-columns:1fr}.swap{justify-self:center}}
+/* sos */
+.sos{display:grid;gap:12px}
+.sos .row{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.num{font-weight:900;font-size:1.5rem;direction:ltr;text-decoration:none}
+.num.red{color:#b3261e}
+/* tabs */
+.tabs{position:fixed;inset:auto 0 0 0;z-index:7;background:rgba(250,244,239,.85);backdrop-filter:saturate(160%) blur(20px);-webkit-backdrop-filter:saturate(160%) blur(20px);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom,0px);padding-left:max(6px,env(safe-area-inset-left,0px));padding-right:max(6px,env(safe-area-inset-right,0px))}
+.tabs nav{max-width:760px;margin:0 auto;display:grid;grid-template-columns:repeat(6,1fr)}
+.tab{display:grid;justify-items:center;gap:2px;padding:9px 0 10px;color:var(--muted);font-size:.72rem;font-weight:700;text-decoration:none}
+.tab svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.tab.on{color:var(--ink)}
+.tab.on svg{stroke:var(--gold)}
+/* motion */
+@keyframes kenburns{from{transform:scale(1.04)}to{transform:scale(1.14) translate(-1.5%,-1%)}}
+@keyframes drift{0%{transform:translateX(-4%)}50%{transform:translateX(4%)}100%{transform:translateX(-4%)}}
+@keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+@keyframes up{from{opacity:0;transform:translateY(40px) scale(.98)}to{opacity:1;transform:none}}
+@keyframes letter{from{opacity:0;transform:translateY(.4em)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:no-preference){
+  .hero-bg{animation:kenburns 22s ease-in-out infinite alternate}
+  .hero-mist{animation:drift 16s ease-in-out infinite}
+  .hero-title span{animation:letter .9s cubic-bezier(.2,.7,.2,1) both}
+  .hero-title span+span{animation-delay:.15s}
+  .hero-sub,.hero-kicker{animation:rise .9s .3s both}
+  .searchbar{animation:up .9s .45s cubic-bezier(.2,.7,.2,1) both}
+  .orb{animation:rise .8s both}.orb:nth-child(2){animation-delay:.1s}.orb:nth-child(3){animation-delay:.2s}
+  .view.on>*{animation:rise .6s cubic-bezier(.2,.7,.2,1) both}
+  .view.on>*:nth-child(2){animation-delay:.06s}.view.on>*:nth-child(3){animation-delay:.12s}.view.on>*:nth-child(n+4){animation-delay:.18s}
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+}
+/* hero v2: gradient sky + faint real 770 photo + clouds + 3D art */
+.hero{color:var(--ink);background:linear-gradient(165deg,#f8dcc6 0%,#f0cabf 30%,#d9c3d6 65%,#bdb6df 100%);align-content:start;gap:6px}
+.hero-bg{opacity:.2;filter:saturate(.7) blur(1px);-webkit-mask-image:linear-gradient(180deg,#000 0%,#000 55%,transparent 90%);mask-image:linear-gradient(180deg,#000 0%,#000 55%,transparent 90%)}
+.hero::after{background:radial-gradient(70% 50% at 50% 30%,rgba(255,255,255,.25),transparent 70%)}
+.hero-clouds{position:absolute;inset:auto -5% -2% -5%;height:58%;z-index:-1;background:url(bg-clouds.jpg) center bottom/cover;opacity:.75;mix-blend-mode:screen;-webkit-mask-image:linear-gradient(0deg,#000 45%,transparent);mask-image:linear-gradient(0deg,#000 45%,transparent);pointer-events:none}
+.hero-title{text-shadow:none;color:var(--ink)}
+.hero-title span{color:var(--ink)}
+.hero-title span+span{background:linear-gradient(90deg,#d79a3a,#c0623a);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-sub{color:#3b3644}
+.hero-kicker{background:rgba(255,255,255,.55);border-color:rgba(255,255,255,.8);color:var(--ink)}
+.orb{color:var(--ink)}
+.hero-art{position:relative;z-index:1;width:min(100%,760px);height:auto;justify-self:center;margin-top:-30px;filter:drop-shadow(0 28px 36px rgba(70,50,80,.28))}
+.searchbar{position:relative;z-index:2;margin-top:-26px}
+@media (max-width:760px){.hero-art{margin-top:6px}}
+@media (prefers-reduced-motion:no-preference){
+  .hero-art{animation:floaty 7s ease-in-out infinite}
+  .hero-clouds{animation:drift 22s ease-in-out infinite}
+}
+@keyframes floaty{50%{transform:translateY(-10px)}}
+
+/* ===== site mode: compact home, header nav, 3D icon categories ===== */
+.top .wrap{height:62px;gap:16px}
+.mainnav{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none}
+.mainnav::-webkit-scrollbar{display:none}
+.mainnav a{white-space:nowrap;text-decoration:none;font-weight:700;font-size:.92rem;padding:7px 12px;border-radius:999px;color:var(--muted)}
+.mainnav a:hover{color:var(--ink);background:rgba(255,255,255,.6)}
+.mainnav a.on{background:var(--ink);color:#fff}
+@media (max-width:900px){.mainnav{display:none}}
+.hero{min-height:0;grid-template-columns:1.05fr .95fr;align-items:center;align-content:center;gap:12px;padding:clamp(22px,4vw,44px)}
+.hero-title{font-size:clamp(3rem,7.2vw,6.2rem)}
+.hero-title span{display:inline}
+.hero-text{display:grid;gap:12px;justify-items:start;position:relative;z-index:2}
+.hero-text .hero-kicker{margin:0}
+.hero-sub{margin:0}
+.hero .searchbar{grid-template-columns:1.4fr 1fr auto;margin-top:8px;justify-self:stretch;animation:none}
+.hero-art{margin:0;width:100%;max-width:600px}
+@media (max-width:860px){.hero{grid-template-columns:1fr}.hero-art{order:-1;max-width:440px;margin-inline:auto}.hero .searchbar{grid-template-columns:1fr 1fr}.hero .sgo{grid-column:1/-1}}
+.cats{display:grid;gap:14px;margin-top:20px}
+.cats-bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between}
+.cats-bar .hub-search{flex:1;min-width:220px;max-width:360px;padding:2px 14px}
+.cats-bar .hub-search input{padding:10px 0}
+.icon-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
+.icon-grid .gcard{grid-template-rows:none;display:grid;justify-items:center;text-align:center;gap:4px;padding:16px 10px 18px;background:rgba(255,255,255,.78);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.9)}
+.icon-grid .gcard img{width:92px;height:92px;object-fit:contain;transition:transform .4s cubic-bezier(.2,.7,.2,1)}
+.icon-grid .gcard:hover img{transform:translateY(-6px) scale(1.08) rotate(-3deg)}
+.icon-grid .gcard b{font-size:1.02rem}
+.icon-grid .gcard small{font-size:.8rem;line-height:1.3}
+.home-row{display:grid;grid-template-columns:1.2fr 1fr;gap:14px;margin-top:18px}
+.home-row .feature{min-height:240px}
+.groups-card{align-content:start}
+.groups-card .group-row{grid-template-columns:repeat(2,1fr)}
+.groups-card .grp{box-shadow:none;background:var(--soft)}
+@media (max-width:760px){.home-row{grid-template-columns:1fr}}
+/* drifting clouds between the 3D objects */
+.art-stage{position:relative;justify-self:center;width:100%;max-width:600px;isolation:isolate}
+.art-stage .hero-art{position:relative;z-index:2;display:block}
+.cloud{position:absolute;left:-30%;width:var(--w,170px);height:calc(var(--w,170px) * .3);background:#fff;border-radius:999px;opacity:var(--o,.6);filter:blur(5px);z-index:1;pointer-events:none}
+.cloud::before,.cloud::after{content:"";position:absolute;background:#fff;border-radius:50%}
+.cloud::before{width:52%;height:160%;top:-75%;left:14%}
+.cloud::after{width:38%;height:125%;top:-52%;right:16%}
+.cloud.front{z-index:3}
+.c1{top:10%;--w:200px;--o:.55}.c2{top:42%;--w:150px;--o:.5}.c3{top:62%;--w:190px;--o:.5}.c4{top:28%;--w:120px;--o:.45}.c5{top:82%;--w:240px;--o:.6}
+.c1{left:10%}.c2{left:62%}.c3{left:30%}.c4{left:75%}.c5{left:-5%}
+@keyframes cloudmove{from{left:-35%}to{left:110%}}
+@media (prefers-reduced-motion:no-preference){
+  .c1{animation:cloudmove 38s linear infinite -6s}
+  .c2{animation:cloudmove 46s linear infinite -30s}
+  .c3{animation:cloudmove 30s linear infinite -12s}
+  .c4{animation:cloudmove 52s linear infinite -40s}
+  .c5{animation:cloudmove 34s linear infinite -20s}
+  .art-stage .hero-art{animation:floaty 7s ease-in-out infinite}
+}
+.gcard.goff{display:none!important}
+
+/* ===== website shell: header + fixed sidebar + content ===== */
+.top .wrap{max-width:none;padding-inline:max(20px,env(safe-area-inset-right,0px)) max(20px,env(safe-area-inset-left,0px));justify-content:flex-start;gap:12px}
+.top .bh{margin-inline-start:auto}
+.menu-btn{display:none;border:0;background:var(--card);width:42px;height:42px;border-radius:12px;cursor:pointer;color:var(--ink);box-shadow:0 2px 10px rgba(0,0,0,.06)}
+.menu-btn svg.lucide{width:22px;height:22px}
+.shell{display:grid;grid-template-columns:270px minmax(0,1fr);gap:28px;max-width:1400px;margin:0 auto;padding-inline:max(20px,env(safe-area-inset-right,0px)) max(20px,env(safe-area-inset-left,0px));align-items:start}
+.content{min-width:0}
+.side{position:sticky;top:76px;max-height:calc(100vh - 92px);overflow:auto;margin-top:18px;background:rgba(255,255,255,.72);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.9);border-radius:24px;padding:12px;display:grid;gap:6px;box-shadow:var(--shadow);scrollbar-width:thin}
+.side-group{display:grid;gap:2px;padding-bottom:6px;border-bottom:1px solid var(--line)}
+.side-group:last-child{border-bottom:0}
+.side-label{font-size:.72rem;font-weight:800;letter-spacing:.06em;color:var(--muted);padding:8px 10px 4px}
+.side a{display:flex;align-items:center;gap:10px;padding:6px 10px;border-radius:14px;text-decoration:none;font-weight:700;font-size:.95rem;color:var(--ink);transition:background .2s}
+.side a img{width:34px;height:34px;object-fit:contain;flex:none;transition:transform .3s}
+.side a:hover{background:rgba(255,255,255,.9)}
+.side a:hover img{transform:scale(1.12) rotate(-4deg)}
+.side a.on{background:var(--ink);color:#fff}
+.side .home-link{padding:10px}
+.side .home-link svg.lucide{width:22px;height:22px;margin-inline:6px}
+.grp-link{font-weight:600!important;font-size:.9rem!important}
+.grp-link svg.lucide{color:var(--gold);width:20px;height:20px;margin-inline:7px}
+.grp-link.soon{opacity:.7}
+.scrim{position:fixed;inset:0;background:rgba(23,22,28,.35);z-index:8}
+/* views inside content */
+.view{padding-block:18px 48px}
+.hero{min-height:0;padding:clamp(18px,3vw,32px)}
+.hero-title{font-size:clamp(2.6rem,5.4vw,4.6rem)}
+.art-stage{max-width:470px}
+.dash{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:16px}
+.widget{background:var(--card);border-radius:20px;padding:16px 18px;display:grid;gap:4px;align-content:start;text-decoration:none;color:var(--ink);box-shadow:var(--shadow);transition:transform .25s}
+a.widget:hover{transform:translateY(-3px)}
+.w-label{display:flex;align-items:center;gap:6px;font-size:.8rem;font-weight:800;color:var(--muted)}
+.w-label svg.lucide{color:var(--gold)}
+.widget b{font-size:1.15rem}
+.widget small{color:var(--muted);font-size:.82rem}
+.w-dark{background:var(--ink);color:#fff}.w-dark .w-label,.w-dark small{color:rgba(255,255,255,.75)}
+.w-gold{background:linear-gradient(135deg,#f3d7b0,#e9c2c9)}
+.w-sos .acts{margin-top:4px}.w-sos .btn{padding:7px 14px}
+.cats{margin-top:18px}
+.icon-grid{grid-template-columns:repeat(auto-fill,minmax(140px,1fr))}
+@media (min-width:901px){.tabs{display:none}body{padding-bottom:0}}
+@media (max-width:1100px){.dash{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:900px){
+  .shell{grid-template-columns:1fr}
+  .menu-btn{display:grid;place-items:center}
+  .side{position:fixed;top:0;bottom:0;inset-inline-end:auto;right:0;width:min(300px,84vw);max-height:none;margin:0;border-radius:0 0 0 24px;z-index:9;transform:translateX(105%);transition:transform .35s cubic-bezier(.2,.7,.2,1);padding-top:calc(16px + env(safe-area-inset-top,0px))}
+  .side.open{transform:none}
+}
+@media (max-width:560px){.dash{grid-template-columns:1fr 1fr}.w-sos{grid-column:1/-1}}
+
+/* ===== guide bot ===== */
+.bot-fab{position:fixed;z-index:9;left:max(18px,env(safe-area-inset-left,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));display:inline-flex;align-items:center;gap:8px;border:0;border-radius:999px;padding:13px 20px;background:var(--ink);color:#fff;font:inherit;font-weight:800;cursor:pointer;box-shadow:0 14px 34px rgba(23,22,28,.3)}
+.bot-fab svg.lucide{color:#ffd36b}
+@media (max-width:900px){.bot-fab{bottom:calc(86px + env(safe-area-inset-bottom,0px));padding:12px}.bot-fab span{display:none}}
+.bot{position:fixed;z-index:10;left:max(18px,env(safe-area-inset-left,0px));bottom:calc(84px + env(safe-area-inset-bottom,0px));width:min(400px,calc(100vw - 32px));height:min(560px,70vh);display:grid;grid-template-rows:auto 1fr auto auto;background:rgba(255,255,255,.96);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-radius:24px;box-shadow:0 30px 70px rgba(23,22,28,.28);overflow:hidden}
+.bot[hidden]{display:none!important}
+.bot-head{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;background:linear-gradient(135deg,#f3d7b0,#d9c3d6)}
+.bot-head small{display:block;color:var(--muted);font-size:.78rem}
+.bot-x{border:0;background:rgba(255,255,255,.7);width:34px;height:34px;border-radius:50%;cursor:pointer}
+.bot-log{overflow-y:auto;padding:14px;display:grid;gap:10px;align-content:start}
+.msg{max-width:88%;padding:10px 14px;border-radius:18px;white-space:pre-wrap;font-size:.95rem;line-height:1.5}
+.msg.ai{background:var(--soft);justify-self:start;border-start-start-radius:6px}
+.msg.me{background:var(--ink);color:#fff;justify-self:end;border-start-end-radius:6px}
+.msg.wait{color:var(--muted)}
+.bot-sugg{display:flex;flex-wrap:wrap;gap:6px}
+.bot-sugg button{font:inherit;font-size:.82rem;border:1px solid var(--line);background:#fff;border-radius:999px;padding:5px 11px;cursor:pointer}
+.bot-form{display:flex;gap:8px;padding:10px 12px;border-top:1px solid var(--line)}
+.bot-form input{flex:1;min-width:0;font:inherit;border:0;background:var(--soft);border-radius:14px;padding:10px 14px}
+.bot-form .sgo{width:46px;height:46px;border-radius:14px}
+.bot-note{margin:0;padding:0 14px 10px;font-size:.8rem;color:var(--muted)}
+@media (max-width:900px){.bot{bottom:calc(150px + env(safe-area-inset-bottom,0px))}}
+.grp-link{font-weight:600!important}
+
+/* daybar */
+.daybar{display:flex;justify-content:center;align-items:center;gap:10px;flex-wrap:wrap;padding:6px 16px;font-size:.88rem;font-weight:700;background:linear-gradient(90deg,rgba(243,215,176,.75),rgba(217,195,214,.75));border-top:1px solid rgba(255,255,255,.6);text-align:center}
+.db-candle{display:inline-flex;align-items:center;gap:6px;background:var(--ink);color:#fff;border-radius:999px;padding:3px 12px}
+.db-candle .fl{display:inline-flex;gap:2px}
+.db-candle .fl i{width:6px;height:10px;border-radius:50% 50% 50% 50%/60% 60% 40% 40%;background:#ffcf5c;box-shadow:0 0 6px #ffb02e;display:inline-block}
+@media (prefers-reduced-motion:no-preference){.db-candle .fl i{animation:flick 1.6s ease-in-out infinite alternate}.db-candle .fl i:nth-child(2n){animation-delay:-.7s}}
+@keyframes flick{from{transform:scaleY(1)}to{transform:scaleY(1.25)}}
+.stbl td small{display:block;color:var(--muted);font-size:.8rem}
+.stbl .tm{font-weight:900;font-size:1.15rem;font-variant-numeric:tabular-nums}
+.stbl tr.hl td{background:#fbf1e2}
+
+.ohel-link{display:flex;align-items:center;gap:14px;text-decoration:none;color:var(--ink);transition:transform .25s}
+.ohel-link:hover{transform:translateY(-3px)}
+.ohel-link img{width:96px;height:auto}
+.ohel-link>div{flex:1}
+.ohel-link svg.lucide{width:22px;height:22px}
+.bot-fab{padding:6px 18px 6px 8px}.bot-fab img{width:46px;height:46px;object-fit:contain;filter:drop-shadow(0 4px 8px rgba(0,0,0,.25))}
+@media (prefers-reduced-motion:no-preference){.bot-fab img{animation:floaty 4s ease-in-out infinite}}
+@media (max-width:900px){.bot-fab{padding:6px}}
+.bot-head{justify-content:flex-start;gap:10px}.bot-av{width:48px;height:48px;object-fit:contain}.bot-tt{flex:1}
+.hero{min-height:min(80vh,740px)}
+.hero-title{font-size:clamp(3.4rem,7.6vw,7.2rem)}
+.art-stage{max-width:640px}
+.hero .searchbar{padding:10px}
+.sfield select{font-size:1.05rem}
+#v-home .sec{margin-top:26px}
+#v-home .rail{grid-auto-columns:minmax(220px,260px)}
+/* hero: art centered and dominant */
+#v-home .hero{grid-template-columns:1fr;justify-items:center;text-align:center;align-content:start;gap:10px;padding-top:clamp(22px,3vw,34px)}
+#v-home .hero-text{display:contents}
+#v-home .hero-kicker{order:1}
+#v-home .hero-title{order:2;font-size:clamp(3rem,6.4vw,6rem)}
+#v-home .hero-sub{order:3;max-width:34em}
+#v-home .art-stage{order:4;max-width:min(920px,100%);width:100%;margin-top:-6px}
+#v-home .art-stage .hero-art{max-width:100%;width:100%}
+#v-home .searchbar{order:5;max-width:720px;width:100%;margin-top:-34px;justify-self:center}
+#v-home .cloud{--w:260px}#v-home .c5{--w:320px}#v-home .c4{--w:170px}
+@media (max-width:860px){#v-home .searchbar{margin-top:0}}
+/* ===== mobile first polish ===== */
+html,body{overflow-x:clip}
+.shell{grid-template-columns:270px minmax(0,1fr)}
+@media (max-width:900px){
+  body{font-size:17px}
+  .shell{grid-template-columns:minmax(0,1fr);padding-inline:12px}
+  .top .wrap{height:54px;padding-inline:12px}
+  .daybar{font-size:.8rem;padding:5px 10px;gap:6px}
+  .view{padding-block:12px 28px}
+  #v-home .hero{min-height:0;padding:18px 14px 16px;border-radius:24px;gap:8px}
+  #v-home .hero-title{font-size:clamp(2.5rem,12vw,3.4rem)}
+  #v-home .hero-sub{font-size:1rem}
+  #v-home .art-stage{margin-top:0}
+  #v-home .searchbar{margin-top:-14px;grid-template-columns:1fr;padding:6px}
+  #v-home .sfield{border-inline-start:0;border-top:1px solid var(--line);padding:10px 12px}
+  #v-home .sfield:first-child{border-top:0}
+  #v-home .sgo{grid-column:auto;width:100%;height:50px;margin-top:4px}
+  #v-home .cloud{--w:150px}#v-home .c5{--w:190px}#v-home .c4{--w:110px}
+  .hero-kicker{font-size:.8rem}
+  #v-home .rail{grid-auto-columns:72%}
+  .dash{grid-template-columns:1fr 1fr;gap:10px}
+  .widget{padding:14px}
+  .widget b{font-size:1rem}
+  .cats-bar{flex-direction:column;align-items:stretch}
+  .cats-bar .hub-search{max-width:none}
+  .chips-row{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
+  .chips-row::-webkit-scrollbar{display:none}
+  .fchip{flex:none}
+  .icon-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .icon-grid .gcard img{width:76px;height:76px}
+  .banner{min-height:190px;padding:20px 18px;border-radius:24px}
+  .banner h1{font-size:clamp(2rem,10vw,2.8rem)}
+  .banner p{font-size:.98rem}
+  .card{padding:16px;border-radius:20px}
+  .card h2{font-size:1.25rem}
+  .btn{min-height:44px;padding:10px 16px}
+  .acts .btn{flex:1 1 auto;justify-content:center}
+  .tbl{font-size:.88rem}.tbl td,.tbl th{padding:8px 6px}
+  .stbl .tm{font-size:1rem}
+  .mapwrap{height:62vh}
+  .tabs nav{grid-template-columns:repeat(6,1fr)}
+  .tab{font-size:.68rem;padding:8px 0 9px}
+  .fun{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+}
+.view{grid-template-columns:minmax(0,1fr)}
+#v-home .hero{grid-template-columns:minmax(0,1fr)}
+.sec,.cats,.dash,.home-row{min-width:0}
+.w-weather b{font-size:1.4rem}
+.wx-days{display:flex;gap:10px;margin-top:2px}
+.cl-head{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.cl-count{font-weight:900;font-variant-numeric:tabular-nums;background:var(--soft);border-radius:999px;padding:3px 12px}
+.cl-bar{height:8px;border-radius:9px;background:var(--soft);overflow:hidden}
+.cl-bar span{display:block;height:100%;width:0;background:linear-gradient(90deg,#d79a3a,#c0623a);transition:width .4s}
+.cl-list{list-style:none;padding:0;margin:0;display:grid;gap:4px}
+.cl-list label{display:flex;align-items:center;gap:12px;padding:10px 8px;border-radius:14px;cursor:pointer;min-height:48px}
+.cl-list label:hover{background:var(--soft)}
+.cl-list input{position:absolute;opacity:0;width:1px;height:1px}
+.cl-list .box{flex:none;width:28px;height:28px;border-radius:9px;border:2px solid #cfc6cc;display:grid;place-items:center;color:transparent;transition:all .2s}
+.cl-list .box svg.lucide{width:18px;height:18px;stroke-width:3}
+.cl-list input:checked+.box{background:#2c7a49;border-color:#2c7a49;color:#fff}
+.cl-list input:checked~.tx{text-decoration:line-through;color:var(--muted)}
+.cl-list input:focus-visible+.box{outline:3px solid var(--gold);outline-offset:2px}
+.checklist.done .cl-count{background:#2c7a49;color:#fff}
+</style>
+
+<div class="glow" aria-hidden="true"></div>
+
+<header class="top">
+  <div class="wrap">
+    <button type="button" class="menu-btn" id="menu-btn" aria-label="תפריט" aria-controls="side" aria-expanded="false"><i data-lucide="menu"></i></button><a class="brand" href="#home"><i></i>נוסעים לרבי</a>
+    <span class="bh" dir="ltr">B"H</span>
+  </div>
+  <div class="daybar" id="daybar" aria-live="polite"><span id="db-date">חנוכה תשפ"ז</span><span class="db-candle" id="db-candle" hidden></span></div>
+</header>
+
+<div class="shell">
+  <aside class="side" id="side" aria-label="תפריט האתר">
+    <div class="side-group"><a href="#home" data-nav="home" class="home-link"><i data-lucide="layout-dashboard"></i>ראשי</a></div>
+    <div class="side-group"><span class="side-label">לפני שטסים</span><a href="#before" data-nav="before"><img src="i-suitcase.png" alt="">לפני הטיסה</a><a href="#prep" data-nav="prep"><img src="i-plane.png" alt="">הלכות הדרך</a></div>
+    <div class="side-group"><span class="side-label">בשכונה</span><a href="#kashrut" data-nav="kashrut"><img src="i-kosher.png" alt="">כשרות</a><a href="#shabbat" data-nav="shabbat"><img src="i-shabbat.png" alt="">שבת ומשלוחים</a><a href="#times" data-nav="times"><img src="i-menorah-770.png" alt="">זמנים ואירועים</a><a href="#ohel" data-nav="ohel"><img src="i-ohelbus.png" alt="">נסיעה לאוהל</a><a href="#map" data-nav="map"><img src="i-map.png" alt="">מפה ומסלולים</a><a href="#learn" data-nav="learn"><img src="i-siddur.png" alt="">לימוד ושיחות</a></div>
+    <div class="side-group"><span class="side-label">יוצאות לעיר</span><a href="#transport" data-nav="transport"><img src="i-subway.png" alt="">התניידות ושכונות</a><a href="#fun" data-nav="fun"><img src="i-nyc.png" alt="">אטרקציות</a><a href="#biz" data-nav="biz"><img src="i-shop.png" alt="">עסקים והטבות</a></div>
+    <div class="side-group"><span class="side-label">כשצריך עזרה</span><a href="#health" data-nav="health"><img src="i-health.png" alt="">בריאות ותרופות</a><a href="#trouble" data-nav="trouble"><img src="i-trouble.png" alt="">כשמשהו משתבש</a><a href="#sos" data-nav="sos"><img src="i-sos.png" alt="">מספרי חירום</a></div>
+    <div class="side-group side-groups"><span class="side-label">הקבוצות שלנו</span>
+      <a class="grp-link" href="#groups" data-nav="groups"><i data-lucide="sparkles"></i>בנות מצווה</a>
+      <a class="grp-link" href="#groups" data-nav="groups"><i data-lucide="heart-handshake"></i>נשים</a>
+      <a class="grp-link" href="#groups" data-nav="groups"><i data-lucide="school"></i>תיכון</a>
+      <a class="grp-link" href="#groups" data-nav="groups"><i data-lucide="graduation-cap"></i>סמינר</a>
+    </div>
+  </aside>
+  <div class="scrim" id="scrim" hidden></div>
+<main class="content">
+
+<!-- HOME -->
+<section class="view" id="v-home" aria-label="בית">
+  <div class="hero">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-mist" aria-hidden="true"></div>
+    <div class="hero-clouds" aria-hidden="true"></div>
+    <div class="hero-text">
+      <span class="hero-kicker"><i data-lucide="flame"></i><span id="cd-text">חנוכה תשפ"ז · 4–12 בדצמבר</span></span>
+      <h1 class="hero-title"><span>נוסעים</span> <span>לרבי</span></h1>
+      <p class="hero-sub">המדריך לטסות ולטסים לחנוכה ב-770. כל מה שצריך, מהנחיתה ועד ההדלקה.</p>
+      <form class="searchbar" id="ask">
+        <label class="sfield" for="ask-to"><span><i data-lucide="map-pin"></i>לאן</span>
+          <select id="ask-to">
+            <option value="menorah">החנוכייה בשדרה החמישית</option>
+            <option value="kingston-shops">החנויות בקינגסטון</option>
+            <option value="times">טיימס סקוור</option>
+            <option value="macys">מייסיז ופריימרק</option>
+            <option value="boropark">בורו פארק</option>
+            <option value="flatbush">פלטבוש</option>
+            <option value="atlantic">אטלנטיק</option>
+            <option value="ohel">האוהל</option>
+            <option value="jfk">שדה התעופה JFK</option>
+          </select></label>
+        <label class="sfield" for="ask-from"><span><i data-lucide="navigation"></i>מאיפה</span>
+          <select id="ask-from"><option value="770">770</option><option value="me">המיקום שלי</option></select></label>
+        <button class="sgo" type="submit" aria-label="הצגת המסלול"><i data-lucide="arrow-left"></i></button>
+      </form>
+    </div>
+    <div class="art-stage"><span class="cloud c1"></span><span class="cloud c2"></span><img class="hero-art" src="hero.png" alt="770, האוהל, מזוודה ומטוס" width="1100" height="733"><span class="cloud front c3"></span><span class="cloud front c4"></span><span class="cloud front c5"></span></div>
+  </div>
+
+
+  <div class="sec">
+    <div class="sec-head"><h2>מקומות שכדאי להכיר</h2><a class="see" href="#fun">לכל האטרקציות</a></div>
+    <div class="rail" id="rail"></div>
+  </div>
+
+  <div class="dash">
+    <a class="widget w-dark" href="#times"><span class="w-label"><i data-lucide="flame"></i>הדלקה ב-770</span><b>בסיום מנחה</b><small>בערך 15:25 בימי חול · ערב שבת מוקדם יותר</small></a>
+    <a class="widget w-gold" href="#times"><span class="w-label"><i data-lucide="calendar-heart"></i>כינוס נשים ב-770</span><b>מוצ"ש ב' טבת · 21:00</b><small>12.12.2026 · לכל אורחות המלך</small></a>
+    <a class="widget w-weather" id="weather" href="https://forecast.weather.gov/MapClick.php?lat=40.669&lon=-73.942" target="_blank" rel="noopener"><span class="w-label"><i data-lucide="cloud-sun"></i>מזג האוויר בקראון הייטס</span><b id="wx-now">לתחזית העדכנית</b><small id="wx-days">בדצמבר בדרך כלל בין 0 ל-8 מעלות</small></a>
+    <div class="widget w-sos"><span class="w-label"><i data-lucide="siren"></i>חירום</span><div class="acts"><a class="btn danger" href="tel:911">911</a><a class="btn" href="tel:+17182301000">הצלה</a><a class="btn" href="#sos">עוד</a></div></div>
+  </div>
+  <div class="cats">
+    <div class="cats-bar">
+      <div class="chips-row" role="group" aria-label="סינון נושאים">
+        <button type="button" class="fchip on" data-g="all">הכל</button>
+        <button type="button" class="fchip" data-g="pre">לפני שטסים</button>
+        <button type="button" class="fchip" data-g="hood">בשכונה</button>
+        <button type="button" class="fchip" data-g="city">יוצאות לעיר</button>
+        <button type="button" class="fchip" data-g="help">כשצריך עזרה</button>
+      </div>
+      <div class="hub-search"><i data-lucide="search"></i><input id="hub-q" type="search" placeholder="חיפוש: כשרות, אובר, דרכון..." aria-label="חיפוש במדריך"></div>
+    </div>
+    <div class="icon-grid hub-group">
+      <a class="gcard" data-g="pre" href="#before" data-k="esta ביטוח esim סים כרטיס אשראי אריזה אפליקציות צק ליסט צ׳ק אין"><img src="i-suitcase.png" alt=""><b>לפני הטיסה</b><small>ESTA, ביטוח, eSIM, אריזה</small></a>
+      <a class="gcard" data-g="pre" href="#prep" data-k="תפילת הדרך המפיל נטילת ידיים טיסה הלכות"><img src="i-plane.png" alt=""><b>הלכות הדרך</b><small>תפילת הדרך ובזמן הטיסה</small></a>
+      <a class="gcard" data-g="hood" href="#kashrut" data-k="כשרות הכשרים מים ירקות מסעדות"><img src="i-kosher.png" alt=""><b>כשרות</b><small>הכשרים, שתייה, מי ברז</small></a>
+      <a class="gcard" data-g="hood" href="#shabbat" data-k="שבת אוכל לשבת טייק אווי משלוחים נרות"><img src="i-shabbat.png" alt=""><b>שבת ומשלוחים</b><small>אוכל לשבת, הדלקת נרות</small></a>
+      <a class="gcard" data-g="hood" href="#times" data-k="הדלקה תפילות אוהל אוטובוס כינוס אירועים זמנים"><img src="i-menorah-770.png" alt=""><b>זמנים ואירועים</b><small>הדלקות, תפילות, כינוס</small></a>
+      <a class="gcard" data-g="hood" href="#ohel" data-k="אוהל אוטובוס נסיעה קווינס פ&quot;נ"><img src="i-ohelbus.png" alt=""><b>נסיעה לאוהל</b><small>אוטובוס, נסיעות, הכנה</small></a>
+      <a class="gcard" data-g="hood" href="#map" data-k="מפה מסלול הליכה רחובות"><img src="i-map.png" alt=""><b>מפה ומסלולים</b><small>זמני הליכה ונסיעה</small></a>
+      <a class="gcard" data-g="hood" href="#learn" data-k="שיחות לימוד מאמר לקוטי שיחות"><img src="i-siddur.png" alt=""><b>לימוד ושיחות</b><small>שיחות הרבי לחנוכה</small></a>
+      <a class="gcard" data-g="city" href="#transport" data-k="סובווי אובר omny כרטיס נסיעה מנהטן מייסיז טיימס אטלנטיק פריימרק בורו פארק פלטבוש"><img src="i-subway.png" alt=""><b>התניידות</b><small>סובווי, אובר, שכונות</small></a>
+      <a class="gcard" data-g="city" href="#fun" data-k="אטרקציות אמפייר פסל החירות מוזיאון סנטרל פארק"><img src="i-nyc.png" alt=""><b>אטרקציות</b><small>מחירים ושעות פתיחה</small></a>
+      <a class="gcard" data-g="city" href="#biz" data-k="עסקים הטבות קופונים הנחה ebt food stamps"><img src="i-shop.png" alt=""><b>עסקים והטבות</b><small>קופונים והנחות</small></a>
+      <a class="gcard" data-g="help" href="#health" data-k="רופא תרופות מרשם בית מרקחת ביטוח בריאות"><img src="i-health.png" alt=""><b>בריאות</b><small>רופאים ומרשמים</small></a>
+      <a class="gcard" data-g="help" href="#trouble" data-k="מזוודה כבודה דרכון אבד החזר מס קבלות"><img src="i-trouble.png" alt=""><b>כשמשהו משתבש</b><small>מזוודה, דרכון, מס</small></a>
+      <a class="gcard" data-g="help" href="#sos" data-k="חירום הצלה 911 קונסוליה שמירה"><img src="i-sos.png" alt=""><b>חירום</b><small>הצלה, 911, קונסוליה</small></a>
+    </div>
+    <p class="muted" id="hub-empty" hidden>לא נמצא נושא מתאים. נסו מילה אחרת.</p>
+  </div>
+
+  </section>
+
+<!-- LEARN -->
+<section class="view" id="v-learn" aria-label="לימוד ושיחות">
+  <header class="banner"><img src="p-books.jpg" alt=""><a class="back" href="#home"><i data-lucide="arrow-right"></i>לכל המדריך</a><h1>לימוד ושיחות</h1><p>שיחות ומאמרים של הרבי לחנוכה, וחומר על הנסיעה לרבי. כל הקישורים לאתרי חב"ד.</p></header>
+
+  <div class="card">
+    <h2><span class="hi"><i data-lucide="flame"></i></span>שיחות ומאמרים לחנוכה</h2>
+    <ul class="learn-list">
+      <li><a href="https://torah4blind.org/hebrew/lse-10-5780.pdf" target="_blank" rel="noopener">לקוטי שיחות חלק י', שיחה לחנוכה (בלשון הקודש, PDF)</a><small>השיחה המוגהת, מוכנה ללימוד ולהדפסה</small></li>
+      <li><a href="https://www.chabad.org/therebbe/article_cdo/aid/6481318/jewish/Tanu-Rabanan-Mitzvas-Ner-Chanukah-5738.htm" target="_blank" rel="noopener">מאמר "תנו רבנן מצות נר חנוכה", תשל"ח</a><small>Chabad.org · עם הקלטה ביידיש ותמליל</small></li>
+      <li><a href="https://www.chabad.org/therebbe/letters/default_cdo/aid/5294373/jewish/Chanukah.htm" target="_blank" rel="noopener">מכתבי הרבי לחנוכה</a><small>Chabad.org · אגרות קודש בנושא חנוכה</small></li>
+      <li><a href="https://sichos-in-english.com/books/likkutei-sichot-6/chanukah.htm" target="_blank" rel="noopener">לקוטי שיחות חלק ו', חנוכה (באנגלית)</a><small>Sichos In English</small></li>
+      <li><a href="https://www25.sichos-in-english.org/books/timeless-patterns/18.htm" target="_blank" rel="noopener">חנוכה מתוך "Timeless Patterns" (באנגלית)</a><small>עיבוד מלקוטי שיחות חלקים א', ה' ושיחות שבת חנוכה תשל"ט</small></li>
+      <li><a href="https://www25.sichos-in-english.org/holiday/chanuka=25210" target="_blank" rel="noopener">כל השיחות לחנוכה באתר Sichos In English</a><small>אוסף לפי נושא</small></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2><span class="hi"><i data-lucide="plane"></i></span>הנסיעה לרבי</h2>
+    <blockquote>"אפילו מהקירות של 770 אפשר לקבל"<cite>מתוך דברי הרבי, כפי שמובא בחב"דפדיה</cite></blockquote>
+    <ul class="learn-list">
+      <li><a href="https://chabadpedia.co.il/index.php/%D7%A0%D7%A1%D7%99%D7%A2%D7%94_%D7%9C%D7%A8%D7%91%D7%99" target="_blank" rel="noopener">נסיעה לרבי</a><small>חב"דפדיה · מקורות, שיחות ומנהגים על הנסיעה לרבי</small></li>
+      <li><a href="https://chabadpedia.co.il/index.php?title=%D7%A6%D7%90%D7%AA%D7%9B%D7%9D_%D7%9C%D7%A9%D7%9C%D7%95%D7%9D" target="_blank" rel="noopener">צאתכם לשלום</a><small>חב"דפדיה · מעמד הפרידה של הרבי מהאורחים</small></li>
+      <li><a href="https://chabadpedia.co.il/index.php/770_-_%D7%9E%D7%A8%D7%9B%D7%96_%D7%97%D7%91%22%D7%93_%D7%94%D7%A2%D7%95%D7%9C%D7%9E%D7%99" target="_blank" rel="noopener">770, מרכז חב"ד העולמי</a><small>חב"דפדיה · תולדות הבית</small></li>
+      <li><a href="https://chabad.info/news/tishrei/182051/" target="_blank" rel="noopener">מתכוננים לנסיעה לרבי</a><small>חב"ד אינפו</small></li>
+    </ul>
+  </div>
+  <p class="src">כל השיחות והמאמרים נמצאים באתרים המקוריים. כאן מופיעים רק קישורים.</p>
+</section>
+
+<!-- FUN -->
+<section class="view" id="v-fun" aria-label="אטרקציות">
+  <header class="banner"><img src="p-manhattan.jpg" alt=""><a class="back" href="#home"><i data-lucide="arrow-right"></i>לכל המדריך</a><h1>אטרקציות בניו יורק</h1><p>מה אפשר לראות, כמה זה עולה, מתי פתוח ואיך מגיעים מ-770.</p></header>
+  <div class="notice">המחירים והשעות לפי האתרים, נכון ל-2026, ויכולים להשתנות לפי יום ושעה. לפני שיוצאות בודקות באתר הרשמי (יש קישור בכל כרטיס).</div>
+  <div class="fun" id="fun-list"></div>
+</section>
+
+<!-- SHABBAT -->
+<section class="view" id="v-shabbat" aria-label="שבת בשכונה">
+  <header class="banner"><img src="p-shabbat.jpg" alt=""><a class="back" href="#home"><i data-lucide="arrow-right"></i>לכל המדריך</a><h1>שבת בשכונה</h1><p>איפה קונים אוכל לשבת, מתי מדליקים, ומה כדאי לסדר מראש.</p></header>
+
+  <div class="card">
+    <h2><span class="hi"><i data-lucide="flame"></i></span>זמני שבת בברוקלין</h2>
+    <div class="table-wrap"><table class="tbl stbl">
+      <thead><tr><th>שבת</th><th>הדלקת נרות (שישי)</th><th>צאת השבת</th></tr></thead>
+      <tbody>
+        <tr><td><b>השבת שלפני חנוכה</b><small>27–28.11.2026</small></td><td class="tm">16:12</td><td class="tm">17:15</td></tr>
+        <tr class="hl"><td><b>שבת חנוכה · נר ראשון</b><small>4–5.12.2026 · במוצאי שבת: נר שני</small></td><td class="tm">16:10</td><td class="tm">17:13</td></tr>
+        <tr class="hl"><td><b>שבת חנוכה · נר שמיני</b><small>11–12.12.2026 · שבת זאת חנוכה</small></td><td class="tm">16:10</td><td class="tm">17:14</td></tr>
+        <tr><td><b>השבת שאחרי חנוכה</b><small>18–19.12.2026</small></td><td class="tm">16:12</td><td class="tm">17:16</td></tr>
+      </tbody>
+    </table></div>
+    <div class="tip"><i data-lucide="lightbulb"></i><span>בערב שבת חנוכה מדליקים קודם את נרות החנוכה ורק אחר כך את נרות השבת. הנרות צריכים לדלוק עד חצי שעה אחרי צאת הכוכבים.</span></div>
+    <p class="src">הזמנים לברוקלין (הדלקה 18 דקות לפני השקיעה), לפי <a href="https://www.hebcal.com/shabbat?geonameid=5110302" target="_blank" rel="noopener">Hebcal</a>. אפשר לבדוק גם ב-<a href="https://www.chabad.org/calendar/candlelighting.htm" target="_blank" rel="noopener">Chabad.org</a>.</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="hi"><i data-lucide="flame"></i></span>הדלקת נרות</h2>
+    <ul class="clean">
+      <li>בערב שבת חנוכה מדליקים קודם את נרות החנוכה, ורק אחר כך את נרות השבת. הנרות צריכים לדלוק עד חצי שעה אחרי צאת הכוכבים.</li>
+    </ul>
+    <div class="acts"><a class="btn primary" href="https://www.chabad.org/calendar/candlelighting.htm" target="_blank" rel="noopener"><i data-lucide="clock"></i>זמני הדלקת נרות</a></div>
+  </div>
+
+  <div class="card">
+    <h2><span class="hi"><i data-lucide="shopping-bag"></i></span>איפה קונים אוכל לשבת</h2>
+    <ul class="clean">
+      <li><b>רחוב קינגסטון</b>, בין איסטרן פארקווי לאמפייר, הוא מרכז הקניות: טייק אווי, מאפיות, מכולות ודגים.</li>
+      <li><b>מזמינים עד יום חמישי.</b> ביום שישי יש תורים ארוכים, והחנויות נסגרות שעה עד שעתיים לפני השבת.</li>
+      <li>בודקים את ההכשר של כל מוצר ושל כל טייק אווי לפי <a href="#kashrut">מדריך הכשרות</a>.</li>
+      <li>מתארחים רק אצל משפחות שאפשר לסמוך בבירור על הכשרות שלהן.</li>
+    </ul>
+    <div class="acts" data-dest="kingston-shops" data-walk="1"></div>
+  </div>
+
+  <div class="card">
+    <h2><span class="hi"><i data-lucide="truck"></i></span>משלוחים עד הדירה</h2>
+    <p class="small">באפליקציות הכלליות (Uber Eats, DoorDash, שאליה עברה גם Wolt בארה"ב) רוב החנויות אינן בכשרות שאנחנו מקפידות עליה. בשכונה יש סופרמרקטים כשרים עם משלוחים משלהם:</p>
+    <ul class="learn-list">
+      <li><a href="https://empirekoshersupermarket.com/delivery" target="_blank" rel="noopener">Empire Kosher</a><small>משלוחים בקראון הייטס · מינימום הזמנה $100</small></li>
+      <li><a href="https://kosherfamily.com/" target="_blank" rel="noopener">Kosher Family</a><small>האפליקציה של The Market Place ברחוב Crown · משלוחים לקראון הייטס והסביבה</small></li>
+      <li><a href="https://koshertown.com/" target="_blank" rel="noopener">Koshertown</a><small>משלוחים בקראון הייטס</small></li>
+      <li><a href="https://www.kahanskosher.com/" target="_blank" rel="noopener">Kahan's Superette</a><small>הזמנה אונליין עם משלוח בשכונה</small></li>
+    </ul>
+    <p class="small muted">בכל הזמנה בודקות את ההכשר של כל מוצר לפי <a href="#kashrut">מדריך הכשרות</a>.</p>
+    <div class="spon"><span class="tag">שותפים · אוכל לשבת</span><b>כאן יופיעו הטייק אווי והמאפיות השותפים, עם הזמנה בוואטסאפ ומשלוח עד הדלת</b></div>
+  </div>
+
+  <div class="card">
+    <h2><span class="hi"><i data-lucide="list-checks"></i></span>מה לבדוק בדירה לפני שבת</h2>
+    <ul class="check">
+      <li>פלטה או מיחם, ושעון שבת לאור ולחימום.</li>
+      <li>פמוטים ונרות, וחנוכייה עם שמן או נרות שדולקים מספיק זמן.</li>
+      <li>מפתח: לשאול את המארחים מה המנהג בטלטול בשבת בשכונה.</li>
+      <li>מספר הטלפון של המארחים כתוב על דף, למקרה שצריך.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- HEALTH -->
+<section class="view" id="v-health" aria-label="בריאות ותרופות">
+  <header class="banner"><img src="p-health.jpg" alt=""><a class="back" href="#home"><i data-lucide="arrow-right"></i>לכל המדריך</a><h1>בריאות ותרופות</h1><p>לאן פונים, מה עושים כשצריך מרשם, ואיך מקבלים החזר מהביטוח.</p></header>
+
+  <div class="steps">
+    <div class="stepcard urgent"><span class="sn">חירום</span><h3>מצב מסכן חיים</h3><p>מתקשרים מיד ל-911 או להצלה קראון הייטס.</p><div class="acts"><a class="btn danger" href="tel:911"><i data-lucide="phone"></i>911</a><a class="btn" href="tel:+17182301000"><i data-lucide="phone"></i>הצלה 718-230-1000</a></div></div>
+    <div class="stepcard"><span class="sn">1</span><h3>קודם מתקשרים לביטוח</h3><p>לחברות ביטוח הנסיעות יש מוקד 24 שעות בעברית. הן מפנות לרופא או למרפאה בהסדר, ולפעמים משלמות ישירות.</p></div>
+    <div class="stepcard"><span class="sn">2</span><h3>מרפאה דחופה (Urgent Care)</h3><p>לחום, דלקות, פציעות קלות ומרשמים. נכנסים בלי תור. בלי ביטוח, ביקור עולה בדרך כלל כמה מאות דולרים.</p></div>
+    <div class="stepcard"><span class="sn">3</span><h3>שומרים כל קבלה</h3><p>קבלות, סיכום ביקור ומרשמים. בלי מסמכים אין החזר מהביטוח.</p></div>
+  </div>
+
+  <div class="card">
+    <h2><span class="hi"><i data-lucide="pill"></i></span>צריכה מרשם לתרופה?</h2>
+    <ul class="clean">
+      <li><b>מרשם ישראלי לא מתקבל</b> בבתי מרקחת בארה"ב. צריך רופא מקומי שיכתוב מרשם: מרפאה דחופה, או רופא בשיחת וידאו דרך חברת הביטוח.</li>
+      <li>תרופות קבועות מביאים מהבית, באריזה המקורית ובתיק היד, עם מכתב מהרופא באנגלית שמפרט את השם הגנרי והמינון.</li>
+      <li>כדאי לקחת כמה ימים יותר ממה שצריך, למקרה של עיכוב בטיסה.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2><span class="hi"><i data-lucide="store"></i></span>בלי מרשם, בבית המרקחת</h2>
+    <div class="table-wrap"><table class="tbl">
+      <thead><tr><th>מה מחפשות</th><th>איך זה נקרא שם</th></tr></thead>
+      <tbody>
+        <tr><td>אקמול (פרצטמול)</td><td dir="ltr">Tylenol · Acetaminophen</td></tr>
+        <tr><td>נורופן / אדוויל (איבופרופן)</td><td dir="ltr">Advil · Motrin · Ibuprofen</td></tr>
+        <tr><td>תרופה לאלרגיה</td><td dir="ltr">Claritin · Zyrtec</td></tr>
+      </tbody>
+    </table></div>
+    <p class="small muted">בכל שאלה על מינון או שילוב תרופות שואלים את הרוקח.</p>
+    <div class="spon"><span class="tag">שותפים · בריאות</span><b>כאן יופיעו בית המרקחת והמרפאה השותפים, כולל רופא דובר עברית</b></div>
+  </div>
+</section>
+
+<!-- TROUBLE -->
+<section class="view" id="v-trouble" aria-label="כשמשהו משתבש">
+  <header class="banner"><img src="p-luggage.jpg" alt=""><a class="back" href="#home"><i data-lucide="arrow-right"></i>לכל המדריך</a><h1>כשמשהו משתבש</h1><p>מה עושים, למי פונים ואיזה מסמכים לשמור.</p></header>
+
+  <details open><summary><span class="sum"><i data-lucide="luggage"></i>המזוודה לא הגיעה</span></summary><div>
+    <ol class="flow">
+      <li><b>לא יוצאות מאולם המזוודות.</b> ניגשות לדלפק המזוודות של חברת התעופה וממלאות דוח על כבודה שלא הגיעה (PIR). מקבלות מספר תיק ושומרות אותו.</li>
+      <li><b>משאירות כתובת וטלפון</b> בקראון הייטס, כדי שישלחו את המזוודה עד הדלת.</li>
+      <li><b>שומרות</b> את כרטיס העלייה למטוס ואת מדבקת המזוודה.</li>
+      <li><b>קונות רק מה שחייבים</b> (בגדים, מוצרי היגיינה) ושומרות כל קבלה. חברת התעופה או הביטוח מחזירים הוצאות סבירות.</li>
+      <li><b>שולחות תביעה בכתב לחברת התעופה:</b> על מזוודה מאחרת תוך 21 יום, על מזוודה פגומה תוך 7 ימים. מצרפות את הדוח והקבלות.</li>
+      <li>אם המזוודה לא נמצאה תוך 21 יום, היא נחשבת אבודה. מגישות תביעה גם לחברת הביטוח.</li>
+    </ol>
+  </div></details>
+
+  <details><summary><span class="sum"><i data-lucide="book-x"></i>הדרכון אבד או נגנב</span></summary><div>
+    <ol class="flow">
+      <li><b>בודקות שוב</b> בכל התיקים ובמקום הלינה.</li>
+      <li><b>מגישות תלונה במשטרה.</b> בקראון הייטס זו תחנה 71, ברחוב Empire Blvd 421. לעזרה אפשר להתקשר ל-311.</li>
+      <li><b>פונות לקונסוליה הישראלית</b> (800 Second Ave, מנהטן). הקונסוליה מנפיקה תעודת מעבר לחזרה לארץ. קובעות תור באתר.</li>
+      <li><b>מביאות:</b> אישור התלונה מהמשטרה, תמונת פספורט, צילום של הדרכון או של תעודת הזהות, וכרטיס הטיסה.</li>
+    </ol>
+    <div class="tip"><i data-lucide="lightbulb"></i><span>עוד לפני הטיסה: מצלמות את הדרכון ואת תעודת הזהות ושולחות למייל של עצמכן.</span></div>
+    <div class="acts"><a class="btn primary" href="https://new.embassies.gov.il/newyork/en/contacts" target="_blank" rel="noopener"><i data-lucide="landmark"></i>הקונסוליה בניו יורק</a><a class="btn" href="https://wa.me/19177415755" target="_blank" rel="noopener"><i data-lucide="message-circle"></i>וואטסאפ חירום</a></div>
+  </div></details>
+
+  <details><summary><span class="sum"><i data-lucide="receipt"></i>החזר מס בשדה התעופה?</span></summary><div>
+    <p><b>בארה"ב אין החזר מס לתיירים.</b> מס המכירות נגבה בקופה, ובניו יורק סיטי הוא 8.875%. אין דלפק החזר מס בשדה התעופה.</p>
+    <p><b>טיפ שחוסך כסף:</b> בניו יורק סיטי בגדים ונעליים במחיר של פחות מ-$110 לפריט פטורים ממס המכירות.</p>
+    <p class="src">מקור: <a href="https://www.tax.ny.gov/bus/st/sales_tax_clothing_exemption.htm" target="_blank" rel="noopener">רשות המסים של מדינת ניו יורק</a></p>
+  </div></details>
+</section>
+
+<!-- GROUPS -->
+<section class="view" id="v-groups" aria-label="הקבוצות">
+  <header class="banner"><img src="p-menorah.jpg" alt=""><a class="back" href="#home"><i data-lucide="arrow-right"></i>לכל המדריך</a><h1>הקבוצות לחנוכה</h1><p>הקבוצות של נשי ובנות חב"ד צפת לחנוכה תשפ"ז: נשים, סמינר, תיכון ובנות מצווה.</p></header>
+  <div class="notice">המידע לקוח מאתר נשי חב"ד צפת. בחלק מהקבוצות הלינה כבר אזלה. לפני שנרשמות בודקות בדף הקבוצה או בוואטסאפ.</div>
+  <div class="grp-cards">
+    <article class="card">
+      <h2><span class="hi"><i data-lucide="heart-handshake"></i></span>קבוצת נשים</h2>
+      <ul class="clean small">
+        <li><b>תאריכים:</b> 7.12–13.12.2026. טיסה קבוצתית באל על ביום ראשון 6.12 בלילה, וחזרה ביום ראשון 13.12.</li>
+        <li><b>מחיר:</b> תוכנית ₪2,100, ארוחות ₪1,640. לינה במלון אש"ל מול 770 בתוספת. <span class="prev">הלינה אזלה</span></li>
+        <li>אפשר להצטרף לתוכנית בלבד או לתוכנית עם ארוחות, בלי לינה.</li>
+      </ul>
+      <div class="acts"><a class="btn primary" href="https://nczefat.org/rebbe-flights/women/" target="_blank" rel="noopener"><i data-lucide="external-link"></i>לדף הקבוצה</a><a class="btn" href="https://wa.me/972587701578" target="_blank" rel="noopener"><i data-lucide="message-circle"></i>וואטסאפ: מושקא</a></div>
+    </article>
+    <article class="card">
+      <h2><span class="hi"><i data-lucide="graduation-cap"></i></span>קבוצת סמינר</h2>
+      <ul class="clean small">
+        <li><b>תאריכים:</b> 3.12–13.12.2026, בליווי הרב טוביה זילברשטרום.</li>
+        <li><b>מחיר התוכנית:</b> ₪1,050. ארוחות ולינה לא כלולות.</li>
+        <li><b>כלול:</b> שיעורים, התוועדויות, נסיעה לאוהל, ביקור בחדר של הרבי ובספרייה, והכינוס המרכזי.</li>
+      </ul>
+      <div class="acts"><a class="btn primary" href="https://nczefat.org/rebbe-flights/seminar/" target="_blank" rel="noopener"><i data-lucide="external-link"></i>לדף הקבוצה</a><a class="btn" href="https://wa.me/972587701578" target="_blank" rel="noopener"><i data-lucide="message-circle"></i>וואטסאפ: מושקא</a></div>
+    </article>
+    <article class="card">
+      <h2><span class="hi"><i data-lucide="school"></i></span>קבוצת תיכון</h2>
+      <ul class="clean small">
+        <li><b>תאריכים:</b> 3.12–13.12.2026. כל 15 בנות עם מדריכה צמודה.</li>
+        <li><b>מחיר:</b> תוכנית וארוחות ₪2,300. עם לינה ₪4,650. <span class="prev">הלינה אזלה</span></li>
+        <li>בת מתחת לגיל 15 צריכה ליווי של מבוגר. כל אחת מזמינה טיסה בעצמה.</li>
+      </ul>
+      <div class="acts"><a class="btn primary" href="https://nczefat.org/rebbe-flights/tichon/" target="_blank" rel="noopener"><i data-lucide="external-link"></i>לדף הקבוצה</a><a class="btn" href="https://wa.me/972587701578" target="_blank" rel="noopener"><i data-lucide="message-circle"></i>וואטסאפ: מושקא</a></div>
+    </article>
+    <article class="card">
+      <h2><span class="hi"><i data-lucide="sparkles"></i></span>קבוצת בנות מצווה</h2>
+      <ul class="clean small">
+        <li><b>למי:</b> בנות כיתות ו'–ח'. <span class="prev">ההרשמה נסגרה</span></li>
+        <li><b>תאריכים:</b> 7.12–13.12.2026, עם טיסה קבוצתית מלווה.</li>
+        <li>לינה במלון אש"ל, דקה מ-770, יחד עם מדריכה.</li>
+      </ul>
+      <div class="acts"><a class="btn primary" href="https://nczefat.org/rebbe-flights/bat-mitzva/" target="_blank" rel="noopener"><i data-lucide="external-link"></i>לדף הקבוצה</a><a class="btn" href="https://wa.me/972525958789" target="_blank" rel="noopener"><i data-lucide="message-circle"></i>וואטסאפ: בת שבע</a></div>
+    </article>
+  </div>
+  <p class="src">מקור: <a href="https://nczefat.org/rebbe-flights/" target="_blank" rel="noopener">נשי ובנות חב"ד צפת – קבוצות נסיעה לרבי</a></p>
+</section>
+
+<!-- OHEL -->
+<section class="view" id="v-ohel" aria-label="נסיעה לאוהל">
+  <header class="banner"><img src="p-bus.jpg" alt=""><a class="back" href="#home"><i data-lucide="arrow-right"></i>לכל המדריך</a><h1>נסיעה לאוהל</h1><p>איך מגיעים לאוהל של הרבי בקווינס, מתי יוצאים ומה כדאי להכין.</p></header>
+  <div class="card">
+    <h2><span class="hi"><i data-lucide="map-pin"></i></span>איפה זה</h2>
+    <p>האוהל נמצא ב-<b dir="ltr">226-20 Francis Lewis Blvd, Cambria Heights, NY</b>, בקווינס. מ-770 זו נסיעה של כ-30–45 דקות, לפי התנועה.</p>
+    <div class="acts" data-dest="ohel"></div>
+  </div>
+  <div class="card">
+        <h2><span class="hi"><i data-lucide="bus"></i></span>האוטובוס לאוהל</h2>
+    <p>יש שירות אוטובוסים יומי מקראון הייטס לאוהל: <a href="https://bustoohel.com" target="_blank" rel="noopener">bustoohel.com</a>. בחגים ובימים מיוחדים מוסיפים נסיעות. נסיעות פרטיות יוצאות גם מ-770 כל בוקר.</p>
+    <h3>בחנוכה <span class="prev">שנים קודמות</span></h3>
+    <ul class="times">
+      <li><span class="t">יציאה</span><div dir="ltr" style="text-align:right">7:00 · 8:00 · 9:00 · 11:30 · 12:00 · 19:00</div></li>
+      <li><span class="t">חזרה</span><div dir="ltr" style="text-align:right">8:45 · 9:45 · 10:45 · 13:15 · 13:45 · 20:45</div></li>
+    </ul>
+    <p class="small muted">יציאה מ-The Draidel, ללא הרשמה מראש. ביום שישי אין נסיעה של 19:00. במוצאי שבת: יציאה 19:00, חזרה 20:45. ייתכנו שינויים בלוח של השנה.</p>
+    <div class="acts"><a class="btn primary" href="https://bustoohel.com" target="_blank" rel="noopener">לאתר האוטובוס לאוהל</a></div>
+  </div>
+
+  <div class="card">
+    <h2><span class="hi"><i data-lucide="car"></i></span>נסיעות פרטיות</h2>
+    <p>מלבד האוטובוס, יוצאות נסיעות פרטיות מ-770 כל בוקר. הזמנים נקבעים ב-770, ושואלים עליהם במקום. אפשר גם להזמין אובר או הסעה מהשכונה.</p>
+  </div>
+  <div class="card">
+    <h2><span class="hi"><i data-lucide="pen-line"></i></span>מה מכינים</h2>
+    <ul class="check">
+      <li>פ"נ (פדיון נפש) כתוב מראש, עם השם ושם האם.</li>
+      <li>סידור או תהילים, וחומר לימוד לדרך.</li>
+      <li>לבוש חם: בדצמבר קר מאוד, ולפעמים מחכים בחוץ.</li>
+      <li>לבדוק מראש את שעת החזרה, כדי לא לפספס את ההדלקה ב-770.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- BEFORE FLIGHT -->
+<section class="view" id="v-before" aria-label="לפני הטיסה">
+  <header class="banner"><img src="p-plane.jpg" alt=""><a class="back" href="#home"><i data-lucide="arrow-right"></i>לכל המדריך</a><h1>לפני הטיסה</h1><p>כל מה שצריך לסדר בבית, כדי לנחות רגועה.</p></header>
+
+  <div class="card checklist" id="checklist">
+    <div class="cl-head"><h2><span class="hi"><i data-lucide="list-checks"></i></span>צ׳ק-ליסט לטיסה</h2><span class="cl-count" id="cl-count">0/15</span></div>
+    <div class="cl-bar"><span id="cl-bar"></span></div>
+    <ul class="cl-list">
+      <li><label><input type="checkbox" id="cl-passport" data-k="passport"><span class="box" aria-hidden="true"><i data-lucide="check"></i></span><span class="tx">דרכון בתוקף לפחות חצי שנה</span></label></li>
+      <li><label><input type="checkbox" id="cl-esta" data-k="esta"><span class="box" aria-hidden="true"><i data-lucide="check"></i></span><span class="tx">ESTA מאושר (באתר הרשמי בלבד)</span></label></li>
+      <li><label><input type="checkbox" id="cl-health" data-k="health"><span class="box" aria-hidden="true"><i data-lucide="check"></i></span><span class="tx">הצהרת הבריאות של ה-CDC מולאה דרך חברת התעופה</span></label></li>
+      <li><label><input type="checkbox" id="cl-insurance" data-k="insurance"><span class="box" aria-hidden="true"><i data-lucide="check"></i></span><span class="tx">ביטוח נסיעות לכל הימים</span></label></li>
+      <li><label><input type="checkbox" id="cl-checkin" data-k="checkin"><span class="box" aria-hidden="true"><i data-lucide="check"></i></span><span class="tx">צ׳ק-אין אונליין (נפתח בדרך כלל 24 שעות לפני הטיסה)</span></label></li>
+      <li><label><input type="checkbox" id="cl-meal" data-k="meal"><span class="box" aria-hidden="true"><i data-lucide="check"></i></span><span class="tx">הוזמנה ארוחה כשרה למהדרין בטיסה</span></label></li>
+      <li><label><input type="checkbox" id="cl-esim" data-k="esim"><span class="box" aria-hidden="true"><i data-lucide="check"></i></span><span class="tx">eSIM או חבילת חו״ל בטלפון</span></label></li>
+      <li><label><input type="checkbox" id="cl-card" data-k="card"><span class="box" aria-hidden="true"><i data-lucide="check"></i></span><span class="tx">כרטיס אשראי ללא עמלת המרה + קצת דולרים</span></label></li>
+      <li><label><input type="checkbox" id="cl-apps" data-k="apps"><span class="box" aria-hidden="true"><i data-lucide="check"></i></span><span class="tx">הורדו Uber ו-Google Maps</span></label></li>
+      <li><label><input type="checkbox" id="cl-address" data-k="address"><span class="box" aria-hidden="true"><i data-lucide="check"></i></span><span class="tx">כתובת הלינה שמורה בטלפון</span></label></li>
+      <li><label><input type="checkbox" id="cl-copies" data-k="copies"><span class="box" aria-hidden="true"><i data-lucide="check"></i></span><span class="tx">צילום דרכון ותעודת זהות שמור במייל</span></label></li>
+      <li><label><input type="checkbox" id="cl-coat" data-k="coat"><span class="box" aria-hidden="true"><i data-lucide="check"></i></span><span class="tx">מעיל, כפפות ונעליים נוחות</span></label></li>
+      <li><label><input type="checkbox" id="cl-adapter" data-k="adapter"><span class="box" aria-hidden="true"><i data-lucide="check"></i></span><span class="tx">מתאם לשקע אמריקאי ומטען נייד</span></label></li>
+      <li><label><input type="checkbox" id="cl-pn" data-k="pn"><span class="box" aria-hidden="true"><i data-lucide="check"></i></span><span class="tx">פ״נ כתוב לרבי</span></label></li>
+      <li><label><input type="checkbox" id="cl-group" data-k="group"><span class="box" aria-hidden="true"><i data-lucide="check"></i></span><span class="tx">הצטרפתי לקבוצה ולוואטסאפ של הקבוצה</span></label></li>
+    </ul>
+    <div class="acts"><a class="btn primary" href="https://www.elal.com" target="_blank" rel="noopener"><i data-lucide="plane"></i>צ׳ק-אין באתר אל על</a><button type="button" class="btn" id="cl-reset"><i data-lucide="rotate-ccw"></i>איפוס</button></div>
+    <p class="src">הסימונים נשמרים רק בטלפון או במחשב שלך.</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="hi"><i data-lucide="stamp"></i></span>אישור כניסה לארה"ב (ESTA)</h2>
+    <p>בעלות דרכון ישראלי צריכות ESTA מאושר לפני הטיסה. מגישים רק באתר הרשמי של ממשלת ארה"ב. אתרים אחרים נראים דומים וגובים עמלה גבוהה. כדאי להגיש לפחות 72 שעות לפני הטיסה, ועדיף כמה שבועות לפני.</p>
+    <div class="acts"><a class="btn primary" href="https://esta.cbp.dhs.gov/" target="_blank" rel="noopener">לאתר ה-ESTA הרשמי</a></div>
+  </div>
+
+  <div class="card">
+    <h2><span class="hi"><i data-lucide="clipboard-check"></i></span>הצהרת בריאות לפני העלייה למטוס <span class="prev">חדש</span></h2>
+    <p>מ-3 בנובמבר 2026 ועד 18 בדצמבר 2026 (אם לא יוארך), כל נוסעת בטיסה בינלאומית לארה"ב חייבת למלא הצהרה של ה-CDC בשם <b dir="ltr">Passenger Disclosure and Attestation</b>.</p>
+    <ul class="clean">
+      <li><b>על מה מצהירות:</b> שלא הייתן ברפובליקה הדמוקרטית של קונגו ב-21 הימים שלפני הטיסה, בגלל התפרצות האבולה שם.</li>
+      <li><b>איך:</b> כל נוסעת ממלאת הצהרה משלה, בטופס דיגיטלי או מודפס, דרך חברת התעופה ולפני העלייה למטוס.</li>
+      <li><b>חשוב:</b> מי שלא מגישה את ההצהרה לא עולה למטוס. ההצהרה לא מחליפה את ה-ESTA.</li>
+    </ul>
+    <div class="acts"><a class="btn primary" href="https://www.elal.com" target="_blank" rel="noopener"><i data-lucide="plane"></i>לאתר אל על</a><a class="btn" href="https://wwwnc.cdc.gov/travel/notices" target="_blank" rel="noopener"><i data-lucide="shield-check"></i>הודעות ה-CDC לנוסעים</a></div>
+    <p class="src">מקורות: <a href="https://www.forbes.com/sites/baileyberg/2026/11/16/flying-to-the-us-a-new-health-declaration-is-now-required/" target="_blank" rel="noopener">Forbes</a> · <a href="https://travel.yahoo.com/advice/safety/articles/flying-us-cdc-health-declaration-190902331.html" target="_blank" rel="noopener">Yahoo Travel</a>. את הפרטים המעודכנים בודקות מול חברת התעופה לפני הטיסה.</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="hi"><i data-lucide="shield-plus"></i></span>ביטוח נסיעות</h2>
+    <p>טיפול רפואי בארה"ב יקר מאוד. עושים ביטוח נסיעות לכל ימי השהייה, כולל כיסוי למזוודות ולביטול טיסה.</p>
+    <div class="card spon"><span class="tag">שותף · ביטוח נסיעות</span><b>כאן תופיע חברת הביטוח השותפה, עם הטבה לטסות המדריך</b></div>
+  </div>
+
+  <div class="card">
+    <h2><span class="hi"><i data-lucide="smartphone"></i></span>eSIM או סים אמריקאי</h2>
+    <p>הדרך הכי נוחה היא eSIM: קונים באפליקציה עוד בבית, ומפעילים כשנוחתים. בודקים קודם שהטלפון תומך ב-eSIM. אפשרות אחרת: חבילת חו"ל של החברה הישראלית, או סים מקומי בשכונה.</p>
+    <div class="card spon"><span class="tag">שותף · eSIM וסים</span><b>כאן תופיע חברת ה-eSIM השותפה, עם קוד הנחה</b></div>
+  </div>
+
+  <div class="card">
+    <h2><span class="hi"><i data-lucide="credit-card"></i></span>כסף וכרטיסים</h2>
+    <ul class="clean">
+      <li>כרטיס אשראי <b>ללא עמלת המרה</b>, עם סמל תשלום ללא מגע (לסובווי ולחנויות).</li>
+      <li>קצת מזומן בדולרים, לטיפים ולחנויות קטנות.</li>
+      <li>מוסיפות את הכרטיס ל-Apple Pay או Google Pay, כדי לשלם בטלפון.</li>
+    </ul>
+    <div class="card spon"><span class="tag">שותף · כרטיסים ומט"ח</span><b>כאן יופיע השותף לכרטיסי חו"ל והמרת מט"ח</b></div>
+  </div>
+
+  <div class="card">
+    <h2><span class="hi"><i data-lucide="download"></i></span>אפליקציות להוריד עוד בבית</h2>
+    <div class="apps">
+      <div class="app"><b>Uber</b><span class="small muted">נרשמים מראש עם טלפון וכרטיס</span><div class="acts"><a class="btn" href="https://apps.apple.com/app/uber/id368677368" target="_blank" rel="noopener">iPhone</a><a class="btn" href="https://play.google.com/store/apps/details?id=com.ubercab" target="_blank" rel="noopener">Android</a></div></div>
+      <div class="app"><b>Google Maps</b><span class="small muted">ניווט, סובווי והליכה</span><div class="acts"><a class="btn" href="https://apps.apple.com/app/google-maps/id585027354" target="_blank" rel="noopener">iPhone</a><a class="btn" href="https://play.google.com/store/apps/details?id=com.google.android.apps.maps" target="_blank" rel="noopener">Android</a></div></div>
+      <div class="app"><b>OMNY</b><span class="small muted">תשלום בסובווי ובדיקת התקרה השבועית</span><div class="acts"><a class="btn" href="https://omny.info" target="_blank" rel="noopener">לאתר OMNY</a></div></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2><span class="hi"><i data-lucide="luggage"></i></span>מה לארוז</h2>
+    <ul class="check">
+      <li>מעיל חם, כפפות, צעיף וכובע: בדצמבר בניו יורק קר מאוד, ולפעמים יורד שלג.</li>
+      <li>נעליים נוחות להליכה ולמדרגות בסובווי.</li>
+      <li>מתאם לשקע אמריקאי (תקע שטוח, 110 וולט).</li>
+      <li>מטען נייד לטלפון.</li>
+      <li>דרכון בתוקף, אישור ESTA ופוליסת הביטוח, גם מודפסים וגם בטלפון.</li>
+      <li>כתובת מקום הלינה, בעברית ובאנגלית.</li>
+    </ul>
+    <div class="card spon"><span class="tag">שותף · מזוודות וציוד</span><b>כאן יופיע השותף למזוודות ולציוד נסיעה</b></div>
+  </div>
+
+  <div class="card">
+    <h2><span class="hi"><i data-lucide="plane"></i></span>טיסה והסעה</h2>
+    <p>מזמינים מראש הסעה משדה התעופה לשכונה, במיוחד בנחיתה בלילה או עם הרבה מזוודות.</p>
+    <div class="acts" data-from="jfk" data-dest="770"></div>
+    <div class="card spon"><span class="tag">שותף · סוכנות נסיעות והסעות</span><b>כאן יופיעו סוכנות הנסיעות וחברת ההסעות השותפות</b></div>
+  </div>
+</section>
+
+<!-- PREP / HALACHA -->
+<section class="view" id="v-prep" aria-label="הלכות הדרך">
+  <header class="banner"><img src="p-books.jpg" alt=""><a class="back" href="#home"><i data-lucide="arrow-right"></i>לכל המדריך</a><h1>הלכות הדרך</h1><p>שאלות ותשובות לפני הנסיעה ובזמן הטיסה.</p></header>
+
+  <div class="group-title">ההכנות לנסיעה</div>
+  <details><summary>כיצד נבחר חברת נסיעות לטיסה?</summary><div>
+    <p>נאמר: "קנה מיד עמיתך", ודרשו חכמים: "באת לקנות, קנה מישראל חברך". לכן, כמו בכל עסקה, גם בבחירת נהג או חברת נסיעות יש להעדיף דווקא יהודים, כל עוד המחיר, השירות וטיב הנסיעה שווים.</p>
+    <p>כשהמחיר אצל הגוי זול יותר (ואין בכוונתו לרושש את היהודי), דנו הפוסקים עד כמה צריך לשלם כדי להעדיף יהודי. יש שכתבו עד הפסד של "שתות", כ-16.5% מהמחיר שמציע הגוי, ויש שכתבו עד חומש. ביותר מכך רשאי לנסוע עם הגוי.</p>
+  </div></details>
+  <details><summary>מתי אומרים תפילת הדרך: במונית לשדה התעופה או אחרי ההמראה?</summary><div>
+    <p>בגמרא נאמר ש"כל היוצא לדרך צריך להתפלל תפילת הדרך", כבקשת רחמים לעבור את הדרך וסכנותיה בשלום. הדרך המחייבת היא לפחות "פרסה", כ-4 ק"מ, או דרך מסוכנת קצרה מזה. אפשר לברך אחרי שיוצאים כ-36 מטרים מחוץ לעירוב של העיר.</p>
+    <p>הרוגוצ'ובר הוכיח מהגמרא בחולין שאין דרכו של אדם בשמיים, ופסק שאין לומר תפילת הדרך בטיסה. למעשה, כיוון שהטיסה היא "כמקום סכנה", נוהגים לאומרה, ורצוי לעשות זאת בדרך לשדה התעופה או כשהמטוס עדיין על הקרקע.</p>
+  </div></details>
+  <details><summary>מותר לטוס בצאת השבת במטוס שהוכן בשבת?</summary><div>
+    <p>נסיעה בתחבורה ציבורית שמופעלת מיד בצאת השבת מעודדת במידה מסוימת חילול שבת. לכן לכתחילה אין לנסוע בנסיעה הראשונה שההכנות אליה היו בשבת, אלא להמתין זמן מה, כך שאפשר יהיה לעשות את ההכנות אחרי צאת השבת. הרבי הורה שלא לטוס בטיסות שיוצאות מיד בצאת שבת.</p>
+    <p>לגבי נסיעה עם נהג יהודי במוצאי שבת, גם אם לא הבדיל, נטו הפוסקים להקל מכמה טעמים.</p>
+  </div></details>
+
+  <div class="group-title">בזמן הטיסה</div>
+  <details><summary>ישנים בטיסה: מברכים "המפיל"?</summary><div>
+    <p>ברכת המפיל נתקנה על שנת הקבע של הלילה. מי שהולך לנוח מעט בשנת ארעי ומתכנן לישון את שנתו הקבועה בהמשך הלילה, אינו מברך המפיל לפני השנה הראשונה.</p>
+    <p>בנסיעה ארוכה בשעות הלילה: אם משערים שהשינה תהיה רצופה לפחות חצי שעה, מברכים המפיל בשם ומלכות. אם מסופקים, מברכים בלי שם ומלכות, ואת שאר קריאת שמע אפשר לומר בשלמותה.</p>
+  </div></details>
+  <details><summary>נטילת ידיים אחרי שינה בטיסה</summary><div>
+    <p>דווקא בנטילה שאחרי שנת לילה יש להיזהר שלא ללכת ארבע אמות. לכן מי שישנה במטוס את שנת הלילה, תדאג לכתחילה ליטול ידיים לפחות פעם אחת ליד מקום השינה. אם אי אפשר, תלך פחות פחות מארבע אמות עד הברז הקרוב.</p>
+  </div></details>
+  <details><summary>ממתי אפשר לברך ברכות השחר בטיסה?</summary><div>
+    <p>ברכות השחר נאמרות פעם אחת ביום, אחרי שנת הלילה. מי שמתעוררת משנת הלילה אחרי חצות, מברכת ברכות התורה לפני הלימוד. מי שהייתה ערה כל הלילה ללא הפסקה, מברכת רק כשיאיר היום.</p>
+  </div></details>
+  <details><summary>לפי מה נקבעים זמני התפילה בטיסה?</summary><div>
+    <p>לפי המקום שהמטוס נמצא מעליו באותו רגע. לכן בדרך מארה"ב לארץ ישראל הלילה או היום מסתיימים מהר מאוד, והזמן בין הנץ החמה לסוף זמן קריאת שמע קצר בהרבה משלוש שעות.</p>
+  </div></details>
+  <p class="src">מתוך חוברת "תוכניה" של ארגון נשי ובנות חב"ד צפת, חנוכה פ"ז.</p>
+</section>
+
+<!-- KASHRUT -->
+<section class="view" id="v-kashrut" aria-label="כשרות">
+  <header class="banner"><img src="p-kosher.jpg" alt=""><a class="back" href="#home"><i data-lucide="arrow-right"></i>לכל המדריך</a><h1>מדריך כשרות לאורחי המלך</h1><p>אחד מעשרת המבצעים של הרבי הוא מבצע כשרות. המידע הוגה על ידי מומחים בכשרות מאנ"ש בשכונה ורבנים העוסקים בתחום.</p></header>
+
+  <details open><summary>הבהרות כלליות</summary><div>
+    <p><b>גופי הכשרות בארץ הקודש:</b> רבים מההכשרים בארה"ב אינם מגיעים לרמה של ההכשרים בארץ, ובראשם העדה החרדית והרב לנדא. לכן ראוי ככל האפשר להשתמש במוצרים מארץ ישראל בכשרות מהודרת מוכרת.</p>
+    <p>חלק מגופי הכשרות בחו"ל (גם המהודרים) סומכים על גופי הכשרות בארץ בלי בדיקה עצמית. לכן במוצרים רבים שמיוצרים בארץ אי אפשר לסמוך על הכשר מחו"ל, אלא רק כשמופיע עליהם הכשר מהודר מהארץ.</p>
+    <p><b>מוצרים ספציפיים:</b> יש מוצרים בלי אחד ההכשרים שברשימה שאפשר לסמוך עליהם, כי ידוע שהמשגיח שלהם מהימן. בכל מוצר כזה מבררים לגופו אצל רבנים ומומחים.</p>
+    <p><b>מיץ טבעי:</b> כל מיץ טעון הכשר מהודר, גם כשכתוב "100% טבעי" או "100% פרי", כי באותו פס ייצור עשויים להיות מוצרים לא כשרים.</p>
+  </div></details>
+
+  <div class="card">
+    <h2>ההכשרים המהודרים</h2>
+    <p class="small muted">למוצרי פרווה וחלבי</p>
+    <input class="search" id="h-search" type="search" placeholder="חיפוש הכשר, למשל: VK, ערוגת הבושם, OK" aria-label="חיפוש הכשר">
+    <ul class="hlist" id="hlist">
+      <li>בית דין לעניני כשרות דשיכון סקווירא <small>NSK · New Square Kashrus</small></li>
+      <li>הרב אשר עקשטיין</li>
+      <li>הרב נתן נפתלי הורביץ <small>רב דביהמ"ד אור יחזקאל</small></li>
+      <li>הרב מרדכי בצלאל קליין <small>דיין ומו"ץ בעיר לייקווד</small></li>
+      <li>הרב נחום אפרים טייטלבוים <small>אבדק"ק וואלאווע · VK</small></li>
+      <li>הרב אברהם חזן <small>בד"ץ מהדרין מילנו, איטליה</small></li>
+      <li>בד"ץ מכון לכשרות <small>הרב מרדכי אונגאר</small></li>
+      <li>קהילה כשרות <small>הכשר מקומי למסעדות בשכונת פלטבוש</small></li>
+      <li>הרב יהושע כ"ץ <small>אבדק"ק מאגרוב</small></li>
+      <li>בד"ץ קהל עדת ישורון ציריך, שוויץ <small>לשוקולד שמרלינג'ס (Schmerling's) בלבד</small></li>
+      <li>בד"ץ דקהל ערוגת הבושם</li>
+      <li>בד"ץ קהל עדת ישורון, וושינגטון הייטס <small>KAJ</small></li>
+      <li>בד"ץ דקהל מנחת חינוך טארטיקוב</li>
+      <li>אבד"ק טארנאפאל <small>הרב נפתלי מאיר באב"ד</small></li>
+      <li>הרב מנחם מאיר ווייסמאנדל <small>רב דקהל תורת חמ"ד, נייטרא מאנסי</small></li>
+      <li class="note">ועד הכשרות שע"י בד"ץ קרית יואל <small>ראו הערה בהמשך</small></li>
+      <li class="note">או-קיי (OK) <small>רק כשליד ההכשר כתוב "פת / בישול ישראל"</small></li>
+    </ul>
+    <p class="small muted">שימו לב: יש מוצרים עם חותמת בצורת משולש או כוכב סביב האות K שאינם כלולים ברשימה.</p>
+  </div>
+
+  <div class="group-title">שתייה</div>
+  <div class="drinks">
+    <div class="card"><h3>ספרייט וג'ינג'ר</h3><p class="small">Sprite, Ginger: בהשגחת OU, מיוצר בארה"ב בלבד.</p></div>
+    <div class="card"><h3>סודה (סעלצער)</h3><p class="small">בלי טעמים אינו צריך הכשר. עם טעמים: OU. בטעם שמכיל ענבים צריך הכשר מהודר.</p></div>
+    <div class="card"><h3>תה</h3><p class="small">תה טבעי בלי טעמים אינו צריך הכשר. תה בטעמים: רק מיוצר בחו"ל, בהשגחת OU.</p></div>
+    <div class="card"><h3>יין ומיץ ענבים</h3><p class="small">יין (Yain), כתר (Keser) ופארבריינגען בהשגחת בד"ץ קראון הייטס CHK. קדם (Kedem) בהשגחת הרב גרינוולד מצעהלים.</p></div>
+  </div>
+
+  <div class="card ban">
+    <h2>הכשר וחברות שעומדים תחת איסור</h2>
+    <p class="small">רבני חב"ד פסקו שההכשר והחברות הבאים עומדים תחת חרם שלא בוטל עד היום (בעקבות מאורעות נגד רבותינו נשיאינו וחסידי חב"ד בשנות הלמ"ד–מ"ם, שעליהם מחה הרבי ברבים):</p>
+    <ul class="ban-list">
+      <li><span><b>הכשר CRC</b> (סי אר סי)</span></li>
+      <li><span><b>מים חיים</b> (Maim Chaim): מים מינרליים וסודה</span></li>
+      <li><span><b>גולדן פלואו</b> (Golden Flow): מוצרי חלב ומיץ פירות</span></li>
+    </ul>
+    <p class="small">האיסור אינו בתוקף אם מופיע על המוצר הכשר <b>מהודר</b> נוסף.</p>
+    <p class="small"><b>ועד הכשרות שע"י בד"ץ קרית יואל</b> אינו כלול בחרם, אך לדעת כמה רבנים ומשפיעים אין להנות גם ממנו מאותם טעמים, למרות היותו מהודר. כל אחת תעשה כפי עצת משפיע.</p>
+  </div>
+
+  <details><summary>מי ברז</summary><div>
+    <p>מי הברז בניו יורק מוחזקים כנגועים בשרצים, ולכן יש להיזהר (לפחות מספק) שלא לשתות מברז שאינו מסונן כראוי. כדאי להיזהר גם בשטיפת הפה ובהדחת פירות וירקות. בשטיפת כלים אין חשש אחרי ייבוש הכלי.</p>
+    <p>אפשר לראות אם הברז מסונן לפי מסנן ("פילטער") שמחובר לצנרת מתחת לכיור. מי שמתקינה מסנן בעצמה: גודל החורים לא יעלה על 50 מיקרון.</p>
+  </div></details>
+  <details><summary>ירקות עלים</summary><div>
+    <p>בניו יורק ירקות עלים בחזקת נגועים, וצריך לשטוף ולבדוק כל עלה בנפרד מול האור. כיוון שיש ירקות ששטיפה לא מועילה להם ויש חרקים שלא רואים, נכון להדר ולקנות ירקות קצוצים וארוזים אחרי שטיפה ובדיקה, בהכשר מהודר. יש כאלה בחנויות בשכונה.</p>
+  </div></details>
+  <details><summary>אירוח אצל משפחות אנ"ש</summary><div>
+    <p>מתארחים רק אצל משפחות שאפשר לסמוך בבירור על הקפדתן בכשרות מהודרת, בדיוק כמו בבית שלנו.</p>
+  </div></details>
+  <details><summary>אש"ל הכנסת אורחים</summary><div>
+    <p>האוכל בחדר האוכל של אש"ל הכנסת אורחים מבושל על ידי תמימים ואברכים יראי שמיים מאנ"ש, במטבח שעומד באישור בד"ץ קראון הייטס. בבניין המלון של אש"ל מותקן מסנן כללי לכל הברזים.</p>
+  </div></details>
+  <details><summary>מסעדות</summary><div>
+    <p>רמת הכשרות אינה זהה בכל המסעדות בשכונה, ויש מהודרות יותר מאחרות. כל אחת תברר בעצמה אצל רבנים ומומחים.</p>
+  </div></details>
+  <details><summary>אוכל מבושל בלי כשרות</summary><div>
+    <p>בשכונה, גם ב-770, אפשר למצוא אוכל מבושל שהוכן לאורחים או שנשאר משמחות. גם הוא צריך חותמת כשרות מוכרת ומהודרת. אחרת ייתכנו בעיות של בשר שנתעלם מן העין ושחיטת ליובאוויטש, חוסר השגחה, בישול נכרי, בדיקת חרקים ומוצרי בסיס לא מהודרים.</p>
+  </div></details>
+
+  <div class="card">
+    <h3>שאלות והערות על הכשרות</h3>
+    <div class="copyline"><code id="k-mail">madrichkashrut@gmail.com</code><button class="btn" type="button" data-copy="k-mail">העתקה</button><a class="btn" href="mailto:madrichkashrut@gmail.com">שליחת מייל</a></div>
+    <span class="copied" data-out="k-mail" aria-live="polite"></span>
+  </div>
+  <p class="src">מתוך "מדריך כשרות בסיסי לאורחי המלך", שהוגה על ידי מומחים בכשרות מאנ"ש בשכונה.</p>
+</section>
+
+<!-- TRANSPORT -->
+<section class="view" id="v-transport" aria-label="התניידות">
+  <header class="banner"><img src="p-subway.jpg" alt=""><a class="back" href="#home"><i data-lucide="arrow-right"></i>לכל המדריך</a><h1>התניידות ויציאות לעיר</h1><p>כרטיס לסובווי, אובר, ואיך מגיעים להדלקה במנהטן, לטיימס סקוור, למייסיז, לאטלנטיק ולפריימרק.</p></header>
+  <div class="card">
+    <h2><span class="hi"><i data-lucide="ticket"></i></span>איך משלמים בסובווי, ומה הכי משתלם</h2>
+    <ul class="clean">
+      <li><b>מטרוקארד כבר לא נמכר.</b> היום משלמים במערכת OMNY: מקישים על הקורא בשער.</li>
+      <li><b>מחיר נסיעה: $3</b>, באוטובוס העירוני אותו מחיר. מעבר בין קווים בתוך התחנות בלי תשלום נוסף.</li>
+      <li><b>הכי משתלם:</b> להשתמש תמיד <b>באותו</b> כרטיס או טלפון. אחרי 12 נסיעות בתשלום ($35) בתוך 7 ימים, כל שאר הנסיעות באותו שבוע בחינם. זה מחליף את הכרטיס השבועי.</li>
+      <li><b>איך מקישים:</b> כרטיס אשראי עם סמל ללא מגע , או טלפון עם Apple Pay / Google Pay. כדאי לבדוק מראש עמלת המרה של כרטיס ישראלי.</li>
+      <li><b>אין כרטיס ללא מגע?</b> קונים כרטיס OMNY במכונה בתחנה (אפשר במזומן) או בחנויות נוחות, בעלות של $1–2, וטוענים כסף. לשבוע מספיק לטעון $35.</li>
+      <li><b>כל אחת עם כרטיס או טלפון משלה</b>, כדי שהתקרה השבועית תחול על כל אחת.</li>
+    </ul>
+    <p class="src">מקורות: <a href="https://omny.info/faq/fare-cap" target="_blank" rel="noopener">OMNY</a> · <a href="https://railpace.com/mta-board-adopts-fare-and-toll-increases-to-take-effect-january-2026/" target="_blank" rel="noopener">Railpace</a></p>
+  </div>
+
+  <div class="card">
+    <h2><span class="hi"><i data-lucide="train-front"></i></span>הסובווי מ-770</h2>
+    <ul class="clean">
+      <li><b>התחנה:</b> Kingston Av של קו 3, על איסטרן פארקווי, צמוד ל-770.</li>
+      <li><b>לכיוון מנהטן:</b> נכנסים לרציף שכתוב עליו Manhattan.</li>
+      <li>לפני כל יציאה בודקים את המסלול ב-Google Maps ("תחבורה ציבורית"). בסופי שבוע ובלילה יש לפעמים שינויים בקווים.</li>
+      <li>יוצאות בקבוצה, ושומרות בטלפון את הכתובת של מקום הלינה.</li>
+    </ul>
+  </div>
+
+  <div class="group-title">יוצאות לעיר: איך מגיעים</div>
+
+  <div class="card trip">
+    <h3><span class="hi"><i data-lucide="flame"></i></span>החנוכייה הגדולה בעולם + חנות אפל בשדרה החמישית</h3>
+    <p class="small">Grand Army Plaza, בפינת 5th Ave ו-59th St, מול מלון פלאזה. חנות Apple Fifth Avenue (קוביית הזכוכית) נמצאת ממש מולה.</p>
+    <div class="route"><span class="ln r">3</span>מ-Kingston Av <span class="ar">←</span> Franklin Av, מעבר לאותו רציף <span class="ln g">4</span><span class="ln g">5</span><span class="ar">←</span> 59 St, הליכה מערבה ברחוב 59 עד השדרה החמישית</div>
+    <p class="dur">כ-45 דקות. אפשרות נוספת: קו 3 עד Times Sq, ומשם קו N/R/W עד 5 Av/59 St.</p>
+    <p class="small"><b>זמני ההדלקה בשנים קודמות:</b> ראשון–חמישי בערך 17:30, שישי בערך 15:45, מוצאי שבת בערך 20:30. <span class="prev">שנים קודמות</span></p>
+    <div class="acts" data-dest="menorah"></div>
+  </div>
+
+  <div class="card trip">
+    <h3><span class="hi"><i data-lucide="building-2"></i></span>טיימס סקוור</h3>
+    <div class="route"><span class="ln r">3</span>מ-Kingston Av, בלי החלפות <span class="ar">←</span> Times Sq–42 St</div>
+    <p class="dur">כ-40 דקות.</p>
+    <div class="acts" data-dest="times"></div>
+  </div>
+
+  <div class="card trip">
+    <h3><span class="hi"><i data-lucide="shopping-bag"></i></span>מייסיז ופריימרק, הראלד סקוור</h3>
+    <p class="small">מייסיז (Macy's) ברחוב 34, בין השדרה השביעית לברודוויי. חנות הדגל של פריימרק (Primark) נמצאת גם היא בהראלד סקוור.</p>
+    <div class="route"><span class="ln r">3</span>מ-Kingston Av, בלי החלפות <span class="ar">←</span> 34 St–Penn Station, הליכה של כ-3 דקות מזרחה ברחוב 34</div>
+    <p class="dur">כ-35 דקות.</p>
+    <div class="acts" data-dest="macys"></div>
+  </div>
+
+  <div class="card trip">
+    <h3><span class="hi"><i data-lucide="shopping-cart"></i></span>אטלנטיק (Atlantic Terminal)</h3>
+    <p class="small">קניון ליד תחנת אטלנטיק, עם רשתות כמו Target. הכי קרוב ל-770.</p>
+    <div class="route"><span class="ln r">3</span>מ-Kingston Av, בלי החלפות <span class="ar">←</span> Atlantic Av–Barclays Ctr</div>
+    <p class="dur">כ-15 דקות.</p>
+    <div class="acts" data-dest="atlantic"></div>
+  </div>
+
+  <div class="card trip">
+    <h3><span class="hi"><i data-lucide="shirt"></i></span>פריימרק בברוקלין (City Point)</h3>
+    <p class="small">בדאונטאון ברוקלין, ברחוב Fulton. יש גם סניף בקניון Kings Plaza.</p>
+    <div class="route"><span class="ln r">3</span>מ-Kingston Av, בלי החלפות <span class="ar">←</span> Hoyt St, הליכה קצרה</div>
+    <p class="dur">כ-20 דקות.</p>
+    <div class="acts" data-dest="citypoint"></div>
+  </div>
+  <div class="group-title">שכונות יהודיות נוספות</div>
+
+  <div class="card trip">
+    <h3><span class="hi"><i data-lucide="store"></i></span>בורו פארק</h3>
+    <p class="small">רחוב הקניות הוא השדרה ה-13, מרחוב 39 עד רחוב 55, בערך קילומטר וחצי של חנויות. יש בגדים צנועים לנשים ולילדים, יודאיקה וספרי קודש, פאות, מאפיות ומעדניות.</p>
+    <ul class="clean small">
+      <li><b>מקומות ידועים:</b> Gourmet Glatt (בפינת רחוב 39), מאפיית Korn's (13th Ave 4304), חנות הספרים Eichler's.</li>
+      <li><b>בתי כנסת:</b> עשרות בתי כנסת ושטיבלך לאורך השכונה. כדאי לברר מראש איפה יש עזרת נשים פתוחה.</li>
+      <li><b>שימו לב:</b> החנויות סגורות משקיעה ביום שישי ועד מוצאי שבת.</li>
+    </ul>
+    <div class="route"><span class="ln r">3</span>מ-Kingston Av <span class="ar">←</span> Atlantic Av–Barclays Ctr, מעבר לקו <span class="ln y" style="background:#ff6319;color:#fff">D</span><span class="ar">←</span> 50 St או 55 St, הליכה קצרה לשדרה ה-13</div>
+    <p class="dur">כ-45 דקות בסובווי, או כ-20 דקות באובר.</p>
+    <div class="acts" data-dest="boropark"></div>
+  </div>
+
+  <div class="card trip">
+    <h3><span class="hi"><i data-lucide="store"></i></span>פלטבוש (מידווד)</h3>
+    <p class="small">רחובות הקניות הם שדרה J, קינגס הייוויי, שדרה M ושדרת קוני איילנד. יש מאפיות, מעדניות, פיצריות, מסעדות, סופרמרקטים כשרים גדולים כמו Pomegranate בשדרת קוני איילנד, וחנויות בגדים.</p>
+    <ul class="clean small">
+      <li><b>כשרות:</b> במדריך הכשרות מופיע "קהילה כשרות", ההכשר המקומי למסעדות בפלטבוש. בשאר המקומות בודקים את ההכשר לפי <a href="#kashrut">מדריך הכשרות</a>.</li>
+      <li><b>בתי כנסת:</b> קהילות רבות לאורך שדרה J ושדרות הסביבה. כדאי לברר מראש איפה יש עזרת נשים פתוחה.</li>
+    </ul>
+    <div class="route"><span class="ln r">3</span>מ-Kingston Av <span class="ar">←</span> Atlantic Av–Barclays Ctr, מעבר לקו <span class="ln y">Q</span><span class="ar">←</span> Avenue J</div>
+    <p class="dur">כ-40 דקות בסובווי, או כ-15 דקות באובר.</p>
+    <div class="acts" data-dest="flatbush"></div>
+  </div>
+  <p class="src">מקורות: <a href="https://en.wikipedia.org/wiki/Thirteenth_Avenue_(Brooklyn)" target="_blank" rel="noopener">Wikipedia</a> · <a href="https://brooklyneagle.com/articles/2016/02/24/architectural-eye-candy-and-actual-candy-in-borough-park" target="_blank" rel="noopener">Brooklyn Eagle</a> · <a href="https://en.wikipedia.org/wiki/Avenue_J_station" target="_blank" rel="noopener">Avenue J</a> · <a href="https://www.gokosher.com/en/f92141" target="_blank" rel="noopener">GoKosher</a></p>
+
+  <p class="src">זמני הנסיעה משוערים. מקורות: <a href="https://www.fox5ny.com/news/worlds-largest-menorah-nyc" target="_blank" rel="noopener">FOX 5 NY</a> · <a href="https://secretnyc.co/primark-herald-square-manhattan-flagship/" target="_blank" rel="noopener">Secret NYC</a></p>
+  <div class="card">
+    <h2><span class="hi"><i data-lucide="car"></i></span>אובר</h2>
+    <ul class="clean">
+      <li>מורידים את האפליקציה ונרשמים <b>עוד בארץ</b>, עם מספר טלפון וכרטיס אשראי.</li>
+      <li>לפני שנכנסים: בודקים שמספר הרכב ושם הנהג תואמים לאפליקציה.</li>
+      <li>משתפים את הנסיעה עם חברה או בן משפחה (Share trip).</li>
+      <li>בשדה התעופה האפליקציה מכוונת לנקודת איסוף מיוחדת (Rideshare).</li>
+    </ul>
+    <div class="acts"><a class="btn primary" href="https://apps.apple.com/app/uber/id368677368" target="_blank" rel="noopener">הורדת אובר לאייפון</a><a class="btn" href="https://play.google.com/store/apps/details?id=com.ubercab" target="_blank" rel="noopener">הורדה לאנדרואיד</a><a class="btn" href="https://m.uber.com/" target="_blank" rel="noopener">אובר בדפדפן</a></div>
+  </div>
+  <div class="card">
+    <h2><span class="hi"><i data-lucide="plane"></i></span>משדה התעופה</h2>
+    <p>עם מזוודות, הדרך הנוחה היא הסעה מוזמנת מראש או אובר. ממליצים על נהגים וחברות הסעה מהשכונה.</p>
+    <h3>מ-JFK ל-770</h3><div class="acts" data-from="jfk" data-dest="770"></div>
+    <h3>מ-Newark ל-770</h3><div class="acts" data-from="ewr" data-dest="770"></div>
+    <div class="card spon"><span class="tag">הסעות מומלצות</span><b>כאן יופיעו חברות ההסעה השותפות</b></div>
+  </div>
+</section>
+
+<!-- MAP -->
+<section class="view" id="v-map" aria-label="מפה">
+  <header class="banner"><img src="p-map.jpg" alt=""><a class="back" href="#home"><i data-lucide="arrow-right"></i>לכל המדריך</a><h1>מפה ומסלולים</h1><p>בוחרים מאיפה ולאן, או לוחצים על המפה, ורואים כמה זמן ההליכה והנסיעה. משם פותחים את המסלול המדויק בגוגל מפות או מזמינים אובר.</p></header>
+  <div class="card planner">
+    <div class="pick">
+      <div class="fld"><label for="from"><i class="dot a"></i>מאיפה</label><select id="from"></select></div>
+      <button class="btn swap" id="swap" type="button" aria-label="החלפת כיוון">⇅</button>
+      <div class="fld"><label for="to"><i class="dot b"></i>לאן</label><select id="to"></select></div>
+    </div>
+    <div class="res" id="res"></div>
+    <div class="acts" id="route-acts"></div>
+  </div>
+  <div class="mapwrap">
+    <svg id="map" role="img" aria-label="מפת קראון הייטס"></svg>
+    <div class="tapmode" role="group" aria-label="לחיצה על המפה קובעת">
+      <span>לחיצה על המפה קובעת:</span>
+      <button type="button" id="tm-from" aria-pressed="false">מאיפה</button>
+      <button type="button" id="tm-to" aria-pressed="true">לאן</button>
+    </div>
+    <div class="zoom">
+      <button type="button" id="zin" aria-label="הגדלה">+</button>
+      <button type="button" id="zout" aria-label="הקטנה">−</button>
+      <button type="button" id="zhome" aria-label="חזרה ל-770">770</button>
+    </div>
+  </div>
+  <p class="src">נתוני המפה © תורמי OpenStreetMap. הזמנים הם הערכה לפי מרחק. את הזמן המדויק, כולל עומסים וקווים, רואים בגוגל מפות.</p>
+</section>
+
+<!-- TIMES -->
+<section class="view" id="v-times" aria-label="זמנים ואירועים">
+  <header class="banner"><img src="p-menorah.jpg" alt=""><a class="back" href="#home"><i data-lucide="arrow-right"></i>לכל המדריך</a><h1>זמנים ואירועים</h1><p>הדלקות, תפילות, נסיעות לאוהל ואירועים לכל הנשים.</p></header>
+  <div class="notice">חלק מהזמנים לקוחים משנים קודמות (מסומנים <span class="prev">שנים קודמות</span>). נעדכן כאן ברגע שיפורסמו הזמנים לחנוכה תשפ"ז.</div>
+
+  <div class="card event">
+    <span class="chip gold">לכל הנשים</span>
+    <h2>כינוס נשים ב-770 · לכל אורחות המלך</h2>
+    <div class="when"><span class="chip">מוצאי שבת, ב' טבת</span><span class="chip" dir="ltr">12.12.2026</span><span class="chip">21:00</span></div>
+  </div>
+
+  <div class="card">
+    <h2><span class="hi"><i data-lucide="flame"></i></span>נרות חנוכה, לילה אחר לילה</h2>
+    <div class="table-wrap"><table class="tbl stbl">
+      <thead><tr><th>ערב</th><th>נר</th><th>ב-770</th><th>בבית</th></tr></thead>
+      <tbody>
+        <tr class="hl"><td><b>שישי 4.12</b><small>כ"ד כסלו · ערב שבת</small></td><td class="tm">1</td><td>לפני שבת</td><td class="tm">לפני 16:10</td></tr>
+        <tr class="hl"><td><b>מוצ"ש 5.12</b><small>כ"ה כסלו</small></td><td class="tm">2</td><td>אחרי ערבית</td><td class="tm">אחרי 17:13</td></tr>
+        <tr><td><b>ראשון 6.12</b><small>כ"ו כסלו</small></td><td class="tm">3</td><td>עם מנחה</td><td class="tm">בערך 16:28</td></tr>
+        <tr><td><b>שני 7.12</b><small>כ"ז כסלו</small></td><td class="tm">4</td><td class="tm">15:15</td><td class="tm">בערך 16:28</td></tr>
+        <tr><td><b>שלישי 8.12</b><small>כ"ח כסלו</small></td><td class="tm">5</td><td class="tm">15:15</td><td class="tm">בערך 16:28</td></tr>
+        <tr><td><b>רביעי 9.12</b><small>כ"ט כסלו</small></td><td class="tm">6</td><td class="tm">15:15</td><td class="tm">בערך 16:28</td></tr>
+        <tr><td><b>חמישי 10.12</b><small>ל' כסלו · ראש חודש</small></td><td class="tm">7</td><td class="tm">15:15</td><td class="tm">בערך 16:28</td></tr>
+        <tr class="hl"><td><b>שישי 11.12</b><small>א' טבת · ערב שבת</small></td><td class="tm">8</td><td>לפני שבת</td><td class="tm">לפני 16:10</td></tr>
+      </tbody>
+    </table></div>
+    <ul class="clean small">
+      <li><b>ב-770:</b> ההדלקה בימי חול היא עם תפילת מנחה, בשעה 15:15 (לפי החוברת של נשי חב"ד צפת לימים 7–10.12).</li>
+      <li><b>בבית:</b> מדליקים בשקיעה, בערך 16:28. הנרות צריכים לדלוק לפחות חצי שעה אחרי צאת הכוכבים.</li>
+      <li><b>בערב שבת:</b> קודם נרות חנוכה ורק אחר כך נרות שבת, עם נרות שידלקו עד אחרי צאת הכוכבים.</li>
+      <li><b>תהלוכת החנוכיות</b> של טנקי המבצעים יוצאת מ-770 אחרי ההדלקה ביום ראשון 6.12. <span class="prev">לפי שנים קודמות</span></li>
+    </ul>
+    <p class="small muted">ההדלקות ב-770 משודרות בשידור חי ב-<a href="https://770live.com" target="_blank" rel="noopener">770live.com</a>. זמני השקיעה וצאת השבת לפי <a href="https://www.hebcal.com/shabbat?geonameid=5110302" target="_blank" rel="noopener">Hebcal</a>.</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="hi"><i data-lucide="book-open"></i></span>תפילות ב-770</h2>
+    <ul class="times">
+      <li><span class="t">10:00</span><div><b>שחרית במניין של הרבי</b>, כל יום, גם בשבת. לאורך היום יש מניינים נוספים.</div></li>
+      <li><span class="t">15:15</span><div><b>מנחה והדלקת החנוכייה</b>, בימי חול.</div></li>
+      <li><span class="t">16:10</span><div><b>ערב שבת:</b> הדלקת נרות שבת, ואחריה קבלת שבת ב-770.</div></li>
+      <li><span class="t">16:00</span><div><b>שבת קודש:</b> מנחה, סדר ניגונים וערבית ב-770. צאת השבת 17:14.</div></li>
+      <li><span class="t">10:30</span><div><b>החדר של הרבי</b> פתוח לנשים כל יום מהשעה הזו. דופקים על הדלת כדי שיפתחו.</div></li>
+    </ul>
+    <p class="src">לפי החוברת "תוכניה" של נשי ובנות חב"ד צפת, חנוכה תשפ"ז. ייתכנו שינויים, כדאי לבדוק בלוח המודעות ב-770.</p>
+  </div>
+
+  <a class="card ohel-link" href="#ohel"><img src="i-ohelbus.png" alt=""><div><h3>נסיעה לאוהל</h3><span class="small muted">האוטובוס היומי, נסיעות פרטיות ואיך מתכוננים</span></div><i data-lucide="arrow-left"></i></a>
+
+  <div class="card">
+    <h2><span class="hi"><i data-lucide="newspaper"></i></span>חדש מהשכונה</h2>
+    <ul class="learn-list">
+      <li><b>"שיירת האור" של התמימים</b><span class="small">תלמידי הישיבה ב-770 נערכים למבצע חנוכה: רכבים לכל ימי החנוכה ושיירה ברחבי ניו יורק. התאריך והמסלול עוד לא פורסמו.</span><small>חב"ד אינפו · ח' כסלו תשפ"ז · <a href="https://chabad.info/seven-seventy/1384353/" target="_blank" rel="noopener">לכתבה</a></small></li>
+      <li><b>החנוכייה הגדולה בעולם, השדרה החמישית</b><span class="small">בשנה שעברה הודלקה כל ערב, וההדלקה הראשונה הייתה ב-17:30. <span class="prev">שנים קודמות</span></span><small><a href="https://www.fox5ny.com/news/worlds-largest-menorah-nyc" target="_blank" rel="noopener">FOX 5 NY</a></small></li>
+      <li><b>Chanukah on Ice לנשים ולבנות</b><span class="small">בשנה שעברה: ערב החלקה על הקרח במשטח LeFrak Center בפרוספקט פארק, 19:00–21:00, מטעם The Space CH. <span class="prev">שנים קודמות</span></span><small><a href="https://x.com/COLLiveNews/status/1998516983025852602" target="_blank" rel="noopener">COLlive</a></small></li>
+      <li><b>ראלי חנוכה של צבאות ה' ב-770</b><span class="small">בכל שנה יש ראלי לילדים ב-770, עם שידור חי והדלקה. לוח השנה יפורסם קרוב לחנוכה.</span><small><a href="https://www.chabad.org/kids/article_cdo/aid/7137455/jewish/Chanukah-Rally-5786.htm" target="_blank" rel="noopener">הראלי של השנה שעברה</a></small></li>
+    </ul>
+    <p class="small muted">הלוחות של השדרה החמישית, האוטובוס לאוהל והראלי מתפרסמים בדרך כלל בסוף נובמבר. נעדכן כאן.</p>
+  </div>
+  <p class="src">מקורות: <a href="https://collive.com/mitzvah-tank-office-finalizes-plans-for-chanukah-menorah-parade/" target="_blank" rel="noopener">COLlive</a> · <a href="https://crownheights.info/crown-heights-news/802016/expanded-bus-service-from-crown-heights-to-the-ohel-for-chanukah" target="_blank" rel="noopener">CrownHeights.info</a> · <a href="https://chanukahnyc.com/770-eastern-parkway-chabad-lubavitch-world-headquarters/" target="_blank" rel="noopener">ChanukahNYC</a></p>
+</section>
+
+<!-- BUSINESSES -->
+<section class="view" id="v-biz" aria-label="עסקים">
+  <header class="banner"><img src="p-shops.jpg" alt=""><a class="back" href="#home"><i data-lucide="arrow-right"></i>לכל המדריך</a><h1>עסקים מומלצים</h1><p>עסקים מהשכונה שמצטרפים לעזור לאורחות של הרבי. חלקם עם הטבה מיוחדת לטסות המדריך <i data-lucide="gift"></i></p></header>
+  <div class="card spon"><span class="tag">בקרוב</span><b>העסקים השותפים יופיעו כאן לקראת חנוכה</b><span class="small muted">בעלי עסקים? <a href="sponsors.html" target="_blank" rel="noopener">כך מצטרפים</a></span></div>
+  <div class="chips-row" role="group" aria-label="סינון עסקים">
+    <button type="button" class="fchip on" data-f="all">הכל</button>
+    <button type="button" class="fchip" data-f="perk"><i data-lucide="gift"></i>עם הטבה</button>
+    <button type="button" class="fchip" data-f="ebt"><i data-lucide="credit-card"></i>מכבדים EBT</button>
+    <button type="button" class="fchip" data-f="shabbat"><i data-lucide="flame"></i>אוכל לשבת</button>
+    <button type="button" class="fchip" data-f="travel"><i data-lucide="plane"></i>לפני הטיסה</button>
+  </div>
+  <div class="biz-list" id="biz-list"></div>
+  <div class="card how"><h3><span class="hi"><i data-lucide="ticket-percent"></i></span>איך משתמשות בהטבה</h3><p class="small">מציגות בקופה את הקוד או את המסך של העסק במדריך. כל עסק שותף מצרף קופון לטסות "נוסעים לרבי".</p></div>
+  </div>
+</section>
+
+<!-- SOS -->
+<section class="view" id="v-sos" aria-label="חירום">
+  <header class="banner"><img src="p-sos.jpg" alt=""><a class="back" href="#home"><i data-lucide="arrow-right"></i>לכל המדריך</a><h1>חירום</h1><p>כדאי לשמור את המספרים בטלפון עוד לפני הטיסה.</p></header>
+  <div class="sos">
+    <div class="card"><div class="row"><div><h3>משטרה, כבאות, אמבולנס</h3><span class="small muted">מכל טלפון</span></div><a class="num red" href="tel:911">911</a></div></div>
+    <div class="card"><div class="row"><div><h3>הצלה קראון הייטס</h3><span class="small muted">עזרה רפואית מהירה, בעברית ויידיש</span></div><a class="num" id="n-hatzalah" href="tel:+17182301000">718-230-1000</a></div>
+      <div class="copyline"><button class="btn" type="button" data-copy="n-hatzalah">העתקה</button><span class="copied" data-out="n-hatzalah" aria-live="polite"></span></div></div>
+    <div class="card"><div class="row"><div><h3>OneCall · הצלה וחברים בכל צפון אמריקה</h3><span class="small muted">קו אחד שמעביר לסניף הקרוב. אומרים "Crown Heights"</span></div><a class="num" href="tel:+18889911613">1-888-9911-613</a></div></div>
+    <div class="card"><div class="row"><div><h3>שמירה קראון הייטס</h3><span class="small muted">סיור ביטחון שכונתי</span></div><a class="num" href="tel:+17182210303">718-221-0303</a></div></div>
+    <div class="card"><div class="row"><div><h3>חברים (Chaverim) קראון הייטס</h3><span class="small muted">עזרה בדרך: נעילה מחוץ לבית, רכב תקוע, מפתחות</span></div><a class="num" href="tel:+17182221800">718-222-1800</a></div></div>
+    <div class="card"><div class="row"><div><h3>הקונסוליה הישראלית בניו יורק</h3><span class="small muted">דרכון שאבד, מעצר או מצוקה. מחוץ לשעות הפעילות: וואטסאפ בלבד</span></div><a class="num" href="https://wa.me/19177415755" target="_blank" rel="noopener">917-741-5755</a></div>
+      <div class="acts"><a class="btn" href="https://new.embassies.gov.il/newyork/en/contacts" target="_blank" rel="noopener">כל דרכי הקשר בקונסוליה</a></div></div>
+    <div class="card"><div class="row"><div><h3>מוקד העירייה (לא חירום)</h3><span class="small muted">מידע, תלונות, חפצים שאבדו בתחבורה</span></div><a class="num" href="tel:311">311</a></div></div>
+    <div class="card"><div class="row"><div><h3>מוקד הרעלות</h3><span class="small muted">בליעה של חומר מסוכן, 24 שעות</span></div><a class="num" href="tel:+18002221222">1-800-222-1222</a></div></div>
+    <div class="card spon"><span class="tag">בית מרקחת</span><b>כאן יופיע בית המרקחת השותף</b></div>
+  </div>
+</section>
+
+</main>
+</div>
+
+
+<button type="button" class="bot-fab" id="bot-fab" aria-controls="bot" aria-expanded="false"><img src="i-bot.png" alt=""><span>שאלי את המדריך</span></button>
+<section class="bot" id="bot" hidden aria-label="שאלות על המדריך">
+  <header class="bot-head"><img class="bot-av" src="i-bot.png" alt=""><div class="bot-tt"><b>שאלי את המדריך</b><small>עונה רק לפי המידע שבאתר</small></div><button type="button" class="bot-x" id="bot-x" aria-label="סגירה"><i data-lucide="x"></i></button></header>
+  <div class="bot-log" id="bot-log" aria-live="polite">
+    <div class="msg ai">שלום! אפשר לשאול אותי כל דבר מהמדריך: כשרות, זמנים, איך מגיעים, הקבוצות ועוד.</div>
+    <div class="bot-sugg"><button type="button">מה ההכשרים המהודרים?</button><button type="button">איך מגיעים לחנוכייה בשדרה החמישית?</button><button type="button">מה עושים אם הדרכון אבד?</button></div>
+  </div>
+  <form class="bot-form" id="bot-form"><input id="bot-in" type="text" autocomplete="off" placeholder="כתבי שאלה..." aria-label="שאלה"><button type="submit" class="sgo" id="bot-send" aria-label="שליחה"><i data-lucide="arrow-left"></i></button></form>
+  <p class="bot-note" id="bot-note" hidden></p>
+</section>
+<div class="tabs">
+  <nav aria-label="ניווט">
+    <a class="tab" href="#home" data-tab="home"><svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7v9H3z"/><path d="M9 20v-6h6v6"/></svg>בית</a>
+    <a class="tab" href="#kashrut" data-tab="kashrut"><svg viewBox="0 0 24 24"><path d="M4 11h16M6 11v8h12v-8M8 11a4 4 0 0 1 8 0"/></svg>כשרות</a>
+    <a class="tab" href="#transport" data-tab="transport"><svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="15" rx="3"/><path d="M5 11h14M8 21l2-3M16 21l-2-3"/></svg>התניידות</a>
+    <a class="tab" href="#times" data-tab="times"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg>זמנים</a>
+    <a class="tab" href="#map" data-tab="map"><svg viewBox="0 0 24 24"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2z"/><path d="M9 4v14M15 6v14"/></svg>מפה</a>
+    <a class="tab" href="#sos" data-tab="sos"><svg viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/></svg>חירום</a>
+  </nav>
+</div>
+
+<script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+<script>
+(function(){
+  var views=["home","ohel","groups","shabbat","health","trouble","fun","learn","before","prep","kashrut","transport","map","times","biz","sos"];
+  function show(){
+    var h=(location.hash||"").replace("#","");
+    if(views.indexOf(h)<0)h="home";
+    views.forEach(function(v){document.getElementById("v-"+v).classList.toggle("on",v===h)});
+    document.querySelectorAll(".tab").forEach(function(t){t.classList.toggle("on",t.dataset.tab===h)});
+    window.scrollTo(0,0);
+  }
+  window.addEventListener("hashchange",show); show();
+
+  // countdown to first candle: Fri 4 Dec 2026 evening (New York)
+  try{
+    var start=new Date("2026-12-04T16:00:00-05:00"), end=new Date("2026-12-12T17:30:00-05:00"), now=new Date(), t=document.getElementById("cd-text");
+    if(now<start){var d=Math.ceil((start-now)/864e5);t.innerHTML="עוד <b>"+d+"</b> ימים לנר הראשון"}
+    else if(now<end){var n=Math.min(8,Math.floor((now-start)/864e5)+1);t.innerHTML="היום נר <b>"+n+"</b> של חנוכה"}
+  }catch(e){}
+
+  // bidi: English runs inside Hebrew text read left-to-right
+  (function(){
+    var re=/[A-Za-z][A-Za-z0-9 .,'’&\/()\-–:]*[A-Za-z0-9)]|[A-Za-z]/g, skip={SCRIPT:1,STYLE:1,BDI:1,CODE:1,INPUT:1,TEXTAREA:1,SELECT:1,OPTION:1,OPTGROUP:1};
+    var w=document.createTreeWalker(document.querySelector("main"),NodeFilter.SHOW_TEXT,{acceptNode:function(n){
+      for(var p=n.parentNode;p&&p.nodeType===1;p=p.parentNode){if(skip[p.tagName]||p.namespaceURI==="http://www.w3.org/2000/svg"||p.getAttribute("dir")==="ltr")return NodeFilter.FILTER_REJECT}
+      return /[A-Za-z]/.test(n.nodeValue)?NodeFilter.FILTER_ACCEPT:NodeFilter.FILTER_REJECT}});
+    var nodes=[];while(w.nextNode())nodes.push(w.currentNode);
+    nodes.forEach(function(n){
+      var s=n.nodeValue,f=document.createDocumentFragment(),i=0;s.replace(re,function(m,o){f.appendChild(document.createTextNode(s.slice(i,o)));var b=document.createElement("bdi");b.dir="ltr";b.textContent=m;f.appendChild(b);i=o+m.length});
+      f.appendChild(document.createTextNode(s.slice(i)));n.parentNode.replaceChild(f,n);
+    });
+  })();
+
+  // hechsher search
+  var q=document.getElementById("h-search");
+  q.addEventListener("input",function(){
+    var s=q.value.trim().toLowerCase();
+    document.querySelectorAll("#hlist li").forEach(function(li){li.hidden=s&&li.textContent.toLowerCase().indexOf(s)<0});
+  });
+
+  // copy buttons
+  document.querySelectorAll("[data-copy]").forEach(function(b){
+    b.addEventListener("click",function(){
+      var id=b.dataset.copy, txt=document.getElementById(id).textContent, out=document.querySelector('[data-out="'+id+'"]');
+      if(navigator.clipboard&&navigator.clipboard.writeText){
+        navigator.clipboard.writeText(txt).then(function(){out.textContent="הועתק ✓"},function(){out.textContent="סמנו והעתיקו ידנית"});
+      }else{out.textContent="סמנו והעתיקו ידנית"}
+    });
+  });
+})();
+</script>
+<script type="application/json" id="streets">{"names":["Midwood Street","Kingston Avenue","Remsen Avenue","Saint Charles Place","Prospect Place","Lamont Court","Clove Road","East 45th Street","Maple Street","Hunterfly Place","Dearborn Court","Union Street","Stoddard Place","East 48th Street","Lincoln Road","Troy Avenue","Fenimore Street","Rutland Road","Saint Francis Place","East 93rd Street","Balfour Place","East 51st Street","Buffalo Avenue","Virginia Place","Ludlam Place","Hawthorne Street","Malbone Street","East New York Avenue","Revere Place","Lincoln Place","Bergen Street","Sterling Street","Utica Avenue","Winthrop Street","Saint Marks Avenue","Rogers Avenue","East 91st Street","Hampton Place","East 52nd Street","East 54th Street","Rochester Avenue","Ford Street","Sullivan Place","East 46th Street","Suydam Place","East 94th Street","East 49th Street","Pacific Street","Empire Boulevard","Eastern Parkway Service Road","Crown Street","President Street","Saint Johns Place","Sterling Place","East 92nd Street","Bedford Avenue","Albany Avenue","Schenectady Avenue","Lefferts Avenue","Dean Street","Brooklyn Avenue","Franklin Avenue","New York Avenue","East 53rd Street","East 96th Street","Montgomery Street","Carroll Street","Atlantic Avenue","Eastern Parkway","Nostrand Avenue","","Park Place","East 95th Street"],"ways":[[0,1,[852,742,840,743,792,747,688,755,660,758,615,762,606,763]],[0,1,[364,785,354,786,152,802,142,803]],[1,1,[-88,902,-88,896,-88,895,-93,829,-94,823,-95,814,-97,786,-100,750,-100,744,-101,736,-106,670,-107,661]],[2,3,[1358,1148,1352,1142,1334,1119,1297,1076,1273,1047,1268,1041,1260,1032,1237,1005,1215,978,1206,968,1199,960,1180,937,1131,880,1124,871,1087,827,1070,807,1057,791,1051,784,1044,777,1027,756,1017,744,967,685,939,652,916,626,899,606,882,586,879,583]],[3,1,[-1192,-451,-1194,-444,-1195,-440,-1216,-364,-1217,-361,-1219,-354]],[4,1,[213,-635,202,-636,-16,-652,-23,-652]],[4,1,[-257,-668,-266,-669,-437,-682,-483,-685,-491,-686]],[5,1,[-229,582,-228,572,-219,448,-219,442,-218,431]],[6,1,[-716,349,-681,393]],[7,1,[453,858,453,863,473,1105,474,1114]],[8,1,[-1614,869,-1604,868,-1306,843,-1298,842,-1291,841,-1026,819,-1017,818,-1007,818,-939,812,-782,799,-772,798,-764,798,-652,788,-537,779,-528,778,-519,778,-493,775,-442,771,-394,768,-347,764,-337,763,-327,762,-110,744,-100,744,-92,743,-40,739,-21,737]],[9,1,[1121,-1045,1120,-1052,1117,-1069,1106,-1136,1101,-1160,1100,-1167]],[10,1,[-912,281,-912,272,-906,195,-906,189,-906,182]],[11,1,[-1702,-276,-1695,-274,-1650,-262,-1594,-247,-1570,-240,-1550,-235,-1476,-215,-1430,-201,-1426,-200,-1418,-198,-1411,-196,-1366,-184,-1201,-138,-1190,-137,-1180,-137,-1112,-132,-1010,-125,-1001,-124,-993,-124,-776,-108,-767,-107,-760,-107,-693,-102,-597,-95,-541,-91,-533,-88,-526,-85,-308,-69,-299,-68,-292,-68,-75,-52,-66,-51]],[12,1,[-1217,259,-1217,267,-1218,271,-1227,395,-1227,403]],[13,1,[682,677,682,682,683,687,687,738,688,748,688,755]],[14,1,[-779,716,-789,717,-1014,735,-1023,736,-1033,737,-1106,743,-1294,758,-1296,758,-1305,759,-1314,760,-1611,784,-1618,784]],[15,1,[391,1120,391,1111,385,1042,384,1035,379,969,377,943,371,871,371,864,370,856,367,819,364,785,358,710,358,705,357,696,352,632,351,624]],[16,1,[-364,1004,-387,1006,-449,1011,-500,1015,-508,1016]],[16,1,[155,961,165,961,169,960,202,958,362,944,367,944,377,943]],[17,1,[1051,784,1060,777,1086,755,1111,734,1116,729,1122,725,1171,683,1177,678,1182,673,1231,631,1237,627,1242,622,1291,580,1297,575,1303,571,1352,529,1357,524,1363,519,1426,465,1431,461,1437,456,1488,413,1499,403]],[17,1,[-1604,1026,-1595,1026,-1294,1001,-1286,1000,-1278,999,-1012,977,-1003,977,-995,976,-769,958,-759,957,-750,956,-525,937,-515,937,-506,936,-334,923,-324,922]],[18,1,[-1265,-471,-1267,-464,-1268,-460,-1288,-385,-1289,-381,-1291,-374]],[19,1,[1049,407,1057,414,1074,435]],[17,1,[1022,810,1029,802,1041,792,1051,784]],[20,1,[-286,425,-287,437,-296,574,-297,578,-297,588]],[21,1,[939,652,932,662,932,672,943,804,943,809,944,817]],[22,2,[1325,196,1345,221,1347,223,1354,232]],[23,1,[129,-542,128,-534,122,-455,122,-451,121,-442]],[24,1,[-1138,265,-1138,272,-1146,389,-1147,397]],[25,1,[163,1054,172,1053,177,1053,231,1048,270,1045,310,1042,373,1036,375,1036,384,1035]],[26,1,[-567,401,-577,400,-674,393,-681,393]],[27,3,[836,529,822,536,802,547,778,561,775,562,742,580,737,583,714,595]],[27,1,[-535,696,-526,696,-354,682,-343,681,-335,680,-189,669,-116,662,-107,661,-98,660,7,652,120,642,127,642]],[28,1,[42,-847,43,-856,46,-923,47,-928,47,-934]],[29,1,[-519,-297,-512,-296,-293,-279,-285,-279,-277,-278,-66,-262,-60,-261,-51,-261,-44,-260,169,-245,174,-245,183,-244,189,-244,221,-241,316,-234,408,-228,416,-227,423,-227,642,-211,650,-211,658,-210,874,-194,884,-193]],[30,1,[1360,-752,1348,-753,1318,-755]],[31,1,[-1635,612,-1625,611,-1569,606,-1525,603,-1417,594,-1329,587,-1319,586,-1310,585,-1046,563,-1037,563,-1028,562,-883,550,-803,543,-793,543,-784,542,-599,527,-559,523,-549,522,-540,522,-353,507,-350,507,-341,507]],[32,1,[1051,-1255,1044,-1247,1038,-1239,1034,-1234,988,-1176,977,-1162,967,-1146,960,-1132,954,-1116,950,-1103,948,-1091,948,-1088,947,-1081,947,-1080,946,-1064,946,-1057]],[33,1,[1268,1041,1261,1049,1214,1053,1207,1054]],[34,1,[685,-702,692,-701,910,-685,919,-684,927,-684,1143,-668,1153,-667]],[35,3,[-973,-521,-972,-530,-966,-613,-966,-620,-965,-629,-963,-651,-959,-713,-958,-719,-958,-728,-952,-810,-951,-819,-951,-828,-948,-854,-945,-910,-945,-917]],[36,1,[1664,1377,1659,1372,1584,1283,1581,1280,1577,1274,1571,1268,1431,1102,1429,1099,1423,1092,1416,1085,1277,920,1275,918,1270,911,1263,904,1121,736,1116,729,1109,721,918,494,910,485]],[37,1,[48,-348,49,-359,54,-437,55,-441,55,-447,56,-456,62,-539,62,-547]],[38,1,[1017,744,1022,796,1022,810]],[39,1,[1207,1054,1208,1060,1222,1231,1222,1240,1223,1247,1233,1375,1234,1382,1234,1390,1247,1542,1248,1554,1249,1563,1262,1727,1263,1737,1264,1746,1280,1955,1281,1964,1282,1973,1287,2038,1298,2169,1299,2179]],[40,1,[1194,-1245,1194,-1238,1189,-1169,1188,-1161,1188,-1154,1180,-1048,1179,-1040]],[41,1,[1049,407,1040,400,1031,333,1030,328,1029,321,1029,313,1018,233,1017,228,1017,220]],[42,1,[-802,369,-813,370,-847,373,-932,380,-1030,388,-1037,388,-1046,389,-1147,397,-1207,402,-1227,403,-1296,409,-1324,411,-1333,412,-1344,412,-1402,417,-1430,419,-1478,423,-1498,425,-1507,426,-1516,427,-1583,433,-1591,433]],[43,1,[552,1107,551,1099,532,857,532,851]],[44,1,[1259,-1035,1259,-1042,1262,-1078,1266,-1143,1267,-1149,1267,-1155]],[45,1,[1121,366,1127,374,1154,406,1155,407,1173,428,1290,567,1297,575]],[46,1,[795,1087,794,1078,783,951,775,843,774,838,774,831]],[47,1,[2107,-873,2100,-873,2067,-875,1888,-888,1882,-889,1873,-889,1865,-890,1722,-900,1663,-905,1655,-905,1647,-906,1557,-912,1477,-918,1420,-922,1419,-922,1412,-923,1407,-923,1398,-924,1372,-926,1297,-931,1258,-934,1215,-937]],[30,1,[1318,-755,1284,-758,1246,-760,1201,-764,1172,-766,1167,-767,1160,-767,1151,-767,940,-783,934,-783,925,-784,917,-784,706,-799,700,-800,691,-800,683,-801,568,-809,473,-816,468,-816,457,-817]],[47,1,[-231,-1041,-239,-1042,-457,-1057,-464,-1058,-473,-1058,-690,-1074,-698,-1074]],[34,1,[-1514,-961,-1508,-959,-1481,-952,-1439,-940,-1387,-926,-1351,-916,-1337,-912,-1335,-912]],[34,1,[-718,-802,-710,-801,-613,-794,-492,-786,-484,-785,-476,-785,-258,-769,-250,-769,-243,-768,-205,-765,-137,-760,-128,-760,-25,-752,-16,-751]],[32,3,[945,-1038,944,-1030,943,-1014,942,-1006,939,-966,939,-957,938,-949,933,-884,933,-879,933,-874,932,-870,932,-863,928,-823,926,-793,925,-784,925,-776,921,-720,920,-693,919,-684,919,-677,915,-633,915,-620,913,-594,912,-585]],[27,3,[594,604,583,605,556,607,359,623,351,624]],[48,3,[835,494,847,494,891,488,893,488,910,485]],[15,1,[367,473,368,460,370,432,373,380,374,374,374,365,376,338,378,324,381,281,381,274,382,265,385,225,387,182,388,175,388,166,390,145,391,126,394,84,395,76,395,66,401,-8,401,-14,402,-22,406,-85,407,-93,407,-100]],[15,3,[351,624,351,620,350,613,348,580,346,566,351,545,353,537]],[27,3,[714,595,778,589,785,589,790,588,795,588]],[49,4,[-1774,-373,-1765,-373,-1760,-373,-1690,-354,-1681,-352,-1674,-350,-1412,-277,-1406,-275,-1397,-273,-1390,-271,-1212,-222,-1179,-215,-1169,-212]],[50,1,[1082,324,1074,324,1034,321,1029,321,1024,321,958,316,860,309,847,308,835,307,680,296,622,292,614,292,606,291,496,283,388,275,381,274,372,274,327,270,154,258,147,257,138,257,-79,241,-87,241,-96,240,-142,237,-244,229,-313,225,-321,224,-329,223,-547,208,-554,207,-562,207,-683,198,-721,195,-781,191,-788,190,-796,190,-858,186,-898,183,-906,182,-914,182,-948,179,-955,179,-1014,174,-1022,174,-1031,173,-1065,171,-1193,162,-1260,157,-1270,156,-1281,155,-1413,119,-1491,98,-1498,96]],[51,1,[1096,126,1087,126,870,110,862,110]],[52,1,[-1420,-514,-1345,-493,-1337,-491]],[53,1,[-973,-521,-983,-522,-1074,-528,-1083,-528,-1093,-529,-1119,-536,-1303,-587,-1311,-589,-1319,-592,-1343,-598,-1391,-611]],[22,2,[1325,196,1318,216,1317,235,1316,242,1315,254]],[22,2,[1343,-55,1341,-41]],[54,1,[982,446,987,453,1078,562,1123,615,1148,644,1165,665,1170,670,1177,678]],[55,2,[-952,-1006,-954,-996,-955,-995,-955,-994,-956,-991,-973,-928,-975,-919,-977,-912,-999,-830,-1002,-822,-1004,-815,-1017,-768,-1022,-748,-1027,-732,-1029,-724,-1031,-719,-1037,-695,-1053,-633,-1056,-627,-1058,-621,-1079,-541,-1080,-536,-1083,-528,-1084,-523,-1107,-439,-1109,-430,-1111,-424,-1134,-341,-1136,-333,-1138,-326,-1155,-265,-1157,-258]],[27,3,[714,595,603,603,594,604]],[56,1,[127,642,128,651,132,685,133,695,135,716,136,724,136,730,141,795,142,803,143,810,145,835,146,849,148,874,149,882,149,887,152,919,154,944,155,961,160,1024,162,1042,163,1048,163,1054,163,1058,165,1084,164,1098,160,1130,159,1139,158,1147,158,1148,156,1164,153,1183,153,1193,156,1235,157,1251,161,1296,163,1318,163,1329]],[15,3,[353,537,357,525,363,508,366,484,367,473]],[27,1,[127,642,138,641,257,631,287,629,321,626,342,625,351,624]],[57,1,[600,489,588,515]],[57,1,[594,604,595,612,600,675,600,683,601,689,606,763,613,836,614,844,614,851,627,1015,631,1066,633,1091,633,1100]],[48,3,[783,498,769,499,738,498,688,495,659,493]],[27,3,[910,485,916,482,928,475,974,450,977,449,982,446,1003,434,1008,431,1013,428,1042,411,1049,407,1055,404,1074,393,1080,389,1087,386,1110,373,1121,366,1146,352,1171,337,1184,330,1191,326,1197,322,1249,292,1271,280,1277,277,1284,273,1303,261,1307,259,1315,254]],[58,1,[353,537,363,536,572,518,577,517,588,515]],[49,4,[1340,-32,1351,-32,1369,-30,1578,-15,1583,-15,1591,-14]],[32,3,[878,-112,877,-104,876,-91]],[32,3,[874,-66,874,-59,873,-54,871,-20,871,-15,869,11,869,19]],[15,1,[457,-817,459,-826,464,-897,465,-904,465,-913,467,-943,470,-983,471,-990,472,-999,476,-1064,477,-1072]],[40,1,[1153,-667,1153,-660,1150,-618,1148,-596,1146,-577,1146,-568,1145,-561,1139,-478,1139,-469,1138,-462,1132,-379,1132,-370,1131,-363,1125,-282,1125,-271,1124,-261,1118,-184,1118,-177,1118,-172,1113,-103,1112,-97]],[40,1,[1166,-853,1165,-844,1160,-775,1160,-767,1159,-760,1158,-734,1154,-677,1153,-667]],[34,1,[1153,-667,1160,-667,1191,-665,1313,-656,1377,-651,1386,-651]],[56,1,[231,-921,230,-913,225,-843,225,-834]],[59,1,[231,-921,238,-920,266,-918,291,-916,450,-905,456,-905,465,-904,473,-903,689,-888,699,-887,706,-887,727,-885,732,-885,923,-871,932,-870,940,-870,961,-868,1147,-854,1157,-854,1166,-853]],[30,1,[457,-817,448,-817,291,-828,273,-829,233,-833,225,-834,216,-835,42,-847,-2,-850,-9,-851,-18,-851,-236,-867,-243,-867,-251,-868,-470,-883,-477,-884,-485,-884,-702,-900,-711,-900]],[22,1,[1358,-254,1358,-244,1352,-166,1352,-160,1351,-156,1346,-86,1345,-79]],[15,1,[407,-100,408,-108,409,-124,410,-138,411,-147,411,-154,416,-223,416,-227,417,-233,422,-310,423,-321,424,-333,430,-414,430,-420,431,-429,437,-512,436,-520,436,-531,441,-612,442,-619,442,-627,449,-711,449,-722,455,-808,457,-817]],[27,3,[836,529,849,523,896,498,898,497,902,495,910,485]],[32,3,[837,549,838,567,839,573,840,584]],[49,4,[407,-100,415,-99,625,-84,628,-84,633,-83,641,-83]],[48,3,[-101,439,-93,440,124,455,133,456]],[1,1,[-101,439,-100,426,-97,387,-95,347,-94,340,-93,332,-92,308,-90,289,-87,248,-87,241,-86,232,-83,188,-80,149,-80,142,-79,133,-78,116,-76,95,-73,50,-73,42,-72,32,-69,-9,-67,-46,-66,-51]],[60,1,[-343,681,-343,689,-337,755,-337,763,-336,769,-331,834,-330,842,-330,848,-325,913,-324,922]],[35,3,[-1044,476,-1043,465,-1043,463,-1038,394,-1037,388,-1037,379,-1030,280,-1029,273,-1029,262,-1028,248,-1023,180,-1022,174,-1022,165,-1016,81,-1015,74,-1014,66,-1012,38,-1009,-18,-1008,-25,-1007,-33,-1006,-60,-1001,-118,-1001,-124,-1000,-132,-996,-188,-996,-194,-995,-200,-995,-210,-994,-225,-993,-239,-992,-247,-992,-254,-987,-316,-987,-323,-986,-331,-981,-404,-980,-415,-980,-422]],[53,1,[-38,-454,-46,-455,-111,-459,-149,-462,-152,-462,-205,-466,-264,-470,-271,-471,-280,-471,-310,-473,-390,-479,-443,-483,-497,-487,-505,-488,-513,-488,-545,-490,-612,-495,-730,-504,-739,-504]],[52,1,[-746,-405,-737,-404,-733,-404,-551,-392,-520,-389,-512,-388]],[35,3,[-980,-422,-979,-431,-973,-514,-973,-521]],[33,1,[1652,585,1641,594,1616,616,1591,637,1585,642,1580,647,1516,701,1511,705,1506,710,1456,752,1451,757,1445,761,1396,804,1390,809,1385,813,1336,855,1330,860,1324,865,1275,907,1270,911,1264,916,1213,958,1206,968]],[61,1,[-1180,-1066,-1182,-1059,-1194,-1014]],[59,1,[-1180,-1066,-1173,-1064,-970,-1009,-964,-1007,-962,-1007,-957,-1006,-952,-1006]],[59,1,[-705,-988,-696,-987,-479,-972,-471,-971,-463,-970,-432,-968,-245,-955,-237,-954,-230,-954,-12,-938,-3,-937,5,-937,47,-934,222,-921,231,-921]],[61,1,[-1203,-981,-1205,-973,-1227,-893,-1230,-883]],[48,3,[-758,452,-670,445,-607,440]],[32,3,[835,494,836,505,836,529]],[58,1,[-1627,698,-1618,697,-1322,673,-1312,672,-1304,671,-1040,649,-1030,649,-1021,648,-913,639,-796,629,-786,629,-777,628,-745,625,-551,609,-542,609,-533,608,-358,594,-348,593]],[62,1,[-494,1193,-495,1185,-497,1158,-500,1116,-501,1110,-502,1102,-506,1048,-508,1026,-508,1022,-508,1016,-509,1008,-515,943,-515,937,-516,929,-521,869,-521,864,-521,857,-522,850,-528,784,-528,778,-529,770,-534,705,-535,696]],[60,1,[-317,1001,-311,1085,-310,1092]],[63,1,[1126,1060,1126,1051,1126,1049,1125,1035,1122,1026,1120,996,1119,980,1116,968,1118,949,1115,937]],[29,1,[-1219,-354,-1291,-374]],[29,1,[-1291,-374,-1357,-392,-1364,-395]],[29,1,[-824,-311,-979,-322,-987,-323]],[29,1,[-987,-323,-996,-323,-1126,-332,-1136,-333]],[29,1,[-519,-289,-527,-290,-745,-305,-753,-306]],[29,1,[-1136,-333,-1147,-333,-1219,-354]],[38,1,[1022,810,1023,818,1025,844,1043,1058,1043,1067]],[45,1,[1297,575,1302,581,1444,749,1451,757]],[64,1,[1431,461,1424,453,1354,369,1283,284,1277,277]],[56,1,[168,-33,167,-27,164,11,162,49,161,59]],[56,1,[196,-437,196,-430,190,-349,190,-344,189,-338]],[56,1,[220,-738,219,-726,213,-642,213,-635]],[56,1,[205,-537,203,-528,197,-446,196,-437]],[56,1,[173,-116,173,-110,168,-40,168,-33]],[56,1,[124,554,123,563,127,633,127,642]],[56,1,[133,456,132,465,125,544,124,554]],[56,1,[189,-338,188,-328,183,-250,183,-244,182,-239,177,-170,177,-164,176,-155,175,-141]],[56,1,[140,357,139,364,134,443,133,456]],[56,1,[154,158,153,166,151,201,148,249,147,257]],[56,1,[161,59,160,67,157,111,155,149,154,158]],[56,1,[213,-635,207,-547,205,-537]],[56,1,[175,-141,174,-125]],[56,1,[225,-834,224,-826,225,-804,221,-745,220,-738]],[56,1,[147,257,146,265,143,306,140,348,140,357]],[4,1,[-958,-719,-968,-720,-1020,-723,-1029,-724]],[4,1,[-1029,-724,-1039,-724,-1250,-783,-1257,-785]],[4,1,[-1257,-785,-1265,-787,-1357,-812,-1394,-823,-1437,-834,-1445,-837,-1500,-852,-1535,-861,-1542,-863]],[4,1,[-491,-686,-499,-687,-717,-702,-725,-703]],[4,1,[-725,-703,-734,-703,-950,-719,-958,-719]],[65,1,[-1217,259,-1211,260,-1171,262,-1138,265]],[65,1,[-562,306,-554,307,-484,312,-386,319,-337,322,-328,323]],[65,1,[-1297,254,-1287,254,-1217,259]],[65,1,[607,390,615,391,828,406,841,407]],[65,1,[-1447,216,-1441,217,-1308,253,-1297,254]],[65,1,[-328,323,-320,323,-103,339,-94,340]],[65,1,[-94,340,-86,340,131,356,140,357]],[65,1,[-912,281,-908,282,-865,285,-804,290,-795,290]],[65,1,[841,407,853,408,986,418,993,421,996,424,999,426,1003,434]],[65,1,[-1029,273,-1021,273,-960,278,-918,281,-912,281]],[65,1,[140,357,148,357,365,373,374,374]],[65,1,[-795,290,-788,291,-758,293,-731,295,-640,301,-570,306,-562,306]],[65,1,[374,374,380,374,533,385,598,390,607,390]],[65,1,[-1138,265,-1131,265,-1072,270,-1038,272,-1029,273]],[16,1,[-753,1036,-763,1037,-988,1055,-997,1056]],[16,1,[-508,1016,-519,1017,-608,1024,-744,1035,-753,1036]],[16,1,[-997,1056,-1007,1057,-1050,1060,-1144,1068,-1272,1079,-1279,1079]],[0,1,[-1292,921,-1300,921,-1599,946,-1609,947]],[0,1,[-94,823,-103,823,-202,831,-321,841,-330,842]],[0,1,[-766,878,-776,878,-1002,897,-1010,898]],[0,1,[142,803,133,804,43,811,-8,815,-85,822,-94,823]],[0,1,[-521,857,-531,858,-682,871,-757,877,-766,878]],[0,1,[-1010,898,-1020,898,-1285,920,-1292,921]],[0,1,[-330,842,-340,843,-387,847,-434,850,-486,855,-513,857,-521,857]],[21,1,[964,1073,964,1064,945,830,944,824,944,817]],[54,1,[1330,860,1335,866,1477,1033,1484,1041]],[54,1,[1177,678,1182,685,1323,852,1330,860]],[61,1,[-1311,-589,-1313,-582,-1335,-500,-1337,-491]],[61,1,[-1337,-491,-1339,-485,-1362,-402,-1364,-395]],[40,1,[1110,373,1103,365,1096,361,1089,355,1086,352,1081,341]],[66,1,[-1471,-2,-1464,0,-1256,56,-1254,56,-1243,58,-1233,58,-1231,58,-1214,59,-1204,60,-1117,67,-1023,74,-1015,74,-1008,75,-952,79,-836,87,-789,91,-781,91,-774,92,-555,107,-547,108]],[61,1,[-1230,-883,-1232,-874,-1255,-793,-1257,-785]],[61,1,[-1257,-785,-1259,-778,-1265,-757]],[19,1,[1237,627,1230,618,1206,590]],[67,3,[747,-1052,755,-1052,821,-1047,908,-1041,935,-1039,945,-1038]],[67,3,[975,-1036,1116,-1026]],[67,3,[945,-1038,953,-1037,966,-1036,975,-1036]],[67,3,[1116,-1026,1169,-1022,1177,-1021]],[67,3,[711,-1055,718,-1054,732,-1053,747,-1052]],[67,3,[477,-1072,485,-1071,645,-1060,702,-1056,711,-1055]],[67,3,[1177,-1021,1186,-1021,1220,-1018]],[68,4,[409,-124,416,-124,475,-120]],[68,4,[1196,-67,1280,-62]],[68,4,[1167,-70,1196,-67]],[68,4,[643,-108,650,-107,699,-104]],[68,4,[844,-93,867,-91,876,-91]],[68,4,[1110,-74,1118,-73,1167,-70]],[68,4,[876,-91,885,-90,948,-86]],[68,4,[354,-129,401,-125,409,-124]],[68,4,[612,-110,635,-108,643,-108]],[68,4,[475,-120,612,-110]],[68,4,[1280,-62,1332,-56,1343,-55]],[68,4,[699,-104,844,-93]],[68,4,[1049,-79,1102,-75,1110,-74]],[68,4,[948,-86,1049,-79]],[68,4,[1343,-55,1352,-55,1398,-52]],[32,3,[839,444,838,452,838,459,837,472,836,483,835,494]],[32,3,[841,407,841,415,839,444]],[48,3,[367,473,373,476,375,478,549,490]],[48,3,[659,493,638,492,605,490,600,489]],[48,3,[325,470,358,472,367,473]],[48,3,[549,490,585,494,589,494,600,489]],[32,3,[836,529,836,540,837,549]],[32,3,[840,584,840,593,841,599,841,609]],[32,3,[846,663,846,672,848,694]],[48,3,[-1088,479,-1080,479,-1073,478,-1065,477,-1059,477,-1053,476,-1044,476]],[48,3,[-1401,505,-1380,503,-1337,500,-1326,499]],[48,3,[-1044,476,-1035,475,-833,459,-810,457,-800,456]],[48,3,[-1326,499,-1316,498,-1311,498,-1289,496,-1280,495]],[48,3,[-800,456,-791,455,-770,453,-758,452]],[68,4,[-236,-171,-197,-168]],[68,4,[175,-141,183,-141,230,-137]],[68,4,[230,-137,354,-129]],[68,4,[-292,-175,-285,-174,-236,-171]],[68,4,[-17,-155,121,-145]],[68,4,[-526,-192,-519,-191,-491,-189]],[68,4,[-197,-168,-120,-163]],[68,4,[-491,-189,-344,-179]],[68,4,[-580,-196,-563,-194,-534,-192,-526,-192]],[68,4,[121,-145,167,-142,175,-141]],[68,4,[-58,-158,-51,-157,-17,-155]],[68,4,[-120,-163,-66,-158,-58,-158]],[68,4,[-344,-179,-300,-176,-292,-175]],[48,3,[-607,440,-599,439,-573,437,-563,436]],[48,3,[-563,436,-551,435,-522,432]],[48,3,[-335,420,-327,421,-302,423,-286,425]],[48,3,[-141,436,-110,439,-101,439]],[48,3,[-286,425,-218,431,-184,433,-141,436]],[68,4,[-962,-223,-889,-218]],[68,4,[-1196,-244,-1174,-240,-1168,-239,-1162,-238]],[68,4,[-1391,-298,-1383,-296,-1336,-283]],[68,4,[-994,-225,-985,-225,-962,-223]],[68,4,[-1050,-230,-1003,-226,-994,-225]],[68,4,[-823,-213,-769,-209,-760,-209]],[68,4,[-760,-209,-752,-208,-719,-206]],[68,4,[-1103,-233,-1050,-230]],[68,4,[-1336,-283,-1196,-244]],[68,4,[-1162,-238,-1159,-238,-1151,-237,-1103,-233]],[68,4,[-719,-206,-580,-196]],[55,3,[-949,-1043,-950,-1048,-954,-1088,-955,-1096]],[48,3,[174,459,325,470]],[48,3,[133,456,140,456,174,459]],[48,3,[401,469,377,467,374,469,367,473]],[48,3,[600,489,588,484,560,482,556,482,553,481,409,470,401,469]],[32,3,[877,1045,878,1062,879,1071,880,1080]],[32,3,[858,824,858,831,862,865,871,973,872,987,873,996,877,1045]],[32,3,[855,788,855,791,856,806,857,817,858,824]],[32,3,[852,742,853,767,854,770]],[32,3,[854,770,854,781,855,788]],[32,3,[848,694,852,742]],[32,3,[847,308,846,315,845,349]],[32,3,[845,349,844,373]],[32,3,[844,373,842,398,841,407]],[55,3,[-942,-1005,-943,-1013,-943,-1017,-945,-1027,-949,-1043]],[35,3,[-940,-994,-940,-995,-942,-1005]],[52,1,[-1337,-491,-1330,-489,-1312,-484,-1265,-471,-1192,-451,-1127,-433,-1121,-431,-1109,-430,-1099,-430,-989,-423,-980,-422]],[62,1,[-535,696,-535,693,-535,687,-537,665,-541,617,-542,609,-542,598,-546,554,-548,530,-549,522,-550,513,-556,455,-557,447,-563,436,-568,425,-568,417,-567,401,-564,351,-562,313,-562,306,-561,297,-559,273,-558,256,-555,214,-554,207,-554,199,-551,155,-548,115,-547,108,-547,100,-546,81,-544,64,-541,16,-540,9,-540,-1,-534,-81,-533,-88,-533,-96,-532,-112,-528,-160,-528,-167,-527,-175,-526,-192,-525,-205,-524,-214]],[53,1,[2048,-297,2042,-303,2035,-305,1841,-319,1833,-319,1824,-320,1783,-323,1728,-327,1622,-334,1614,-335,1606,-336,1373,-352,1365,-353,1357,-353,1139,-369,1132,-370,1123,-370,905,-386,898,-387,888,-387,671,-403,664,-404,655,-404,438,-420,430,-420,421,-421,204,-436,196,-437,188,-438,121,-442,61,-447,55,-447,49,-448,-30,-453,-38,-454]],[52,1,[-512,-388,-505,-388,-501,-387,-482,-386,-287,-372,-278,-372,-271,-371,-266,-371,-248,-369,-240,-369,-198,-366,-180,-364,-54,-355,-45,-355,-37,-354,-33,-354,-11,-352,48,-348,161,-340,181,-338,189,-338,197,-337,221,-335,387,-324,414,-322,423,-321,430,-321,455,-319,623,-307,641,-305,648,-305,657,-304,664,-304,875,-289,881,-288,891,-288,899,-287,903,-287,1090,-273,1116,-271,1125,-271,1132,-270,1160,-268,1296,-258,1309,-257,1349,-254,1358,-254]],[60,1,[-228,-1082,-230,-1049,-231,-1041,-231,-1034,-236,-963,-237,-954,-237,-947,-242,-876,-243,-867,-243,-861,-245,-835,-249,-779,-250,-769,-251,-760,-256,-678,-257,-668,-257,-662,-263,-580,-264,-570,-265,-562,-267,-534,-270,-479,-271,-471,-272,-464,-277,-383,-278,-372]],[60,1,[-288,-239,-290,-208,-290,-204,-291,-197,-292,-175,-293,-158]],[1,1,[-38,-454,-37,-463,-31,-544,-30,-553]],[60,1,[-293,-158,-294,-150,-294,-144,-299,-76,-299,-68,-300,-63,-302,-34,-303,-26,-305,13,-306,25,-307,36,-310,80,-313,116,-314,125,-314,132,-316,152,-317,175,-320,215,-321,224,-321,230,-324,272,-327,315,-328,323,-328,330,-330,357,-331,370,-334,408,-335,420]],[60,1,[-278,-372,-279,-361,-281,-327,-284,-286,-285,-279,-285,-273,-288,-239]],[22,2,[1341,-41,1340,-32]],[58,1,[672,507,693,506,760,504,775,502,783,498]],[48,3,[783,498,800,496,809,496,821,495,835,494]],[34,1,[141,-740,141,-738,142,-736,144,-734,146,-733,207,-729,209,-731,220,-738,210,-741,208,-742,146,-746,144,-746,142,-744,141,-742,141,-740]],[34,1,[81,-745,81,-747,80,-749,78,-751,76,-752,35,-754,28,-752,-5,-755,-9,-754,-16,-751,-9,-747,-6,-744,75,-739,77,-740,79,-741,80,-743,81,-745]],[32,3,[884,-193,883,-189,878,-120,878,-112]],[32,3,[876,-91,875,-74,874,-66]],[49,4,[950,-107,886,-112,878,-112]],[49,4,[1324,-34,1327,-33,1340,-32]],[49,4,[874,-66,884,-65,1095,-50,1100,-50,1109,-49]],[22,2,[1335,29,1326,143,1323,187,1323,190,1323,192,1325,196]],[32,3,[945,-1048,945,-1038]],[32,3,[946,-1057,945,-1048]],[49,4,[645,-130,636,-130,423,-146,418,-146,411,-147,403,-147,184,-163,177,-164,168,-164,-44,-180,-45,-180,-50,-180,-57,-181,-65,-181,-284,-197,-291,-197,-299,-198,-403,-205,-514,-213,-517,-213,-524,-214]],[49,4,[1112,-97,1104,-97,950,-107]],[40,1,[1109,-49,1108,-42,1103,29,1102,37,1102,42,1096,126,1090,216,1089,226,1089,232,1082,324]],[40,1,[1112,-97,1111,-87,1110,-74]],[49,4,[1109,-49,1116,-48,1138,-47,1319,-34,1324,-34]],[58,1,[-348,593,-340,592,-321,590,-297,588,-229,582,-121,574,-112,573,-105,573,115,555,124,554,132,554,344,537,353,537]],[60,1,[-335,420,-335,432,-340,497,-341,507,-342,513,-347,582,-348,593]],[30,1,[-945,-917,-954,-918,-966,-919,-975,-919]],[55,2,[-952,-1006,-951,-1013,-949,-1043]],[27,3,[1315,254,1337,242,1341,239,1354,232]],[49,4,[1595,-62,1586,-62,1571,-62,1551,-64,1359,-78,1357,-78,1353,-79,1345,-79]],[69,3,[-762,-183,-762,-177,-764,-157,-766,-116,-767,-107,-767,-101,-774,-15,-774,-8,-775,-1,-781,83,-781,91,-782,99,-783,121,-788,182,-788,190,-789,197,-794,277,-794,281,-795,290,-796,296,-802,369,-803,373,-805,393,-805,399,-801,443,-800,456,-799,467,-795,518,-794,534,-793,543,-793,550,-787,618,-786,629,-785,637,-783,666,-780,707,-779,716,-778,723,-773,790,-772,798,-772,805,-769,835,-766,869,-766,878,-765,884,-760,949,-759,957,-759,963,-756,993,-753,1028,-753,1036,-752,1042,-746,1124,-745,1131,-745,1137,-743,1156,-739,1206,-739,1214,-738,1220,-732,1299,-731,1307,-731,1313,-724,1391,-723,1400,-723,1406,-721,1432,-712,1533,-712,1542,-711,1548,-705,1634,-705,1635,-699,1697,-698,1710]],[27,3,[840,584,852,583,867,581,873,581,879,583]],[57,1,[645,-130,643,-108]],[49,4,[641,-83,649,-82,800,-71,811,-70,858,-67]],[49,4,[878,-112,869,-113,846,-115,816,-117,810,-117,657,-129,652,-129,645,-130]],[57,1,[641,-83,641,-76,635,-5,635,3,634,9,629,83,628,93,628,101,625,143,622,183,622,192,621,200,618,241,615,283,614,292,614,298,611,339,608,381,607,390,607,397,604,436,604,441,601,476,600,489]],[17,1,[858,824,870,823,936,818,944,817]],[49,4,[-1157,-258,-1168,-259,-1377,-318,-1384,-320]],[55,2,[-1157,-258,-1159,-250,-1162,-238]],[55,2,[-1162,-238,-1167,-222,-1169,-212]],[49,4,[-762,-183,-754,-183,-536,-167,-528,-167,-521,-166,-306,-151,-302,-151,-294,-150,-287,-150,-68,-133,-60,-132,-53,-132,161,-117,165,-116,173,-116,181,-115,398,-100,407,-100]],[55,2,[-1169,-212,-1170,-208,-1188,-145,-1190,-137,-1192,-130,-1214,-48,-1216,-40,-1218,-33,-1226,-5,-1241,50,-1243,58,-1245,65,-1258,111,-1268,148,-1270,156,-1272,163,-1295,245,-1297,254,-1299,262,-1310,301,-1316,324,-1320,340,-1329,372,-1329,374,-1331,378,-1334,392,-1334,403,-1333,412]],[70,0,[449,-711,460,-711,463,-710,519,-706,562,-703,604,-700,676,-694]],[70,0,[562,-703,568,-801,568,-809]],[70,0,[604,-700,603,-682,600,-644,599,-617,598,-608]],[66,1,[-314,125,-306,125,-88,141,-80,142,-72,142,145,158,154,158,161,159,207,162,378,175,388,175,396,176,613,191,622,192,629,192,845,208,854,209]],[66,1,[-547,108,-540,108,-489,112,-388,119,-323,124,-314,125]],[6,1,[-681,393,-672,427,-671,433,-670,445]],[17,1,[1022,810,1037,809,1050,808,1055,808,1070,807]],[71,1,[-1284,-687,-1276,-685,-1066,-627,-1056,-627,-1047,-626,-975,-621,-966,-620,-958,-620,-905,-616,-879,-614,-741,-604,-732,-604]],[48,3,[-1280,495,-1273,495,-1088,479]],[48,3,[-522,432,-517,432,-382,421,-363,420,-349,420,-344,420,-335,420]],[67,3,[1220,-1018,1362,-1008]],[47,1,[471,-990,462,-991,297,-1003,244,-1007,237,-1007,228,-1008,11,-1024,3,-1024,-6,-1025,-71,-1029,-165,-1036,-223,-1040,-231,-1041]],[34,1,[-1313,-905,-1239,-885,-1230,-883]],[34,1,[-1335,-912,-1313,-905]],[30,1,[-1203,-981,-1212,-983,-1282,-1002]],[30,1,[-975,-919,-987,-920,-1030,-932,-1196,-978,-1203,-981]],[32,3,[912,-585,912,-578,910,-553,905,-495,905,-486,904,-478,898,-396,898,-387,897,-380,894,-329,891,-299,891,-288,890,-278,887,-243,884,-200,884,-193]],[1,1,[-16,-751,-16,-761,-9,-843,-9,-851,-8,-859,-6,-889,-3,-930,-3,-937,-2,-946,2,-1017,3,-1024,4,-1033,5,-1058,8,-1098,9,-1105]],[1,1,[-59,-145,-58,-158,-57,-172,-57,-181,-56,-187,-51,-256,-51,-261,-51,-267,-45,-344,-45,-355,-44,-366,-42,-388,-38,-446,-38,-454]],[71,1,[-498,-587,-491,-586,-273,-571,-264,-570,-257,-569,-166,-563,-39,-554,-30,-553]],[62,1,[-498,-587,-497,-596,-491,-679,-491,-686,-490,-695,-488,-719,-484,-777,-484,-785,-483,-795,-478,-871,-477,-877,-477,-884,-476,-893,-471,-964,-471,-971,-470,-980,-465,-1050,-464,-1058,-464,-1066,-462,-1091,-459,-1132]],[1,1,[-30,-553,-30,-563,-24,-640,-23,-652,-22,-664,-21,-685,-17,-742,-16,-751]],[71,1,[-30,-553,-23,-553,62,-547,129,-542,195,-537,205,-537,213,-537,351,-527,427,-521,436,-520,445,-519,662,-503,671,-503,678,-502,895,-486,905,-486,913,-485,937,-483,1022,-477,1130,-469,1139,-469,1146,-468,1363,-453,1373,-452,1380,-452,1613,-435,1621,-434,1629,-434,1660,-431,1792,-422,1797,-421,1832,-419,1840,-418,1848,-418,1877,-416,2065,-402,2074,-402,2082,-401,2209,-392,2223,-391]],[55,2,[-1326,499,-1326,510,-1320,578,-1319,586,-1318,594,-1313,663,-1312,672,-1312,681,-1306,751,-1305,759,-1305,766,-1304,768,-1299,835,-1298,842,-1298,847,-1292,914,-1292,921,-1292,926,-1286,993,-1286,1000,-1285,1005,-1280,1072,-1279,1079,-1279,1084,-1272,1167,-1271,1174,-1271,1179,-1265,1249,-1265,1257,-1264,1263,-1258,1342,-1257,1350]],[57,1,[643,-108,641,-91,641,-83]],[55,2,[-1331,446,-1330,456]],[49,4,[-1169,-212,-1159,-212,-1005,-201,-995,-200,-988,-200,-774,-184,-770,-184,-762,-183]],[69,3,[-746,-405,-746,-398,-750,-346,-752,-315,-753,-306,-754,-298,-758,-237,-758,-231]],[49,4,[-758,-231,-768,-232,-978,-246,-984,-247,-992,-247,-1001,-248,-1146,-258,-1157,-258]],[62,1,[-524,-214,-524,-220,-523,-239,-519,-289,-519,-297,-513,-373,-513,-379,-512,-388,-511,-399,-505,-480,-505,-488,-504,-496,-503,-516,-498,-579,-498,-587]],[35,3,[-945,-917,-944,-927,-942,-966]],[35,3,[-942,-966,-940,-994]],[61,1,[-1194,-1014,-1201,-988,-1203,-981]],[4,1,[1847,-518,1839,-518,1798,-521,1636,-533,1628,-533,1620,-534,1387,-551,1380,-551,1370,-552,1284,-558,1153,-568,1146,-568,1137,-569,1029,-577,920,-585,912,-585,903,-586,686,-601,678,-602,670,-603,598,-608,453,-618,442,-619]],[57,1,[588,515,587,524,590,553,593,594,594,604]],[58,1,[588,515,598,513,603,512,665,507,672,507]],[61,1,[-1265,-757,-1269,-742,-1281,-696,-1284,-687,-1286,-680,-1301,-624]],[61,1,[-1301,-624,-1308,-598,-1311,-589]],[72,1,[1766,1008,1762,1001,1674,899,1670,893,1664,887,1658,879,1516,712,1511,705,1504,697,1363,530,1357,524,1351,516,1197,333,1191,326]],[19,1,[1696,1171,1692,1165,1671,1140,1550,997,1544,990,1537,982,1399,819,1396,815,1390,809,1384,801,1246,638,1242,633,1237,627]],[32,3,[854,209,854,215,851,243,847,300,847,308]],[66,1,[854,209,864,209,1017,220,1079,225,1089,226]],[51,1,[862,110,853,109,636,93,628,93,620,92,403,77,395,76,385,75,168,60,161,59,153,59,-66,43,-73,42,-81,41,-132,38,-226,31,-299,26,-306,25,-316,25,-533,9,-540,9,-549,8,-766,-7,-774,-8,-782,-9,-1000,-24,-1008,-25,-1016,-26,-1082,-30,-1207,-40,-1216,-40,-1227,-41,-1278,-55,-1307,-62,-1370,-80,-1437,-98,-1445,-100,-1453,-103,-1526,-123]],[32,3,[862,110,861,117,857,179,855,201,854,209]],[29,1,[884,-193,892,-193,1109,-177,1118,-177,1125,-176,1342,-160,1352,-160,1358,-159,1587,-143,1592,-143,1601,-142,1608,-142,1709,-135,1717,-135,1721,-134,1725,-130,1729,-124]],[22,1,[1345,-79,1344,-70,1343,-55]],[49,4,[1345,-79,1337,-80,1266,-85,1125,-96,1123,-96,1119,-96,1112,-97]],[40,1,[1081,341,1076,379,1080,389]],[40,1,[1082,324,1081,341]],[69,3,[-698,-1074,-699,-1067,-700,-1046,-704,-996,-704,-991,-705,-988]],[59,1,[-952,-1006,-949,-1006,-942,-1005,-932,-1004,-714,-989,-705,-988]],[30,1,[-711,-900,-720,-901,-936,-916,-945,-917]],[69,3,[-705,-988,-705,-981,-710,-910,-711,-900]],[34,1,[-1230,-883,-1222,-880,-1012,-823,-1002,-822,-993,-822,-960,-819,-951,-819,-943,-818,-727,-803,-718,-802]],[69,3,[-711,-900,-711,-893,-714,-856,-717,-812,-718,-802]],[69,3,[-718,-802,-718,-794,-724,-711,-725,-703]],[71,1,[-732,-604,-723,-603,-506,-587,-498,-587]],[69,3,[-725,-703,-725,-696,-726,-678,-731,-612,-732,-604]],[53,1,[-739,-504,-748,-505,-889,-515,-964,-520,-973,-521]],[69,3,[-732,-604,-732,-597,-738,-513,-739,-504]],[69,3,[-739,-504,-739,-497,-745,-414,-746,-405]],[52,1,[-980,-422,-971,-421,-965,-421,-952,-420,-814,-410,-759,-406,-756,-406,-746,-405]],[49,4,[-524,-214,-532,-214,-750,-230,-758,-231]],[69,3,[-758,-231,-759,-222,-760,-209,-761,-195,-761,-192,-762,-183]],[71,1,[-1370,-711,-1336,-701,-1293,-689,-1284,-687]],[40,1,[1110,-74,1109,-58,1109,-49]],[70,0,[543,-677,545,-678,551,-681,556,-682,561,-683,568,-683,574,-680,578,-677,581,-673,582,-672,583,-672,584,-672,587,-674,589,-676,590,-679,591,-682,591,-684,591,-686,585,-688,577,-691,570,-692,567,-695,566,-700,561,-700,555,-700,555,-698,553,-695,551,-695,547,-694,541,-694,536,-693,537,-691,538,-689,543,-677]],[17,1,[944,817,950,816,1016,811,1022,810]],[39,1,[1206,968,1202,981,1205,1016,1206,1041,1207,1044,1207,1054]],[33,1,[1207,1054,1199,1054,1133,1060,1126,1060,1116,1061,1051,1066,1043,1067,1036,1068,971,1073,964,1073]],[55,2,[-1333,412,-1333,419,-1331,446]],[55,2,[-1330,456,-1327,486,-1326,499]],[49,4,[858,-67,865,-66,874,-66]],[22,2,[1340,-32,1340,-26,1339,-21,1335,29]],[63,1,[1115,937,1111,889,1112,884,1116,879,1124,871]],[30,1,[-1282,-1002,-1302,-1008]],[30,1,[-1302,-1008,-1481,-1057,-1487,-1059]],[68,4,[-889,-218,-823,-213]],[47,1,[705,-973,696,-974,479,-990,471,-990]],[47,1,[1215,-937,1199,-938,1181,-939,1172,-940,1164,-941,1053,-949,946,-956,939,-957,929,-958,902,-960,712,-973,705,-973]],[11,1,[869,19,877,20,1093,36,1102,37]],[32,3,[869,19,868,26,863,99,862,110]],[27,3,[800,587,827,585,840,584]],[32,3,[843,633,845,655,846,663]],[32,3,[841,609,843,633]],[57,1,[711,-1055,710,-1047,709,-1030,708,-1021,705,-982,705,-973,704,-966,701,-921,699,-896,699,-887,698,-880,694,-837,692,-809,691,-800,691,-793,688,-738,686,-710,685,-702,685,-694,679,-611,678,-602,678,-595,672,-511,671,-503,671,-496,665,-412,664,-404,664,-397,658,-316,657,-304,656,-293,651,-217,650,-211,650,-205,645,-137,645,-130]],[57,1,[711,-1064,711,-1055]],[29,1,[-753,-306,-762,-307,-813,-310,-824,-311]],[67,3,[1179,-1040,1170,-1041,1156,-1042]],[40,1,[1179,-1040,1178,-1031]],[40,1,[1177,-1021,1177,-1014,1173,-948,1172,-940,1172,-933,1167,-862,1167,-857,1166,-853]],[40,1,[1178,-1031,1177,-1021]],[67,3,[1156,-1042,1121,-1045,954,-1057,946,-1057]],[17,1,[-88,902,-79,901,-79,901,5,894,105,886,110,885,140,883,149,882,157,882,190,879,350,866,361,865,371,864,380,864,453,858,532,851,604,845,614,844,622,844,767,832,774,831,780,831,795,830,799,829,817,828,846,825,858,824]],[60,1,[-324,922,-323,929,-317,1001]],[1,1,[-69,1157,-70,1147,-77,1049,-80,1016,-84,965,-84,961,-84,959,-88,915,-88,910,-88,902]],[67,3,[946,-1057,936,-1058,885,-1062]],[14,1,[-535,696,-545,697,-599,701,-623,703,-699,709,-708,710,-770,715,-779,716]],[8,1,[-21,737,35,733,127,725,136,724,145,724,348,707,358,705,366,702,443,696,590,684,600,683]],[8,1,[600,683,609,683,682,677,833,664,846,663]],[56,1,[244,-1088,243,-1081,241,-1056,238,-1016,237,-1007,236,-1000,231,-930,231,-921]],[67,3,[1387,-1026,1259,-1035,1187,-1039,1179,-1040]],[27,3,[795,588,800,587]],[60,1,[-348,593,-350,602,-344,672,-343,681]],[1,1,[-107,661,-107,657,-108,652,-112,582,-112,573,-111,564,-102,450,-101,439]],[1,1,[-66,-51,-66,-59,-64,-79,-61,-127,-60,-132,-60,-140,-59,-145]],[11,1,[-66,-51,-59,-51,63,-42,159,-35,168,-33,175,-31,392,-15,401,-14,409,-14,627,2,635,3,642,3,705,8,859,19,869,19]],[56,1,[174,-125,173,-116]],[16,1,[-317,1001,-327,1001,-364,1004]],[35,3,[-975,1327,-976,1319,-982,1240,-983,1234,-983,1226,-985,1211,-989,1157,-990,1151,-990,1143,-997,1062,-997,1056,-998,1048,-1000,1021,-1003,982,-1003,977,-1004,969,-1009,903,-1010,898,-1011,890,-1016,825,-1017,818,-1017,810,-1022,744,-1023,736,-1024,728,-1029,661,-1030,649,-1031,638,-1037,570,-1037,563,-1038,552,-1042,514,-1043,498,-1044,496,-1044,488,-1044,487,-1044,476]],[17,1,[-324,922,-315,921,-104,904,-98,904,-88,902]]]}</script>
+<script>
+// ===== places, links, map =====
+(function(){
+  var P=[
+    {id:"770",n:"770",c:"770",lat:40.66916,lng:-73.94249,near:1,k:"main"},
+    {id:"kingston-st",n:"תחנת Kingston Av (קו 3)",s:"Kingston Av",lat:40.66940,lng:-73.94221,near:1,k:"sub"},
+    {id:"nostrand-st",n:"תחנת Nostrand Av (קו 3)",s:"Nostrand Av",lat:40.66985,lng:-73.95047,near:1,k:"sub"},
+    {id:"utica-st",n:"תחנת Utica Av (קווים 3, 4)",s:"Utica Av",lat:40.66890,lng:-73.93294,near:1,k:"sub"},
+    {id:"kingston-shops",n:"רחוב קינגסטון, אזור החנויות",s:"החנויות בקינגסטון",lat:40.66560,lng:-73.94262,near:1,k:"shop"},
+    {id:"atlantic",n:"אטלנטיק (Atlantic Terminal)",lat:40.68450,lng:-73.97740},
+    {id:"citypoint",n:"פריימרק City Point, ברוקלין",lat:40.69080,lng:-73.98320},
+    {id:"kingsplaza",n:"קניון Kings Plaza",lat:40.60940,lng:-73.92040},
+    {id:"boropark",n:"בורו פארק, השדרה ה-13",lat:40.63570,lng:-73.98970},
+    {id:"flatbush",n:"פלטבוש, שדרה J",lat:40.62500,lng:-73.96200},
+    {id:"times",n:"טיימס סקוור",lat:40.75800,lng:-73.98550},
+    {id:"macys",n:"מייסיז ופריימרק, הראלד סקוור",lat:40.75080,lng:-73.98910},
+    {id:"menorah",n:"החנוכייה הגדולה בעולם, השדרה החמישית",lat:40.76440,lng:-73.97330},
+    {id:"apple",n:"חנות Apple Fifth Avenue",lat:40.76370,lng:-73.97270},
+    {id:"ohel",n:"האוהל",lat:40.69620,lng:-73.74170},
+    {id:"jfk",n:"שדה התעופה JFK",lat:40.64130,lng:-73.77810},
+    {id:"ewr",n:"שדה התעופה Newark (EWR)",lat:40.68950,lng:-74.17450}
+  ];
+  var FUN=[
+    {id:"jcm",n:"מוזיאון הילדים היהודי",s:"מוזיאון הילדים",near:1,k:"shop",c:"JCM",tag:"ליד 770",lat:40.66880,lng:-73.94190,price:"מבוגרים $17 · ילדים $19 · עד גיל 2 חינם",hours:"א' 10:00–17:30 · ב'–ה' 10:00–17:00 · ו'–ש' סגור",how:"הליכה של 2 דקות מ-770, על איסטרן פארקווי 792",url:"https://www.jcm.museum/planning-your-visit/",walk:1},
+    {id:"esb",n:"האמפייר סטייט בילדינג",c:"ESB",lat:40.74840,lng:-73.98570,price:"מ-$44 למבוגר (תצפית קומה 86)",hours:"כל יום, בדרך כלל 9:00–24:00",how:"קו 3 עד 34 St–Penn Station, הליכה של כ-8 דקות מזרחה עד השדרה החמישית",url:"https://www.esbnyc.com"},
+    {id:"totr",n:"Top of the Rock",c:"TOTR",lat:40.75930,lng:-73.97940,price:"כ-$44 למבוגר",hours:"כל יום 8:00–24:00",how:"קו 3 עד Times Sq–42 St, הליכה של כ-10 דקות לרוקפלר פלאזה 30",url:"https://www.rockefellercenter.com/attractions/top-of-the-rock-observation-deck/"},
+    {id:"summit",n:"SUMMIT One Vanderbilt",c:"SUMT",lat:40.75290,lng:-73.97870,price:"$43 בימים ב'–ה' · $49 בשישי–ראשון · שקיעה +$10",hours:"כל יום 9:00–24:00, כניסה אחרונה 22:30",how:"קו 3 עד Franklin Av, מעבר לקו 4 או 5 עד Grand Central–42 St",url:"https://summitov.com"},
+    {id:"edge",n:"Edge, הדסון יארדס",c:"EDGE",lat:40.75380,lng:-74.00110,price:"כ-$42 · $36 בהזמנה שבועיים מראש",hours:"בדקו את השעות באתר",how:"קו 3 עד Times Sq–42 St, מעבר לקו 7 עד 34 St–Hudson Yards",url:"https://www.edgenyc.com"},
+    {id:"liberty",n:"פסל החירות (מעבורת)",c:"SOL",lat:40.70330,lng:-74.01700,price:"$25.50 למבוגר",hours:"מעבורות מ-9:00 כל 20–30 דקות. האחרונה בין 15:30 ל-17:00, לפי העונה",how:"קו 3 עד Franklin Av, מעבר לקו 4 או 5 עד Bowling Green, הליכה קצרה לבטרי פארק",url:"https://www.cityexperiences.com/new-york/city-cruises/statue/"},
+    {id:"siferry",n:"מעבורת סטטן איילנד",c:"SIF",tag:"חינם",lat:40.70130,lng:-74.01300,price:"חינם",hours:"24 שעות ביממה",how:"קו 4 או 5 עד Bowling Green, הליכה לטרמינל Whitehall. המעבורת עוברת ליד פסל החירות",url:"https://www.siferry.com"},
+    {id:"central",n:"סנטרל פארק",c:"CPK",tag:"חינם",lat:40.76800,lng:-73.97400,price:"חינם",hours:"כל יום 6:00–1:00",how:"כמו לחנוכייה בשדרה החמישית: הפארק מתחיל ממש שם",url:"https://www.centralparknyc.org"},
+    {id:"bridge",n:"גשר ברוקלין ברגל",c:"BKB",tag:"חינם",lat:40.70610,lng:-73.99690,price:"חינם",hours:"פתוח תמיד. מומלץ באור יום",how:"קו 3 עד Clark St, הליכה של כ-10 דקות לכניסה לגשר"}
+  ];
+var PH={jcm:"p-museum",esb:"p-esb",totr:"p-rock",summit:"p-manhattan",edge:"p-rock",liberty:"p-liberty",siferry:"p-ferry",central:"p-park",bridge:"p-bridge"};
+  var PP={jcm:"$17",esb:"מ-$44",totr:"$44",summit:"מ-$43",edge:"$42",liberty:"$25.50",siferry:"חינם",central:"חינם",bridge:"חינם"};
+  var favs={};try{favs=JSON.parse(localStorage.getItem("g770-favs")||"{}")}catch(e){}
+  FUN.forEach(function(f){P.push(f)});
+  (function(){
+    var box=document.getElementById("fun-list");if(!box)return;
+    box.innerHTML=FUN.map(function(f){
+      return '<article class="att trip" id="att-'+f.id+'"><div class="att-ph"><img src="'+PH[f.id]+'.jpg" alt="" loading="lazy"><span class="pill">'+PP[f.id]+'</span><button type="button" class="fav'+(favs[f.id]?' on':'')+'" data-fav="'+f.id+'" aria-label="שמירה למועדפים"><i data-lucide="heart"></i></button><h3>'+f.n+'</h3></div><div class="att-body">'+
+        '<dl class="facts"><div><dt><i data-lucide="wallet"></i></dt><dd><small>מחיר</small>'+f.price+'</dd></div><div><dt><i data-lucide="clock"></i></dt><dd><small>שעות פתיחה</small>'+f.hours+'</dd></div><div><dt><i data-lucide="train-front"></i></dt><dd><small>איך מגיעים מ-770</small>'+f.how+'</dd></div></dl>'+
+        (f.url?'<div class="acts"><a class="btn" href="'+f.url+'" target="_blank" rel="noopener">לאתר הרשמי</a></div>':'')+
+        '<div class="acts" data-dest="'+f.id+'"'+(f.walk?' data-walk="1"':'')+'></div></div></article>';
+    }).join("");
+  })();
+
+  (function(){var r=document.getElementById("rail");if(!r)return;
+    r.innerHTML=FUN.map(function(f){return '<a class="pcard" href="#fun" data-att="'+f.id+'"><img src="'+PH[f.id]+'.jpg" alt="" loading="lazy"><span class="pill">'+PP[f.id]+'</span><button type="button" class="fav'+(favs[f.id]?' on':'')+'" data-fav="'+f.id+'" aria-label="שמירה למועדפים"><i data-lucide="heart"></i></button><span class="meta"><b>'+f.n+'</b><small><i data-lucide="map-pin"></i>'+(f.tag||"ניו יורק")+'</small></span></a>'}).join("");
+  })();
+  document.addEventListener("click",function(e){var b=e.target.closest("[data-fav]");if(!b)return;e.preventDefault();e.stopPropagation();var id=b.dataset.fav;favs[id]=!favs[id];try{localStorage.setItem("g770-favs",JSON.stringify(favs))}catch(x){}document.querySelectorAll('[data-fav="'+id+'"]').forEach(function(x){x.classList.toggle("on",!!favs[id])})});
+  var byId={};P.forEach(function(p){byId[p.id]=p});
+  var CODES={atlantic:["ATL","אטלנטיק"],citypoint:["CTP","City Point"],times:["TSQ","טיימס סקוור"],macys:["HSQ","הראלד סקוור"],menorah:["5AV","השדרה החמישית"],ohel:["OHEL","האוהל"],jfk:["JFK","שדה התעופה"],ewr:["EWR","ניוארק"],"770":["770","קראון הייטס"],boropark:["BP","בורו פארק"],flatbush:["FLT","פלטבוש"]};
+  FUN.forEach(function(f){CODES[f.id]=[f.c,f.n]});
+  document.querySelectorAll(".trip .acts[data-dest], .card .acts[data-dest][data-from]").forEach(function(box){
+    var to=CODES[box.dataset.dest],fr=CODES[box.dataset.from||"770"];if(!to||!fr)return;
+    var leg=document.createElement("div");leg.className="leg";
+    leg.innerHTML='<div><b>'+fr[0]+'</b><small>'+fr[1]+'</small></div><span class="path" aria-hidden="true"><i>✈</i></span><div><b>'+to[0]+'</b><small>'+to[1]+'</small></div>';
+    box.parentNode.insertBefore(leg,box);
+  });
+  var custom={from:null,to:null};
+  function get(v,side){if(v==="me")return {id:"me",n:"המיקום שלי",me:1};if(v==="pt")return custom[side];return byId[v]||null}
+  function enc(s){return encodeURIComponent(s)}
+  function gm(a,b,mode){return "https://www.google.com/maps/dir/?api=1"+(a&&!a.me?"&origin="+a.lat+","+a.lng:"")+"&destination="+b.lat+","+b.lng+"&travelmode="+mode}
+  function uber(a,b){return "https://m.uber.com/ul/?action=setPickup"+(a&&!a.me?"&pickup[latitude]="+a.lat+"&pickup[longitude]="+a.lng+"&pickup[nickname]="+enc(a.n):"&pickup=my_location")+"&dropoff[latitude]="+b.lat+"&dropoff[longitude]="+b.lng+"&dropoff[nickname]="+enc(b.n)}
+  function dist(a,b){var R=6371000,t=Math.PI/180,dl=(b.lat-a.lat)*t,dn=(b.lng-a.lng)*t,x=Math.sin(dl/2)*Math.sin(dl/2)+Math.cos(a.lat*t)*Math.cos(b.lat*t)*Math.sin(dn/2)*Math.sin(dn/2);return 2*R*Math.asin(Math.sqrt(x))}
+  function fmtMin(m){m=Math.max(1,Math.round(m));if(m<60)return m+" דק'";var h=Math.floor(m/60),r=m%60;return h+" שע'"+(r?" ו-"+r+" דק'":"")}
+  function link(href,txt,cls){return '<a class="btn '+(cls||"")+'" href="'+href+'" target="_blank" rel="noopener">'+txt+'</a>'}
+
+  // static action rows: data-dest (+ optional data-from, default 770)
+  document.querySelectorAll(".acts[data-dest]").forEach(function(box){
+    var b=byId[box.dataset.dest], a=box.dataset.from==="me"?{me:1,n:"המיקום שלי"}:byId[box.dataset.from||"770"], h="";
+    h+=link(gm(a,b,"transit"),'<i data-lucide="navigation"></i>מסלול בגוגל מפות',"primary");
+    h+=link(uber(a,b),'<i data-lucide="car"></i>אובר');
+    if(box.dataset.walk)h+=link(gm(a,b,"walking"),'<i data-lucide="footprints"></i>הליכה');
+    h+='<a class="btn" href="#map" data-plan="'+b.id+'"><i data-lucide="map"></i>במפה</a>';
+    box.innerHTML=h;
+  });
+  document.getElementById("ask").addEventListener("submit",function(e){e.preventDefault();selFrom.value=document.getElementById("ask-from").value;selTo.value=document.getElementById("ask-to").value;update();location.hash="#map"});
+  document.addEventListener("click",function(e){var t=e.target.closest("[data-plan]");if(!t)return;selFrom.value="770";selTo.value=t.dataset.plan;update();});
+
+  // selects
+  var selFrom=document.getElementById("from"), selTo=document.getElementById("to");
+  function fill(sel,withMe){
+    var h=withMe?'<option value="me">המיקום שלי (בגוגל מפות ובאובר)</option>':'';
+    h+='<optgroup label="בשכונה">'+P.filter(function(p){return p.near}).map(function(p){return '<option value="'+p.id+'">'+p.n+'</option>'}).join("")+'</optgroup>';
+    h+='<optgroup label="מחוץ לשכונה">'+P.filter(function(p){return !p.near}).map(function(p){return '<option value="'+p.id+'">'+p.n+'</option>'}).join("")+'</optgroup>';
+    h+='<option value="pt" disabled>נקודה שסימנתי במפה</option>';
+    sel.innerHTML=h;
+  }
+  fill(selFrom,true);fill(selTo,false);
+  selFrom.value="770";selTo.value="kingston-shops";
+  selFrom.addEventListener("change",update);selTo.addEventListener("change",update);
+  document.getElementById("swap").addEventListener("click",function(){
+    if(selFrom.value==="me"){selFrom.value="770"}
+    var f=selFrom.value,t=selTo.value,cf=custom.from;custom.from=custom.to;custom.to=cf;
+    setPtOpt(selFrom,custom.from);setPtOpt(selTo,custom.to);selFrom.value=t;selTo.value=f;update();
+  });
+  function setPtOpt(sel,pt){var o=sel.querySelector('option[value="pt"]');o.disabled=!pt}
+
+  var res=document.getElementById("res"), acts=document.getElementById("route-acts");
+  function update(){
+    var a=get(selFrom.value,"from"), b=get(selTo.value,"to");
+    if(!b){res.innerHTML='<p class="muted">בחרו יעד, או לחצו על המפה.</p>';acts.innerHTML="";drawSel(a,b);return}
+    var h="";
+    if(a&&!a.me){
+      var d=dist(a,b), walk=d*1.25/80, drive=d*1.35/(d<3000?300:450)+3, transit=d*1.3/500+8;
+      h+='<div class="est"><div><span><i data-lucide="footprints"></i></span><b>'+fmtMin(walk)+'</b><small>הליכה</small></div>';
+      if(d>1200)h+='<div><span><i data-lucide="train-front"></i></span><b>'+fmtMin(transit)+'</b><small>תחבורה ציבורית</small></div>';
+      h+='<div><span><i data-lucide="car"></i></span><b>'+fmtMin(drive)+'</b><small>נסיעה / אובר</small></div></div>';
+      h+='<p class="small muted">מרחק בקו ישר: '+(d<1000?Math.round(d/10)*10+" מ'":(d/1000).toFixed(1)+' ק"מ')+'. הערכה בלבד.</p>';
+    }else{h+='<p class="small muted">מהמיקום שלך: גוגל מפות ואובר יחשבו את הזמן לפי המקום שבו את נמצאת.</p>'}
+    res.innerHTML=h;
+    acts.innerHTML=link(gm(a,b,"walking"),'<i data-lucide="footprints"></i>הליכה בגוגל מפות',"primary")+link(gm(a,b,"transit"),'<i data-lucide="train-front"></i>תחבורה ציבורית')+link(gm(a,b,"driving"),'<i data-lucide="car"></i>נסיעה')+link(uber(a,b),"הזמנת אובר");
+    drawSel(a,b);
+    if(window.lucide)lucide.createIcons();
+  }
+
+  // ===== map =====
+  var S=JSON.parse(document.getElementById("streets").textContent);
+  var LAT0=40.668,LON0=-73.9415,KY=111320,KX=111320*Math.cos(LAT0*Math.PI/180);
+  function xy(p){return [(p.lng-LON0)*KX,(LAT0-p.lat)*KY]}
+  function ll(x,y){return {lat:LAT0-y/KY,lng:LON0+x/KX}}
+  var NS="http://www.w3.org/2000/svg", svg=document.getElementById("map");
+  function el(t,a,p){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e}
+  el("rect",{x:-1500,y:-1200,width:3000,height:2400,fill:"#eef2f6"},svg);
+  var gCase=el("g",{},svg),gFill=el("g",{},svg),gLab=el("g",{},svg),gRoute=el("g",{},svg),gPins=el("g",{},svg),gSel=el("g",{},svg);
+  var W={0:5,1:8,2:11,3:15,4:34};
+  var best={};
+  S.ways.forEach(function(w){
+    var c=w[2],d="M"+c[0]+" "+c[1],len=0;
+    for(var i=2;i<c.length;i+=2){d+="L"+c[i]+" "+c[i+1];len+=Math.hypot(c[i]-c[i-2],c[i+1]-c[i-1])}
+    var cls=w[1];
+    el("path",{d:d,fill:"none",stroke:"#cbd4e1","stroke-width":W[cls]+4,"stroke-linecap":"round","stroke-linejoin":"round"},gCase);
+    el("path",{d:d,fill:"none",stroke:cls===4?"#d8ead0":"#ffffff","stroke-width":W[cls],"stroke-linecap":"round","stroke-linejoin":"round"},gFill);
+    var nm=S.names[w[0]];
+    if(nm&&!/Service Road/.test(nm)&&(!best[nm]||best[nm].len<len))best[nm]={len:len,c:c,cls:cls};
+  });
+  var labels=[];
+  Object.keys(best).forEach(function(nm){
+    var b=best[nm];if(b.len<220)return;
+    var c=b.c,half=b.len/2,acc=0,i=2;
+    for(;i<c.length;i+=2){var s=Math.hypot(c[i]-c[i-2],c[i+1]-c[i-1]);if(acc+s>=half)break;acc+=s}
+    if(i>=c.length)i=c.length-2;
+    var x0=c[i-2],y0=c[i-1],x1=c[i],y1=c[i+1],s2=Math.hypot(x1-x0,y1-y0)||1,f=(half-acc)/s2;
+    var x=x0+(x1-x0)*f,y=y0+(y1-y0)*f,ang=Math.atan2(y1-y0,x1-x0)*180/Math.PI;if(ang>90)ang-=180;if(ang<-90)ang+=180;
+    var short=nm.replace("Saint ","St ").replace(" Avenue"," Ave").replace(" Street"," St").replace(" Place"," Pl").replace(" Boulevard"," Blvd").replace(" Road"," Rd");
+    var t=el("text",{x:x,y:y,transform:"rotate("+ang.toFixed(1)+" "+x.toFixed(0)+" "+y.toFixed(0)+")","text-anchor":"middle","dominant-baseline":"central",fill:b.cls>=3?"#13284a":"#5b6b85","font-family":"Rubik,system-ui,sans-serif","font-weight":b.cls>=3?"700":"500","paint-order":"stroke",stroke:"#ffffff","stroke-linejoin":"round"},gLab);
+    t.textContent=short;labels.push({t:t,big:b.cls>=3});
+  });
+  var pins=[];
+  P.filter(function(p){return p.near}).forEach(function(p){
+    var q=xy(p),g=el("g",{},gPins);
+    var col=p.k==="main"?"#d4622f":p.k==="sub"?"#d22630":"#c08410";
+    var c=el("circle",{cx:q[0],cy:q[1],fill:col,stroke:"#fff"},g);
+    var t=el("text",{x:q[0],y:q[1],"text-anchor":"middle",fill:"#13284a","font-family":"Rubik,system-ui,sans-serif","font-weight":"700","paint-order":"stroke",stroke:"#fff","stroke-linejoin":"round"},g);
+    t.textContent=p.s||p.n;pins.push({p:p,q:q,c:c,t:t});
+  });
+
+  var view={cx:-60,cy:-80,w:1300},mpp=1;
+  function setVB(){
+    var r=svg.getBoundingClientRect();if(!r.width)return;
+    view.w=Math.max(220,Math.min(3000,view.w));
+    var h=view.w*r.height/r.width;mpp=view.w/r.width;
+    view.cx=Math.max(-1400,Math.min(1400,view.cx));view.cy=Math.max(-1100,Math.min(1100,view.cy));
+    svg.setAttribute("viewBox",(view.cx-view.w/2)+" "+(view.cy-h/2)+" "+view.w+" "+h);
+    labels.forEach(function(l){l.t.setAttribute("font-size",(l.big?12.5:11)*mpp);l.t.setAttribute("stroke-width",3*mpp);l.t.style.display=(!l.big&&mpp>2.2)?"none":""});
+    pins.forEach(function(o){o.c.setAttribute("r",7*mpp);o.c.setAttribute("stroke-width",2*mpp);o.t.setAttribute("font-size",12*mpp);o.t.setAttribute("y",o.q[1]-13*mpp);o.t.setAttribute("stroke-width",3*mpp)});
+    drawSel(get(selFrom.value,"from"),get(selTo.value,"to"));
+  }
+  function drawSel(a,b){
+    while(gSel.firstChild)gSel.removeChild(gSel.firstChild);while(gRoute.firstChild)gRoute.removeChild(gRoute.firstChild);
+    var qa=a&&!a.me?xy(a):null,qb=b?xy(b):null;
+    if(qa&&qb)el("line",{x1:qa[0],y1:qa[1],x2:qb[0],y2:qb[1],stroke:"#2457b3","stroke-width":4*mpp,"stroke-dasharray":(8*mpp)+" "+(6*mpp),"stroke-linecap":"round"},gRoute);
+    if(qa)el("circle",{cx:qa[0],cy:qa[1],r:10*mpp,fill:"#2457b3",stroke:"#fff","stroke-width":3*mpp},gSel);
+    if(qb){el("circle",{cx:qb[0],cy:qb[1],r:12*mpp,fill:"#d4622f",stroke:"#fff","stroke-width":3*mpp},gSel);el("circle",{cx:qb[0],cy:qb[1],r:4*mpp,fill:"#fff"},gSel)}
+  }
+
+  // tap mode
+  var mode="to",bf=document.getElementById("tm-from"),bt=document.getElementById("tm-to");
+  function setMode(m){mode=m;bf.setAttribute("aria-pressed",m==="from");bt.setAttribute("aria-pressed",m==="to")}
+  bf.addEventListener("click",function(){setMode("from")});bt.addEventListener("click",function(){setMode("to")});
+
+  // pan / zoom / tap
+  var pts={},start=null,moved=0;
+  svg.addEventListener("pointerdown",function(e){svg.setPointerCapture(e.pointerId);pts[e.pointerId]={x:e.clientX,y:e.clientY};moved=0;start=Object.keys(pts).length===2?pinchD():null});
+  function pinchD(){var k=Object.keys(pts);return Math.hypot(pts[k[0]].x-pts[k[1]].x,pts[k[0]].y-pts[k[1]].y)}
+  svg.addEventListener("pointermove",function(e){
+    var o=pts[e.pointerId];if(!o)return;var dx=e.clientX-o.x,dy=e.clientY-o.y;o.x=e.clientX;o.y=e.clientY;moved+=Math.abs(dx)+Math.abs(dy);
+    if(Object.keys(pts).length===2&&start){var d=pinchD();view.w*=start/d;start=d;setVB();return}
+    view.cx-=dx*mpp;view.cy-=dy*mpp;setVB();
+  });
+  function end(e){
+    var wasTap=moved<8&&Object.keys(pts).length===1;delete pts[e.pointerId];start=null;
+    if(!wasTap)return;
+    var r=svg.getBoundingClientRect(),x=view.cx-view.w/2+(e.clientX-r.left)*mpp,y=view.cy-(view.w*r.height/r.width)/2+(e.clientY-r.top)*mpp;
+    var hit=null,bd=18*mpp;pins.forEach(function(o){var d=Math.hypot(o.q[0]-x,o.q[1]-y);if(d<bd){bd=d;hit=o.p}});
+    var sel=mode==="from"?selFrom:selTo;
+    if(hit){sel.value=hit.id}else{var p=ll(x,y);p.n="נקודה שסימנתי";custom[mode]=p;setPtOpt(sel,p);sel.value="pt"}
+    if(mode==="from")setMode("to");
+    update();
+  }
+  svg.addEventListener("pointerup",end);svg.addEventListener("pointercancel",function(e){delete pts[e.pointerId];start=null});
+  svg.addEventListener("wheel",function(e){
+    e.preventDefault();var r=svg.getBoundingClientRect(),f=Math.exp(e.deltaY*0.0015);
+    var px=view.cx-view.w/2+(e.clientX-r.left)*mpp,py=view.cy-(view.w*r.height/r.width)/2+(e.clientY-r.top)*mpp;
+    var nw=Math.max(220,Math.min(3000,view.w*f));f=nw/view.w;view.cx=px-(px-view.cx)*f;view.cy=py-(py-view.cy)*f;view.w=nw;setVB();
+  },{passive:false});
+  document.getElementById("zin").addEventListener("click",function(){view.w/=1.5;setVB()});
+  document.getElementById("zout").addEventListener("click",function(){view.w*=1.5;setVB()});
+  document.getElementById("zhome").addEventListener("click",function(){view={cx:-60,cy:-80,w:1300};setVB()});
+  window.addEventListener("resize",setVB);
+  window.addEventListener("hashchange",function(){if(location.hash==="#map")setTimeout(setVB,30)});
+  if(location.hash==="#map")setTimeout(setVB,30);
+  update();
+})();
+</script>
+
+<script>
+(function(){
+  // WhatsApp group links: fill in when received
+  var GROUPS={batmitzva:"",women:"",highschool:"",seminary:""};
+  document.querySelectorAll(".grp,.grp-link").forEach(function(a){var u=GROUPS[a.dataset.grp];if(u){a.href=u;a.target="_blank";a.rel="noopener"}else{a.classList.add("soon");var sm=a.querySelector("small");if(sm)sm.textContent="הקישור יתווסף בקרוב";else a.title="הקישור יתווסף בקרוב";a.addEventListener("click",function(e){e.preventDefault()})}});
+  // hub search
+  var q=document.getElementById("hub-q"),empty=document.getElementById("hub-empty");
+  if(q)q.addEventListener("input",function(){var s=q.value.trim().toLowerCase(),any=false;
+    document.querySelectorAll(".hub-group").forEach(function(g){var vis=0;g.querySelectorAll(".gcard").forEach(function(t){var m=!s||(t.textContent+" "+(t.dataset.k||"")).toLowerCase().indexOf(s)>=0;t.hidden=!m;if(m)vis++});g.hidden=!vis;if(vis)any=true});
+    empty.hidden=any;});
+  // businesses: add partners here {n,cat,addr,phone,perk,code,tags:["perk","ebt","shabbat","travel"]}
+  var BIZ=[];
+  var list=document.getElementById("biz-list"),cur="all";
+  function esc(s){return String(s||"").replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+  function render(){
+    var items=BIZ.filter(function(b){return cur==="all"||(b.tags||[]).indexOf(cur)>=0});
+    list.innerHTML=items.length?items.map(function(b){
+      return '<article class="card"><h3>'+esc(b.n)+'</h3><p class="small muted">'+esc(b.cat)+' · '+esc(b.addr)+'</p>'+
+        (b.perk?'<div class="tip"><i data-lucide="gift"></i><span>'+esc(b.perk)+(b.code?' · קוד: <b>'+esc(b.code)+'</b>':'')+'</span></div>':'')+
+        (b.phone?'<div class="acts"><a class="btn primary" href="tel:'+esc(b.phone)+'"><i data-lucide="phone"></i>'+esc(b.phone)+'</a></div>':'')+'</article>';
+    }).join(""):'<div class="biz-empty"><b>העסקים השותפים יופיעו כאן לקראת חנוכה</b>עם קופונים והטבות לטסות המדריך. <a href="sponsors.html" target="_blank" rel="noopener">בעלי עסקים? כך מצטרפים</a></div>';
+    if(window.lucide)lucide.createIcons();
+  }
+  document.querySelectorAll(".fchip").forEach(function(c){c.addEventListener("click",function(){cur=c.dataset.f;document.querySelectorAll(".fchip").forEach(function(x){x.classList.toggle("on",x===c)});render()})});
+  if(list)render();
+  if(window.lucide)lucide.createIcons();
+  window.addEventListener("hashchange",function(){if(window.lucide)lucide.createIcons()});
+})();
+</script>
+
+<script>
+(function(){
+  document.querySelectorAll(".cats .fchip").forEach(function(c){c.addEventListener("click",function(){var g=c.dataset.g;document.querySelectorAll(".cats .fchip").forEach(function(x){x.classList.toggle("on",x===c)});document.querySelectorAll(".icon-grid .gcard").forEach(function(t){t.classList.toggle("goff",g!=="all"&&t.dataset.g!==g)})})});
+  function nav(){var h=location.hash||"#home";document.querySelectorAll(".mainnav a").forEach(function(a){a.classList.toggle("on",a.getAttribute("href")===h)})}
+  window.addEventListener("hashchange",nav);nav();
+})();
+</script>
+
+<script>
+(function(){
+  var side=document.getElementById("side"),scrim=document.getElementById("scrim"),btn=document.getElementById("menu-btn");
+  function open(o){side.classList.toggle("open",o);scrim.hidden=!o;btn.setAttribute("aria-expanded",o)}
+  btn.addEventListener("click",function(){open(!side.classList.contains("open"))});
+  scrim.addEventListener("click",function(){open(false)});
+  function mark(){var cur=(location.hash||"#home").slice(1);document.querySelectorAll(".side [data-nav]").forEach(function(a){a.classList.toggle("on",a.dataset.nav===cur)});open(false)}
+  window.addEventListener("hashchange",mark);mark();
+})();
+</script>
+
+<script>
+(function(){
+  var fab=document.getElementById("bot-fab"),box=document.getElementById("bot"),log=document.getElementById("bot-log"),form=document.getElementById("bot-form"),inp=document.getElementById("bot-in"),note=document.getElementById("bot-note"),send=document.getElementById("bot-send");
+  var sample=null,ready=false,turns=[],busy=false,CTX=null;if(!window.claude||!window.claude.use){fab.hidden=true;return}
+  window.claude&&window.claude.use&&window.claude.use("sample").then(function(s){sample=s;ready=true;if(!s){fab.hidden=true}});
+  function toggle(o){box.hidden=!o;fab.setAttribute("aria-expanded",o);if(o)setTimeout(function(){inp.focus()},50)}
+  fab.addEventListener("click",function(){toggle(box.hidden)});
+  document.getElementById("bot-x").addEventListener("click",function(){toggle(false)});
+  log.querySelectorAll(".bot-sugg button").forEach(function(b){b.addEventListener("click",function(){inp.value=b.textContent;form.requestSubmit()})});
+  function ctx(){if(CTX)return CTX;var parts=[];document.querySelectorAll("main .view").forEach(function(v){if(v.id==="v-home"||v.id==="v-map")return;var t=(v.innerText||v.textContent||"").replace(/\s+\n/g,"\n").replace(/[ \t]+/g," ").trim();var title=v.getAttribute("aria-label")||v.id;parts.push("### עמוד: "+title+"\n"+t)});CTX=parts.join("\n\n").slice(0,90000);return CTX}
+  function add(cls,text){var d=document.createElement("div");d.className="msg "+cls;d.textContent=text;log.appendChild(d);log.scrollTop=log.scrollHeight;return d}
+  var COPY={not_granted:"אין הרשאה להשתמש בעוזר בדף הזה.",sampling_disabled:"העוזר לא זמין בחשבון הזה.",rate_limited:"יותר מדי שאלות ברגע. נסי שוב בעוד דקה.",session_expired:"צריך להתחבר מחדש לחשבון.",refused:"לא אוכל לענות על זה. נסי לשאול אחרת."};
+  form.addEventListener("submit",async function(e){
+    e.preventDefault();var q=inp.value.trim();if(!q||busy)return;
+    if(!sample){note.hidden=false;note.textContent=ready?"העוזר לא זמין כאן.":"העוזר עוד נטען, נסי שוב בעוד רגע.";return}
+    var s=log.querySelector(".bot-sugg");if(s)s.remove();
+    add("me",q);inp.value="";busy=true;send.disabled=true;var out=add("ai wait","חושבת...");
+    var RULES="את העוזרת של האתר 'נוסעים לרבי', מדריך לנשים ובנות שטסות לרבי ל-770 בחנוכה תשפ\"ז. עני אך ורק לפי המידע שבמדריך שלמטה. כתבי בעברית פשוטה, קצר וברור (עד 6 שורות), בלי Markdown. אל תמציאי מספרי טלפון, מחירים, שעות או כתובות. אם המידע לא נמצא במדריך, אמרי זאת והציעי את העמוד המתאים או מי לשאול. בסוף התשובה כתבי בשורה נפרדת: 'בעמוד: <שם העמוד>'.\n\nהמדריך:\n"+ctx();
+    turns.push({role:"user",content:q});
+    try{
+      var r=await sample([{role:"user",content:RULES}].concat(turns.slice(-8)),{modelTier:"quick",cache:false,onText:function(u){out.classList.remove("wait");out.textContent=u.text;log.scrollTop=log.scrollHeight}});
+      out.classList.remove("wait");out.textContent=r.text;turns.push({role:"assistant",content:r.text});
+    }catch(err){
+      turns.pop();out.classList.remove("wait");
+      if(err&&err.code==="not_granted"||err&&err.code==="sampling_disabled"){fab.hidden=true}
+      out.textContent=(err&&err.text)||COPY[err&&err.code]||"משהו השתבש. נסי שוב.";
+    }finally{busy=false;send.disabled=false;inp.focus()}
+  });
+})();
+</script>
+
+<script>
+(function(){
+  var ORD=["ראשון","שני","שלישי","רביעי","חמישי","שישי","שביעי","שמיני"];
+  var NIGHTS={"2026-12-04":1,"2026-12-05":2,"2026-12-06":3,"2026-12-07":4,"2026-12-08":5,"2026-12-09":6,"2026-12-10":7,"2026-12-11":8};
+  var NOTE={"2026-12-04":"לפני השבת, עד 16:10","2026-12-05":"אחרי צאת השבת (17:13)","2026-12-11":"לפני השבת, עד 16:10"};
+  var SHAB={"2026-11-27":"16:12","2026-12-04":"16:10","2026-12-11":"16:10","2026-12-18":"16:12"};
+  function gem(n){var L=[[400,"ת"],[300,"ש"],[200,"ר"],[100,"ק"],[90,"צ"],[80,"פ"],[70,"ע"],[60,"ס"],[50,"נ"],[40,"מ"],[30,"ל"],[20,"כ"],[10,"י"],[9,"ט"],[8,"ח"],[7,"ז"],[6,"ו"],[5,"ה"],[4,"ד"],[3,"ג"],[2,"ב"],[1,"א"]],s="";
+    if(n===15)s="טו";else if(n===16)s="טז";else{for(var i=0;i<L.length;i++){while(n>=L[i][0]){s+=L[i][1];n-=L[i][0]}}}
+    return s.length>1?s.slice(0,-1)+'"'+s.slice(-1):s+"'";}
+  try{
+    var now=new Date(),tz="America/New_York";
+    var p=new Intl.DateTimeFormat("en-CA",{timeZone:tz,year:"numeric",month:"2-digit",day:"2-digit"}).format(now);
+    var greg=new Intl.DateTimeFormat("he-IL",{timeZone:tz,weekday:"long",day:"numeric",month:"long",year:"numeric"}).format(now);
+    var hp=new Intl.DateTimeFormat("en-u-ca-hebrew",{timeZone:tz,day:"numeric",month:"numeric",year:"numeric"}).formatToParts(now),hd=0,hy=0;
+    hp.forEach(function(x){if(x.type==="day")hd=+x.value;if(x.type==="year")hy=+x.value});
+    var hm=new Intl.DateTimeFormat("he-u-ca-hebrew",{timeZone:tz,month:"long"}).format(now).replace(/^ב/,"");
+    var heb=hd?gem(hd)+" "+hm+" "+gem(hy%1000):"";
+    document.getElementById("db-date").textContent=greg+(heb?" · "+heb:"");
+    var c=document.getElementById("db-candle"),n=NIGHTS[p],start=new Date("2026-12-04T12:00:00-05:00");
+    if(n){c.hidden=false;var fl='<span class="fl">'+new Array(n+1).join("<i></i>")+'</span>';c.innerHTML=fl+"הערב מדליקים נר "+ORD[n-1]+(NOTE[p]?" · "+NOTE[p]:"")}
+    else if(p==="2026-12-12"){c.hidden=false;c.textContent="היום זאת חנוכה, היום השמיני"}
+    else if(now<start){var d=Math.ceil((start-now)/864e5);c.hidden=false;c.textContent="עוד "+d+" ימים לנר הראשון"}
+    if(SHAB[p]){c.hidden=false;c.textContent+=(c.textContent?" · ":"")+"הדלקת נרות שבת: "+SHAB[p]}
+  }catch(e){}
+})();
+</script>
+
+<script>
+(function(){
+  var C={0:["בהיר","sun"],1:["בהיר ברובו","sun"],2:["מעונן חלקית","cloud-sun"],3:["מעונן","cloud"],45:["ערפל","cloud-fog"],48:["ערפל","cloud-fog"],51:["טפטוף","cloud-drizzle"],53:["טפטוף","cloud-drizzle"],55:["טפטוף","cloud-drizzle"],61:["גשם קל","cloud-rain"],63:["גשם","cloud-rain"],65:["גשם חזק","cloud-rain"],71:["שלג קל","snowflake"],73:["שלג","snowflake"],75:["שלג כבד","snowflake"],77:["פתיתי שלג","snowflake"],80:["ממטרים","cloud-rain"],81:["ממטרים","cloud-rain"],82:["ממטרים חזקים","cloud-rain"],85:["ממטרי שלג","snowflake"],86:["ממטרי שלג","snowflake"],95:["סופת רעמים","cloud-lightning"]};
+  var DAY=["א","ב","ג","ד","ה","ו","ש"];
+  fetch("https://api.open-meteo.com/v1/forecast?latitude=40.669&longitude=-73.942&current=temperature_2m,weather_code&daily=temperature_2m_max,temperature_2m_min,weather_code&timezone=America%2FNew_York&forecast_days=4")
+  .then(function(r){return r.json()}).then(function(d){
+    var c=C[d.current.weather_code]||["",""];
+    document.getElementById("wx-now").textContent=Math.round(d.current.temperature_2m)+"° · "+c[0];
+    var ic=document.querySelector("#weather .w-label i, #weather .w-label svg");if(ic&&c[1]){var n=document.createElement("i");n.setAttribute("data-lucide",c[1]);ic.replaceWith(n)}
+    var s="";for(var i=1;i<4;i++){var dt=new Date(d.daily.time[i]+"T12:00:00");s+="יום "+DAY[dt.getDay()]+"׳ "+Math.round(d.daily.temperature_2m_min[i])+"°–"+Math.round(d.daily.temperature_2m_max[i])+"°"+(i<3?" · ":"")}
+    document.getElementById("wx-days").textContent=s;
+    if(window.lucide)lucide.createIcons();
+  }).catch(function(){});
+})();
+</script>
+
+<script>
+(function(){
+  var KEY="g770-checklist",st={};try{st=JSON.parse(localStorage.getItem(KEY)||"{}")}catch(e){}
+  var boxes=[].slice.call(document.querySelectorAll("#checklist input[type=checkbox]"));
+  function upd(){var n=boxes.filter(function(b){return b.checked}).length;document.getElementById("cl-count").textContent=n+"/"+boxes.length;document.getElementById("cl-bar").style.width=(100*n/boxes.length)+"%";document.getElementById("checklist").classList.toggle("done",n===boxes.length)}
+  boxes.forEach(function(b){b.checked=!!st[b.dataset.k];b.addEventListener("change",function(){st[b.dataset.k]=b.checked;try{localStorage.setItem(KEY,JSON.stringify(st))}catch(e){}upd()})});
+  document.getElementById("cl-reset").addEventListener("click",function(){st={};boxes.forEach(function(b){b.checked=false});try{localStorage.removeItem(KEY)}catch(e){}upd()});
+  upd();
+})();
+</script>
+
+</body>
+</html>
