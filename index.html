@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="he" dir="rtl" data-ver="1795091571552">
+<html lang="he" dir="rtl" data-ver="1795091647938">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
@@ -7,7 +7,7 @@
 <meta name="description" content="המדריך לטסות ולטסים לחנוכה אצל הרבי ב-770: כשרות, זמנים, מפה, התניידות ומספרי חירום.">
 <meta name="theme-color" content="#f6e8dd">
 <style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
-<script>(function(){var V="1795091571552";try{fetch(location.pathname+"?nc="+Date.now(),{cache:"no-store"}).then(function(r){return r.text()}).then(function(t){var m=t.match(/data-ver="([0-9]+)"/);if(m&&m[1]!==V){var k="nl-reload-"+m[1];try{if(sessionStorage.getItem(k))return;sessionStorage.setItem(k,"1")}catch(e){}location.replace(location.pathname+"?v="+m[1]+location.hash)}}).catch(function(){})}catch(e){}})();</script>
+<script>(function(){var V="1795091647938";try{fetch(location.pathname+"?nc="+Date.now(),{cache:"no-store"}).then(function(r){return r.text()}).then(function(t){var m=t.match(/data-ver="([0-9]+)"/);if(m&&m[1]!==V){var k="nl-reload-"+m[1];try{if(sessionStorage.getItem(k))return;sessionStorage.setItem(k,"1")}catch(e){}location.replace(location.pathname+"?v="+m[1]+location.hash)}}).catch(function(){})}catch(e){}})();</script>
 </head>
 <body>
 <title>נוסעים לרבי – המדריך</title>
@@ -751,6 +751,27 @@ body{background:radial-gradient(900px 500px at 100% -5%,rgba(255,206,160,.55),tr
 .banner{background:linear-gradient(125deg,#3a2546 0%,#7a4a78 38%,#c0707a 68%,#d9a050 100%)!important}
 .banner img{opacity:.42;mix-blend-mode:luminosity;filter:contrast(1.1) saturate(0)!important}
 .banner::after{background:linear-gradient(180deg,rgba(58,37,70,0) 30%,rgba(40,22,50,.55) 100%)!important}
+
+/* ===== v15 צבע זרחני: נגיעות קטנות ===== */
+:root{--neon:#c8ff2e;--neon-glow:0 0 10px rgba(200,255,46,.85),0 0 22px rgba(200,255,46,.45)}
+.sec-head h2::after{width:56px;background:linear-gradient(90deg,#e7b964 0 70%,var(--neon) 70% 100%);box-shadow:6px 0 12px rgba(200,255,46,.5)}
+.banner h1::after{background:linear-gradient(90deg,#e7b964 0 72%,var(--neon) 72% 100%)}
+.tab.on::after{content:"";position:absolute;top:2px;right:calc(50% - 26px);width:7px;height:7px;border-radius:50%;background:var(--neon);box-shadow:var(--neon-glow)}
+.fchip.on,.btn.primary{box-shadow:0 0 0 2px rgba(200,255,46,.0),0 8px 18px rgba(70,40,80,.28)}
+.fchip.on::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--neon);box-shadow:var(--neon-glow);margin-inline-end:6px;vertical-align:middle}
+.chip.gold,.ecube.hot summary::before{position:relative}
+.ecube.hot{box-shadow:0 0 0 2px var(--neon),0 0 18px rgba(200,255,46,.45),0 10px 30px rgba(120,70,110,.12)!important}
+.flow li::before{box-shadow:0 0 0 2px var(--neon)}
+.check li::marker,.clean li::marker{color:#9fd400}
+.bot-fab::after{background:var(--neon)!important;color:var(--ink)!important;box-shadow:var(--neon-glow)}
+.cal-rings i{background:var(--neon);box-shadow:0 0 6px var(--neon)}
+.db-candle{box-shadow:0 0 0 2px var(--neon)}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline-color:var(--neon)!important}
+.card h2 .hi{position:relative}
+.card h2 .hi::after{content:"";position:absolute;top:-2px;left:-2px;width:8px;height:8px;border-radius:50%;background:var(--neon);box-shadow:var(--neon-glow)}
+.content::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;opacity:.7;background-image:radial-gradient(circle at 30% 12%,var(--neon) 0 1.5px,transparent 3px),radial-gradient(circle at 70% 55%,var(--neon) 0 1.2px,transparent 2.6px),radial-gradient(circle at 15% 85%,var(--neon) 0 1.5px,transparent 3px);background-size:520px 520px}
+@media (prefers-reduced-motion:no-preference){.tab.on::after,.card h2 .hi::after{animation:neonPulse 2.4s ease-in-out infinite}}
+@keyframes neonPulse{50%{opacity:.45;transform:scale(.8)}}
 </style>
 
 <div class="glow" aria-hidden="true"></div>
@@ -1674,9 +1695,9 @@ body{background:radial-gradient(900px 500px at 100% -5%,rgba(255,206,160,.55),tr
 </div>
 
 
-<button type="button" class="bot-fab" id="bot-fab" aria-controls="bot" aria-expanded="false" aria-label="שאלו את מדריך הטיסה"><img src="i-bot-770q.png" alt=""></button>
+<button type="button" class="bot-fab" id="bot-fab" aria-controls="bot" aria-expanded="false" aria-label="שאלו את מדריך הטיסה"><img src="i-bot-770q_v2.png" alt=""></button>
 <section class="bot" id="bot" hidden aria-label="שאלות על המדריך">
-  <header class="bot-head"><img class="bot-av" src="i-bot-770q.png" alt=""><div class="bot-tt"><b>אני מדריך הטיסה שלכם</b><small>שאלו כל דבר על הנסיעה, לפי המדריך</small></div><button type="button" class="bot-x" id="bot-x" aria-label="סגירה"><i data-lucide="x"></i></button></header>
+  <header class="bot-head"><img class="bot-av" src="i-bot-770q_v2.png" alt=""><div class="bot-tt"><b>אני מדריך הטיסה שלכם</b><small>שאלו כל דבר על הנסיעה, לפי המדריך</small></div><button type="button" class="bot-x" id="bot-x" aria-label="סגירה"><i data-lucide="x"></i></button></header>
   <div class="bot-log" id="bot-log" aria-live="polite">
     <div class="msg ai">שלום! אני מדריך הטיסה שלכם ✈️ אפשר לשאול אותי על כל מה שכתוב במדריך: מה להכין, מה לארוז, ESTA, נחיתה והגעה ל-770, כשרות, זמנים ואירועים. אם משהו לא כתוב במדריך, אגיד שאין לי מידע עליו.</div>
     <div class="bot-sugg"><button type="button">מה צריך להכין לפני הטיסה?</button><button type="button">מה זה ESTA?</button><button type="button">מה מותר במזוודה?</button><button type="button">מה ההכשרים המהודרים?</button><button type="button">איך מגיעים לחנוכייה בשדרה החמישית?</button><button type="button">איך מגיעים לנתב״ג מירושלים?</button><button type="button">מה עושים אם הדרכון אבד?</button></div>
