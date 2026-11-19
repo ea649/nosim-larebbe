@@ -574,6 +574,13 @@ html,body{overflow-x:clip}
 .svc{display:grid;gap:4px;background:var(--soft,#f6efe9);border-radius:16px;padding:12px 14px}
 .svc b{font-size:1.05rem;text-align:right}
 .svc .acts{margin-top:4px}
+.flow li{display:block;position:relative;padding-inline-start:42px;min-height:30px;line-height:1.6}
+.flow li::before{position:absolute;inset-inline-start:0;top:0}
+#v-trouble .tdet{margin-top:12px}
+#v-trouble .tdet summary{padding:12px 0;font-size:1.08rem}
+#v-trouble .tdet .sum img{width:58px;height:58px;object-fit:contain;flex:none;filter:drop-shadow(0 4px 8px rgba(0,0,0,.15))}
+#v-trouble .tdet .sum{gap:14px}
+#urgent{scroll-margin-top:150px}
 </style>
 
 <div class="glow" aria-hidden="true"></div>
@@ -767,10 +774,22 @@ html,body{overflow-x:clip}
   <div class="steps">
     <div class="stepcard urgent"><span class="sn">חירום</span><h3>מצב מסכן חיים</h3><p>מתקשרים מיד ל-911 או להצלה קראון הייטס.</p><div class="acts"><a class="btn danger" href="tel:911"><i data-lucide="phone"></i>911</a><a class="btn" href="tel:+17182301000"><i data-lucide="phone"></i>הצלה 718-230-1000</a></div></div>
     <div class="stepcard"><span class="sn">1</span><h3>קודם מתקשרים לביטוח</h3><p>לחברות ביטוח הנסיעות יש מוקד 24 שעות בעברית. הן מפנות לרופא או למרפאה בהסדר, ולפעמים משלמות ישירות.</p></div>
-    <div class="stepcard"><span class="sn">2</span><h3>מרפאה דחופה (Urgent Care)</h3><p>לחום, דלקות, פציעות קלות ומרשמים. נכנסים בלי תור. בלי ביטוח, ביקור עולה בדרך כלל כמה מאות דולרים.</p></div>
+    <div class="stepcard"><span class="sn">2</span><h3>מרפאה דחופה (Urgent Care)</h3><p>לחום, דלקות, פציעות קלות ומרשמים. נכנסים בלי תור. בלי ביטוח, ביקור עולה בדרך כלל כמה מאות דולרים. <a href="#health" onclick="event.preventDefault();document.getElementById('urgent').scrollIntoView({behavior:'smooth',block:'start'})">איפה יש מרפאה קרובה?</a></p></div>
     <div class="stepcard"><span class="sn">3</span><h3>שומרים כל קבלה</h3><p>קבלות, סיכום ביקור ומרשמים. בלי מסמכים אין החזר מהביטוח.</p></div>
   </div>
 
+
+  <div class="card" id="urgent">
+    <h2><span class="hi"><i data-lucide="stethoscope"></i></span>מרפאות דחופות ליד 770</h2>
+    <ul class="svc-list">
+      <li class="svc"><b dir="ltr">Kamin Health</b><span class="small">מרפאה דחופה של השכונה, בערך 10 דקות הליכה מ-770, בפינת קינגסטון. צוות שמכיר את הקהילה, רנטגן במקום. פתוחה גם במוצאי שבת.</span><span class="small muted" dir="ltr" style="text-align:right">555 Lefferts Ave</span><div class="acts"><a class="btn" href="tel:+17183608074" dir="ltr"><i data-lucide="phone"></i>718-360-8074</a><a class="btn" href="https://www.google.com/maps/dir/?api=1&destination=555%20Lefferts%20Ave%2C%20Brooklyn%2C%20NY" target="_blank" rel="noopener"><i data-lucide="navigation"></i>ניווט</a></div></li>
+      <li class="svc"><b dir="ltr">CityMD Crown Heights</b><span class="small">ב׳–ו׳ <span dir="ltr">8:00–20:00</span>, שבת וראשון <span dir="ltr">9:00–17:00</span>. ליד תחנת Utica Av (קווים 2, 3, 4).</span><span class="small muted" dir="ltr" style="text-align:right">256 Utica Ave</span><div class="acts"><a class="btn" href="tel:+17185719355" dir="ltr"><i data-lucide="phone"></i>718-571-9355</a><a class="btn" href="https://www.google.com/maps/dir/?api=1&destination=256%20Utica%20Ave%2C%20Brooklyn%2C%20NY" target="_blank" rel="noopener"><i data-lucide="navigation"></i>ניווט</a></div></li>
+      <li class="svc"><b dir="ltr">Nao Medical</b><span class="small">על איסטרן פארקוויי, ליד Franklin Ave. ב׳–ו׳ <span dir="ltr">8:00–21:00</span>, שבת וראשון <span dir="ltr">9:00–17:00</span>.</span><span class="small muted" dir="ltr" style="text-align:right">341 Eastern Pkwy</span><div class="acts"><a class="btn" href="tel:+19173103371" dir="ltr"><i data-lucide="phone"></i>917-310-3371</a><a class="btn" href="https://www.google.com/maps/dir/?api=1&destination=341%20Eastern%20Pkwy%2C%20Brooklyn%2C%20NY" target="_blank" rel="noopener"><i data-lucide="navigation"></i>ניווט</a></div></li>
+    </ul>
+    <p><b>חדר מיון 24 שעות:</b> Kings County Hospital, <span dir="ltr">451 Clarkson Ave</span>, בערך 2 ק"מ מ-770. טלפון: <a href="tel:+17182453131" dir="ltr">718-245-3131</a>. במצב מסכן חיים מתקשרים קודם ל-911 או להצלה.</p>
+    <p><b>בית מרקחת קרוב:</b> Walgreens, <span dir="ltr">1040 St Johns Pl</span>, כמה רחובות מ-770. טלפון: <a href="tel:+17189537150" dir="ltr">718-953-7150</a>.</p>
+    <p class="small muted">השעות משתנות, ובחנוכה ובימי ראשון לפעמים מקצרים. כדאי להתקשר לפני שיוצאות.</p>
+  </div>
   <div class="card">
     <h2><span class="hi"><i data-lucide="pill"></i></span>צריכה מרשם לתרופה?</h2>
     <ul class="clean">
@@ -799,9 +818,9 @@ html,body{overflow-x:clip}
 <section class="view" id="v-trouble" aria-label="כשמשהו משתבש">
   <header class="banner"><img src="p-luggage.jpg" alt=""><a class="back" href="#home"><i data-lucide="arrow-right"></i>לכל המדריך</a><h1>כשמשהו משתבש</h1><p>מה עושים, למי פונים ואיזה מסמכים לשמור.</p></header>
 
-  <details open><summary><span class="sum"><i data-lucide="luggage"></i>המזוודה לא הגיעה</span></summary><div>
+  <details class="tdet"><summary><span class="sum"><img src="t-luggage.png" alt="">המזוודה לא הגיעה</span></summary><div>
     <ol class="flow">
-      <li><b>לא יוצאות מאולם המזוודות.</b> ניגשות לדלפק המזוודות של חברת התעופה וממלאות דוח על כבודה שלא הגיעה (PIR). מקבלות מספר תיק ושומרות אותו.</li>
+      <li><b>לא יוצאות מאולם המזוודות.</b> ניגשות לדלפק המזוודות של חברת התעופה וממלאות דוח על כבודה שלא הגיעה <span dir="ltr">(PIR)</span>. מקבלות מספר תיק ושומרות אותו.</li>
       <li><b>משאירות כתובת וטלפון</b> בקראון הייטס, כדי שישלחו את המזוודה עד הדלת.</li>
       <li><b>שומרות</b> את כרטיס העלייה למטוס ואת מדבקת המזוודה.</li>
       <li><b>קונות רק מה שחייבים</b> (בגדים, מוצרי היגיינה) ושומרות כל קבלה. חברת התעופה או הביטוח מחזירים הוצאות סבירות.</li>
@@ -810,7 +829,7 @@ html,body{overflow-x:clip}
     </ol>
   </div></details>
 
-  <details><summary><span class="sum"><i data-lucide="book-x"></i>הדרכון אבד או נגנב</span></summary><div>
+  <details class="tdet"><summary><span class="sum"><img src="t-passport.png" alt="">הדרכון אבד או נגנב</span></summary><div>
     <ol class="flow">
       <li><b>בודקות שוב</b> בכל התיקים ובמקום הלינה.</li>
       <li><b>מגישות תלונה במשטרה.</b> בקראון הייטס זו תחנה 71, ברחוב Empire Blvd 421. לעזרה אפשר להתקשר ל-311.</li>
@@ -821,7 +840,7 @@ html,body{overflow-x:clip}
     <div class="acts"><a class="btn primary" href="https://new.embassies.gov.il/newyork/en/contacts" target="_blank" rel="noopener"><i data-lucide="landmark"></i>הקונסוליה בניו יורק</a><a class="btn" href="https://wa.me/19177415755" target="_blank" rel="noopener"><i data-lucide="message-circle"></i>וואטסאפ חירום</a></div>
   </div></details>
 
-  <details><summary><span class="sum"><i data-lucide="receipt"></i>החזר מס בשדה התעופה?</span></summary><div>
+  <details class="tdet"><summary><span class="sum"><img src="t-tax.png" alt="">החזר מס בשדה התעופה?</span></summary><div>
     <p><b>בארה"ב אין החזר מס לתיירים.</b> מס המכירות נגבה בקופה, ובניו יורק סיטי הוא 8.875%. אין דלפק החזר מס בשדה התעופה.</p>
     <p><b>טיפ שחוסך כסף:</b> בניו יורק סיטי בגדים ונעליים במחיר של פחות מ-$110 לפריט פטורים ממס המכירות.</p>
     <p class="src">מקור: <a href="https://www.tax.ny.gov/bus/st/sales_tax_clothing_exemption.htm" target="_blank" rel="noopener">רשות המסים של מדינת ניו יורק</a></p>
@@ -907,10 +926,9 @@ html,body{overflow-x:clip}
   <div class="card">
     <h2><span class="hi"><i data-lucide="pen-line"></i></span>מה מכינים</h2>
     <ul class="check">
-      <li>פ"נ (פדיון נפש) כתוב מראש, עם השם ושם האם.</li>
       <li>סידור או תהילים, וחומר לימוד לדרך.</li>
-      <li>לבוש חם: בדצמבר קר מאוד, ולפעמים מחכים בחוץ.</li>
-      <li>לבדוק מראש את שעת החזרה, כדי לא לפספס את ההדלקה ב-770.</li>
+      <li>לבוש חם: בחנוכה קר מאוד, ולפעמים מחכים בחוץ.</li>
+      <li>דבר מאכל, לאכול אחרי היציאה מהאוהל.</li>
     </ul>
   </div>
 </section>
