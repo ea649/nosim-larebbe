@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="he" dir="rtl" data-ver="1795098452034">
+<html lang="he" dir="rtl" data-ver="1795099411707">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
@@ -7,7 +7,7 @@
 <meta name="description" content="המדריך לטסות ולטסים לחנוכה אצל הרבי ב-770: כשרות, זמנים, מפה, התניידות ומספרי חירום.">
 <meta name="theme-color" content="#f6e8dd">
 <style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
-<script>(function(){var V="1795098452034";try{fetch(location.pathname+"?nc="+Date.now(),{cache:"no-store"}).then(function(r){return r.text()}).then(function(t){var m=t.match(/data-ver="([0-9]+)"/);if(m&&m[1]!==V){var k="nl-reload-"+m[1];try{if(sessionStorage.getItem(k))return;sessionStorage.setItem(k,"1")}catch(e){}location.replace(location.pathname+"?v="+m[1]+location.hash)}}).catch(function(){})}catch(e){}})();</script>
+<script>(function(){var V="1795099411707";try{fetch(location.pathname+"?nc="+Date.now(),{cache:"no-store"}).then(function(r){return r.text()}).then(function(t){var m=t.match(/data-ver="([0-9]+)"/);if(m&&m[1]!==V){var k="nl-reload-"+m[1];try{if(sessionStorage.getItem(k))return;sessionStorage.setItem(k,"1")}catch(e){}location.replace(location.pathname+"?v="+m[1]+location.hash)}}).catch(function(){})}catch(e){}})();</script>
 </head>
 <body>
 <title>נוסעים לרבי – המדריך</title>
@@ -848,6 +848,12 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline-color:var(--n
 .wxd svg.lucide{width:20px;height:20px;color:#7d7aa8}
 .wxd strong{font-size:1rem;font-weight:900;color:var(--ink)}
 .wxd small{font-size:.75rem;color:var(--muted)}
+
+/* ===== v18: בטלפון — 770 גבוה יותר במסך הפתיחה, הכותרת לא מסתירה את הגג ===== */
+@media (max-width:900px){
+  #v-home .hero{align-content:center}
+  #v-home .hero-title.on-art{margin-bottom:-4%}
+}
 </style>
 
 <div class="glow" aria-hidden="true"></div>
