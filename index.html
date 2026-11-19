@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="he" dir="rtl" data-ver="1795089028424">
+<html lang="he" dir="rtl" data-ver="1795089438535">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
@@ -7,7 +7,7 @@
 <meta name="description" content="המדריך לטסות ולטסים לחנוכה אצל הרבי ב-770: כשרות, זמנים, מפה, התניידות ומספרי חירום.">
 <meta name="theme-color" content="#f6e8dd">
 <style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
-<script>(function(){var V="1795089028424";try{fetch(location.pathname+"?nc="+Date.now(),{cache:"no-store"}).then(function(r){return r.text()}).then(function(t){var m=t.match(/data-ver="([0-9]+)"/);if(m&&m[1]!==V){var k="nl-reload-"+m[1];try{if(sessionStorage.getItem(k))return;sessionStorage.setItem(k,"1")}catch(e){}location.replace(location.pathname+"?v="+m[1]+location.hash)}}).catch(function(){})}catch(e){}})();</script>
+<script>(function(){var V="1795089438535";try{fetch(location.pathname+"?nc="+Date.now(),{cache:"no-store"}).then(function(r){return r.text()}).then(function(t){var m=t.match(/data-ver="([0-9]+)"/);if(m&&m[1]!==V){var k="nl-reload-"+m[1];try{if(sessionStorage.getItem(k))return;sessionStorage.setItem(k,"1")}catch(e){}location.replace(location.pathname+"?v="+m[1]+location.hash)}}).catch(function(){})}catch(e){}})();</script>
 </head>
 <body>
 <title>נוסעים לרבי – המדריך</title>
@@ -625,6 +625,30 @@ html,body{overflow-x:clip}
 .bot-fab img{width:76px!important;height:76px!important;border-radius:0!important;object-fit:contain!important;filter:drop-shadow(0 8px 14px rgba(23,22,28,.3))!important}
 @media (max-width:900px){.bot-fab,.bot-fab:hover{width:66px;height:66px}.bot-fab img{width:66px!important;height:66px!important}}
 .bot-av{border-radius:0!important;object-fit:contain!important;width:54px;height:54px}
+.evt{display:grid;grid-template-columns:76px minmax(0,1fr);gap:16px;align-items:start}
+.evt-date{display:grid;justify-items:center;align-content:center;text-align:center;background:var(--ink);color:#fff;border-radius:16px;padding:12px 6px;min-height:76px}
+.evt-date b{font-size:1.1rem;line-height:1.1}.evt-date small{font-size:.72rem;opacity:.8;margin-top:3px}
+.evt-hot .evt-date{background:linear-gradient(135deg,#d79a3a,#c0623a)}
+.evt-body{display:grid;gap:6px;min-width:0}.evt-body h2{font-size:1.2rem;margin:0}.evt-body p{margin:0}
+.evt-tags{display:flex;flex-wrap:wrap;gap:6px}
+.chip.free{background:#16a34a!important;color:#fff!important;border-color:#16a34a!important;font-weight:900}
+.chip.kids{background:#e0f2fe;color:#075985;border-color:#bae6fd}
+.chip.prev{background:#f3f0f6;color:var(--muted)}
+@media (max-width:560px){.evt{grid-template-columns:62px minmax(0,1fr);gap:12px}.evt-date{min-height:62px;padding:8px 4px}.evt-date b{font-size:.95rem}}
+.ffchip{display:inline-flex;align-items:center;gap:6px;font:inherit;font-weight:700;border:1px solid var(--line);border-radius:999px;padding:8px 16px;background:var(--card);color:var(--ink);cursor:pointer;flex:none}
+.ffchip.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.ffchip.free{border-color:#16a34a;color:#15803d;font-weight:900}
+.ffchip.free.on{background:#16a34a;color:#fff}
+.fun-filters{margin-bottom:-4px}
+.att[hidden]{display:none!important}
+.att-tags{display:flex;flex-wrap:wrap;gap:6px;padding-top:8px}
+.tagb{font-size:.76rem;font-weight:800;border-radius:999px;padding:3px 10px;background:#f3f0f6;color:#4a4458}
+.tagb.free{background:#16a34a;color:#fff}
+.tagb.kids{background:#e0f2fe;color:#075985}
+.tagb.acc{background:#ede9fe;color:#5b21b6}
+.tagb.near{background:#fdecc8;color:#8a5a1c}
+.pill.free{background:#16a34a!important;color:#fff!important;font-weight:900;font-size:.9rem;padding:5px 13px;box-shadow:0 4px 14px rgba(22,163,74,.45)}
+.free-price{color:#15803d;font-weight:900}
 </style>
 
 <div class="glow" aria-hidden="true"></div>
@@ -636,8 +660,8 @@ html,body{overflow-x:clip}
   <aside class="side" id="side" aria-label="תפריט האתר">
     <div class="side-group"><a href="#home" data-nav="home" class="home-link"><i data-lucide="layout-dashboard"></i>ראשי</a></div>
     <div class="side-group"><span class="side-label">לפני שטסים</span><a href="#before" data-nav="before"><img src="i-suitcase.png" alt="">לפני הטיסה</a><a href="#prep" data-nav="prep"><img src="i-plane.png" alt="">הלכות הדרך</a></div>
-    <div class="side-group"><span class="side-label">בשכונה</span><a href="#kashrut" data-nav="kashrut"><img src="i-kosher.png" alt="">כשרות</a><a href="#shabbat" data-nav="shabbat"><img src="i-shabbat.png" alt="">שבת ומשלוחים</a><a href="#times" data-nav="times"><img src="i-menorah-770.png" alt="">זמנים ואירועים</a><a href="#ohel" data-nav="ohel"><img src="i-ohelbus.png" alt="">נסיעה לאוהל</a><a href="#map" data-nav="map"><img src="i-map.png" alt="">מפה ומסלולים</a><a href="#learn" data-nav="learn"><img src="i-siddur.png" alt="">לימוד ושיחות</a></div>
-    <div class="side-group"><span class="side-label">יוצאות לעיר</span><a href="#transport" data-nav="transport"><img src="i-subway.png" alt="">התניידות ושכונות</a><a href="#fun" data-nav="fun"><img src="i-nyc.png" alt="">אטרקציות</a><a href="#biz" data-nav="biz"><img src="i-shop.png" alt="">עסקים והטבות</a></div>
+    <div class="side-group"><span class="side-label">בשכונה</span><a href="#kashrut" data-nav="kashrut"><img src="i-kosher.png" alt="">כשרות</a><a href="#shabbat" data-nav="shabbat"><img src="i-shabbat.png" alt="">שבת ומשלוחים</a><a href="#times" data-nav="times"><img src="i-menorah-770.png" alt="">זמנים ותפילות</a><a href="#events" data-nav="events"><img src="i-menorah.png" alt="">אירועי חנוכה</a><a href="#ohel" data-nav="ohel"><img src="i-ohelbus.png" alt="">נסיעה לאוהל</a><a href="#map" data-nav="map"><img src="i-map.png" alt="">מפה ומסלולים</a><a href="#learn" data-nav="learn"><img src="i-siddur.png" alt="">לימוד ושיחות</a></div>
+    <div class="side-group"><span class="side-label">יוצאים לעיר</span><a href="#transport" data-nav="transport"><img src="i-subway.png" alt="">התניידות ושכונות</a><a href="#fun" data-nav="fun"><img src="i-nyc.png" alt="">אטרקציות</a><a href="#biz" data-nav="biz"><img src="i-shop.png" alt="">עסקים והטבות</a></div>
     <div class="side-group"><span class="side-label">כשצריך עזרה</span><a href="#health" data-nav="health"><img src="i-health.png" alt="">בריאות ותרופות</a><a href="#trouble" data-nav="trouble"><img src="i-trouble.png" alt="">כשמשהו משתבש</a><a href="#sos" data-nav="sos"><img src="i-sos.png" alt="">מספרי חירום</a></div>
     <div class="side-group side-groups"><span class="side-label">הקבוצות שלנו</span>
       <a class="grp-link" href="#groups" data-nav="groups"><i data-lucide="sparkles"></i>בנות מצווה</a>
@@ -678,7 +702,7 @@ html,body{overflow-x:clip}
         <button type="button" class="fchip on" data-g="all">הכל</button>
         <button type="button" class="fchip" data-g="pre">לפני שטסים</button>
         <button type="button" class="fchip" data-g="hood">בשכונה</button>
-        <button type="button" class="fchip" data-g="city">יוצאות לעיר</button>
+        <button type="button" class="fchip" data-g="city">יוצאים לעיר</button>
         <button type="button" class="fchip" data-g="help">כשצריך עזרה</button>
       </div>
       <div class="hub-search"><i data-lucide="search"></i><input id="hub-q" type="search" placeholder="חיפוש: כשרות, אובר, דרכון..." aria-label="חיפוש במדריך"></div>
@@ -688,7 +712,8 @@ html,body{overflow-x:clip}
       <a class="gcard" data-g="pre" href="#prep" data-k="תפילת הדרך המפיל נטילת ידיים טיסה הלכות"><img src="i-plane.png" alt=""><b>הלכות הדרך</b><small>תפילת הדרך ובזמן הטיסה</small></a>
       <a class="gcard" data-g="hood" href="#kashrut" data-k="כשרות הכשרים מים ירקות מסעדות"><img src="i-kosher.png" alt=""><b>כשרות</b><small>הכשרים, שתייה, מי ברז</small></a>
       <a class="gcard" data-g="hood" href="#shabbat" data-k="שבת אוכל לשבת טייק אווי משלוחים נרות"><img src="i-shabbat.png" alt=""><b>שבת ומשלוחים</b><small>אוכל לשבת, הדלקת נרות</small></a>
-      <a class="gcard" data-g="hood" href="#times" data-k="הדלקה תפילות אוהל אוטובוס כינוס אירועים זמנים"><img src="i-menorah-770.png" alt=""><b>זמנים ואירועים</b><small>הדלקות, תפילות, כינוס</small></a>
+      <a class="gcard" data-g="hood" href="#times" data-k="הדלקה תפילות שחרית מנחה ערבית זמנים"><img src="i-menorah-770.png" alt=""><b>זמנים ותפילות</b><small>הדלקות ותפילות ב-770</small></a>
+      <a class="gcard" data-g="hood" href="#events" data-k="אירועים כינוס הדלקה מרכזית שיירה שיירת האור טנקים ראלי החלקה שדרה החמישית"><img src="i-menorah.png" alt=""><b>אירועי חנוכה</b><small>כינוס, הדלקה מרכזית, שיירה</small></a>
       <a class="gcard" data-g="hood" href="#ohel" data-k="אוהל אוטובוס נסיעה קווינס פ&quot;נ"><img src="i-ohelbus.png" alt=""><b>נסיעה לאוהל</b><small>אוטובוס, נסיעות, הכנה</small></a>
       <a class="gcard" data-g="hood" href="#map" data-k="מפה מסלול הליכה רחובות"><img src="i-map.png" alt=""><b>מפה ומסלולים</b><small>זמני הליכה ונסיעה</small></a>
       <a class="gcard" data-g="hood" href="#learn" data-k="שיחות לימוד מאמר לקוטי שיחות"><img src="i-siddur.png" alt=""><b>לימוד ושיחות</b><small>שיחות הרבי לחנוכה</small></a>
@@ -736,8 +761,20 @@ html,body{overflow-x:clip}
 <!-- FUN -->
 <section class="view" id="v-fun" aria-label="אטרקציות">
   <header class="banner"><img src="p-manhattan.jpg" alt=""><a class="back" href="#home"><i data-lucide="arrow-right"></i>לכל המדריך</a><h1>אטרקציות בניו יורק</h1><p>מה אפשר לראות, כמה זה עולה, מתי פתוח ואיך מגיעים מ-770.</p></header>
-  <div class="notice">המחירים והשעות לפי האתרים, נכון ל-2026, ויכולים להשתנות לפי יום ושעה. לפני שיוצאות בודקות באתר הרשמי (יש קישור בכל כרטיס).</div>
+  <div class="notice">המחירים והשעות לפי האתרים, נכון ל-2026, ויכולים להשתנות לפי יום ושעה. לפני שיוצאים כדאי לבדוק באתר הרשמי (יש קישור בכל כרטיס).</div>
+  <div class="chips-row fun-filters" role="group" aria-label="סינון אטרקציות" id="fun-filters">
+    <button type="button" class="ffchip on" data-t="all">הכל</button>
+    <button type="button" class="ffchip free" data-t="free">חינם</button>
+    <button type="button" class="ffchip" data-t="kids">מתאים לילדים</button>
+    <button type="button" class="ffchip" data-t="acc">מונגש</button>
+    <button type="button" class="ffchip" data-t="in">בפנים</button>
+    <button type="button" class="ffchip" data-t="out">בחוץ</button>
+    <button type="button" class="ffchip" data-t="near">ליד 770</button>
+    <button type="button" class="ffchip" data-t="view">תצפית</button>
+  </div>
+  <p class="small muted" id="fun-count" aria-live="polite"></p>
   <div class="fun" id="fun-list"></div>
+  <p class="muted" id="fun-empty" hidden>אין מקום שמתאים לכל הסינונים. אפשר להוריד סינון.</p>
 </section>
 
 <!-- SHABBAT -->
@@ -780,14 +817,14 @@ html,body{overflow-x:clip}
 
   <div class="card">
     <h2><span class="hi"><i data-lucide="truck"></i></span>משלוחים עד הדירה</h2>
-    <p class="small">באפליקציות הכלליות (Uber Eats, DoorDash, שאליה עברה גם Wolt בארה"ב) רוב החנויות אינן בכשרות שאנחנו מקפידות עליה. בשכונה יש סופרמרקטים כשרים עם משלוחים משלהם:</p>
+    <p class="small">באפליקציות הכלליות (Uber Eats, DoorDash, שאליה עברה גם Wolt בארה"ב) רוב החנויות אינן בכשרות שאנחנו מקפידים עליה. בשכונה יש סופרמרקטים כשרים עם משלוחים משלהם:</p>
     <ul class="learn-list">
       <li><a href="https://empirekoshersupermarket.com/delivery" target="_blank" rel="noopener">Empire Kosher</a><small>משלוחים בקראון הייטס · מינימום הזמנה $100</small></li>
       <li><a href="https://kosherfamily.com/" target="_blank" rel="noopener">Kosher Family</a><small>האפליקציה של The Market Place ברחוב Crown · משלוחים לקראון הייטס והסביבה</small></li>
       <li><a href="https://koshertown.com/" target="_blank" rel="noopener">Koshertown</a><small>משלוחים בקראון הייטס</small></li>
       <li><a href="https://www.kahanskosher.com/" target="_blank" rel="noopener">Kahan's Superette</a><small>הזמנה אונליין עם משלוח בשכונה</small></li>
     </ul>
-    <p class="small muted">בכל הזמנה בודקות את ההכשר של כל מוצר לפי <a href="#kashrut">מדריך הכשרות</a>.</p>
+    <p class="small muted">בכל הזמנה בודקים את ההכשר של כל מוצר לפי <a href="#kashrut">מדריך הכשרות</a>.</p>
     <div class="spon"><span class="tag">שותפים · אוכל לשבת</span><b>כאן יופיעו הטייק אווי והמאפיות השותפים, עם הזמנה בוואטסאפ ומשלוח עד הדלת</b></div>
   </div>
 
@@ -823,10 +860,10 @@ html,body{overflow-x:clip}
     </ul>
     <p><b>חדר מיון 24 שעות:</b> Kings County Hospital, <span dir="ltr">451 Clarkson Ave</span>, בערך 2 ק"מ מ-770. טלפון: <a href="tel:+17182453131" dir="ltr">718-245-3131</a>. במצב מסכן חיים מתקשרים קודם ל-911 או להצלה.</p>
     <p><b>בית מרקחת קרוב:</b> Walgreens, <span dir="ltr">1040 St Johns Pl</span>, כמה רחובות מ-770. טלפון: <a href="tel:+17189537150" dir="ltr">718-953-7150</a>.</p>
-    <p class="small muted">השעות משתנות, ובחנוכה ובימי ראשון לפעמים מקצרים. כדאי להתקשר לפני שיוצאות.</p>
+    <p class="small muted">השעות משתנות, ובחנוכה ובימי ראשון לפעמים מקצרים. כדאי להתקשר לפני שיוצאים.</p>
   </div>
   <div class="card">
-    <h2><span class="hi"><i data-lucide="pill"></i></span>צריכה מרשם לתרופה?</h2>
+    <h2><span class="hi"><i data-lucide="pill"></i></span>צריכים מרשם לתרופה?</h2>
     <ul class="clean">
       <li><b>מרשם ישראלי לא מתקבל</b> בבתי מרקחת בארה"ב. צריך רופא מקומי שיכתוב מרשם: מרפאה דחופה, או רופא בשיחת וידאו דרך חברת הביטוח.</li>
       <li>תרופות קבועות מביאים מהבית, באריזה המקורית ובתיק היד, עם מכתב מהרופא באנגלית שמפרט את השם הגנרי והמינון.</li>
@@ -837,7 +874,7 @@ html,body{overflow-x:clip}
   <div class="card">
     <h2><span class="hi"><i data-lucide="store"></i></span>בלי מרשם, בבית המרקחת</h2>
     <div class="table-wrap"><table class="tbl">
-      <thead><tr><th>מה מחפשות</th><th>איך זה נקרא שם</th></tr></thead>
+      <thead><tr><th>מה מחפשים</th><th>איך זה נקרא שם</th></tr></thead>
       <tbody>
         <tr><td>אקמול (פרצטמול)</td><td dir="ltr">Tylenol · Acetaminophen</td></tr>
         <tr><td>נורופן / אדוויל (איבופרופן)</td><td dir="ltr">Advil · Motrin · Ibuprofen</td></tr>
@@ -855,23 +892,23 @@ html,body{overflow-x:clip}
 
   <details class="tdet"><summary><span class="sum"><img src="t-luggage.png" alt="">המזוודה לא הגיעה</span></summary><div>
     <ol class="flow">
-      <li><b>לא יוצאות מאולם המזוודות.</b> ניגשות לדלפק המזוודות של חברת התעופה וממלאות דוח על כבודה שלא הגיעה <span dir="ltr">(PIR)</span>. מקבלות מספר תיק ושומרות אותו.</li>
-      <li><b>משאירות כתובת וטלפון</b> בקראון הייטס, כדי שישלחו את המזוודה עד הדלת.</li>
-      <li><b>שומרות</b> את כרטיס העלייה למטוס ואת מדבקת המזוודה.</li>
-      <li><b>קונות רק מה שחייבים</b> (בגדים, מוצרי היגיינה) ושומרות כל קבלה. חברת התעופה או הביטוח מחזירים הוצאות סבירות.</li>
-      <li><b>שולחות תביעה בכתב לחברת התעופה:</b> על מזוודה מאחרת תוך 21 יום, על מזוודה פגומה תוך 7 ימים. מצרפות את הדוח והקבלות.</li>
-      <li>אם המזוודה לא נמצאה תוך 21 יום, היא נחשבת אבודה. מגישות תביעה גם לחברת הביטוח.</li>
+      <li><b>לא יוצאים מאולם המזוודות.</b> ניגשים לדלפק המזוודות של חברת התעופה וממלאים דוח על כבודה שלא הגיעה <span dir="ltr">(PIR)</span>. מקבלים מספר תיק ושומרים אותו.</li>
+      <li><b>משאירים כתובת וטלפון</b> בקראון הייטס, כדי שישלחו את המזוודה עד הדלת.</li>
+      <li><b>שומרים</b> את כרטיס העלייה למטוס ואת מדבקת המזוודה.</li>
+      <li><b>קונים רק מה שחייבים</b> (בגדים, מוצרי היגיינה) ושומרים כל קבלה. חברת התעופה או הביטוח מחזירים הוצאות סבירות.</li>
+      <li><b>שולחים תביעה בכתב לחברת התעופה:</b> על מזוודה מאחרת תוך 21 יום, על מזוודה פגומה תוך 7 ימים. מצרפים את הדוח והקבלות.</li>
+      <li>אם המזוודה לא נמצאה תוך 21 יום, היא נחשבת אבודה. מגישים תביעה גם לחברת הביטוח.</li>
     </ol>
   </div></details>
 
   <details class="tdet"><summary><span class="sum"><img src="t-passport.png" alt="">הדרכון אבד או נגנב</span></summary><div>
     <ol class="flow">
-      <li><b>בודקות שוב</b> בכל התיקים ובמקום הלינה.</li>
-      <li><b>מגישות תלונה במשטרה.</b> בקראון הייטס זו תחנה 71, ברחוב Empire Blvd 421. לעזרה אפשר להתקשר ל-311.</li>
-      <li><b>פונות לקונסוליה הישראלית</b> (800 Second Ave, מנהטן). הקונסוליה מנפיקה תעודת מעבר לחזרה לארץ. קובעות תור באתר.</li>
-      <li><b>מביאות:</b> אישור התלונה מהמשטרה, תמונת פספורט, צילום של הדרכון או של תעודת הזהות, וכרטיס הטיסה.</li>
+      <li><b>בודקים שוב</b> בכל התיקים ובמקום הלינה.</li>
+      <li><b>מגישים תלונה במשטרה.</b> בקראון הייטס זו תחנה 71, ברחוב Empire Blvd 421. לעזרה אפשר להתקשר ל-311.</li>
+      <li><b>פונים לקונסוליה הישראלית</b> (800 Second Ave, מנהטן). הקונסוליה מנפיקה תעודת מעבר לחזרה לארץ. קובעים תור באתר.</li>
+      <li><b>מביאים:</b> אישור התלונה מהמשטרה, תמונת פספורט, צילום של הדרכון או של תעודת הזהות, וכרטיס הטיסה.</li>
     </ol>
-    <div class="tip"><i data-lucide="lightbulb"></i><span>עוד לפני הטיסה: מצלמות את הדרכון ואת תעודת הזהות ושולחות למייל של עצמכן.</span></div>
+    <div class="tip"><i data-lucide="lightbulb"></i><span>עוד לפני הטיסה: מצלמים את הדרכון ואת תעודת הזהות ושולחים למייל האישי.</span></div>
     <div class="acts"><a class="btn primary" href="https://new.embassies.gov.il/newyork/en/contacts" target="_blank" rel="noopener"><i data-lucide="landmark"></i>הקונסוליה בניו יורק</a><a class="btn" href="https://wa.me/19177415755" target="_blank" rel="noopener"><i data-lucide="message-circle"></i>וואטסאפ חירום</a></div>
   </div></details>
 
@@ -885,7 +922,7 @@ html,body{overflow-x:clip}
 <!-- GROUPS -->
 <section class="view" id="v-groups" aria-label="הקבוצות">
   <header class="banner"><img src="p-menorah.jpg" alt=""><a class="back" href="#home"><i data-lucide="arrow-right"></i>לכל המדריך</a><h1>הקבוצות לחנוכה</h1><p>הקבוצות של נשי ובנות חב"ד צפת לחנוכה תשפ"ז: נשים, סמינר, תיכון ובנות מצווה.</p></header>
-  <div class="notice">המידע לקוח מאתר נשי חב"ד צפת. בחלק מהקבוצות הלינה כבר אזלה. לפני שנרשמות בודקות בדף הקבוצה או בוואטסאפ.</div>
+  <div class="notice">המידע לקוח מאתר נשי חב"ד צפת. בחלק מהקבוצות הלינה כבר אזלה. לפני שנרשמים כדאי לבדוק בדף הקבוצה או בוואטסאפ.</div>
   <div class="grp-cards">
     <article class="card">
       <h2><span class="hi"><i data-lucide="heart-handshake"></i></span>קבוצת נשים</h2>
@@ -910,7 +947,7 @@ html,body{overflow-x:clip}
       <ul class="clean small">
         <li><b>תאריכים:</b> 3.12–13.12.2026. כל 15 בנות עם מדריכה צמודה.</li>
         <li><b>מחיר:</b> תוכנית וארוחות ₪2,300. עם לינה ₪4,650. <span class="prev">הלינה אזלה</span></li>
-        <li>בת מתחת לגיל 15 צריכה ליווי של מבוגר. כל אחת מזמינה טיסה בעצמה.</li>
+        <li>בת מתחת לגיל 15 צריכה ליווי של מבוגר. כל משתתפת מזמינה טיסה בעצמה.</li>
       </ul>
       <div class="acts"><a class="btn primary" href="https://nczefat.org/rebbe-flights/tichon/" target="_blank" rel="noopener"><i data-lucide="external-link"></i>לדף הקבוצה</a><a class="btn" href="https://wa.me/972587701578" target="_blank" rel="noopener"><i data-lucide="message-circle"></i>וואטסאפ: מושקא</a></div>
     </article>
@@ -956,7 +993,7 @@ html,body{overflow-x:clip}
       <li class="svc"><b dir="ltr">GO Kosher Travel</b><span class="small">מארגנים נסיעות וביקורים באוהל.</span><div class="acts"><a class="btn" href="tel:+17184194551" dir="ltr"><i data-lucide="phone"></i>718-419-4551</a></div></li>
       <li class="svc"><b dir="ltr">Gotham Ride</b><span class="small">נהגים פרטיים בניו יורק (לא חב"די). סדאן, ואן וספרינטר עד 14 נוסעות. אפשר לבקש שהנהג ימתין ויחזיר.</span><div class="acts"><a class="btn" href="tel:+12127637722" dir="ltr"><i data-lucide="phone"></i>212-763-7722</a></div></li>
     </ul>
-    <p class="small muted">המספרים נאספו מאתרי חב"ד (groupstoohel.com, אתר האוהל ואתרי השכונה). מחירים לא מפורסמים: שואלות בטלפון לפני ההזמנה, ומזמינות מראש, במיוחד בחנוכה. מידע כללי במרכז האוהל: <a href="tel:+17187234545" dir="ltr">718-723-4545</a>.</p>
+    <p class="small muted">המספרים נאספו מאתרי חב"ד (groupstoohel.com, אתר האוהל ואתרי השכונה). מחירים לא מפורסמים: שואלים בטלפון לפני ההזמנה, ומזמינים מראש, במיוחד בחנוכה. מידע כללי במרכז האוהל: <a href="tel:+17187234545" dir="ltr">718-723-4545</a>.</p>
   </div>
   <div class="card">
     <h2><span class="hi"><i data-lucide="pen-line"></i></span>מה מכינים</h2>
@@ -994,7 +1031,7 @@ html,body{overflow-x:clip}
     </ul>
     <form class="cl-add" id="cl-add"><input id="cl-new" type="text" placeholder="להוסיף פריט לרשימה..." aria-label="פריט חדש" autocomplete="off"><button class="btn primary" type="submit"><i data-lucide="plus"></i>הוספה</button></form>
     <div class="acts"><a class="btn primary" href="https://www.elal.com" target="_blank" rel="noopener"><i data-lucide="plane"></i>צ׳ק-אין באתר אל על</a><button type="button" class="btn" id="cl-reset"><i data-lucide="rotate-ccw"></i>חזרה לרשימה המקורית</button></div>
-    <p class="src">אפשר להוסיף ולהוריד פריטים. הרשימה והסימונים נשמרים רק בטלפון או במחשב שלך.</p>
+    <p class="src">אפשר להוסיף ולהוריד פריטים. הרשימה והסימונים נשמרים רק בטלפון או במחשב הזה.</p>
   </div>
 
   <div class="card" id="to-airport">
@@ -1033,7 +1070,7 @@ html,body{overflow-x:clip}
 
   <div class="card">
     <h2><span class="hi"><i data-lucide="stamp"></i></span>אישור כניסה לארה"ב (ESTA)</h2>
-    <p>בעלות דרכון ישראלי צריכות ESTA מאושר לפני הטיסה. מגישים רק באתר הרשמי של ממשלת ארה"ב. אתרים אחרים נראים דומים וגובים עמלה גבוהה. כדאי להגיש לפחות 72 שעות לפני הטיסה, ועדיף כמה שבועות לפני.</p>
+    <p>בעלי דרכון ישראלי צריכים ESTA מאושר לפני הטיסה. מגישים רק באתר הרשמי של ממשלת ארה"ב. אתרים אחרים נראים דומים וגובים עמלה גבוהה. כדאי להגיש לפחות 72 שעות לפני הטיסה, ועדיף כמה שבועות לפני.</p>
     <div class="acts"><a class="btn primary" href="https://esta.cbp.dhs.gov/" target="_blank" rel="noopener">לאתר ה-ESTA הרשמי</a></div>
   </div>
 
@@ -1041,12 +1078,12 @@ html,body{overflow-x:clip}
     <h2><span class="hi"><i data-lucide="clipboard-check"></i></span>הצהרת בריאות לפני העלייה למטוס <span class="prev">חדש</span></h2>
     <p>מ-3 בנובמבר 2026 ועד 18 בדצמבר 2026 (אם לא יוארך), כל נוסעת בטיסה בינלאומית לארה"ב חייבת למלא הצהרה של ה-CDC בשם <b dir="ltr">Passenger Disclosure and Attestation</b>.</p>
     <ul class="clean">
-      <li><b>על מה מצהירות:</b> שלא הייתן ברפובליקה הדמוקרטית של קונגו ב-21 הימים שלפני הטיסה, בגלל התפרצות האבולה שם.</li>
+      <li><b>על מה מצהירים:</b> שלא הייתם ברפובליקה הדמוקרטית של קונגו ב-21 הימים שלפני הטיסה, בגלל התפרצות האבולה שם.</li>
       <li><b>איך:</b> כל נוסעת ממלאת הצהרה משלה, בטופס דיגיטלי או מודפס, דרך חברת התעופה ולפני העלייה למטוס.</li>
       <li><b>חשוב:</b> מי שלא מגישה את ההצהרה לא עולה למטוס. ההצהרה לא מחליפה את ה-ESTA.</li>
     </ul>
     <div class="acts"><a class="btn primary" href="https://www.elal.com" target="_blank" rel="noopener"><i data-lucide="plane"></i>לאתר אל על</a><a class="btn" href="https://wwwnc.cdc.gov/travel/notices" target="_blank" rel="noopener"><i data-lucide="shield-check"></i>הודעות ה-CDC לנוסעים</a></div>
-    <p class="src">מקורות: <a href="https://www.forbes.com/sites/baileyberg/2026/11/16/flying-to-the-us-a-new-health-declaration-is-now-required/" target="_blank" rel="noopener">Forbes</a> · <a href="https://travel.yahoo.com/advice/safety/articles/flying-us-cdc-health-declaration-190902331.html" target="_blank" rel="noopener">Yahoo Travel</a>. את הפרטים המעודכנים בודקות מול חברת התעופה לפני הטיסה.</p>
+    <p class="src">מקורות: <a href="https://www.forbes.com/sites/baileyberg/2026/11/16/flying-to-the-us-a-new-health-declaration-is-now-required/" target="_blank" rel="noopener">Forbes</a> · <a href="https://travel.yahoo.com/advice/safety/articles/flying-us-cdc-health-declaration-190902331.html" target="_blank" rel="noopener">Yahoo Travel</a>. את הפרטים המעודכנים כדאי לבדוק מול חברת התעופה לפני הטיסה.</p>
   </div>
 
   <div class="card">
@@ -1066,7 +1103,7 @@ html,body{overflow-x:clip}
     <ul class="clean">
       <li>כרטיס אשראי <b>ללא עמלת המרה</b>, עם סמל תשלום ללא מגע (לסובווי ולחנויות).</li>
       <li>קצת מזומן בדולרים, לטיפים ולחנויות קטנות.</li>
-      <li>מוסיפות את הכרטיס ל-Apple Pay או Google Pay, כדי לשלם בטלפון.</li>
+      <li>מוסיפים את הכרטיס ל-Apple Pay או Google Pay, כדי לשלם בטלפון.</li>
     </ul>
     <div class="card spon"><span class="tag">שותף · כרטיסים ומט"ח</span><b>כאן יופיע השותף לכרטיסי חו"ל והמרת מט"ח</b></div>
   </div>
@@ -1190,7 +1227,7 @@ html,body{overflow-x:clip}
       <li><span><b>גולדן פלואו</b> (Golden Flow): מוצרי חלב ומיץ פירות</span></li>
     </ul>
     <p class="small">האיסור אינו בתוקף אם מופיע על המוצר הכשר <b>מהודר</b> נוסף.</p>
-    <p class="small"><b>ועד הכשרות שע"י בד"ץ קרית יואל</b> אינו כלול בחרם, אך לדעת כמה רבנים ומשפיעים אין להנות גם ממנו מאותם טעמים, למרות היותו מהודר. כל אחת תעשה כפי עצת משפיע.</p>
+    <p class="small"><b>ועד הכשרות שע"י בד"ץ קרית יואל</b> אינו כלול בחרם, אך לדעת כמה רבנים ומשפיעים אין להנות גם ממנו מאותם טעמים, למרות היותו מהודר. כל אחד יעשה כפי עצת משפיע.</p>
   </div>
 
   <details><summary>מי ברז</summary><div>
@@ -1207,7 +1244,7 @@ html,body{overflow-x:clip}
     <p>האוכל בחדר האוכל של אש"ל הכנסת אורחים מבושל על ידי תמימים ואברכים יראי שמיים מאנ"ש, במטבח שעומד באישור בד"ץ קראון הייטס. בבניין המלון של אש"ל מותקן מסנן כללי לכל הברזים.</p>
   </div></details>
   <details><summary>מסעדות</summary><div>
-    <p>רמת הכשרות אינה זהה בכל המסעדות בשכונה, ויש מהודרות יותר מאחרות. כל אחת תברר בעצמה אצל רבנים ומומחים.</p>
+    <p>רמת הכשרות אינה זהה בכל המסעדות בשכונה, ויש מהודרות יותר מאחרות. כדאי לברר אצל רבנים ומומחים.</p>
   </div></details>
   <details><summary>אוכל מבושל בלי כשרות</summary><div>
     <p>בשכונה, גם ב-770, אפשר למצוא אוכל מבושל שהוכן לאורחים או שנשאר משמחות. גם הוא צריך חותמת כשרות מוכרת ומהודרת. אחרת ייתכנו בעיות של בשר שנתעלם מן העין ושחיטת ליובאוויטש, חוסר השגחה, בישול נכרי, בדיקת חרקים ומוצרי בסיס לא מהודרים.</p>
@@ -1232,7 +1269,7 @@ html,body{overflow-x:clip}
       <li><b>הכי משתלם:</b> להשתמש תמיד <b>באותו</b> כרטיס או טלפון. אחרי 12 נסיעות בתשלום ($35) בתוך 7 ימים, כל שאר הנסיעות באותו שבוע בחינם. זה מחליף את הכרטיס השבועי.</li>
       <li><b>איך מקישים:</b> כרטיס אשראי עם סמל ללא מגע , או טלפון עם Apple Pay / Google Pay. כדאי לבדוק מראש עמלת המרה של כרטיס ישראלי.</li>
       <li><b>אין כרטיס ללא מגע?</b> קונים כרטיס OMNY במכונה בתחנה (אפשר במזומן) או בחנויות נוחות, בעלות של $1–2, וטוענים כסף. לשבוע מספיק לטעון $35.</li>
-      <li><b>כל אחת עם כרטיס או טלפון משלה</b>, כדי שהתקרה השבועית תחול על כל אחת.</li>
+      <li><b>לכל נוסע כרטיס או טלפון משלו</b>, כדי שהתקרה השבועית תחול על כל אחד.</li>
     </ul>
     <p class="src">מקורות: <a href="https://omny.info/faq/fare-cap" target="_blank" rel="noopener">OMNY</a> · <a href="https://railpace.com/mta-board-adopts-fare-and-toll-increases-to-take-effect-january-2026/" target="_blank" rel="noopener">Railpace</a></p>
   </div>
@@ -1243,11 +1280,11 @@ html,body{overflow-x:clip}
       <li><b>התחנה:</b> Kingston Av של קו 3, על איסטרן פארקווי, צמוד ל-770.</li>
       <li><b>לכיוון מנהטן:</b> נכנסים לרציף שכתוב עליו Manhattan.</li>
       <li>לפני כל יציאה בודקים את המסלול ב-Google Maps ("תחבורה ציבורית"). בסופי שבוע ובלילה יש לפעמים שינויים בקווים.</li>
-      <li>יוצאות בקבוצה, ושומרות בטלפון את הכתובת של מקום הלינה.</li>
+      <li>יוצאים בקבוצה, ושומרים בטלפון את הכתובת של מקום הלינה.</li>
     </ul>
   </div>
 
-  <div class="group-title">יוצאות לעיר: איך מגיעים</div>
+  <div class="group-title">יוצאים לעיר: איך מגיעים</div>
 
   <div class="card trip">
     <h3><span class="hi"><i data-lucide="flame"></i></span>החנוכייה הגדולה בעולם + חנות אפל בשדרה החמישית</h3>
@@ -1365,15 +1402,10 @@ html,body{overflow-x:clip}
 </section>
 
 <!-- TIMES -->
-<section class="view" id="v-times" aria-label="זמנים ואירועים">
-  <header class="banner"><img src="p-menorah.jpg" alt=""><a class="back" href="#home"><i data-lucide="arrow-right"></i>לכל המדריך</a><h1>זמנים ואירועים</h1><p>הדלקות, תפילות, נסיעות לאוהל ואירועים לכל הנשים.</p></header>
+<section class="view" id="v-times" aria-label="זמנים ותפילות">
+  <header class="banner"><img src="p-menorah.jpg" alt=""><a class="back" href="#home"><i data-lucide="arrow-right"></i>לכל המדריך</a><h1>זמנים ותפילות</h1><p>הדלקות ותפילות ב-770, לילה אחר לילה.</p></header>
   <div class="notice">חלק מהזמנים לקוחים משנים קודמות (מסומנים <span class="prev">שנים קודמות</span>). נעדכן כאן ברגע שיפורסמו הזמנים לחנוכה תשפ"ז.</div>
 
-  <div class="card event">
-    <span class="chip gold">לכל הנשים</span>
-    <h2>כינוס נשים ב-770 · לכל אורחות המלך</h2>
-    <div class="when"><span class="chip">מוצאי שבת, ב' טבת</span><span class="chip" dir="ltr">12.12.2026</span><span class="chip">21:00</span></div>
-  </div>
 
   <div class="card">
     <h2><span class="hi"><i data-lucide="flame"></i></span>נרות חנוכה, לילה אחר לילה</h2>
@@ -1411,19 +1443,92 @@ html,body{overflow-x:clip}
     <p class="src">לפי החוברת "תוכניה" של נשי ובנות חב"ד צפת, חנוכה תשפ"ז. ייתכנו שינויים, כדאי לבדוק בלוח המודעות ב-770.</p>
   </div>
 
+  <a class="card ohel-link" href="#events"><img src="i-menorah.png" alt=""><div><h3>אירועי חנוכה</h3><span class="small muted">הכינוס, ההדלקה המרכזית, שיירת האור ועוד</span></div><i data-lucide="arrow-left"></i></a>
   <a class="card ohel-link" href="#ohel"><img src="i-ohelbus.png" alt=""><div><h3>נסיעה לאוהל</h3><span class="small muted">האוטובוס היומי, נסיעות פרטיות ואיך מתכוננים</span></div><i data-lucide="arrow-left"></i></a>
 
-  <div class="card">
-    <h2><span class="hi"><i data-lucide="newspaper"></i></span>חדש מהשכונה</h2>
-    <ul class="learn-list">
-      <li><b>"שיירת האור" של התמימים</b><span class="small">תלמידי הישיבה ב-770 נערכים למבצע חנוכה: רכבים לכל ימי החנוכה ושיירה ברחבי ניו יורק. התאריך והמסלול עוד לא פורסמו.</span><small>חב"ד אינפו · ח' כסלו תשפ"ז · <a href="https://chabad.info/seven-seventy/1384353/" target="_blank" rel="noopener">לכתבה</a></small></li>
-      <li><b>החנוכייה הגדולה בעולם, השדרה החמישית</b><span class="small">בשנה שעברה הודלקה כל ערב, וההדלקה הראשונה הייתה ב-17:30. <span class="prev">שנים קודמות</span></span><small><a href="https://www.fox5ny.com/news/worlds-largest-menorah-nyc" target="_blank" rel="noopener">FOX 5 NY</a></small></li>
-      <li><b>Chanukah on Ice לנשים ולבנות</b><span class="small">בשנה שעברה: ערב החלקה על הקרח במשטח LeFrak Center בפרוספקט פארק, 19:00–21:00, מטעם The Space CH. <span class="prev">שנים קודמות</span></span><small><a href="https://x.com/COLLiveNews/status/1998516983025852602" target="_blank" rel="noopener">COLlive</a></small></li>
-      <li><b>ראלי חנוכה של צבאות ה' ב-770</b><span class="small">בכל שנה יש ראלי לילדים ב-770, עם שידור חי והדלקה. לוח השנה יפורסם קרוב לחנוכה.</span><small><a href="https://www.chabad.org/kids/article_cdo/aid/7137455/jewish/Chanukah-Rally-5786.htm" target="_blank" rel="noopener">הראלי של השנה שעברה</a></small></li>
-    </ul>
-    <p class="small muted">הלוחות של השדרה החמישית, האוטובוס לאוהל והראלי מתפרסמים בדרך כלל בסוף נובמבר. נעדכן כאן.</p>
-  </div>
-  <p class="src">מקורות: <a href="https://collive.com/mitzvah-tank-office-finalizes-plans-for-chanukah-menorah-parade/" target="_blank" rel="noopener">COLlive</a> · <a href="https://crownheights.info/crown-heights-news/802016/expanded-bus-service-from-crown-heights-to-the-ohel-for-chanukah" target="_blank" rel="noopener">CrownHeights.info</a> · <a href="https://chanukahnyc.com/770-eastern-parkway-chabad-lubavitch-world-headquarters/" target="_blank" rel="noopener">ChanukahNYC</a></p>
+</section>
+
+<!-- EVENTS -->
+<section class="view" id="v-events" aria-label="אירועי חנוכה">
+  <header class="banner"><img src="p-menorah.jpg" alt=""><a class="back" href="#home"><i data-lucide="arrow-right"></i>לכל המדריך</a><h1>אירועי חנוכה</h1><p>הכינוס, ההדלקה המרכזית, שיירת האור ועוד אירועים בשכונה ובעיר.</p></header>
+  <div class="notice">רוב הלוחות לחנוכה תשפ"ז עוד לא פורסמו. מה שמסומן <span class="prev">שנים קודמות</span> לקוח מהשנה שעברה. נעדכן כאן ברגע שיתפרסמו הזמנים.</div>
+  <article class="card evt evt-hot">
+    <div class="evt-date"><b>12.12</b><small>מוצ״ש ב׳ טבת</small></div>
+    <div class="evt-body">
+      <div class="evt-tags"><span class="chip gold">לכל הנשים</span><span class="chip">21:00</span></div>
+      <h2>כינוס נשים ב-770 · לכל אורחות המלך</h2>
+      <p class="small">הכינוס המרכזי של הנשים והבנות שבאו לרבי, בזאת חנוכה. כדאי להגיע מוקדם כדי למצוא מקום.</p>
+      
+    </div>
+  </article>
+  <article class="card evt">
+    <div class="evt-date"><b>כל ערב</b><small>4–11.12</small></div>
+    <div class="evt-body">
+      <div class="evt-tags"><span class="chip free">חינם</span><span class="chip">בחוץ</span><span class="chip">לכל המשפחה</span><span class="chip prev">שנים קודמות</span></div>
+      <h2>ההדלקה המרכזית: החנוכייה הגדולה בעולם, השדרה החמישית</h2>
+      <p class="small"><bdi>Grand Army Plaza</bdi>, בפינת <bdi>5th Ave</bdi> ו-<bdi>59th St</bdi> במנהטן, מול מלון פלאזה.</p>
+      <p class="small">זמני ההדלקה בשנה שעברה: ראשון–חמישי ב-17:30, שישי ב-15:45 (לפני שבת), מוצאי שבת ב-20:30. השנה הנר הראשון ביום שישי, ולכן ההדלקה הראשונה צפויה בסביבות 15:45.</p>
+      <p class="small">איך מגיעים: קו 3 עד <bdi>Times Sq–42 St</bdi>, ומשם <bdi>N</bdi>, <bdi>R</bdi> או <bdi>W</bdi> עד <bdi>5 Av/59 St</bdi>. כ-50 דקות.</p>
+      <p class="src">מקור: <a href="https://secretnyc.co/worlds-largest-menorah-fifth-avenue-2025/" target="_blank" rel="noopener">SecretNYC, לוח 2025</a></p>
+    </div>
+  </article>
+  <article class="card evt">
+    <div class="evt-date"><b>כל ערב</b><small>4–11.12</small></div>
+    <div class="evt-body">
+      <div class="evt-tags"><span class="chip free">חינם</span><span class="chip">בחוץ</span><span class="chip kids">מתאים לילדים</span><span class="chip prev">שנים קודמות</span></div>
+      <h2>החנוכייה הגדולה בברוקלין</h2>
+      <p class="small">בכניסה לפרוספקט פארק, קרוב מאוד ל-770. בשנה שעברה היו בכל ערב לביבות ומתנות לילדים, ובערב הראשון הופעה ב-16:00.</p>
+      <p class="small">איך מגיעים: קו 3 ישירות לתחנת <bdi>Grand Army Plaza</bdi>, שלוש תחנות מ-<bdi>Kingston Av</bdi>.</p>
+      <p class="src">מקורות: <a href="https://collive.com/hundreds-gather-for-brooklyns-largest-menorah-lighting/" target="_blank" rel="noopener">COLlive</a> · <a href="https://mommypoppins.com/new-york-city-kids/event/free/the-worlds-largest-hanukkah-menorah-brooklyn" target="_blank" rel="noopener">Mommy Poppins</a></p>
+    </div>
+  </article>
+  <article class="card evt">
+    <div class="evt-date"><b>ייקבע</b><small>בחנוכה</small></div>
+    <div class="evt-body">
+      <div class="evt-tags"><span class="chip free">חינם</span><span class="chip">בחוץ</span><span class="chip">לכל המשפחה</span></div>
+      <h2>שיירת האור: תהלוכת החנוכיות של טנקי המבצעים</h2>
+      <p class="small">טנקי המבצעים ומאות מכוניות עם חנוכיות יוצאים מ-770 ונוסעים דרך גשר מנהטן אל מנהטן. אפשר לצפות ביציאה מול 770.</p>
+      <p class="small">בשנה שעברה השיירה יצאה בערב השלישי של חנוכה, עם 35 טנקים ויותר מ-300 מכוניות. התמימים ב-770 כבר נערכים לשיירה של השנה, והתאריך והמסלול יפורסמו בקרוב.</p>
+      <p class="src">מקורות: <a href="https://chabad.info/seven-seventy/1384353/" target="_blank" rel="noopener">חב״ד אינפו</a> · <a href="https://collive.com/menorah-parade-lit-up-new-york-city-with-jewish-pride/" target="_blank" rel="noopener">COLlive</a> · <a href="https://www.menorahparadesnyc.com" target="_blank" rel="noopener">MenorahParadesNYC</a></p>
+    </div>
+  </article>
+  <article class="card evt">
+    <div class="evt-date"><b>ייקבע</b><small>בחנוכה</small></div>
+    <div class="evt-body">
+      <div class="evt-tags"><span class="chip kids">מתאים לילדים</span><span class="chip">בפנים</span></div>
+      <h2>ראלי חנוכה של צבאות ה׳ ב-770</h2>
+      <p class="small">ראלי לילדים ב-770 עם הדלקה, בשידור חי לילדים בכל העולם. התאריך של השנה יפורסם קרוב לחנוכה.</p>
+      <p class="src">מקור: <a href="https://www.chabad.org/kids/article_cdo/aid/7137455/jewish/Chanukah-Rally-5786.htm" target="_blank" rel="noopener">הראלי של השנה שעברה</a></p>
+    </div>
+  </article>
+  <article class="card evt">
+    <div class="evt-date"><b>ייקבע</b><small>בחנוכה</small></div>
+    <div class="evt-body">
+      <div class="evt-tags"><span class="chip gold">לנשים ולבנות</span><span class="chip">בחוץ</span><span class="chip prev">שנים קודמות</span></div>
+      <h2>ערב החלקה על הקרח לנשים ולבנות</h2>
+      <p class="small">במשטח <bdi>LeFrak Center</bdi> שבפרוספקט פארק, מטעם <bdi>The Space CH</bdi>. בשנה שעברה השתתפו כ-350 נשים ובנות, גם מישראל, בשעות 19:00–21:00.</p>
+      <p class="src">מקור: <a href="https://collive.com/girls-enjoy-11th-chanukah-ice-skating-night-in-brooklyn/" target="_blank" rel="noopener">COLlive</a></p>
+    </div>
+  </article>
+  <article class="card evt">
+    <div class="evt-date"><b>ייקבע</b><small>בחנוכה</small></div>
+    <div class="evt-body">
+      <div class="evt-tags"><span class="chip free">חינם</span><span class="chip kids">מתאים לילדים</span><span class="chip">בפנים</span><span class="chip prev">שנים קודמות</span></div>
+      <h2>מסיבת חנוכה לילדים של אהלי יוסף יצחק</h2>
+      <p class="small"><bdi>Binyan Sheleg</bdi>, ‏<bdi>333 Albany Ave</bdi>, בקראון הייטס. לילדים בגילאי 3–9 עם מבוגר. בשנה שעברה המסיבה הייתה בערב החמישי ב-16:00, אחרי ההדלקה ב-770, עם הופעה וסדנאות: קישוט סופגניות, סביבונים וחנוכייה אכילה.</p>
+      <p class="src">מקור: <a href="https://collive.com/increasing-the-light-today-public-menorah-lighting-childrens-chanukah-party-in-crown-heights/" target="_blank" rel="noopener">COLlive</a></p>
+    </div>
+  </article>
+  <article class="card evt">
+    <div class="evt-date"><b>כל החג</b><small>4–11.12</small></div>
+    <div class="evt-body">
+      <div class="evt-tags"><span class="chip kids">מתאים לילדים</span><span class="chip">בפנים</span><span class="chip">ליד 770</span><span class="chip prev">שנים קודמות</span></div>
+      <h2>פסטיבל חנוכה במוזיאון הילדים היהודי</h2>
+      <p class="small">שתי דקות הליכה מ-770. בשנה שעברה היו שם פעילויות חנוכה כל ימי החג: קישוט סופגניות, סדנת שמן זית ומעבדה, ובערב הראשון אירוע "חנוכה על הפארקווי".</p>
+      <p class="src">מקור: <a href="https://anash.org/families-enjoy-chanukah-on-the-parkway-event" target="_blank" rel="noopener">Anash</a></p>
+    </div>
+  </article>
+  <a class="card ohel-link" href="#times"><img src="i-menorah-770.png" alt=""><div><h3>זמנים ותפילות ב-770</h3><span class="small muted">הדלקות, שחרית, מנחה וערבית</span></div><i data-lucide="arrow-left"></i></a>
 </section>
 
 <!-- BUSINESSES -->
@@ -1438,7 +1543,7 @@ html,body{overflow-x:clip}
     <button type="button" class="fchip" data-f="travel"><i data-lucide="plane"></i>לפני הטיסה</button>
   </div>
   <div class="biz-list" id="biz-list"></div>
-  <div class="card how"><h3><span class="hi"><i data-lucide="ticket-percent"></i></span>איך משתמשות בהטבה</h3><p class="small">מציגות בקופה את הקוד או את המסך של העסק במדריך. כל עסק שותף מצרף קופון לטסות "נוסעים לרבי".</p></div>
+  <div class="card how"><h3><span class="hi"><i data-lucide="ticket-percent"></i></span>איך משתמשים בהטבה</h3><p class="small">מציגים בקופה את הקוד או את המסך של העסק במדריך. כל עסק שותף מצרף קופון לטסות "נוסעים לרבי".</p></div>
 
   <div class="card" id="dir">
     <h2><span class="hi"><i data-lucide="store"></i></span>מדריך השכונה: הסעות, אוכל ושירותים</h2>
@@ -1495,7 +1600,7 @@ html,body{overflow-x:clip}
 <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
 <script>
 (function(){
-  var views=["home","ohel","groups","shabbat","health","trouble","fun","learn","before","prep","kashrut","transport","map","times","biz","sos"];
+  var views=["home","ohel","groups","shabbat","health","trouble","fun","learn","before","prep","kashrut","transport","map","times","events","biz","sos"];
   function show(){
     var h=(location.hash||"").replace("#","");
     if(views.indexOf(h)<0)h="home";
@@ -1567,15 +1672,29 @@ html,body{overflow-x:clip}
     {id:"ewr",n:"שדה התעופה Newark (EWR)",lat:40.68950,lng:-74.17450}
   ];
   var FUN=[
-    {id:"jcm",n:"מוזיאון הילדים היהודי",s:"מוזיאון הילדים",near:1,k:"shop",c:"JCM",tag:"ליד 770",lat:40.66880,lng:-73.94190,price:"מבוגרים $17 · ילדים $19 · עד גיל 2 חינם",hours:"א' 10:00–17:30 · ב'–ה' 10:00–17:00 · ו'–ש' סגור",how:"הליכה של 2 דקות מ-770, על איסטרן פארקווי 792",url:"https://www.jcm.museum/planning-your-visit/",walk:1},
-    {id:"esb",n:"האמפייר סטייט בילדינג",c:"ESB",lat:40.74840,lng:-73.98570,price:"מ-$44 למבוגר (תצפית קומה 86)",hours:"כל יום, בדרך כלל 9:00–24:00",how:"קו 3 עד 34 St–Penn Station, הליכה של כ-8 דקות מזרחה עד השדרה החמישית",url:"https://www.esbnyc.com"},
-    {id:"totr",n:"Top of the Rock",c:"TOTR",lat:40.75930,lng:-73.97940,price:"כ-$44 למבוגר",hours:"כל יום 8:00–24:00",how:"קו 3 עד Times Sq–42 St, הליכה של כ-10 דקות לרוקפלר פלאזה 30",url:"https://www.rockefellercenter.com/attractions/top-of-the-rock-observation-deck/"},
-    {id:"summit",n:"SUMMIT One Vanderbilt",c:"SUMT",lat:40.75290,lng:-73.97870,price:"$43 בימים ב'–ה' · $49 בשישי–ראשון · שקיעה +$10",hours:"כל יום 9:00–24:00, כניסה אחרונה 22:30",how:"קו 3 עד Franklin Av, מעבר לקו 4 או 5 עד Grand Central–42 St",url:"https://summitov.com"},
-    {id:"edge",n:"Edge, הדסון יארדס",c:"EDGE",lat:40.75380,lng:-74.00110,price:"כ-$42 · $36 בהזמנה שבועיים מראש",hours:"בדקו את השעות באתר",how:"קו 3 עד Times Sq–42 St, מעבר לקו 7 עד 34 St–Hudson Yards",url:"https://www.edgenyc.com"},
-    {id:"liberty",n:"פסל החירות (מעבורת)",c:"SOL",lat:40.70330,lng:-74.01700,price:"$25.50 למבוגר",hours:"מעבורות מ-9:00 כל 20–30 דקות. האחרונה בין 15:30 ל-17:00, לפי העונה",how:"קו 3 עד Franklin Av, מעבר לקו 4 או 5 עד Bowling Green, הליכה קצרה לבטרי פארק",url:"https://www.cityexperiences.com/new-york/city-cruises/statue/"},
-    {id:"siferry",n:"מעבורת סטטן איילנד",c:"SIF",tag:"חינם",lat:40.70130,lng:-74.01300,price:"חינם",hours:"24 שעות ביממה",how:"קו 4 או 5 עד Bowling Green, הליכה לטרמינל Whitehall. המעבורת עוברת ליד פסל החירות",url:"https://www.siferry.com"},
-    {id:"central",n:"סנטרל פארק",c:"CPK",tag:"חינם",lat:40.76800,lng:-73.97400,price:"חינם",hours:"כל יום 6:00–1:00",how:"כמו לחנוכייה בשדרה החמישית: הפארק מתחיל ממש שם",url:"https://www.centralparknyc.org"},
-    {id:"bridge",n:"גשר ברוקלין ברגל",c:"BKB",tag:"חינם",lat:40.70610,lng:-73.99690,price:"חינם",hours:"פתוח תמיד. מומלץ באור יום",how:"קו 3 עד Clark St, הליכה של כ-10 דקות לכניסה לגשר"}
+    {id:"jcm",tags:"near kids in acc",n:"מוזיאון הילדים היהודי",s:"מוזיאון הילדים",near:1,k:"shop",c:"JCM",tag:"ליד 770",lat:40.66880,lng:-73.94190,price:"מבוגרים $17 · ילדים $19 · עד גיל 2 חינם",hours:"א' 10:00–17:30 · ב'–ה' 10:00–17:00 · ו'–ש' סגור",how:"הליכה של 2 דקות מ-770, על איסטרן פארקווי 792",url:"https://www.jcm.museum/planning-your-visit/",walk:1},
+    {id:"esb",tags:"in acc kids view",n:"האמפייר סטייט בילדינג",c:"ESB",lat:40.74840,lng:-73.98570,price:"מ-$44 למבוגר (תצפית קומה 86)",hours:"כל יום, בדרך כלל 9:00–24:00",how:"קו 3 עד 34 St–Penn Station, הליכה של כ-8 דקות מזרחה עד השדרה החמישית",url:"https://www.esbnyc.com"},
+    {id:"totr",tags:"in out acc kids view",n:"Top of the Rock",c:"TOTR",lat:40.75930,lng:-73.97940,price:"כ-$44 למבוגר",hours:"כל יום 8:00–24:00",how:"קו 3 עד Times Sq–42 St, הליכה של כ-10 דקות לרוקפלר פלאזה 30",url:"https://www.rockefellercenter.com/attractions/top-of-the-rock-observation-deck/"},
+    {id:"summit",tags:"in acc view",n:"SUMMIT One Vanderbilt",c:"SUMT",lat:40.75290,lng:-73.97870,price:"$43 בימים ב'–ה' · $49 בשישי–ראשון · שקיעה +$10",hours:"כל יום 9:00–24:00, כניסה אחרונה 22:30",how:"קו 3 עד Franklin Av, מעבר לקו 4 או 5 עד Grand Central–42 St",url:"https://summitov.com"},
+    {id:"edge",tags:"out acc view",n:"Edge, הדסון יארדס",c:"EDGE",lat:40.75380,lng:-74.00110,price:"כ-$42 · $36 בהזמנה שבועיים מראש",hours:"בדקו את השעות באתר",how:"קו 3 עד Times Sq–42 St, מעבר לקו 7 עד 34 St–Hudson Yards",url:"https://www.edgenyc.com"},
+    {id:"liberty",tags:"out kids",n:"פסל החירות (מעבורת)",c:"SOL",lat:40.70330,lng:-74.01700,price:"$25.50 למבוגר",hours:"מעבורות מ-9:00 כל 20–30 דקות. האחרונה בין 15:30 ל-17:00, לפי העונה",how:"קו 3 עד Franklin Av, מעבר לקו 4 או 5 עד Bowling Green, הליכה קצרה לבטרי פארק",url:"https://www.cityexperiences.com/new-york/city-cruises/statue/"},
+    {id:"siferry",tags:"free out acc kids view",n:"מעבורת סטטן איילנד",c:"SIF",tag:"חינם",lat:40.70130,lng:-74.01300,price:"חינם",hours:"24 שעות ביממה",how:"קו 4 או 5 עד Bowling Green, הליכה לטרמינל Whitehall. המעבורת עוברת ליד פסל החירות",url:"https://www.siferry.com"},
+    {id:"central",tags:"free out kids acc",n:"סנטרל פארק",c:"CPK",tag:"חינם",lat:40.76800,lng:-73.97400,price:"חינם",hours:"כל יום 6:00–1:00",how:"כמו לחנוכייה בשדרה החמישית: הפארק מתחיל ממש שם",url:"https://www.centralparknyc.org"},
+    {id:"bridge",tags:"free out kids view",n:"גשר ברוקלין ברגל",c:"BKB",tag:"חינם",lat:40.70610,lng:-73.99690,price:"חינם",hours:"פתוח תמיד. מומלץ באור יום",how:"קו 3 עד Clark St, הליכה של כ-10 דקות לכניסה לגשר"},
+    {id:"bcm",n:"מוזיאון הילדים של ברוקלין",c:"BCM",tags:"near kids in",tag:"ליד 770",lat:40.6746,lng:-73.9441,price:"$15 לאדם · בימי חמישי 14:00–17:00 הכניסה חינם",hours:"ד׳–א׳ 10:00–17:00 · ב׳–ג׳ סגור",how:"הליכה של כ-12 דקות מ-770, ל-145 Brooklyn Ave",url:"https://www.brooklynkids.org/visit/",walk:1,ph:"p-bcm",pp:"$15"},
+    {id:"gym",n:"משחקייה לקטנים (Gymboree)",c:"GYM",tags:"kids in",lat:40.6756,lng:-73.9851,price:"בעיקר למנויים. כדאי להתקשר ולשאול על כניסה חד-פעמית: 718-788-7808",hours:"משתנות. בדקו בטלפון",how:"קו 3 עד Atlantic Av, ומשם קו R עד Union St. הסניף ב-365 4th Ave, פארק סלופ. כ-30 דקות",url:"https://kidpass.com/providers/1841",ph:"p-gym",pp:"לקטנים"},
+    {id:"wax",n:"מוזיאון השעווה מאדאם טוסו",c:"MT",tags:"kids in",lat:40.7564,lng:-73.9886,price:"$34–54 בהזמנה באתר · $44–64 בקופה",hours:"בערך 10:00–19:00, משתנה לפי יום",how:"קו 3 עד Times Sq–42 St, כ-40 דקות. שימו לב: חלק מהדמויות בלבוש לא צנוע",url:"https://www.madametussauds.com/new-york/tickets/",ph:"p-wax",pp:"מ-$34"},
+    {id:"amnh",n:"מוזיאון הטבע",c:"AMNH",tags:"kids in acc",lat:40.7813,lng:-73.974,price:"מבוגרים $37 · ילדים $22 · עד גיל 3 חינם",hours:"כל יום 10:00–17:30",how:"קו 3 עד 72 St, ומשם קו 1 עד 79 St. כ-50 דקות. אפשר לשלב עם סנטרל פארק",url:"https://www.amnh.org/plan-your-visit",ph:"p-amnh",pp:"$37"},
+    {id:"intrepid",n:"נושאת המטוסים Intrepid",c:"INT",tags:"kids in out acc",lat:40.7645,lng:-73.9996,price:"מבוגרים כ-$32–36 · ילדים כ-$23 · עד גיל 4 חינם",hours:"בחורף כל יום 10:00–17:00, כניסה אחרונה 16:00",how:"קו 3 עד Times Sq, ומשם הליכה של כ-20 דקות מערבה או אוטובוס M50",url:"https://intrepidmuseum.org",ph:"p-intrepid",pp:"כ-$32"},
+    {id:"illusions",n:"מוזיאון האשליות",c:"MOI",tags:"kids in",lat:40.7392,lng:-74.0026,price:"מבוגרים $35 · ילדים 5–12 $28 · עד גיל 4 חינם",hours:"ב׳–ה׳ 10:00–22:00 · ו׳–א׳ 10:00–23:00",how:"קו 3 עד 14 St, ומשם שני רחובות מערבה (77 8th Ave). הקומה השנייה במדרגות בלבד",url:"https://newyork.museumofillusions.us/faq",ph:"p-illusions",pp:"$35"},
+    {id:"highline",n:"הפארק המוגבה High Line",c:"HL",tags:"free out acc view",lat:40.7397,lng:-74.008,price:"חינם",hours:"בדצמבר בערך 7:00–19:00",how:"קו 3 עד 14 St, ומשם כ-10 דקות הליכה מערבה לכניסת Gansevoort. יש מעליות",url:"https://www.thehighline.org",ph:"p-highline",pp:"חינם"},
+    {id:"littleisland",n:"האי הקטן Little Island",c:"LI",tags:"free out acc",lat:40.742,lng:-74.0101,price:"חינם",hours:"כל יום מ-6:00 בבוקר. בדקו באתר עד מתי",how:"כמו ל-High Line, ליד Pier 55 על נהר ההדסון. יש רמפות",url:"https://littleisland.org",ph:"p-littleisland",pp:"חינם"},
+    {id:"grandcentral",n:"התחנה המרכזית Grand Central",c:"GCT",tags:"free in acc",lat:40.7527,lng:-73.9772,price:"חינם",hours:"כל יום, בערך 5:30–2:00",how:"קו 3 עד Atlantic Av, ומשם קו 4 או 5 עד Grand Central. כ-35 דקות",url:"https://www.grandcentralterminal.com",ph:"p-grandcentral",pp:"חינם"},
+    {id:"tram",n:"רכבל רוזוולט איילנד: תצפית על מנהטן",c:"TRAM",tags:"out acc kids view",lat:40.7613,lng:-73.964,price:"$3 לכיוון, בתשלום OMNY (כמו נסיעה בסובווי)",hours:"כל יום, בערך 6:00–2:00",how:"קו 3 עד Atlantic Av, ומשם 4 או 5 עד 59 St–Lexington, והליכה לשדרה השנייה פינת רחוב 60",url:"https://rioc.ny.gov/302/Tram",ph:"p-tram",pp:"$3"},
+    {id:"dumbo",n:"פארק גשר ברוקלין ודאמבו",c:"DUMBO",tags:"free out acc kids view",lat:40.7033,lng:-73.9903,price:"חינם",hours:"פתוח כל יום. מומלץ באור יום",how:"קו 3 עד Clark St, ומשם כ-10 דקות הליכה לטיילת",url:"https://www.brooklynbridgepark.org",ph:"p-dumbo",pp:"חינם"},
+    {id:"coney",n:"הטיילת בקוני איילנד",c:"CONEY",tags:"free out acc",lat:40.573,lng:-73.981,price:"חינם. המתקנים סגורים בחורף",hours:"פתוח תמיד. בחורף קר ורוחני",how:"קו 3 עד Atlantic Av, ומשם Q, N או D עד Coney Island–Stillwell Av. כ-50 דקות",url:"https://www.nycgovparks.org/parks/coney-island-beach-boardwalk",ph:"p-coney",pp:"חינם"},
+    {id:"skate",n:"החלקה על הקרח בפרוספקט פארק",c:"ICE",tags:"near kids out",tag:"ליד 770",lat:40.6553,lng:-73.9644,price:"בעונה שעברה $10 (בערבים ובחגים $15) + השכרת מחליקיים $10",hours:"משתנות לפי יום. בדקו באתר",how:"מונית של כ-10 דקות, או קו 3 עד Franklin Av, רכבת S עד Prospect Park וכ-15 דקות הליכה",url:"https://lakeside.prospectpark.org/activity/public-ice-skate",ph:"p-skate",pp:"$10"},
+    {id:"nysci",n:"היכל המדע New York Hall of Science",c:"SCI",tags:"kids in acc",lat:40.7471,lng:-73.8517,price:"מבוגרים $22 · ילדים 2–17 $19 · בשישי 14:00–17:00 חינם בהרשמה מראש",hours:"ד׳–א׳ 10:00–17:00",how:"קו 3 עד Times Sq, ומשם קו 7 עד 111 St. כשעה ורבע",url:"https://nysci.org/visit",ph:"p-nysci",pp:"$22"}
   ];
 var PH={jcm:"p-museum",esb:"p-esb",totr:"p-rock",summit:"p-manhattan",edge:"p-rock",liberty:"p-liberty",siferry:"p-ferry",central:"p-park",bridge:"p-bridge"};
   var PP={jcm:"$17",esb:"מ-$44",totr:"$44",summit:"מ-$43",edge:"$42",liberty:"$25.50",siferry:"חינם",central:"חינם",bridge:"חינם"};
@@ -1583,16 +1702,19 @@ var PH={jcm:"p-museum",esb:"p-esb",totr:"p-rock",summit:"p-manhattan",edge:"p-ro
   FUN.forEach(function(f){P.push(f)});
   (function(){
     var box=document.getElementById("fun-list");if(!box)return;
+    var TG={free:["חינם","free"],kids:["מתאים לילדים","kids"],acc:["מונגש","acc"],"in":["בפנים",""],out:["בחוץ",""],near:["ליד 770","near"],view:["תצפית",""]};
+    function bd(s){return String(s||"").replace(/[A-Za-z0-9][A-Za-z0-9.'’\/]*(?:[ \u2013-][A-Za-z0-9][A-Za-z0-9.'’\/]*)*/g,function(x){var e=/\.$/.test(x)?".":"";if(e)x=x.slice(0,-1);return /[A-Za-z]/.test(x)?"<bdi>"+x+"</bdi>"+e:x+e})}
+    function tagsHtml(f){return '<div class="att-tags">'+(f.tags||"").split(" ").filter(Boolean).map(function(t){var x=TG[t];return x?'<span class="tagb '+x[1]+'">'+x[0]+'</span>':""}).join("")+'</div>'}
     box.innerHTML=FUN.map(function(f){
-      return '<article class="att trip" id="att-'+f.id+'"><div class="att-ph"><img src="'+PH[f.id]+'.jpg" alt="" decoding="async"><span class="pill">'+PP[f.id]+'</span><button type="button" class="fav'+(favs[f.id]?' on':'')+'" data-fav="'+f.id+'" aria-label="שמירה למועדפים"><i data-lucide="heart"></i></button><h3>'+f.n+'</h3></div><div class="att-body">'+
-        '<dl class="facts"><div><dt><i data-lucide="wallet"></i></dt><dd><small>מחיר</small>'+f.price+'</dd></div><div><dt><i data-lucide="clock"></i></dt><dd><small>שעות פתיחה</small>'+f.hours+'</dd></div><div><dt><i data-lucide="train-front"></i></dt><dd><small>איך מגיעים מ-770</small>'+f.how+'</dd></div></dl>'+
+      var pp=f.pp||PP[f.id],fr=pp==="חינם";return '<article class="att trip" id="att-'+f.id+'" data-tags="'+(f.tags||"")+'"><div class="att-ph"><img src="'+(f.ph||PH[f.id])+'.jpg" alt="" loading="lazy" decoding="async"><span class="pill'+(fr?' free':'')+'">'+(fr?'חינם!':pp)+'</span><button type="button" class="fav'+(favs[f.id]?' on':'')+'" data-fav="'+f.id+'" aria-label="שמירה למועדפים"><i data-lucide="heart"></i></button><h3>'+f.n+'</h3></div><div class="att-body">'+
+        tagsHtml(f)+'<dl class="facts"><div><dt><i data-lucide="wallet"></i></dt><dd'+(fr?' class="free-price"':'')+'><small>מחיר</small>'+bd(f.price)+'</dd></div><div><dt><i data-lucide="clock"></i></dt><dd><small>שעות פתיחה</small>'+bd(f.hours)+'</dd></div><div><dt><i data-lucide="train-front"></i></dt><dd><small>איך מגיעים מ-770</small>'+bd(f.how)+'</dd></div></dl>'+
         (f.url?'<div class="acts"><a class="btn" href="'+f.url+'" target="_blank" rel="noopener">לאתר הרשמי</a></div>':'')+
         '<div class="acts" data-dest="'+f.id+'"'+(f.walk?' data-walk="1"':'')+'></div></div></article>';
     }).join("");
   })();
 
   (function(){var r=document.getElementById("rail");if(!r)return;
-    r.innerHTML=FUN.map(function(f){return '<a class="pcard" href="#fun" data-att="'+f.id+'"><img src="'+PH[f.id]+'.jpg" alt="" decoding="async"><span class="pill">'+PP[f.id]+'</span><button type="button" class="fav'+(favs[f.id]?' on':'')+'" data-fav="'+f.id+'" aria-label="שמירה למועדפים"><i data-lucide="heart"></i></button><span class="meta"><b>'+f.n+'</b><small><i data-lucide="map-pin"></i>'+(f.tag||"ניו יורק")+'</small></span></a>'}).join("");
+    r.innerHTML=FUN.map(function(f){var pp=f.pp||PP[f.id],fr=pp==="חינם";return '<a class="pcard" href="#fun" data-att="'+f.id+'"><img src="'+(f.ph||PH[f.id])+'.jpg" alt="" loading="lazy" decoding="async"><span class="pill'+(fr?' free':'')+'">'+(fr?'חינם!':pp)+'</span><button type="button" class="fav'+(favs[f.id]?' on':'')+'" data-fav="'+f.id+'" aria-label="שמירה למועדפים"><i data-lucide="heart"></i></button><span class="meta"><b>'+f.n+'</b><small><i data-lucide="map-pin"></i>'+(f.tag||"ניו יורק")+'</small></span></a>'}).join("");
   })();
   document.addEventListener("click",function(e){var b=e.target.closest("[data-fav]");if(!b)return;e.preventDefault();e.stopPropagation();var id=b.dataset.fav;favs[id]=!favs[id];try{localStorage.setItem("g770-favs",JSON.stringify(favs))}catch(x){}document.querySelectorAll('[data-fav="'+id+'"]').forEach(function(x){x.classList.toggle("on",!!favs[id])})});
   var byId={};P.forEach(function(p){byId[p.id]=p});
@@ -1655,7 +1777,7 @@ var PH={jcm:"p-museum",esb:"p-esb",totr:"p-rock",summit:"p-manhattan",edge:"p-ro
       if(d>1200)h+='<div><span><i data-lucide="train-front"></i></span><b>'+fmtMin(transit)+'</b><small>תחבורה ציבורית</small></div>';
       h+='<div><span><i data-lucide="car"></i></span><b>'+fmtMin(drive)+'</b><small>נסיעה / אובר</small></div></div>';
       h+='<p class="small muted">מרחק בקו ישר: '+(d<1000?Math.round(d/10)*10+" מ'":(d/1000).toFixed(1)+' ק"מ')+'. הערכה בלבד.</p>';
-    }else{h+='<p class="small muted">מהמיקום שלך: גוגל מפות ואובר יחשבו את הזמן לפי המקום שבו את נמצאת.</p>'}
+    }else{h+='<p class="small muted">מהמיקום הנוכחי: גוגל מפות ואובר יחשבו את הזמן לפי המקום הנוכחי.</p>'}
     res.innerHTML=h;
     acts.innerHTML=link(gm(a,b,"walking"),'<i data-lucide="footprints"></i>הליכה בגוגל מפות',"primary")+link(gm(a,b,"transit"),'<i data-lucide="train-front"></i>תחבורה ציבורית')+link(gm(a,b,"driving"),'<i data-lucide="car"></i>נסיעה')+link(uber(a,b),"הזמנת אובר");
     drawSel(a,b);
@@ -1913,7 +2035,7 @@ var PH={jcm:"p-museum",esb:"p-esb",totr:"p-rock",summit:"p-manhattan",edge:"p-ro
   var sample=null,ready=false,turns=[],busy=false,CTX=null,LOCAL=!(window.claude&&window.claude.use);
   if(!LOCAL)window.claude.use("sample").then(function(s){sample=s;ready=true;if(!s)LOCAL=true}).catch(function(){LOCAL=true});
   /* מצב מקומי: חיפוש בתוכן המדריך עצמו, בלי שרת */
-  var IDX=null,STOP={"מה":1,"איך":1,"איפה":1,"מתי":1,"כמה":1,"יש":1,"של":1,"את":1,"על":1,"אם":1,"אני":1,"זה":1,"עם":1,"לא":1,"או":1,"גם":1,"כל":1,"צריך":1,"צריכה":1,"אפשר":1,"מי":1,"למה":1,"הכי":1};
+  var IDX=null,STOP={"מה":1,"איך":1,"איפה":1,"מתי":1,"כמה":1,"יש":1,"של":1,"את":1,"על":1,"אם":1,"אני":1,"זה":1,"עם":1,"לא":1,"או":1,"גם":1,"כל":1,"צריך":1,"צריכה":1,"צריכים":1,"אפשר":1,"מי":1,"למה":1,"הכי":1};
   function clean(w){return w.replace(/[״"׳']/g,"").replace(/[^\u0590-\u05FFa-z0-9]/gi,"").toLowerCase().replace(/[\u0591-\u05C7]/g,"")}
   function forms(w){w=clean(w);if(w.length<2)return[];var f={};f[w]=1;var a=w.length>3?w.replace(/^(וה|שה|וב|ול|ומ|וש|וכ|בה|לה|מה|כש|ה|ו|ב|ל|מ|ש|כ)/,""):w;if(a.length>1)f[a]=1;var b=a.length>3?a.replace(/^(ה|ו|ב|ל|מ|ש|כ)/,""):a;if(b.length>1)f[b]=1;Object.keys(f).forEach(function(x){var s=x.replace(/(יות|ים|ות)$/,"");if(s.length>2)f[s]=1});return Object.keys(f)}
   function norm(w){return forms(w)[0]||""}
@@ -1927,7 +2049,20 @@ var PH={jcm:"p-museum",esb:"p-esb",totr:"p-rock",summit:"p-manhattan",edge:"p-ro
     var sc=IDX.map(function(e){var s=0;qt.forEach(function(fs,i){s+=mt(fs,e.w)*W[i]});return{e:e,s:s-(e.t.length>400?.3:0)}})
       .filter(function(x){return x.s>=tot*.6}).sort(function(a,b){return b.s-a.s});
     if(!sc.length)return null;var top=sc[0].s;return sc.filter(function(x){return x.s>=top*.85}).slice(0,3)}
-  function showLocal(q,out){var r=localAnswer(q);out.classList.remove("wait");out.textContent="";if(!r){out.textContent="אין לי מידע על זה במדריך. אפשר לנסות לשאול במילים אחרות, או לפתוח את התפריט ולבחור עמוד.";return}var seen={};r.forEach(function(x){if(x.e.t===x.e.h)return;var p=document.createElement("p");p.textContent=(x.e.h&&x.e.t.indexOf(x.e.h)!==0?x.e.h+": ":"")+x.e.t;out.appendChild(p)});r.forEach(function(x){if(seen[x.e.id])return;seen[x.e.id]=1;var a=document.createElement("a");a.href="#"+x.e.id;a.className="bot-link";a.textContent="בעמוד: "+x.e.page;a.addEventListener("click",function(){toggle(false)});out.appendChild(a)});log.scrollTop=log.scrollHeight}
+  var FAQ=[
+    {r:/מזווד|לארוז|אריזה|לקחת איתנו|מה לקחת|תיק יד/,a:["מה לארוז: מעיל חם, כפפות, צעיף וכובע (בדצמבר קר מאוד), נעליים נוחות להליכה, מתאם לשקע אמריקאי (110 וולט), מטען נייד, ודרכון + ESTA + פוליסת ביטוח, גם מודפסים וגם בטלפון.","תרופות קבועות: באריזה המקורית ובתיק היד, עם מכתב מהרופא באנגלית.","על משקל המזוודה ועל נוזלים אין לי מידע במדריך. כדאי לבדוק באתר של חברת התעופה."],p:"before",n:"לפני הטיסה"},
+    {r:/הצלה|911|אמבולנס|משטרה|חירום|מספר טלפון|מספרי טלפון/,a:["משטרה, כבאות ואמבולנס: 911.","הצלה קראון הייטס: 718-230-1000.","שמירה קראון הייטס: 718-221-0303. חברים (עזרה בדרך): 718-222-1800."],p:"sos",n:"מספרי חירום"},
+    {r:/להכין לפני|לפני הטיסה|צ.?ק.?ליסט|רשימת הכנה/,a:["לפני הטיסה: אישור ESTA (רק באתר הרשמי), ביטוח נסיעות לכל ימי השהייה, eSIM או חבילת גלישה, כרטיס אשראי, ואריזה לחורף.","בעמוד יש צ׳ק-ליסט שאפשר לסמן בו."],p:"before",n:"לפני הטיסה"},
+    {r:/שדרה החמישית|השדרה ה-?5|חנוכי.ה הגדולה|fifth/i,a:["החנוכייה הגדולה בעולם: Grand Army Plaza, בפינת 5th Ave ו-59th St, מול מלון פלאזה.","איך מגיעים: קו 3 מ-Kingston Av עד Franklin Av, מעבר לקו 4 או 5 עד 59 St, והליכה מערבה. כ-45 דקות.","זמני ההדלקה בשנים קודמות: ראשון–חמישי בערך 17:30, שישי בערך 15:45, מוצאי שבת בערך 20:30."],p:"events",n:"אירועי חנוכה"},
+    {r:/סובו|רכבת תחתית|מטרו|omny|כרטיס נסיעה|כמה עולה נסיעה/i,a:["נסיעה בסובווי עולה $3, ומשלמים ב-OMNY: מקישים בשער עם כרטיס אשראי, טלפון או כרטיס OMNY.","אחרי 12 נסיעות בתשלום ($35) בתוך 7 ימים, כל שאר הנסיעות באותו שבוע בחינם."],p:"transport",n:"התניידות"},
+    {r:/כינוס/,a:["כינוס נשים ב-770, לכל אורחות המלך: מוצאי שבת ב׳ טבת, 12.12.2026, בשעה 21:00."],p:"events",n:"אירועי חנוכה"},
+    {r:/שייר|תהלוכ|טנק/,a:["שיירת החנוכיות של טנקי המבצעים יוצאת מ-770 ונוסעת למנהטן. בשנה שעברה יצאה בערב השלישי של חנוכה. מועד השנה עוד לא פורסם."],p:"events",n:"אירועי חנוכה"},
+    {r:/הדלק.*770|770.*הדלק|מתי מדליקים|שחרית|מנחה|ערבית/,a:["יום חול בחנוכה ב-770: שחרית 10:00, מנחה 15:15, ההדלקה בסיום מנחה, ואחר כך ערבית.","בערב שבת מדליקים לפני השבת (עד 16:10)."],p:"times",n:"זמנים"},
+    {r:/חינם|בחינם|לא עולה כסף/,a:["אטרקציות בחינם: מעבורת סטטן איילנד, סנטרל פארק, גשר ברוקלין, ה-High Line, Little Island, התחנה המרכזית וטיילת קוני איילנד.","בעמוד האטרקציות אפשר לסנן לפי 'חינם'."],p:"fun",n:"אטרקציות"},
+    {r:/ילדים|משחקי|גימבורי|לקטנים/,a:["לילדים: מוזיאון הילדים היהודי (ליד 770), מוזיאון הילדים של ברוקלין, מוזיאון הטבע, משחקייה לקטנים ועוד.","בעמוד האטרקציות אפשר לסנן לפי 'מתאים לילדים'."],p:"fun",n:"אטרקציות"}
+  ];
+  function faq(q){for(var i=0;i<FAQ.length;i++)if(FAQ[i].r.test(q))return FAQ[i];return null}
+  function showLocal(q,out){out.classList.remove("wait");out.textContent="";var f=faq(q);if(f){f.a.forEach(function(t){var p=document.createElement("p");p.textContent=t;out.appendChild(p)});var a=document.createElement("a");a.href="#"+f.p;a.className="bot-link";a.textContent="בעמוד: "+f.n;a.addEventListener("click",function(){toggle(false)});out.appendChild(a);log.scrollTop=log.scrollHeight;return}var r=localAnswer(q);if(!r){out.textContent="אין לי מידע על זה במדריך. אפשר לנסות לשאול במילים אחרות, או לפתוח את התפריט ולבחור עמוד.";return}var seen={};r.forEach(function(x){if(x.e.t===x.e.h)return;var p=document.createElement("p");p.textContent=(x.e.h&&x.e.t.indexOf(x.e.h)!==0?x.e.h+": ":"")+x.e.t;out.appendChild(p)});r.forEach(function(x){if(seen[x.e.id])return;seen[x.e.id]=1;var a=document.createElement("a");a.href="#"+x.e.id;a.className="bot-link";a.textContent="בעמוד: "+x.e.page;a.addEventListener("click",function(){toggle(false)});out.appendChild(a)});log.scrollTop=log.scrollHeight}
   function toggle(o){box.hidden=!o;fab.setAttribute("aria-expanded",o);if(o)setTimeout(function(){inp.focus()},50)}
   fab.addEventListener("click",function(){toggle(box.hidden)});
   document.getElementById("bot-x").addEventListener("click",function(){toggle(false)});
@@ -1951,6 +2086,17 @@ var PH={jcm:"p-museum",esb:"p-esb",totr:"p-rock",summit:"p-manhattan",edge:"p-ro
       out.textContent=(err&&err.text)||COPY[err&&err.code]||"משהו השתבש. אפשר לנסות שוב.";
     }finally{busy=false;send.disabled=false;inp.focus()}
   });
+})();
+</script>
+
+<script>
+(function(){
+  var on={},chips=document.querySelectorAll("#fun-filters .ffchip");
+  function apply(){var keys=Object.keys(on),n=0;document.querySelectorAll("#fun-list .att").forEach(function(a){var t=" "+(a.dataset.tags||"")+" ",m=keys.every(function(k){return t.indexOf(" "+k+" ")>=0});a.hidden=!m;if(m)n++});
+    chips.forEach(function(c){c.classList.toggle("on",c.dataset.t==="all"?!keys.length:!!on[c.dataset.t])});
+    document.getElementById("fun-count").textContent=n+" מקומות";document.getElementById("fun-empty").hidden=n>0}
+  chips.forEach(function(c){c.addEventListener("click",function(){var t=c.dataset.t;if(t==="all")on={};else if(on[t])delete on[t];else{on[t]=1;if(t==="in")delete on.out;if(t==="out")delete on["in"]}apply()})});
+  if(chips.length)apply();
 })();
 </script>
 
