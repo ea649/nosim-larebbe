@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="he" dir="rtl" data-ver="1795091892902">
+<html lang="he" dir="rtl" data-ver="1795093973447">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
@@ -7,7 +7,7 @@
 <meta name="description" content="המדריך לטסות ולטסים לחנוכה אצל הרבי ב-770: כשרות, זמנים, מפה, התניידות ומספרי חירום.">
 <meta name="theme-color" content="#f6e8dd">
 <style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
-<script>(function(){var V="1795091892902";try{fetch(location.pathname+"?nc="+Date.now(),{cache:"no-store"}).then(function(r){return r.text()}).then(function(t){var m=t.match(/data-ver="([0-9]+)"/);if(m&&m[1]!==V){var k="nl-reload-"+m[1];try{if(sessionStorage.getItem(k))return;sessionStorage.setItem(k,"1")}catch(e){}location.replace(location.pathname+"?v="+m[1]+location.hash)}}).catch(function(){})}catch(e){}})();</script>
+<script>(function(){var V="1795093973447";try{fetch(location.pathname+"?nc="+Date.now(),{cache:"no-store"}).then(function(r){return r.text()}).then(function(t){var m=t.match(/data-ver="([0-9]+)"/);if(m&&m[1]!==V){var k="nl-reload-"+m[1];try{if(sessionStorage.getItem(k))return;sessionStorage.setItem(k,"1")}catch(e){}location.replace(location.pathname+"?v="+m[1]+location.hash)}}).catch(function(){})}catch(e){}})();</script>
 </head>
 <body>
 <title>נוסעים לרבי – המדריך</title>
@@ -806,6 +806,15 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline-color:var(--n
 .bc-logo{background:linear-gradient(#fff,#fff) padding-box,linear-gradient(140deg,rgba(231,185,100,.7),rgba(255,90,38,.55),rgba(255,140,26,.6)) border-box!important}
 .art-wrap{position:relative;display:block;width:100%;order:1}
 .hero-plane{top:28%!important}
+
+/* ===== v16: ב"ה בצד ימין; מסך הבית ממלא את כל המסך בטלפון ===== */
+.bh-corner{left:auto;right:max(14px,env(safe-area-inset-right,0px))}
+@media (min-width:901px){#v-home .hero{min-height:calc(100vh - 42px);align-content:center}}
+@media (max-width:900px){
+  .menu-btn{top:calc(30px + env(safe-area-inset-top,0px))}
+  #v-home{padding-top:0}
+  #v-home .hero{width:100vw;max-width:none;box-sizing:border-box;margin:-26px calc(50% - 50vw) 0;border-radius:0;box-shadow:none;min-height:calc(100vh - 72px);min-height:calc(100svh - 72px - min(env(safe-area-inset-bottom,0px),18px));align-content:center;padding:calc(40px + env(safe-area-inset-top,0px)) 14px 24px!important}
+}
 </style>
 
 <div class="glow" aria-hidden="true"></div>
