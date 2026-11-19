@@ -541,6 +541,12 @@ html,body{overflow-x:clip}
 .cl-list input:checked~.tx{text-decoration:line-through;color:var(--muted)}
 .cl-list input:focus-visible+.box{outline:3px solid var(--gold);outline-offset:2px}
 .checklist.done .cl-count{background:#2c7a49;color:#fff}
+.cl-list li{display:flex;align-items:center;gap:4px}
+.cl-list li label{flex:1;min-width:0}
+.cl-rm{flex:none;width:40px;height:40px;border:0;border-radius:12px;background:none;color:var(--muted);cursor:pointer;display:grid;place-items:center}
+.cl-rm:hover{background:#fbe9e7;color:#b3261e}
+.cl-add{display:flex;gap:8px}
+.cl-add input{flex:1;min-width:0;font:inherit;border:0;border-radius:14px;background:var(--soft);padding:12px 14px}
 </style>
 
 <div class="glow" aria-hidden="true"></div>
@@ -915,8 +921,9 @@ html,body{overflow-x:clip}
       <li><label><input type="checkbox" id="cl-pn" data-k="pn"><span class="box" aria-hidden="true"><i data-lucide="check"></i></span><span class="tx">פ״נ כתוב לרבי</span></label></li>
       <li><label><input type="checkbox" id="cl-group" data-k="group"><span class="box" aria-hidden="true"><i data-lucide="check"></i></span><span class="tx">הצטרפתי לקבוצה ולוואטסאפ של הקבוצה</span></label></li>
     </ul>
-    <div class="acts"><a class="btn primary" href="https://www.elal.com" target="_blank" rel="noopener"><i data-lucide="plane"></i>צ׳ק-אין באתר אל על</a><button type="button" class="btn" id="cl-reset"><i data-lucide="rotate-ccw"></i>איפוס</button></div>
-    <p class="src">הסימונים נשמרים רק בטלפון או במחשב שלך.</p>
+    <form class="cl-add" id="cl-add"><input id="cl-new" type="text" placeholder="להוסיף פריט לרשימה..." aria-label="פריט חדש" autocomplete="off"><button class="btn primary" type="submit"><i data-lucide="plus"></i>הוספה</button></form>
+    <div class="acts"><a class="btn primary" href="https://www.elal.com" target="_blank" rel="noopener"><i data-lucide="plane"></i>צ׳ק-אין באתר אל על</a><button type="button" class="btn" id="cl-reset"><i data-lucide="rotate-ccw"></i>חזרה לרשימה המקורית</button></div>
+    <p class="src">אפשר להוסיף ולהוריד פריטים. הרשימה והסימונים נשמרים רק בטלפון או במחשב שלך.</p>
   </div>
 
   <div class="card" id="to-airport">
@@ -1802,12 +1809,27 @@ var PH={jcm:"p-museum",esb:"p-esb",totr:"p-rock",summit:"p-manhattan",edge:"p-ro
 
 <script>
 (function(){
-  var KEY="g770-checklist",st={};try{st=JSON.parse(localStorage.getItem(KEY)||"{}")}catch(e){}
-  var boxes=[].slice.call(document.querySelectorAll("#checklist input[type=checkbox]"));
-  function upd(){var n=boxes.filter(function(b){return b.checked}).length;document.getElementById("cl-count").textContent=n+"/"+boxes.length;document.getElementById("cl-bar").style.width=(100*n/boxes.length)+"%";document.getElementById("checklist").classList.toggle("done",n===boxes.length)}
-  boxes.forEach(function(b){b.checked=!!st[b.dataset.k];b.addEventListener("change",function(){st[b.dataset.k]=b.checked;try{localStorage.setItem(KEY,JSON.stringify(st))}catch(e){}upd()})});
-  document.getElementById("cl-reset").addEventListener("click",function(){st={};boxes.forEach(function(b){b.checked=false});try{localStorage.removeItem(KEY)}catch(e){}upd()});
-  upd();
+  var KEY="g770-checklist-v2",ul=document.querySelector("#checklist .cl-list");
+  var DEF=[].slice.call(ul.querySelectorAll("input")).map(function(b){return {k:b.dataset.k,t:b.parentNode.querySelector(".tx").textContent,d:false}});
+  var items=null;try{items=JSON.parse(localStorage.getItem(KEY)||"null")}catch(e){}
+  if(!Array.isArray(items))items=DEF.map(function(x){return {k:x.k,t:x.t,d:false}});
+  function save(){try{localStorage.setItem(KEY,JSON.stringify(items))}catch(e){}}
+  function render(){
+    ul.innerHTML="";
+    items.forEach(function(it,i){
+      var li=document.createElement("li"),lb=document.createElement("label"),cb=document.createElement("input"),bx=document.createElement("span"),tx=document.createElement("span"),rm=document.createElement("button");
+      cb.type="checkbox";cb.id="cl-"+it.k;cb.checked=!!it.d;bx.className="box";bx.setAttribute("aria-hidden","true");bx.innerHTML="<i data-lucide=\"check\"></i>";tx.className="tx";tx.textContent=it.t;
+      rm.type="button";rm.className="cl-rm";rm.setAttribute("aria-label","הסרה מהרשימה: "+it.t);rm.innerHTML="<i data-lucide=\"x\"></i>";
+      cb.addEventListener("change",function(){it.d=cb.checked;save();count()});
+      rm.addEventListener("click",function(){items.splice(i,1);save();render()});
+      lb.append(cb,bx,tx);li.append(lb,rm);ul.appendChild(li);
+    });
+    count();if(window.lucide)lucide.createIcons();
+  }
+  function count(){var n=items.filter(function(x){return x.d}).length,t=items.length;document.getElementById("cl-count").textContent=n+"/"+t;document.getElementById("cl-bar").style.width=(t?100*n/t:0)+"%";document.getElementById("checklist").classList.toggle("done",t>0&&n===t)}
+  document.getElementById("cl-add").addEventListener("submit",function(e){e.preventDefault();var inp=document.getElementById("cl-new"),v=inp.value.trim();if(!v)return;items.push({k:"u"+Date.now(),t:v,d:false});inp.value="";save();render();inp.focus()});
+  document.getElementById("cl-reset").addEventListener("click",function(){items=DEF.map(function(x){return {k:x.k,t:x.t,d:false}});save();render()});
+  render();
 })();
 </script>
 
