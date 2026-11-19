@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="he" dir="rtl" data-ver="1795089438535">
+<html lang="he" dir="rtl" data-ver="1795089772503">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
@@ -7,7 +7,7 @@
 <meta name="description" content="המדריך לטסות ולטסים לחנוכה אצל הרבי ב-770: כשרות, זמנים, מפה, התניידות ומספרי חירום.">
 <meta name="theme-color" content="#f6e8dd">
 <style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
-<script>(function(){var V="1795089438535";try{fetch(location.pathname+"?nc="+Date.now(),{cache:"no-store"}).then(function(r){return r.text()}).then(function(t){var m=t.match(/data-ver="([0-9]+)"/);if(m&&m[1]!==V){var k="nl-reload-"+m[1];try{if(sessionStorage.getItem(k))return;sessionStorage.setItem(k,"1")}catch(e){}location.replace(location.pathname+"?v="+m[1]+location.hash)}}).catch(function(){})}catch(e){}})();</script>
+<script>(function(){var V="1795089772503";try{fetch(location.pathname+"?nc="+Date.now(),{cache:"no-store"}).then(function(r){return r.text()}).then(function(t){var m=t.match(/data-ver="([0-9]+)"/);if(m&&m[1]!==V){var k="nl-reload-"+m[1];try{if(sessionStorage.getItem(k))return;sessionStorage.setItem(k,"1")}catch(e){}location.replace(location.pathname+"?v="+m[1]+location.hash)}}).catch(function(){})}catch(e){}})();</script>
 </head>
 <body>
 <title>נוסעים לרבי – המדריך</title>
@@ -649,6 +649,46 @@ html,body{overflow-x:clip}
 .tagb.near{background:#fdecc8;color:#8a5a1c}
 .pill.free{background:#16a34a!important;color:#fff!important;font-weight:900;font-size:.9rem;padding:5px 13px;box-shadow:0 4px 14px rgba(22,163,74,.45)}
 .free-price{color:#15803d;font-weight:900}
+.w-tl{background:var(--card);color:var(--ink)}
+.w-tl .w-label{color:#8a5a1c}.w-tl .w-label svg.lucide{color:#d79a3a}
+.w-tl .tl::before{background:linear-gradient(90deg,#e8c27a,#d79a3a 50%,#e8c27a);height:3px}
+.w-tl .tl li i{background:#fff;border-color:#d79a3a}
+.w-tl .tl li b{color:var(--ink)}
+.w-tl .tl li small{color:var(--muted)}
+.w-tl .tl li.hot i{background:#d79a3a;border-color:#d79a3a;box-shadow:0 0 0 5px rgba(215,154,58,.22),0 0 14px rgba(255,176,46,.7)}
+.w-tl .tl li.hot b{color:#b4672a}
+.w-tl .tl-note{color:var(--muted)}
+.egrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;align-items:start}
+@media (max-width:1100px){.egrid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:700px){.egrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}}
+.ecube{background:var(--card);border-radius:20px;box-shadow:var(--shadow);overflow:hidden;min-width:0}
+.ecube.hot{box-shadow:0 0 0 2px #d79a3a,var(--shadow)}
+.ecube summary{list-style:none;cursor:pointer;display:grid;justify-items:center;text-align:center;gap:4px;padding:12px 10px 14px}
+.ecube summary::-webkit-details-marker{display:none}
+.ecube summary img{width:min(120px,80%);height:auto;aspect-ratio:1;object-fit:contain;filter:drop-shadow(0 8px 12px rgba(60,40,50,.18))}
+.ec-t{font-size:1rem;line-height:1.2}
+.ec-when{display:grid;font-size:.82rem;line-height:1.35}.ec-when b{color:#8a5a1c}.ec-when span{color:var(--muted)}
+.ec-time{display:inline-flex;align-items:center;gap:4px;font-size:.76rem;font-weight:700;background:var(--soft);border-radius:999px;padding:3px 10px}
+.ec-time svg.lucide{width:13px;height:13px}
+.ecube[open]{grid-column:1/-1}
+.ecube[open] summary{grid-template-columns:110px 1fr;justify-items:start;text-align:start;align-items:center;column-gap:14px}
+.ecube[open] summary img{grid-row:span 3;width:110px}
+.ec-more{display:grid;gap:8px;padding:0 16px 16px}.ec-more p{margin:0}
+.view>.w-tl{margin-top:2px}
+.cat-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:6px 0 4px}
+@media (min-width:901px){.cat-grid{grid-template-columns:repeat(5,minmax(0,1fr))}}
+.cat-tile{font:inherit;color:var(--ink);background:var(--soft);border:2px solid transparent;border-radius:18px;padding:10px 6px 12px;display:grid;justify-items:center;gap:2px;cursor:pointer;min-width:0;text-align:center}
+.cat-tile img{width:min(72px,80%);height:auto;aspect-ratio:1;object-fit:contain}
+.cat-tile b{font-size:.86rem;line-height:1.2}.cat-tile small{font-size:.72rem;color:var(--muted)}
+.cat-tile.on{background:#fff;border-color:#d79a3a;box-shadow:0 6px 16px rgba(215,154,58,.25)}
+.dir-cur{margin:14px 0 8px;font-size:1.15rem;scroll-margin-top:70px}
+.biz-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+@media (min-width:901px){.biz-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:420px){.biz-grid{grid-template-columns:minmax(0,1fr)}}
+.bcard{background:#fff;border:1px solid var(--line);border-radius:18px;padding:12px;display:grid;gap:4px;align-content:start;min-width:0;position:relative}
+.bcard .bc-ic{width:46px;height:46px;object-fit:contain}
+.bcard b{font-size:1rem;text-align:right;overflow-wrap:anywhere}
+.bcard .acts{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}.bcard .btn{padding:6px 10px;font-size:.82rem}
 </style>
 
 <div class="glow" aria-hidden="true"></div>
@@ -691,8 +731,8 @@ html,body{overflow-x:clip}
   </div>
 
   <div class="dash">
-    <a class="widget w-dark w-tl" href="#times"><span class="w-label"><i data-lucide="flame"></i>יום חול בחנוכה ב-770</span><ol class="tl"><li><i></i><b>שחרית</b><small>10:00</small></li><li><i></i><b>מנחה</b><small>15:15</small></li><li class="hot"><i></i><b>הדלקה</b><small>בסיום מנחה</small></li><li><i></i><b>ערבית</b><small>בערב</small></li></ol><small class="tl-note">בערב שבת ההדלקה לפני השבת · כל הזמנים בעמוד "זמנים"</small></a>
-    <a class="widget w-gold" href="#events"><span class="w-label"><i data-lucide="calendar-heart"></i>כינוס נשים ב-770</span><b>מוצ"ש ב' טבת · 21:00</b><small>12.12.2026 · לכל אורחות המלך</small></a>
+    <a class="widget w-tl" href="#times"><span class="w-label"><i data-lucide="flame"></i>יום חול בחנוכה ב-770</span><ol class="tl"><li><i></i><b>שחרית</b><small>10:00</small></li><li><i></i><b>מנחה</b><small>15:15</small></li><li class="hot"><i></i><b>הדלקה</b><small>בסיום מנחה</small></li><li><i></i><b>ערבית</b><small>בערב</small></li></ol><small class="tl-note">בערב שבת ההדלקה לפני השבת · כל הזמנים בעמוד "זמנים"</small></a>
+    
     <a class="widget w-weather" id="weather" href="https://forecast.weather.gov/MapClick.php?lat=40.669&lon=-73.942" target="_blank" rel="noopener"><span class="w-label"><i data-lucide="cloud-sun"></i>מזג האוויר בקראון הייטס</span><b id="wx-now">לתחזית העדכנית</b><small id="wx-days">בדצמבר בדרך כלל בין 0 ל-8 מעלות</small></a>
     <div class="widget w-sos"><span class="w-label"><i data-lucide="siren"></i>חירום · לוחצים ומתקשרים</span><div class="acts"><a class="btn danger" href="tel:911">911</a><a class="btn" href="tel:+17182301000">הצלה</a><a class="btn" href="#sos">עוד</a></div></div>
   </div>
@@ -731,7 +771,7 @@ html,body{overflow-x:clip}
 
 <!-- LEARN -->
 <section class="view" id="v-learn" aria-label="לימוד ושיחות">
-  <header class="banner"><img src="p-books.jpg" alt=""><a class="back" href="#home"><i data-lucide="arrow-right"></i>לכל המדריך</a><h1>לימוד ושיחות</h1><p>שיחות ומאמרים של הרבי לחנוכה, וחומר על הנסיעה לרבי. כל הקישורים לאתרי חב"ד.</p></header>
+  <header class="banner"><img src="p-likkutei-sichos.jpg" alt=""><a class="back" href="#home"><i data-lucide="arrow-right"></i>לכל המדריך</a><h1>לימוד ושיחות</h1><p>שיחות ומאמרים של הרבי לחנוכה, וחומר על הנסיעה לרבי. כל הקישורים לאתרי חב"ד.</p></header>
 
   <div class="card">
     <h2><span class="hi"><i data-lucide="flame"></i></span>שיחות ומאמרים לחנוכה</h2>
@@ -1403,7 +1443,8 @@ html,body{overflow-x:clip}
 
 <!-- TIMES -->
 <section class="view" id="v-times" aria-label="זמנים ותפילות">
-  <header class="banner"><img src="p-menorah.jpg" alt=""><a class="back" href="#home"><i data-lucide="arrow-right"></i>לכל המדריך</a><h1>זמנים ותפילות</h1><p>הדלקות ותפילות ב-770, לילה אחר לילה.</p></header>
+  <header class="banner"><img src="p-770-lighting.jpg" alt=""><a class="back" href="#home"><i data-lucide="arrow-right"></i>לכל המדריך</a><h1>זמנים ותפילות</h1><p>הדלקות ותפילות ב-770, לילה אחר לילה.</p></header>
+  <div class="widget w-tl"><span class="w-label"><i data-lucide="flame"></i>יום חול בחנוכה ב-770</span><ol class="tl"><li><i></i><b>שחרית</b><small>10:00</small></li><li><i></i><b>מנחה</b><small>15:15</small></li><li class="hot"><i></i><b>הדלקה</b><small>בסיום מנחה</small></li><li><i></i><b>ערבית</b><small>בערב</small></li></ol><small class="tl-note">בערב שבת ההדלקה לפני השבת</small></div>
   <div class="notice">חלק מהזמנים לקוחים משנים קודמות (מסומנים <span class="prev">שנים קודמות</span>). נעדכן כאן ברגע שיפורסמו הזמנים לחנוכה תשפ"ז.</div>
 
 
@@ -1450,84 +1491,78 @@ html,body{overflow-x:clip}
 
 <!-- EVENTS -->
 <section class="view" id="v-events" aria-label="אירועי חנוכה">
-  <header class="banner"><img src="p-menorah.jpg" alt=""><a class="back" href="#home"><i data-lucide="arrow-right"></i>לכל המדריך</a><h1>אירועי חנוכה</h1><p>הכינוס, ההדלקה המרכזית, שיירת האור ועוד אירועים בשכונה ובעיר.</p></header>
-  <div class="notice">רוב הלוחות לחנוכה תשפ"ז עוד לא פורסמו. מה שמסומן <span class="prev">שנים קודמות</span> לקוח מהשנה שעברה. נעדכן כאן ברגע שיתפרסמו הזמנים.</div>
-  <article class="card evt evt-hot">
-    <div class="evt-date"><b>12.12</b><small>מוצ״ש ב׳ טבת</small></div>
-    <div class="evt-body">
-      <div class="evt-tags"><span class="chip gold">לכל הנשים</span><span class="chip">21:00</span></div>
-      <h2>כינוס נשים ב-770 · לכל אורחות המלך</h2>
-      <p class="small">הכינוס המרכזי של הנשים והבנות שבאו לרבי, בזאת חנוכה. כדאי להגיע מוקדם כדי למצוא מקום.</p>
-      
-    </div>
-  </article>
-  <article class="card evt">
-    <div class="evt-date"><b>כל ערב</b><small>4–11.12</small></div>
-    <div class="evt-body">
-      <div class="evt-tags"><span class="chip free">חינם</span><span class="chip">בחוץ</span><span class="chip">לכל המשפחה</span><span class="chip prev">שנים קודמות</span></div>
-      <h2>ההדלקה המרכזית: החנוכייה הגדולה בעולם, השדרה החמישית</h2>
-      <p class="small"><bdi>Grand Army Plaza</bdi>, בפינת <bdi>5th Ave</bdi> ו-<bdi>59th St</bdi> במנהטן, מול מלון פלאזה.</p>
-      <p class="small">זמני ההדלקה בשנה שעברה: ראשון–חמישי ב-17:30, שישי ב-15:45 (לפני שבת), מוצאי שבת ב-20:30. השנה הנר הראשון ביום שישי, ולכן ההדלקה הראשונה צפויה בסביבות 15:45.</p>
-      <p class="small">איך מגיעים: קו 3 עד <bdi>Times Sq–42 St</bdi>, ומשם <bdi>N</bdi>, <bdi>R</bdi> או <bdi>W</bdi> עד <bdi>5 Av/59 St</bdi>. כ-50 דקות.</p>
-      <p class="src">מקור: <a href="https://secretnyc.co/worlds-largest-menorah-fifth-avenue-2025/" target="_blank" rel="noopener">SecretNYC, לוח 2025</a></p>
-    </div>
-  </article>
-  <article class="card evt">
-    <div class="evt-date"><b>כל ערב</b><small>4–11.12</small></div>
-    <div class="evt-body">
-      <div class="evt-tags"><span class="chip free">חינם</span><span class="chip">בחוץ</span><span class="chip kids">מתאים לילדים</span><span class="chip prev">שנים קודמות</span></div>
-      <h2>החנוכייה הגדולה בברוקלין</h2>
-      <p class="small">בכניסה לפרוספקט פארק, קרוב מאוד ל-770. בשנה שעברה היו בכל ערב לביבות ומתנות לילדים, ובערב הראשון הופעה ב-16:00.</p>
-      <p class="small">איך מגיעים: קו 3 ישירות לתחנת <bdi>Grand Army Plaza</bdi>, שלוש תחנות מ-<bdi>Kingston Av</bdi>.</p>
-      <p class="src">מקורות: <a href="https://collive.com/hundreds-gather-for-brooklyns-largest-menorah-lighting/" target="_blank" rel="noopener">COLlive</a> · <a href="https://mommypoppins.com/new-york-city-kids/event/free/the-worlds-largest-hanukkah-menorah-brooklyn" target="_blank" rel="noopener">Mommy Poppins</a></p>
-    </div>
-  </article>
-  <article class="card evt">
-    <div class="evt-date"><b>ייקבע</b><small>בחנוכה</small></div>
-    <div class="evt-body">
-      <div class="evt-tags"><span class="chip free">חינם</span><span class="chip">בחוץ</span><span class="chip">לכל המשפחה</span></div>
-      <h2>שיירת האור: תהלוכת החנוכיות של טנקי המבצעים</h2>
-      <p class="small">טנקי המבצעים ומאות מכוניות עם חנוכיות יוצאים מ-770 ונוסעים דרך גשר מנהטן אל מנהטן. אפשר לצפות ביציאה מול 770.</p>
-      <p class="small">בשנה שעברה השיירה יצאה בערב השלישי של חנוכה, עם 35 טנקים ויותר מ-300 מכוניות. התמימים ב-770 כבר נערכים לשיירה של השנה, והתאריך והמסלול יפורסמו בקרוב.</p>
-      <p class="src">מקורות: <a href="https://chabad.info/seven-seventy/1384353/" target="_blank" rel="noopener">חב״ד אינפו</a> · <a href="https://collive.com/menorah-parade-lit-up-new-york-city-with-jewish-pride/" target="_blank" rel="noopener">COLlive</a> · <a href="https://www.menorahparadesnyc.com" target="_blank" rel="noopener">MenorahParadesNYC</a></p>
-    </div>
-  </article>
-  <article class="card evt">
-    <div class="evt-date"><b>ייקבע</b><small>בחנוכה</small></div>
-    <div class="evt-body">
-      <div class="evt-tags"><span class="chip kids">מתאים לילדים</span><span class="chip">בפנים</span></div>
-      <h2>ראלי חנוכה של צבאות ה׳ ב-770</h2>
-      <p class="small">ראלי לילדים ב-770 עם הדלקה, בשידור חי לילדים בכל העולם. התאריך של השנה יפורסם קרוב לחנוכה.</p>
-      <p class="src">מקור: <a href="https://www.chabad.org/kids/article_cdo/aid/7137455/jewish/Chanukah-Rally-5786.htm" target="_blank" rel="noopener">הראלי של השנה שעברה</a></p>
-    </div>
-  </article>
-  <article class="card evt">
-    <div class="evt-date"><b>ייקבע</b><small>בחנוכה</small></div>
-    <div class="evt-body">
-      <div class="evt-tags"><span class="chip gold">לנשים ולבנות</span><span class="chip">בחוץ</span><span class="chip prev">שנים קודמות</span></div>
-      <h2>ערב החלקה על הקרח לנשים ולבנות</h2>
-      <p class="small">במשטח <bdi>LeFrak Center</bdi> שבפרוספקט פארק, מטעם <bdi>The Space CH</bdi>. בשנה שעברה השתתפו כ-350 נשים ובנות, גם מישראל, בשעות 19:00–21:00.</p>
-      <p class="src">מקור: <a href="https://collive.com/girls-enjoy-11th-chanukah-ice-skating-night-in-brooklyn/" target="_blank" rel="noopener">COLlive</a></p>
-    </div>
-  </article>
-  <article class="card evt">
-    <div class="evt-date"><b>ייקבע</b><small>בחנוכה</small></div>
-    <div class="evt-body">
-      <div class="evt-tags"><span class="chip free">חינם</span><span class="chip kids">מתאים לילדים</span><span class="chip">בפנים</span><span class="chip prev">שנים קודמות</span></div>
-      <h2>מסיבת חנוכה לילדים של אהלי יוסף יצחק</h2>
-      <p class="small"><bdi>Binyan Sheleg</bdi>, ‏<bdi>333 Albany Ave</bdi>, בקראון הייטס. לילדים בגילאי 3–9 עם מבוגר. בשנה שעברה המסיבה הייתה בערב החמישי ב-16:00, אחרי ההדלקה ב-770, עם הופעה וסדנאות: קישוט סופגניות, סביבונים וחנוכייה אכילה.</p>
-      <p class="src">מקור: <a href="https://collive.com/increasing-the-light-today-public-menorah-lighting-childrens-chanukah-party-in-crown-heights/" target="_blank" rel="noopener">COLlive</a></p>
-    </div>
-  </article>
-  <article class="card evt">
-    <div class="evt-date"><b>כל החג</b><small>4–11.12</small></div>
-    <div class="evt-body">
-      <div class="evt-tags"><span class="chip kids">מתאים לילדים</span><span class="chip">בפנים</span><span class="chip">ליד 770</span><span class="chip prev">שנים קודמות</span></div>
-      <h2>פסטיבל חנוכה במוזיאון הילדים היהודי</h2>
-      <p class="small">שתי דקות הליכה מ-770. בשנה שעברה היו שם פעילויות חנוכה כל ימי החג: קישוט סופגניות, סדנת שמן זית ומעבדה, ובערב הראשון אירוע "חנוכה על הפארקווי".</p>
-      <p class="src">מקור: <a href="https://anash.org/families-enjoy-chanukah-on-the-parkway-event" target="_blank" rel="noopener">Anash</a></p>
-    </div>
-  </article>
+  <header class="banner"><img src="p-770-lighting.jpg" alt=""><a class="back" href="#home"><i data-lucide="arrow-right"></i>לכל המדריך</a><h1>אירועי חנוכה</h1><p>הכינוס, ההדלקה המרכזית, שיירת האור ועוד. לוחצים על אירוע לכל הפרטים.</p></header>
+  <div class="notice">רוב הלוחות לחנוכה תשפ"ז עוד לא פורסמו. מה שכתוב "בשנה שעברה" לקוח מהשנה שעברה. נעדכן כאן ברגע שיתפרסמו הזמנים.</div>
+  <div class="egrid">
+    <details class="ecube hot">
+      <summary><img src="e-kinus.png" alt="" width="320" height="320" loading="lazy"><b class="ec-t">כינוס נשים ב-770</b><span class="ec-when"><b>מוצאי שבת · <span dir="ltr">12.12</span></b><span>ב׳ טבת</span></span><span class="ec-time"><i data-lucide="clock"></i>21:00</span></summary>
+      <div class="ec-more">
+        <div class="evt-tags"><span class="chip gold">לכל הנשים</span></div>
+        <p class="small">כינוס "לכל אורחות המלך": הכינוס המרכזי של הנשים והבנות שבאו לרבי, בזאת חנוכה. כדאי להגיע מוקדם כדי למצוא מקום.</p>
+        
+      </div>
+    </details>
+    <details class="ecube">
+      <summary><img src="e-fifth.png" alt="" width="320" height="320" loading="lazy"><b class="ec-t">ההדלקה המרכזית בשדרה החמישית</b><span class="ec-when"><b>כל ערב · <span dir="ltr">4–11.12</span></b><span>כ״ד כסלו – א׳ טבת</span></span><span class="ec-time"><i data-lucide="clock"></i>בשנה שעברה: א׳–ה׳ 17:30</span></summary>
+      <div class="ec-more">
+        <div class="evt-tags"><span class="chip free">חינם</span><span class="chip">בחוץ</span></div>
+        <p class="small">החנוכייה הגדולה בעולם, ב-<bdi>Grand Army Plaza</bdi>, בפינת <bdi>5th Ave</bdi> ו-<bdi>59th St</bdi> במנהטן, מול מלון פלאזה.</p>
+        <p class="small">זמני ההדלקה בשנה שעברה: ראשון–חמישי ב-17:30, שישי ב-15:45 (לפני שבת), מוצאי שבת ב-20:30. השנה הנר הראשון ביום שישי 4.12, ולכן ההדלקה הראשונה צפויה בסביבות 15:45.</p>
+        <p class="small">איך מגיעים: קו 3 עד <bdi>Times Sq–42 St</bdi>, ומשם <bdi>N</bdi>, <bdi>R</bdi> או <bdi>W</bdi> עד <bdi>5 Av/59 St</bdi>. כ-50 דקות.</p>
+        <p class="src">מקור: <a href="https://secretnyc.co/worlds-largest-menorah-fifth-avenue-2025/" target="_blank" rel="noopener">SecretNYC, לוח 2025</a></p>
+      </div>
+    </details>
+    <details class="ecube">
+      <summary><img src="e-brooklyn.png" alt="" width="320" height="320" loading="lazy"><b class="ec-t">החנוכייה הגדולה בברוקלין</b><span class="ec-when"><b>כל ערב · <span dir="ltr">4–11.12</span></b><span>כ״ד כסלו – א׳ טבת</span></span><span class="ec-time"><i data-lucide="clock"></i>שעה תפורסם · בשנה שעברה: הופעה ב-16:00 בערב הראשון</span></summary>
+      <div class="ec-more">
+        <div class="evt-tags"><span class="chip free">חינם</span><span class="chip kids">מתאים לילדים</span></div>
+        <p class="small">ב-<bdi>Grand Army Plaza</bdi>, בכניסה לפרוספקט פארק, קרוב מאוד ל-770. בשנה שעברה היו בכל ערב לביבות ומתנות לילדים.</p>
+        <p class="small">איך מגיעים: קו 3 ישירות לתחנת <bdi>Grand Army Plaza</bdi>, שלוש תחנות מ-<bdi>Kingston Av</bdi>.</p>
+        <p class="src">מקורות: <a href="https://collive.com/hundreds-gather-for-brooklyns-largest-menorah-lighting/" target="_blank" rel="noopener">COLlive</a> · <a href="https://mommypoppins.com/new-york-city-kids/event/free/the-worlds-largest-hanukkah-menorah-brooklyn" target="_blank" rel="noopener">Mommy Poppins</a></p>
+      </div>
+    </details>
+    <details class="ecube">
+      <summary><img src="e-tanks.png" alt="" width="320" height="320" loading="lazy"><b class="ec-t">שיירת האור: טנקי המבצעים</b><span class="ec-when"><b>יום ראשון · <span dir="ltr">6.12</span></b><span>כ״ו כסלו</span></span><span class="ec-time"><i data-lucide="clock"></i>אחרי ההדלקה ב-770 · שעה תפורסם</span></summary>
+      <div class="ec-more">
+        <div class="evt-tags"><span class="chip free">חינם</span><span class="chip prev">לפי שנים קודמות</span></div>
+        <p class="small">טנקי המבצעים ומאות מכוניות עם חנוכיות יוצאים מ-770 ונוסעים דרך גשר מנהטן אל מנהטן. אפשר לצפות ביציאה מול 770.</p>
+        <p class="small">בשנה שעברה השיירה יצאה בערב השלישי של חנוכה, עם 35 טנקים ויותר מ-300 מכוניות. התמימים ב-770 כבר נערכים לשיירה של השנה, והמועד הסופי יפורסם בקרוב.</p>
+        <p class="src">מקורות: <a href="https://chabad.info/seven-seventy/1384353/" target="_blank" rel="noopener">חב״ד אינפו</a> · <a href="https://collive.com/menorah-parade-lit-up-new-york-city-with-jewish-pride/" target="_blank" rel="noopener">COLlive</a> · <a href="https://www.menorahparadesnyc.com" target="_blank" rel="noopener">MenorahParadesNYC</a></p>
+      </div>
+    </details>
+    <details class="ecube">
+      <summary><img src="e-rally.png" alt="" width="320" height="320" loading="lazy"><b class="ec-t">ראלי חנוכה של צבאות ה׳</b><span class="ec-when"><b>יום רביעי · <span dir="ltr">9.12</span></b><span>כ״ט כסלו</span></span><span class="ec-time"><i data-lucide="clock"></i>שעה תפורסם</span></summary>
+      <div class="ec-more">
+        <div class="evt-tags"><span class="chip kids">מתאים לילדים</span></div>
+        <p class="small">ראלי לילדים ב-770 עם הדלקה, בשידור חי לילדים בכל העולם. היום החמישי של חנוכה, ובערב מדליקים נר שישי.</p>
+        <p class="src">מקור: <a href="https://www.chabad.org/kids/article_cdo/aid/7137455/jewish/Chanukah-Rally-5786.htm" target="_blank" rel="noopener">הראלי של השנה שעברה</a></p>
+      </div>
+    </details>
+    <details class="ecube">
+      <summary><img src="e-skating.png" alt="" width="320" height="320" loading="lazy"><b class="ec-t">החלקה על הקרח לנשים ולבנות</b><span class="ec-when"><b>תאריך יפורסם · <span dir="ltr">בחנוכה</span></b></span><span class="ec-time"><i data-lucide="clock"></i>בשנה שעברה: 19:00–21:00</span></summary>
+      <div class="ec-more">
+        <div class="evt-tags"><span class="chip gold">לנשים ולבנות</span></div>
+        <p class="small">במשטח <bdi>LeFrak Center</bdi> שבפרוספקט פארק, מטעם <bdi>The Space CH</bdi>. בשנה שעברה השתתפו כ-350 נשים ובנות, גם מישראל.</p>
+        <p class="src">מקור: <a href="https://collive.com/girls-enjoy-11th-chanukah-ice-skating-night-in-brooklyn/" target="_blank" rel="noopener">COLlive</a></p>
+      </div>
+    </details>
+    <details class="ecube">
+      <summary><img src="e-party.png" alt="" width="320" height="320" loading="lazy"><b class="ec-t">מסיבת חנוכה לילדים, אהלי יוסף יצחק</b><span class="ec-when"><b>תאריך יפורסם · <span dir="ltr">בחנוכה</span></b></span><span class="ec-time"><i data-lucide="clock"></i>בשנה שעברה: 16:00, אחרי ההדלקה</span></summary>
+      <div class="ec-more">
+        <div class="evt-tags"><span class="chip free">חינם</span><span class="chip kids">מתאים לילדים</span></div>
+        <p class="small"><bdi>Binyan Sheleg</bdi>, ‏<bdi>333 Albany Ave</bdi>, בקראון הייטס. לילדים בגילאי 3–9 עם מבוגר. בשנה שעברה המסיבה הייתה בערב החמישי, עם הופעה וסדנאות: קישוט סופגניות, סביבונים וחנוכייה אכילה.</p>
+        <p class="src">מקור: <a href="https://collive.com/increasing-the-light-today-public-menorah-lighting-childrens-chanukah-party-in-crown-heights/" target="_blank" rel="noopener">COLlive</a></p>
+      </div>
+    </details>
+    <details class="ecube">
+      <summary><img src="e-museum.png" alt="" width="320" height="320" loading="lazy"><b class="ec-t">חנוכה במוזיאון הילדים היהודי</b><span class="ec-when"><b>ראשון–חמישי · <span dir="ltr">6–10.12</span></b><span>כ״ו–ל׳ כסלו</span></span><span class="ec-time"><i data-lucide="clock"></i>בשעות המוזיאון</span></summary>
+      <div class="ec-more">
+        <div class="evt-tags"><span class="chip kids">מתאים לילדים</span><span class="chip near">ליד 770</span></div>
+        <p class="small">שתי דקות הליכה מ-770. בשנה שעברה היו שם פעילויות חנוכה כל ימי החג: קישוט סופגניות, סדנת שמן זית ומעבדה. בשישי ובשבת המוזיאון סגור.</p>
+        <p class="src">מקור: <a href="https://anash.org/families-enjoy-chanukah-on-the-parkway-event" target="_blank" rel="noopener">Anash</a></p>
+      </div>
+    </details>
+  </div>
   <a class="card ohel-link" href="#times"><img src="i-menorah-770.png" alt=""><div><h3>זמנים ותפילות ב-770</h3><span class="small muted">הדלקות, שחרית, מנחה וערבית</span></div><i data-lucide="arrow-left"></i></a>
 </section>
 
@@ -1549,6 +1584,7 @@ html,body{overflow-x:clip}
     <h2><span class="hi"><i data-lucide="store"></i></span>מדריך השכונה: הסעות, אוכל ושירותים</h2>
     <p class="small">עסקים בקראון הייטס, מתוך רשימות של אתרי השכונה (חב"ד אינפו, CrownHeights.info, ‏COLlive) ובדיקה בגוגל מפות. זה לא פרסום בתשלום. שעות ומחירים משתנים, אז מומלץ להתקשר לפני.</p>
     <div class="chips-row" role="group" aria-label="סינון לפי קטגוריה" id="dir-chips"></div>
+    <h3 class="dir-cur" id="dir-cur">הסעות ומוניות</h3>
     <ul class="svc-list" id="dir-list"></ul>
     <p class="src" id="dir-src"></p>
   </div>
@@ -1975,18 +2011,20 @@ var PH={jcm:"p-museum",esb:"p-esb",totr:"p-rock",summit:"p-manhattan",edge:"p-ro
     if(!chips||!ul)return;
     function e(s){return String(s||"").replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
     var cur="ride";
-    chips.innerHTML=CATS.map(function(k){return '<button type="button" class="fchip'+(k[0]===cur?' on':'')+'" data-c="'+k[0]+'"><i data-lucide="'+k[2]+'"></i>'+k[1]+'</button>'}).join("");
+    chips.className="cat-grid";chips.innerHTML=CATS.map(function(k){var n=DIR.filter(function(b){return b.c===k[0]}).length;return '<button type="button" class="cat-tile'+(k[0]===cur?' on':'')+'" data-c="'+k[0]+'" aria-pressed="'+(k[0]===cur)+'"><img src="b-'+k[0]+'.png" alt="" width="256" height="256" loading="lazy"><b>'+k[1]+'</b><small>'+n+' עסקים</small></button>'}).join("");
+    function catName(c){for(var i=0;i<CATS.length;i++)if(CATS[i][0]===c)return CATS[i][1];return ""}
     function draw(){
+      ul.className="biz-grid";ul.setAttribute("aria-label",catName(cur));
       ul.innerHTML=DIR.filter(function(b){return b.c===cur}).map(function(b){
         var tel=b.t?'+1'+b.t.replace(/\D/g,""):"";
-        return '<li class="svc"><b dir="ltr">'+e(b.n)+'</b><span class="small">'+e(b.d)+'</span>'+(b.a?'<span class="small muted" dir="ltr" style="text-align:right">'+e(b.a)+'</span>':'')+
+        return '<li class="bcard"><img class="bc-ic" src="b-'+b.c+'.png" alt="" width="256" height="256" loading="lazy"><b dir="ltr">'+e(b.n)+'</b><span class="small">'+e(b.d)+'</span>'+(b.a?'<span class="small muted" dir="ltr" style="text-align:right">'+e(b.a)+'</span>':'')+
           '<div class="acts">'+(b.t?'<a class="btn" href="tel:'+tel+'" dir="ltr"><i data-lucide="phone"></i>'+e(b.t)+'</a>':'')+
           (b.a?'<a class="btn" href="https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(b.n+" "+b.a+" Brooklyn")+'" target="_blank" rel="noopener"><i data-lucide="map-pin"></i>מפה</a>':'')+
           (b.w?'<a class="btn" href="https://'+e(b.w)+'" target="_blank" rel="noopener"><i data-lucide="globe"></i>אתר</a>':'')+'</div></li>';
       }).join("");
       if(window.lucide)lucide.createIcons();
     }
-    chips.querySelectorAll(".fchip").forEach(function(c){c.addEventListener("click",function(){cur=c.dataset.c;chips.querySelectorAll(".fchip").forEach(function(x){x.classList.toggle("on",x===c)});draw()})});
+    chips.querySelectorAll(".cat-tile").forEach(function(c){c.addEventListener("click",function(){cur=c.dataset.c;chips.querySelectorAll(".cat-tile").forEach(function(x){x.classList.toggle("on",x===c);x.setAttribute("aria-pressed",x===c)});draw();var t=document.getElementById("dir-cur");if(t){t.textContent=catName(cur);t.scrollIntoView({behavior:"smooth",block:"start"})}})});
     if(src)src.innerHTML='מקורות: <a href="https://crownheights.info/" target="_blank" rel="noopener">CrownHeights.info</a> (רשימת CHK) · <a href="https://chkosher.org/" target="_blank" rel="noopener">ועד הכשרות CHK</a> · <a href="https://gegent.com/" target="_blank" rel="noopener">Gegent by COLlive</a> · <a href="https://chabad.info/" target="_blank" rel="noopener">חב"ד אינפו</a> · גוגל מפות (נבדק 19.11.2026)';
     draw();
   })();
