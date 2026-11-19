@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="he" dir="rtl" data-ver="1795091647938">
+<html lang="he" dir="rtl" data-ver="1795091892902">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
@@ -7,7 +7,7 @@
 <meta name="description" content="המדריך לטסות ולטסים לחנוכה אצל הרבי ב-770: כשרות, זמנים, מפה, התניידות ומספרי חירום.">
 <meta name="theme-color" content="#f6e8dd">
 <style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
-<script>(function(){var V="1795091647938";try{fetch(location.pathname+"?nc="+Date.now(),{cache:"no-store"}).then(function(r){return r.text()}).then(function(t){var m=t.match(/data-ver="([0-9]+)"/);if(m&&m[1]!==V){var k="nl-reload-"+m[1];try{if(sessionStorage.getItem(k))return;sessionStorage.setItem(k,"1")}catch(e){}location.replace(location.pathname+"?v="+m[1]+location.hash)}}).catch(function(){})}catch(e){}})();</script>
+<script>(function(){var V="1795091892902";try{fetch(location.pathname+"?nc="+Date.now(),{cache:"no-store"}).then(function(r){return r.text()}).then(function(t){var m=t.match(/data-ver="([0-9]+)"/);if(m&&m[1]!==V){var k="nl-reload-"+m[1];try{if(sessionStorage.getItem(k))return;sessionStorage.setItem(k,"1")}catch(e){}location.replace(location.pathname+"?v="+m[1]+location.hash)}}).catch(function(){})}catch(e){}})();</script>
 </head>
 <body>
 <title>נוסעים לרבי – המדריך</title>
@@ -772,12 +772,46 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline-color:var(--n
 .content::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;opacity:.7;background-image:radial-gradient(circle at 30% 12%,var(--neon) 0 1.5px,transparent 3px),radial-gradient(circle at 70% 55%,var(--neon) 0 1.2px,transparent 2.6px),radial-gradient(circle at 15% 85%,var(--neon) 0 1.5px,transparent 3px);background-size:520px 520px}
 @media (prefers-reduced-motion:no-preference){.tab.on::after,.card h2 .hi::after{animation:neonPulse 2.4s ease-in-out infinite}}
 @keyframes neonPulse{50%{opacity:.45;transform:scale(.8)}}
+
+/* ===== v15 גרדיאנט במקום צהוב זרחני; לוגואים ===== */
+:root{--neon:#ff5ccd;--neon-g:linear-gradient(135deg,#ff7ac6 0%,#c86bff 55%,#7d8bff 100%);--neon-glow:0 0 10px rgba(255,92,205,.6),0 0 20px rgba(140,110,255,.35)}
+.sec-head h2::after{background:linear-gradient(90deg,#e7b964 0 62%,#ff7ac6 62%,#c86bff 82%,#7d8bff 100%)!important;box-shadow:6px 0 12px rgba(200,107,255,.35)!important}
+.banner h1::after{background:linear-gradient(90deg,#e7b964 0 62%,#ff7ac6 62%,#c86bff 82%,#7d8bff 100%)!important}
+.tab.on::after,.fchip.on::before,.card h2 .hi::after,.cal-rings i{background:var(--neon-g)!important}
+.bot-fab::after{background:var(--neon-g)!important;color:#fff!important}
+.ecube.hot{box-shadow:0 0 0 2px #d86cff,0 0 18px rgba(200,107,255,.4),0 10px 30px rgba(120,70,110,.12)!important}
+.flow li::before{box-shadow:0 0 0 2px #e27bff}
+.db-candle{box-shadow:0 0 0 2px #e27bff}
+.check li::marker,.clean li::marker{color:#c86bff}
+.content::after{background-image:radial-gradient(circle at 30% 12%,#ff7ac6 0 1.5px,transparent 3px),radial-gradient(circle at 70% 55%,#c86bff 0 1.2px,transparent 2.6px),radial-gradient(circle at 15% 85%,#7d8bff 0 1.5px,transparent 3px)!important}
+.bc-logo{display:grid;place-items:center;width:84px;height:84px;margin:0 auto 4px;background:#fff;border-radius:20px;box-shadow:0 6px 16px rgba(120,70,110,.16);padding:8px;box-sizing:border-box;border:1px solid transparent;background:linear-gradient(#fff,#fff) padding-box,linear-gradient(140deg,rgba(231,185,100,.7),rgba(255,122,198,.5),rgba(125,139,255,.6)) border-box}
+.bc-logo img{max-width:100%;max-height:100%;object-fit:contain;border-radius:10px}
+.bh-corner{font-weight:800}
+
+/* ===== v15 תאריך מתחת לבאנר; מטוס מונפש ===== */
+.date-strip{order:0!important;display:flex!important;flex-direction:row!important;flex-wrap:wrap;justify-content:center;align-items:center;gap:12px;margin:16px auto 4px;animation:none}
+#v-home .hero{padding-top:clamp(40px,8vw,70px)!important}
+#v-home .art-stage{position:relative}
+.hero-plane{position:absolute;left:4.1%;top:calc(28% + var(--plane-off,0px));width:31%;height:auto;z-index:2;pointer-events:none;filter:drop-shadow(0 10px 14px rgba(40,30,60,.18))}
+@media (prefers-reduced-motion:no-preference){.hero-plane{animation:planeFly 6s ease-in-out infinite}}
+@keyframes planeFly{0%,100%{transform:translate(0,0) rotate(0)}25%{transform:translate(6px,-8px) rotate(-2deg)}50%{transform:translate(12px,-3px) rotate(1deg)}75%{transform:translate(4px,-10px) rotate(-1.5deg)}}
+
+/* ===== v15 צבע הנגיעות: אדום-כתום ===== */
+:root{--neon:#ff4a2a;--neon-g:linear-gradient(90deg,#ff3b30 0%,#ff5a26 50%,#ff8c1a 100%);--neon-glow:0 0 10px rgba(255,74,42,.55),0 0 20px rgba(255,140,26,.35)}
+.sec-head h2::after,.banner h1::after{background:linear-gradient(90deg,#e7b964 0 60%,#ff3b30 60%,#ff8c1a 100%)!important;box-shadow:6px 0 12px rgba(255,90,38,.35)!important}
+.ecube.hot{box-shadow:0 0 0 2px #ff5a26,0 0 18px rgba(255,90,38,.35),0 10px 30px rgba(120,70,110,.12)!important}
+.flow li::before,.db-candle{box-shadow:0 0 0 2px #ff6a22}
+.check li::marker,.clean li::marker{color:#ff5a26}
+.content::after{background-image:radial-gradient(circle at 30% 12%,#ff5a26 0 1.5px,transparent 3px),radial-gradient(circle at 70% 55%,#ff8c1a 0 1.2px,transparent 2.6px),radial-gradient(circle at 15% 85%,#ff3b30 0 1.5px,transparent 3px)!important}
+.bc-logo{background:linear-gradient(#fff,#fff) padding-box,linear-gradient(140deg,rgba(231,185,100,.7),rgba(255,90,38,.55),rgba(255,140,26,.6)) border-box!important}
+.art-wrap{position:relative;display:block;width:100%;order:1}
+.hero-plane{top:28%!important}
 </style>
 
 <div class="glow" aria-hidden="true"></div>
 
 <button type="button" class="menu-btn" id="menu-btn" aria-label="תפריט" aria-controls="side" aria-expanded="false"><i data-lucide="menu"></i></button>
-<span class="bh bh-corner" dir="ltr">B"H</span>
+<span class="bh bh-corner">ב"ה</span>
 
 <div class="shell">
   <aside class="side" id="side" aria-label="תפריט האתר">
@@ -802,11 +836,14 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline-color:var(--n
     <div class="hero-bg" aria-hidden="true"></div>
     <div class="hero-mist" aria-hidden="true"></div>
     <div class="hero-clouds" aria-hidden="true"></div>
-    <div class="hero-date" id="daybar" aria-live="polite"><div class="cal" id="db-cal" aria-label="התאריך היום"><span class="cal-rings" aria-hidden="true"><i></i><i></i></span><b class="cal-top" id="db-wd">חנוכה</b><span class="cal-line" id="db-greg">תשפ"ז</span><span class="cal-line heb" id="db-heb"></span></div><span class="db-candle" id="db-candle" hidden></span></div>
-    <div class="art-stage"><h1 class="hero-title on-art"><span>נוסעים</span> <span>לרבי</span></h1><span class="cloud c1"></span><span class="cloud c2"></span><img class="hero-art" src="hero-v3.png" alt="770, האוהל, מזוודה ומטוס" width="1100" height="733"><span class="cloud front c3"></span><span class="cloud front c4"></span><span class="cloud front c5"></span></div>
+    
+    <div class="art-stage"><h1 class="hero-title on-art"><span>נוסעים</span> <span>לרבי</span></h1><span class="cloud c1"></span><span class="cloud c2"></span><span class="art-wrap"><img class="hero-plane" src="hero-plane.png" alt="" aria-hidden="true"><img class="hero-art" src="hero-noplane.png" alt="770, האוהל, מזוודה ומטוס" width="1100" height="733"></span><span class="cloud front c3"></span><span class="cloud front c4"></span><span class="cloud front c5"></span></div>
     <p class="hero-sub">המדריך המלא לנסיעה לרבי בחנוכה: מהאריזה, דרך הנחיתה ועד ההדלקה ב-770.</p>
   </div>
+  <div class="hero-date date-strip" id="daybar" aria-live="polite"><div class="cal" id="db-cal" aria-label="התאריך היום"><span class="cal-rings" aria-hidden="true"><i></i><i></i></span><b class="cal-top" id="db-wd">חנוכה</b><span class="cal-line" id="db-greg">תשפ"ז</span><span class="cal-line heb" id="db-heb"></span></div><span class="db-candle" id="db-candle" hidden></span></div>
 
+
+  
 
   <div class="sec">
     <div class="sec-head"><h2>מקומות שכדאי להכיר</h2><a class="see" href="#fun">לכל האטרקציות</a></div>
@@ -2100,7 +2137,7 @@ var PH={jcm:"p-museum",esb:"p-esb",totr:"p-rock",summit:"p-manhattan",edge:"p-ro
       ul.className="biz-grid";ul.setAttribute("aria-label",catName(cur));
       ul.innerHTML=DIR.filter(function(b){return b.c===cur}).map(function(b){
         var tel=b.t?'+1'+b.t.replace(/\D/g,""):"";
-        return '<li class="bcard"><img class="bc-ic" src="b-'+b.c+'.png" alt="" width="256" height="256" loading="lazy"><b dir="ltr">'+e(b.n)+'</b><span class="small">'+e(b.d)+'</span>'+(b.a?'<span class="small muted" dir="ltr" style="text-align:right">'+e(b.a)+'</span>':'')+
+        var LG={"brooklynab.com":1,"bunchobagels.com":1,"bustoohel.com":1,"chbutcher.com":1,"chmozzarella.com":1,"choco-latte.com":1,"chshippingcenter.com":1,"crispandcrumbnyc.com":1,"holesomebagels.com":1,"holyschnitzel.com":1,"hummusbarny.com":1,"kahanskosher.com":1,"kingstonbakeshop.com":1,"kingstonkosherpizza.com":1,"koltuvgrocery.com":1,"kosherfamily.com":1,"koshertown.com":1,"noribar1.com":1,"sushispot2.com":1,"sweetexpressionsch.com":1,"thehouseofglatt.com":1,};return '<li class="bcard'+(b.w&&LG[b.w]?' has-logo':'')+'">'+(b.w&&LG[b.w]?'<span class="bc-logo"><img src="logos/'+b.w+'.png" alt="הלוגו של '+e(b.n)+'" loading="lazy"></span>':'<img class="bc-ic" src="b-'+b.c+'.png" alt="" width="256" height="256" loading="lazy">')+'<b dir="ltr">'+e(b.n)+'</b><span class="small">'+e(b.d)+'</span>'+(b.a?'<span class="small muted" dir="ltr" style="text-align:right">'+e(b.a)+'</span>':'')+
           '<div class="acts">'+(b.t?'<a class="btn" href="tel:'+tel+'" dir="ltr"><i data-lucide="phone"></i>'+e(b.t)+'</a>':'')+
           (b.a?'<a class="btn" href="https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(b.n+" "+b.a+" Brooklyn")+'" target="_blank" rel="noopener"><i data-lucide="map-pin"></i>מפה</a>':'')+
           (b.w?'<a class="btn" href="https://'+e(b.w)+'" target="_blank" rel="noopener"><i data-lucide="globe"></i>אתר</a>':'')+'</div></li>';
